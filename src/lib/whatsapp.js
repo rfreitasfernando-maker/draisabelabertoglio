@@ -1,6 +1,6 @@
 const WHATSAPP_NUMBER = '5511999758182';
 
-export const whatsappLink = (message) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+export const whatsappLink = (message) => `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
 
 export const WHATSAPP_URL = whatsappLink("Olá! Vim pelo site da Dra. Isabela e gostaria de saber mais sobre o plano de emagrecimento personalizado. Podemos conversar?");
 

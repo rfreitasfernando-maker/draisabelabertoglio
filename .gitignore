@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+nutrologiaclinica/
+
+# Arquivos originais em alta resolução e material impresso (não vão para o repositório público)
+fotos-originais/
+site-para-upload.zip
+.playwright-mcp/

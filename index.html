@@ -34,6 +34,21 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M26VJ6B2"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <script>
+      // Remove texto solto injetado direto no <body> (ex.: tag HTML do GTM salva sem <script>).
+      // Todo o conteúdo do site fica dentro de #root, então nada legítimo é afetado.
+      (function () {
+        function clean(nodes) {
+          for (var i = 0; i < nodes.length; i++) {
+            var n = nodes[i];
+            if (n.nodeType === 3 && n.parentNode === document.body && n.textContent.trim()) n.parentNode.removeChild(n);
+          }
+        }
+        new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) clean(mutations[i].addedNodes);
+        }).observe(document.body, { childList: true });
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>

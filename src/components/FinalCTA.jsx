@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const FinalCTA = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
@@ -28,6 +29,7 @@ const FinalCTA = () => {
 
           <motion.a
             href={WHATSAPP_URL}
+            onClick={() => trackWhatsappClick('contato')}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
@@ -40,6 +42,7 @@ const FinalCTA = () => {
 
           <a
             href={WHATSAPP_URL}
+            onClick={() => trackWhatsappClick('contato_telefone')}
             target="_blank"
             rel="noopener noreferrer"
             className="block mt-8 py-3 text-xs tracking-[0.2em] uppercase text-brand-light-gray/50 font-sans hover:text-brand-gold transition-colors duration-300"

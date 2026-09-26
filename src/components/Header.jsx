@@ -3,6 +3,7 @@ import { Menu, X, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MapModal from '@/components/MapModal';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,6 +78,7 @@ const Header = () => {
 
             <a
               href={WHATSAPP_URL}
+              onClick={() => trackWhatsappClick('menu')}
               target="_blank"
               rel="noopener noreferrer"
               className={`hidden md:block text-sm font-sans font-medium tracking-widest uppercase px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
@@ -119,9 +121,12 @@ const Header = () => {
                   ))}
                   <a
                     href={WHATSAPP_URL}
+                    onClick={() => {
+                      trackWhatsappClick('menu_mobile');
+                      setIsMenuOpen(false);
+                    }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
                     className="mt-3 text-sm font-sans font-medium tracking-widest uppercase border border-brand-gold text-brand-gold px-6 py-4 min-h-[48px] hover:bg-brand-gold hover:text-white transition-all duration-300 text-center"
                   >
                     Agendar Consulta

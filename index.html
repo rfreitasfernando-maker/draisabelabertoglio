@@ -2,11 +2,7 @@
 <html lang="pt-BR">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M26VJ6B2');</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P2GJVCZW');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,28 +27,9 @@
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M26VJ6B2"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2GJVCZW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <script>
-      // Remove texto solto injetado direto no <body> (ex.: tag HTML do GTM salva sem <script>).
-      // Todo o conteúdo do site fica dentro de #root, então nada legítimo é afetado.
-      (function () {
-        function clean(nodes) {
-          for (var i = 0; i < nodes.length; i++) {
-            var n = nodes[i];
-            if (n.nodeType === 3 && n.parentNode === document.body && n.textContent.trim()) n.parentNode.removeChild(n);
-          }
-        }
-        new MutationObserver(function (mutations) {
-          for (var i = 0; i < mutations.length; i++) clean(mutations[i].addedNodes);
-        }).observe(document.body, { childList: true });
-      })();
-    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      (function () { function trackWhatsappClick(e) { var el = e.target; while (el && el !== document) { if (el.tagName === 'A' && el.href) { if (el.href.indexOf('wa.me') > -1 || el.href.indexOf('api.whatsapp.com') > -1 || el.href.indexOf('web.whatsapp.com') > -1) { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'whatsapp_click', whatsapp_url: el.href }); break; } } el = el.parentNode; } } document.addEventListener('click', trackWhatsappClick, true); })();
-    </script>
   </body>
 </html>

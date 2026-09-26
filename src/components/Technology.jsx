@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Layers, ShieldCheck, Stethoscope } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_UNYQUE_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const features = [
   { icon: Layers, title: 'Três tecnologias, uma sessão', detail: 'Cada uma age em uma camada: pele, sustentação e gordura.' },
@@ -158,6 +159,7 @@ const Technology = () => {
           <div className="text-center mt-10">
             <a
               href={WHATSAPP_UNYQUE_URL}
+              onClick={() => trackWhatsappClick('tecnologia', WHATSAPP_UNYQUE_URL)}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500"

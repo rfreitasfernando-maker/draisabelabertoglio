@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const WhatsAppButton = () => {
   // A barra do mobile só aparece depois da primeira dobra, para não competir com os botões do topo
@@ -19,6 +20,7 @@ const WhatsAppButton = () => {
       {/* Desktop: botão flutuante */}
       <motion.a
         href={WHATSAPP_URL}
+        onClick={() => trackWhatsappClick('flutuante')}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco pelo WhatsApp"
@@ -47,6 +49,7 @@ const WhatsAppButton = () => {
           >
             <a
               href={WHATSAPP_URL}
+              onClick={() => trackWhatsappClick('barra_mobile')}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full min-h-[50px] bg-[#25D366] text-white font-sans text-xs font-semibold tracking-[0.15em] uppercase active:scale-[0.98] transition-transform"

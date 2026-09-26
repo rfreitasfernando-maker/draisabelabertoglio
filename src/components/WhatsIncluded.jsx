@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const WhatsIncluded = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
@@ -56,6 +57,7 @@ const WhatsIncluded = () => {
             <div className="border-t border-brand-gold/10 pt-8">
               <motion.a
                 href={WHATSAPP_URL}
+                onClick={() => trackWhatsappClick('plano')}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.01 }}

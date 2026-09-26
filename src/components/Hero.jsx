@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
 
 const Hero = () => {
@@ -50,6 +51,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <motion.a
                 href={WHATSAPP_URL}
+                onClick={() => trackWhatsappClick('hero')}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

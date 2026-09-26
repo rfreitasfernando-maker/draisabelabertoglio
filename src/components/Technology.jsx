@@ -159,7 +159,7 @@ const Technology = () => {
           <div className="text-center mt-10">
             <a
               href={WHATSAPP_UNYQUE_URL}
-              onClick={() => trackWhatsappClick('tecnologia', WHATSAPP_UNYQUE_URL)}
+              onClick={(e) => trackWhatsappClick('tecnologia', e)}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500"

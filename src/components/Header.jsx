@@ -78,7 +78,7 @@ const Header = () => {
 
             <a
               href={WHATSAPP_URL}
-              onClick={() => trackWhatsappClick('menu')}
+              onClick={(e) => trackWhatsappClick('menu', e)}
               target="_blank"
               rel="noopener noreferrer"
               className={`hidden md:block text-sm font-sans font-medium tracking-widest uppercase px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
@@ -121,8 +121,8 @@ const Header = () => {
                   ))}
                   <a
                     href={WHATSAPP_URL}
-                    onClick={() => {
-                      trackWhatsappClick('menu_mobile');
+                    onClick={(e) => {
+                      trackWhatsappClick('menu_mobile', e);
                       setIsMenuOpen(false);
                     }}
                     target="_blank"

@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <motion.a
                 href={WHATSAPP_URL}
-                onClick={() => trackWhatsappClick('hero')}
+                onClick={(e) => trackWhatsappClick('hero', e)}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

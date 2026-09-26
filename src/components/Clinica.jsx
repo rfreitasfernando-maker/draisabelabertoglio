@@ -134,7 +134,7 @@ const Clinica = () => {
           )}
 
           <div className="text-center mt-8">
-            <a href={WHATSAPP_URL} onClick={() => trackWhatsappClick('clinica')} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
+            <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('clinica', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
               Agendar uma visita
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>

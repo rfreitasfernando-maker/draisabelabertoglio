@@ -57,7 +57,7 @@ const WhatsIncluded = () => {
             <div className="border-t border-brand-gold/10 pt-8">
               <motion.a
                 href={WHATSAPP_URL}
-                onClick={() => trackWhatsappClick('plano')}
+                onClick={(e) => trackWhatsappClick('plano', e)}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.01 }}

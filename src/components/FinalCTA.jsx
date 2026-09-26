@@ -29,7 +29,7 @@ const FinalCTA = () => {
 
           <motion.a
             href={WHATSAPP_URL}
-            onClick={() => trackWhatsappClick('contato')}
+            onClick={(e) => trackWhatsappClick('contato', e)}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
@@ -42,7 +42,7 @@ const FinalCTA = () => {
 
           <a
             href={WHATSAPP_URL}
-            onClick={() => trackWhatsappClick('contato_telefone')}
+            onClick={(e) => trackWhatsappClick('contato_telefone', e)}
             target="_blank"
             rel="noopener noreferrer"
             className="block mt-8 py-3 text-xs tracking-[0.2em] uppercase text-brand-light-gray/50 font-sans hover:text-brand-gold transition-colors duration-300"

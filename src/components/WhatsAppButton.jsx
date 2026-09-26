@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
       {/* Desktop: botão flutuante */}
       <motion.a
         href={WHATSAPP_URL}
-        onClick={() => trackWhatsappClick('flutuante')}
+        onClick={(e) => trackWhatsappClick('flutuante', e)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco pelo WhatsApp"
@@ -49,7 +49,7 @@ const WhatsAppButton = () => {
           >
             <a
               href={WHATSAPP_URL}
-              onClick={() => trackWhatsappClick('barra_mobile')}
+              onClick={(e) => trackWhatsappClick('barra_mobile', e)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full min-h-[50px] bg-[#25D366] text-white font-sans text-xs font-semibold tracking-[0.15em] uppercase active:scale-[0.98] transition-transform"

@@ -37,6 +37,12 @@ const technologies = [
   },
 ];
 
+const results = [
+  { src: '/unyque/resultado-1.webp', area: 'Coxas' },
+  { src: '/unyque/resultado-2.webp', area: 'Glúteo e coxa' },
+  { src: '/unyque/resultado-3.webp', area: 'Coxas' },
+];
+
 const Technology = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
@@ -148,6 +154,47 @@ const Technology = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Antes e depois: carrossel com rolagem no mobile, grade de 3 no desktop */}
+            <div className="mt-14 md:mt-16">
+              <div className="text-center mb-6 md:mb-8">
+                <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-4">
+                  Resultados
+                </span>
+                <h3 className="text-2xl md:text-4xl font-serif font-light text-brand-dark">
+                  Antes <span className="italic text-brand-gold">e depois</span>
+                </h3>
+              </div>
+
+              <div className="-mx-6 px-6 md:mx-0 md:px-0 flex md:grid md:grid-cols-3 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {results.map((result) => (
+                  <figure key={result.src} className="shrink-0 basis-[85%] sm:basis-[60%] md:basis-auto snap-start">
+                    <div className="relative aspect-[2/1] overflow-hidden bg-black">
+                      <img
+                        src={result.src}
+                        alt={`Antes e depois com Unyque Pro - ${result.area}`}
+                        width="800"
+                        height="400"
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-y-0 left-1/2 w-px bg-white/30" />
+                      <span className="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] font-sans font-medium tracking-[0.15em] uppercase px-2 py-1">
+                        Antes
+                      </span>
+                      <span className="absolute bottom-2 left-[calc(50%+0.5rem)] bg-brand-gold/90 text-white text-[10px] font-sans font-medium tracking-[0.15em] uppercase px-2 py-1">
+                        Depois
+                      </span>
+                    </div>
+                    <figcaption className="mt-2.5 text-[11px] font-sans font-medium tracking-[0.2em] uppercase text-brand-light-gray">
+                      {result.area}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+              <p className="mt-3 text-center text-[11px] font-sans text-brand-light-gray md:hidden">Deslize para ver mais</p>
             </div>
 
             <p className="mt-6 text-center text-xs font-sans font-light text-brand-light-gray leading-relaxed">

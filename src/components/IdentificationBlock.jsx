@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Ban, Battery, ShieldAlert, Target, Sparkles, ClipboardCheck, ArrowRight } from 'lucide-react';
+import { Ban, ShieldAlert, Target, Sparkles, ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
@@ -8,15 +8,10 @@ import { trackWhatsappClick } from '@/lib/tracking';
 const IdentificationBlock = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
-
   const items = [
     {
       icon: Ban,
       text: <>Tentou <strong>dieta, treino ou remédio</strong> sem sucesso</>
-    },
-    {
-      icon: Battery,
-      text: <>Sente <strong>culpa por não ter energia</strong> para a família</>
     },
     {
       icon: ShieldAlert,
@@ -29,10 +24,6 @@ const IdentificationBlock = () => {
     {
       icon: Sparkles,
       text: <>Tem a sensação de que algo no seu corpo <strong>não está funcionando</strong> como deveria</>
-    },
-    {
-      icon: ClipboardCheck,
-      text: <>Deseja um <strong>acompanhamento médico real</strong>, personalizado para o seu momento</>
     },
   ];
 

@@ -15,7 +15,8 @@ const ENDPOINT = 'https://agendabel.com.br/api/wa/clique';
 const CLINICA_ID = '600140eb-7537-44fc-a9af-c784fee99c8c';
 
 // Só o domínio de produção registra cliques: preview da Vercel e localhost não gravam no BEL.IA.
-const HOSTS_PRODUCAO = ['nutrologiaclinica.com.br', 'www.nutrologiaclinica.com.br'];
+// O domínio sem www redireciona (308) para o www mantendo a query, então o gclid chega aqui.
+const HOSTS_PRODUCAO = ['www.draisabelabertoglio.com.br', 'draisabelabertoglio.com.br'];
 
 const CHAVE_STORAGE = 'clique_anuncio';
 const CAMPOS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];

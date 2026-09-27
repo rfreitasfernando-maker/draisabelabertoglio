@@ -79,6 +79,30 @@ const HowItWorks = () => {
             ))}
           </div>
 
+          {/* Destaque do equipamento de bioimpedância da clínica */}
+          <div className="mt-6 flex items-center gap-5 md:gap-8 bg-brand-cream border border-brand-gold/15 p-4 md:p-6">
+            <img
+              src="/inbody-380.webp"
+              alt="Bioimpedância InBody 380"
+              width="219"
+              height="560"
+              loading="lazy"
+              decoding="async"
+              className="h-36 md:h-44 w-auto flex-shrink-0 mix-blend-multiply"
+            />
+            <div>
+              <span className="inline-block whitespace-nowrap bg-brand-gold text-white text-[10px] md:text-[11px] font-sans font-medium tracking-[0.08em] md:tracking-[0.15em] uppercase px-2 md:px-2.5 py-1 mb-3">
+                Inclusa na sua avaliação
+              </span>
+              <p className="text-xl md:text-2xl font-serif text-brand-dark leading-snug">
+                Bioimpedância de <span className="italic text-brand-gold">última geração</span>
+              </p>
+              <p className="mt-2 text-sm font-sans font-light text-brand-dark-gray/70 leading-relaxed">
+                InBody 380: músculo, gordura e água corporal medidos em detalhe, para acompanhar sua evolução real.
+              </p>
+            </div>
+          </div>
+
           <div className="text-center mt-10">
             <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('metodo', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
               Agendar minha avaliação

@@ -6,7 +6,6 @@ import Highlights from '@/components/Highlights';
 import IdentificationBlock from '@/components/IdentificationBlock';
 import KeywordsTicker from '@/components/KeywordsTicker';
 import HowItWorks from '@/components/HowItWorks';
-import WhatsIncluded from '@/components/WhatsIncluded';
 import Technology from '@/components/Technology';
 import AboutDoctor from '@/components/AboutDoctor';
 import FAQ from '@/components/FAQ';
@@ -32,7 +31,6 @@ function App() {
         <IdentificationBlock />
         <KeywordsTicker />
         <HowItWorks />
-        <WhatsIncluded />
         <Technology />
         <Clinica />
         <GoogleMapsEmbed />

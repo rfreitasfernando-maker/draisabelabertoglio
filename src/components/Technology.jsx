@@ -47,7 +47,7 @@ const Technology = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="tecnologia" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-20 bg-white">
+    <section id="tecnologia" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-20 bg-white border-t border-brand-gold/10">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           ref={ref}

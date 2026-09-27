@@ -7,7 +7,7 @@ const GoogleMapsEmbed = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
   return (
-    <section className="py-12 md:py-16 bg-brand-cream/50">
+    <section id="localizacao" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-brand-cream/50">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           ref={ref}

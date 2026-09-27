@@ -16,8 +16,11 @@ import FinalCTA from '@/components/FinalCTA';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { useScrollToHash } from '@/hooks/useScrollToHash';
 
 function App() {
+  useScrollToHash();
+
   return (
     <>
       <Helmet>

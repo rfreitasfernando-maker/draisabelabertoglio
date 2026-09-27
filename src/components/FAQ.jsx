@@ -81,7 +81,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section id="duvidas" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           ref={ref}

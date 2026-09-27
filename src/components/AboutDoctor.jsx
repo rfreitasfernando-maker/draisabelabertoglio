@@ -9,7 +9,7 @@ import { DOCTOR_CREDENTIALS } from '@/lib/doctor';
 const education = [
   'Doutorado pela USP-SP',
   'Especialização pela USP-SP',
-  'Pós-graduação em Nutrologia Clínica pelo Hospital Israelita Albert Einstein',
+  'Nutrologia Clínica - Hospital Albert Einstein',
 ];
 
 const AboutDoctor = () => {
@@ -76,10 +76,10 @@ const AboutDoctor = () => {
 
               <div className="space-y-6 text-base text-brand-dark-gray/70 leading-[1.8] font-light">
                 <p>
-                  Sua atuação é pautada por uma visão individualizada, fugindo de protocolos genéricos. Entende que cada organismo responde de forma única e que o tratamento deve ser adaptado à realidade do paciente.
+                  Minha atuação é pautada por uma visão individualizada, fugindo de protocolos genéricos. Entendo que cada pessoa responde de forma única e que o tratamento deve ser adaptado à sua realidade!
                 </p>
                 <p>
-                  Oferece uma abordagem acolhedora e baseada em ciência, onde o objetivo não é apenas a perda de peso, mas a construção de uma saúde robusta e de uma relação equilibrada com o próprio corpo.
+                  Ofereço uma abordagem acolhedora e baseada em ciência, onde o objetivo não é apenas a perda de peso, mas a construção de uma saúde robusta e de uma relação equilibrada com seu próprio corpo.
                 </p>
               </div>
 

@@ -9,6 +9,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Technology from '@/components/Technology';
 import AboutDoctor from '@/components/AboutDoctor';
 import FAQ from '@/components/FAQ';
+import Reviews from '@/components/Reviews';
 import Clinica from '@/components/Clinica';
 import GoogleMapsEmbed from '@/components/GoogleMapsEmbed';
 import FinalCTA from '@/components/FinalCTA';
@@ -32,6 +33,7 @@ function App() {
         <KeywordsTicker />
         <HowItWorks />
         <Technology />
+        <Reviews />
         <Clinica />
         <GoogleMapsEmbed />
         <FAQ />

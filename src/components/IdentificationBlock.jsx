@@ -19,7 +19,7 @@ const IdentificationBlock = () => {
     },
     {
       icon: Target,
-      text: <>Dorme mal e vive <strong>cansado(a)</strong> sem entender o motivo</>
+      text: <>Dorme mal e vive <strong>sem disposição</strong></>
     },
     {
       icon: Sparkles,

@@ -23,8 +23,8 @@ function App() {
       <div className="min-h-screen bg-white text-brand-dark relative">
         <Header />
         <Hero />
-        <AboutDoctor />
         <IdentificationBlock />
+        <AboutDoctor />
         <KeywordsTicker />
         <Reviews />
         <HowItWorks />

@@ -38,7 +38,9 @@ const IdentificationBlock = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-5xl mx-auto"
         >
-          <div className="text-center mb-12">
+          <WeightLossResults />
+
+          <div className="text-center mt-14 md:mt-16 mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-brand-dark leading-tight">
               Este acompanhamento é <span className="text-brand-gold italic">ideal</span>
               <br />para você que...
@@ -63,8 +65,6 @@ const IdentificationBlock = () => {
               </motion.div>
             ))}
           </div>
-
-          <WeightLossResults />
 
           <div className="text-center mt-10">
             <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('identificacao', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">

@@ -29,7 +29,7 @@ const WeightLossResults = () => {
   const seta = 'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center bg-white/90 text-brand-dark shadow-md hover:bg-brand-gold hover:text-white transition-all duration-300';
 
   return (
-    <div className="mt-14 md:mt-16">
+    <div>
       <div className="text-center mb-6 md:mb-8">
         <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-4">
           Resultados

@@ -106,7 +106,7 @@ const Hero = () => {
       <div className="relative h-[75vh] max-h-[560px] md:max-h-none md:absolute md:inset-y-0 md:right-0 md:h-full md:w-[44%] xl:w-[48%]">
         <img
           src="/dra-isabela-bertoglio.webp"
-          alt={`${DOCTOR_NAME}, nutróloga, em seu consultório`}
+          alt={`${DOCTOR_NAME}, médica – Nutrologia e Emagrecimento, em seu consultório`}
           width="892"
           height="1280"
           srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w"

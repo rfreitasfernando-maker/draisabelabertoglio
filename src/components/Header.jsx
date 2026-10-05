@@ -56,7 +56,7 @@ const Header = () => {
                 src="/logo-monograma.webp"
                 srcSet="/logo-monograma-118.webp 118w, /logo-monograma.webp 203w"
                 sizes="(min-width: 768px) 59px, 46px"
-                alt="Clínica Belvitá"
+                alt="Clínica Belvitá – logotipo"
                 width="203"
                 height="192"
                 className="h-11 md:h-14 w-auto"

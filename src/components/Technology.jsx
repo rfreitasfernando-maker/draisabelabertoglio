@@ -160,7 +160,7 @@ const Technology = () => {
             <div className="mt-14 md:mt-16">
               <div className="text-center mb-6 md:mb-8">
                 <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-4">
-                  Resultados
+                  Resultados Unyque Pro
                 </span>
                 <h3 className="text-2xl md:text-4xl font-serif font-light text-brand-dark">
                   Antes <span className="italic text-brand-gold">e depois</span>

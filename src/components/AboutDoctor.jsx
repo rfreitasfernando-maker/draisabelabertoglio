@@ -46,7 +46,8 @@ const AboutDoctor = () => {
                   height="1149"
                   alt="Dra. Isabela Bertoglio em seu consultório na Clínica Belvitá"
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: '55% 50%' }}
+                  // Zoom leve centrado na Dra. Isabela, para mostrar menos das bordas da sala
+                  style={{ objectPosition: '55% 50%', transform: 'scale(1.18)', transformOrigin: '95% 55%' }}
                   loading="lazy"
                 />
               </div>

@@ -13,6 +13,7 @@ const results = [
   { src: '/resultados/emagrecimento-2.webp' },
   { src: '/resultados/emagrecimento-3.webp' },
   { src: '/resultados/emagrecimento-4.webp' },
+  { src: '/resultados/emagrecimento-5.webp' },
 ];
 
 const WeightLossResults = () => {

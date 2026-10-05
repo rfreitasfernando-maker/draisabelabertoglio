@@ -102,22 +102,22 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Foto da Dra. Isabela: só no desktop (metade direita). No celular ela já aparece em "Quem sou". */}
-      <div className="hidden md:block md:absolute md:inset-y-0 md:right-0 md:h-full md:w-[44%] xl:w-[48%]">
+      {/* Foto da Dra. Isabela: depois do texto e dos chips no celular, metade direita no desktop */}
+      <div className="relative h-[75vh] max-h-[560px] md:max-h-none md:absolute md:inset-y-0 md:right-0 md:h-full md:w-[44%] xl:w-[48%]">
         <img
           src="/dra-isabela-bertoglio.webp"
           alt={`${DOCTOR_NAME}, nutróloga, em seu consultório`}
           width="892"
           height="1280"
           srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w"
-          sizes="48vw"
-          // lazy: escondida no celular, não é baixada lá; no desktop o index.html já faz o preload
+          sizes="(min-width: 768px) 48vw, 100vw"
+          // lazy: no celular fica abaixo da dobra e não disputa banda com o título; no desktop o index.html faz o preload
           loading="lazy"
           className="w-full h-full object-cover"
           style={{ objectPosition: '50% 18%' }}
         />
-        {/* Funde a foto com o fundo pela esquerda */}
-        <div className="absolute inset-0 -left-0.5 bg-gradient-to-r from-brand-dark via-brand-dark/10 to-transparent" />
+        {/* Funde a foto com o fundo: pelo topo no celular, pela esquerda no desktop */}
+        <div className="absolute inset-0 md:-left-0.5 bg-gradient-to-b from-brand-dark via-transparent to-transparent md:bg-gradient-to-r md:from-brand-dark md:via-brand-dark/10" />
       </div>
     </section>
   );

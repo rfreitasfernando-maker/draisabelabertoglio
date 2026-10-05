@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Highlights from '@/components/Highlights';
 import IdentificationBlock from '@/components/IdentificationBlock';
 import KeywordsTicker from '@/components/KeywordsTicker';
 import HowItWorks from '@/components/HowItWorks';
@@ -24,13 +23,12 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Dra. Isabela Bertoglio - Nutrologia Clínica | Emagrecimento Personalizado</title>
-        <meta name="description" content="Protocolos médicos para perda de peso sustentável. Emagrecimento que respeita seu corpo, seu tempo e sua história com a Dra. Isabela Bertoglio." />
+        <title>Nutróloga em São Paulo | Emagrecimento com Acompanhamento Médico – Dra. Isabela Bertoglio</title>
+        <meta name="description" content="Nutróloga no Paraíso (SP). Emagrecimento com acompanhamento médico de 3 a 6 meses, bioimpedância e plano adaptado à sua rotina. Doutorado USP. Agende sua avaliação." />
       </Helmet>
       <div className="min-h-screen bg-white text-brand-dark relative">
         <Header />
         <Hero />
-        <Highlights />
         <AboutDoctor />
         <IdentificationBlock />
         <KeywordsTicker />

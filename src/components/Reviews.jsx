@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
-
-// Ficha da Dra. Isabela no Google Maps (CID do mesmo local do mapa do site).
-const GOOGLE_REVIEWS_URL = 'https://maps.google.com/?cid=17414812094946494450';
+import { GOOGLE_REVIEWS_URL } from '@/lib/doctor';
 
 // Trechos de avaliações reais do Google (nota 5). Só corrigimos digitação e espaçamento.
 const reviews = [

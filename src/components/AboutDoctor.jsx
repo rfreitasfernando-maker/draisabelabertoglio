@@ -42,6 +42,8 @@ const AboutDoctor = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img 
                   src="/dra-isabela-consultorio.webp"
+                  srcSet="/dra-isabela-consultorio-600.webp 600w, /dra-isabela-consultorio.webp 900w"
+                  sizes="(min-width: 768px) 40vw, 100vw"
                   width="900"
                   height="1149"
                   alt="Dra. Isabela Bertoglio em seu consultório na Clínica Belvitá"

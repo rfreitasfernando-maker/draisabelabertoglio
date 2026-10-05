@@ -26,7 +26,7 @@ const KeywordRow = () => (
 
 const KeywordsTicker = () => {
   return (
-    <div className="bg-white border-y border-brand-gold/10 py-4 overflow-hidden">
+    <div className="bg-white border-y border-brand-gold/10 py-4 overflow-hidden" aria-hidden="true">
       <motion.div
         className="flex"
         animate={{ x: ['0%', '-50%'] }}

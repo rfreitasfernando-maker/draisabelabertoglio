@@ -118,12 +118,12 @@ const Clinica = () => {
           </div>
 
           {snapCount > 1 && (
-            <div className="flex justify-center gap-1 mt-6">
+            <div className="flex justify-center mt-6">
               {Array.from({ length: snapCount }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => emblaApi?.scrollTo(index)}
-                  className="p-2 flex items-center justify-center"
+                  className="w-11 h-11 flex items-center justify-center"
                   aria-label={`Ir para a foto ${index + 1}`}
                   aria-current={index === selectedIndex}
                 >

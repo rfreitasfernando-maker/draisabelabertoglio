@@ -45,7 +45,7 @@ const GoogleMapsEmbed = () => {
               href={MAP_DIRECTIONS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block py-3 px-4 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
+              className="inline-flex items-center min-h-[44px] py-3 px-4 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
             >
               Como Chegar →
             </a>

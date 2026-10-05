@@ -6,6 +6,12 @@ import { capturarCliqueAnuncio } from '@/lib/cliqueAnuncio';
 
 capturarCliqueAnuncio();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <App />
-);
+const root = document.getElementById('root');
+
+// Em produção o #root já chega com o HTML pré-renderizado (tools/prerender.js): só hidratamos.
+// No `npm run dev` ele vem vazio e renderizamos do zero.
+if (root.hasChildNodes()) {
+  ReactDOM.hydrateRoot(root, <App />);
+} else {
+  ReactDOM.createRoot(root).render(<App />);
+}

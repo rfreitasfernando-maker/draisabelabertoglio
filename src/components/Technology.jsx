@@ -173,6 +173,8 @@ const Technology = () => {
                     <div className="relative aspect-[2/1] overflow-hidden bg-black">
                       <img
                         src={result.src}
+                        srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 800w`}
+                        sizes="(min-width: 768px) 33vw, 85vw"
                         alt={`Antes e depois com Unyque Pro - ${result.area}`}
                         width="800"
                         height="400"

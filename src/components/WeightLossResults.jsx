@@ -56,6 +56,8 @@ const WeightLossResults = () => {
             <div className="relative aspect-[3/2] overflow-hidden bg-brand-warm">
               <img
                 src={result.src}
+                srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 900w`}
+                sizes="(min-width: 768px) 33vw, 85vw"
                 alt={`Antes e depois de paciente no acompanhamento de emagrecimento, caso ${index + 1}`}
                 width="900"
                 height="600"

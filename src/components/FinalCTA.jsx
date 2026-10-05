@@ -45,7 +45,7 @@ const FinalCTA = () => {
             onClick={(e) => trackWhatsappClick('contato_telefone', e)}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-8 py-3 text-xs tracking-[0.2em] uppercase text-brand-light-gray/50 font-sans hover:text-brand-gold transition-colors duration-300"
+            className="flex items-center justify-center min-h-[44px] mt-8 py-3 text-xs tracking-[0.2em] uppercase text-brand-light-gray font-sans hover:text-brand-gold transition-colors duration-300"
           >
             WhatsApp: (11) 99975-8182
           </a>

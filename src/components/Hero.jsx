@@ -24,13 +24,8 @@ const Hero = () => {
     <section id="hero" className="relative bg-brand-dark overflow-hidden flex flex-col md:block md:min-h-screen">
       <div className="relative z-10 md:min-h-screen flex items-center">
         <div className="container mx-auto px-6 lg:px-8 pt-24 pb-10 xl:pt-28 md:pb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-xl lg:max-w-2xl md:w-[56%] xl:w-[52%]"
-          >
-            <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-brand-gold mb-4 md:mb-5">
+          <div className="max-w-xl lg:max-w-2xl md:w-[56%] xl:w-[52%]">
+            <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold)_85%,white)] mb-4 md:mb-5">
               Nutrologia · Emagrecimento · Paraíso, SP
             </p>
 
@@ -60,7 +55,7 @@ const Hero = () => {
               {/* Desktop: botão outline. Mobile: link de texto discreto, para não competir com o CTA. */}
               <button
                 onClick={scrollToAbout}
-                className="self-center md:self-auto font-sans text-sm text-white/70 underline underline-offset-4 decoration-white/30 hover:text-white md:whitespace-nowrap md:no-underline md:text-xs md:font-medium md:tracking-[0.12em] xl:tracking-[0.2em] md:uppercase md:border md:border-white/30 md:px-5 xl:px-8 md:py-4 md:min-h-[52px] md:hover:bg-white md:hover:text-brand-dark transition-all duration-500"
+                className="self-center md:self-auto py-3 font-sans text-sm text-white/70 underline underline-offset-4 decoration-white/30 hover:text-white md:whitespace-nowrap md:no-underline md:text-xs md:font-medium md:tracking-[0.12em] xl:tracking-[0.2em] md:uppercase md:border md:border-white/30 md:px-5 xl:px-8 md:py-4 md:min-h-[52px] md:hover:bg-white md:hover:text-brand-dark transition-all duration-500"
               >
                 Conheça a Dra. Isabela
               </button>
@@ -90,7 +85,7 @@ const Hero = () => {
               </p>
             </div>
 
-          </motion.div>
+          </div>
 
           {/* Benefícios */}
           <ul className="mt-6 grid grid-cols-2 md:flex md:flex-wrap md:pr-20 xl:pr-0 xl:max-w-[52%] gap-2">
@@ -114,7 +109,8 @@ const Hero = () => {
           alt={`${DOCTOR_NAME}, nutróloga, em seu consultório`}
           width="892"
           height="1280"
-          fetchPriority="high"
+          srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w"
+          sizes="(min-width: 768px) 48vw, 100vw"
           className="w-full h-full object-cover"
           style={{ objectPosition: '50% 18%' }}
         />

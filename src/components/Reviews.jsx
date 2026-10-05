@@ -90,7 +90,7 @@ const Reviews = () => {
             href={GOOGLE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300"
+            className="mt-1 inline-block py-3 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300"
           >
             Ver todas as avaliações no Google →
           </a>

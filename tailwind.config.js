@@ -17,8 +17,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				serif: ['Cormorant Garamond', 'Georgia', 'Times New Roman', 'serif'],
-				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				serif: ['Cormorant Garamond', 'Cormorant Garamond Fallback', 'Georgia', 'Times New Roman', 'serif'],
+				sans: ['Inter', 'Inter Fallback', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			colors: {
 				"brand-gold": "#A58A59",

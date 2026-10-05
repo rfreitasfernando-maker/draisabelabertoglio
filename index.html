@@ -23,7 +23,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- Fontes sem bloquear a renderização: o texto aparece com a fonte do sistema e troca quando a fonte chega -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" /></noscript>
+    <!-- No desktop a foto do hero é o maior elemento da primeira dobra: começa a baixar já -->
+    <link rel="preload" as="image" href="/dra-isabela-bertoglio.webp" imagesrcset="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w" imagesizes="48vw" media="(min-width: 768px)" fetchpriority="high" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

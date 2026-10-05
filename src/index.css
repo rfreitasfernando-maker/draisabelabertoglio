@@ -1,3 +1,26 @@
+/*
+ * Fontes de reserva com métricas ajustadas às do Google Fonts (medidas no navegador).
+ * As fontes do Google carregam sem bloquear a página; enquanto não chegam, o texto usa estas,
+ * que ocupam o mesmo espaço. Assim a troca não desloca o layout (CLS).
+ */
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Times New Roman'), local('TimesNewRomanPSMT');
+  size-adjust: 96.7%;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Times New Roman Italic'), local('TimesNewRomanPS-ItalicMT');
+  size-adjust: 86%;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('ArialMT'), local('Roboto');
+  size-adjust: 106%;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,7 +63,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.7;
@@ -48,7 +71,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, 'Times New Roman', serif;
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.15;
@@ -57,9 +80,9 @@
 
 @layer utilities {
   .font-serif {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, 'Times New Roman', serif;
   }
   .font-sans {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }

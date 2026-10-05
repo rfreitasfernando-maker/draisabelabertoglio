@@ -54,6 +54,8 @@ const Header = () => {
             >
               <img
                 src="/logo-monograma.webp"
+                srcSet="/logo-monograma-118.webp 118w, /logo-monograma.webp 203w"
+                sizes="(min-width: 768px) 59px, 46px"
                 alt="Clínica Belvitá"
                 width="203"
                 height="192"

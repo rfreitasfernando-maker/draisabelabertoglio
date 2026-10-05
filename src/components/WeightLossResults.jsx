@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 /**
  * Antes e depois de pacientes da Dra. Isabela no acompanhamento de emagrecimento.
@@ -11,11 +12,20 @@ const results = [
   { src: '/resultados/emagrecimento-1.webp' },
   { src: '/resultados/emagrecimento-2.webp' },
   { src: '/resultados/emagrecimento-3.webp' },
+  { src: '/resultados/emagrecimento-4.webp' },
 ];
 
 const WeightLossResults = () => {
-  // Com até 3 casos, centraliza no desktop; com mais, vira carrossel também no desktop.
-  const centralizar = results.length <= 3 ? 'md:justify-center' : '';
+  const trilho = useRef(null);
+  // Com até 3 casos, centraliza no desktop; com mais, vira carrossel com setas também no desktop.
+  const carrosselDesktop = results.length > 3;
+  const centralizar = carrosselDesktop ? '' : 'md:justify-center';
+
+  const rolar = (direcao) => {
+    const el = trilho.current;
+    if (el) el.scrollBy({ left: direcao * el.clientWidth, behavior: 'smooth' });
+  };
+  const seta = 'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center bg-white/90 text-brand-dark shadow-md hover:bg-brand-gold hover:text-white transition-all duration-300';
 
   return (
     <div className="mt-14 md:mt-16">
@@ -28,7 +38,18 @@ const WeightLossResults = () => {
         </h3>
       </div>
 
-      <div className={`-mx-6 px-6 md:mx-0 md:px-0 flex ${centralizar} gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory scroll-px-6 md:scroll-px-0 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}>
+      <div className="relative">
+      {carrosselDesktop && (
+        <>
+          <button onClick={() => rolar(-1)} className={`${seta} -left-5`} aria-label="Casos anteriores">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button onClick={() => rolar(1)} className={`${seta} -right-5`} aria-label="Próximos casos">
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </>
+      )}
+      <div ref={trilho} className={`-mx-6 px-6 md:mx-0 md:px-0 flex ${centralizar} gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory scroll-px-6 md:scroll-px-0 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}>
         {results.map((result, index) => (
           <figure key={result.src} className="shrink-0 basis-[85%] sm:basis-[60%] md:basis-[calc((100%-2.5rem)/3)] snap-start">
             <div className="relative aspect-[3/2] overflow-hidden bg-brand-warm">
@@ -52,12 +73,13 @@ const WeightLossResults = () => {
           </figure>
         ))}
       </div>
+      </div>
 
       {results.length > 1 && (
         <p className="mt-3 text-center text-[11px] font-sans text-brand-light-gray md:hidden">Deslize para ver mais</p>
       )}
       <p className="mt-4 text-center text-xs font-sans font-light text-brand-light-gray leading-relaxed">
-        Imagens publicadas com autorização das pacientes. Os resultados variam de pessoa para pessoa e dependem de avaliação e acompanhamento médico.
+        Imagens publicadas com autorização dos pacientes. Os resultados variam de pessoa para pessoa e dependem de avaliação e acompanhamento médico.
       </p>
     </div>
   );

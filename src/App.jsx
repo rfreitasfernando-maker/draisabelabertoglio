@@ -32,9 +32,9 @@ function App() {
         <AboutDoctor />
         <IdentificationBlock />
         <KeywordsTicker />
+        <Reviews />
         <HowItWorks />
         <Technology />
-        <Reviews />
         <Clinica />
         <GoogleMapsEmbed />
         <FAQ />

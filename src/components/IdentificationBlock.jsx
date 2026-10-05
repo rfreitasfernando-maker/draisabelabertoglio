@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Ban, ShieldAlert, Target, Sparkles, ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import WeightLossResults from '@/components/WeightLossResults';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
@@ -62,6 +63,8 @@ const IdentificationBlock = () => {
               </motion.div>
             ))}
           </div>
+
+          <WeightLossResults />
 
           <div className="text-center mt-10">
             <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('identificacao', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">

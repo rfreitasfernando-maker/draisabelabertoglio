@@ -9,11 +9,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  * Só entram fotos reais, sem edição, de pacientes que autorizaram o uso.
  */
 const results = [
+  { src: '/resultados/emagrecimento-4.webp' },
+  { src: '/resultados/emagrecimento-5.webp' },
   { src: '/resultados/emagrecimento-1.webp' },
   { src: '/resultados/emagrecimento-2.webp' },
   { src: '/resultados/emagrecimento-3.webp' },
-  { src: '/resultados/emagrecimento-4.webp' },
-  { src: '/resultados/emagrecimento-5.webp' },
 ];
 
 const WeightLossResults = () => {

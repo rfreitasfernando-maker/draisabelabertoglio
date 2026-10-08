@@ -13,8 +13,10 @@ import PaginaDoBlog from '@/blog/PaginaDoBlog';
 
 const textos = import.meta.glob('./posts/*.html', { query: '?raw', import: 'default', eager: true });
 
-// Mais recentes primeiro
-const posts = [...POSTS].sort((a, b) => b.publicadoEm.localeCompare(a.publicadoEm));
+// Mais recentes primeiro; na mesma data, o último cadastrado em posts/index.js vem antes.
+const posts = POSTS.map((post, ordem) => ({ post, ordem }))
+  .sort((a, b) => b.post.publicadoEm.localeCompare(a.post.publicadoEm) || b.ordem - a.ordem)
+  .map(({ post }) => post);
 const slugs = new Set(posts.map((post) => post.slug));
 
 const conteudos = new Map(

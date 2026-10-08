@@ -48,7 +48,10 @@ export const CardDoPost = ({ post, minutos, Titulo = 'h2', destaque = false }) =
           width={post.capa.largura}
           height={post.capa.altura}
           alt={post.capa.alt}
-          loading="lazy"
+          // O card em destaque fica na primeira dobra da lista: carrega já; os demais, só ao chegar perto.
+          loading={destaque ? 'eager' : 'lazy'}
+          // eslint-disable-next-line react/no-unknown-property -- o React 18 só repassa este atributo escrito em minúsculas
+          fetchpriority={destaque ? 'high' : undefined}
           decoding="async"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />

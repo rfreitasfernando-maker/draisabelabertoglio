@@ -1,7 +1,9 @@
 // Posts do blog. Cada post tem uma entrada aqui e o texto em ./<slug>.html (o HTML do artigo, sem o título,
 // a assinatura e o aviso, que a página monta). Datas no formato AAAA-MM-DD.
 //
-// Opcionais: `aviso` troca o aviso final padrão; `mencoes` lista o que o texto cita (schema.org `mentions`).
+// Opcional: `aviso` troca o aviso final padrão.
+// Não use o tipo `Drug` nos dados estruturados: o Google o lê como produto à venda e acusa erro
+// por falta de preço e avaliação.
 //
 // Capa: o original vai em fotos-originais/blog/ e as versões otimizadas saem de
 //   node tools/imagens-blog.js capa <original> <slug>
@@ -73,10 +75,6 @@ export const POSTS = [
       legenda: 'Imagem ilustrativa',
     },
     tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
-    mencoes: [
-      { '@type': 'Drug', name: 'Tirzepatida', nonProprietaryName: 'tirzepatida', prescriptionStatus: 'https://schema.org/PrescriptionOnly' },
-      { '@type': 'Drug', name: 'Semaglutida', nonProprietaryName: 'semaglutida', prescriptionStatus: 'https://schema.org/PrescriptionOnly' },
-    ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Todo tratamento medicamentoso envolve riscos, exige prescrição e depende de avaliação individual com médico.',
   },

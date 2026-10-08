@@ -114,7 +114,6 @@ export function headDoPost(post, conteudo) {
       lastReviewed: post.atualizadoEm,
       audience: { '@type': 'MedicalAudience', audienceType: 'Pacientes' },
       about: post.tema,
-      ...(post.mencoes && { mentions: post.mencoes }),
       author: { '@id': ID_MEDICA },
       reviewedBy: { '@id': ID_MEDICA },
       publisher: { '@id': ID_CLINICA },

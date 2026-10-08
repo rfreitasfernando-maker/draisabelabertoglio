@@ -1,6 +1,8 @@
 // Posts do blog. Cada post tem uma entrada aqui e o texto em ./<slug>.html (o HTML do artigo, sem o título,
 // a assinatura e o aviso, que a página monta). Datas no formato AAAA-MM-DD.
 //
+// Opcionais: `aviso` troca o aviso final padrão; `mencoes` lista o que o texto cita (schema.org `mentions`).
+//
 // Capa: o original vai em fotos-originais/blog/ e as versões otimizadas saem de
 //   node tools/imagens-blog.js capa <original> <slug>
 // que imprime a largura e a altura a preencher em `capa`.
@@ -52,5 +54,30 @@ export const POSTS = [
     },
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e a indicação de qualquer tratamento dependem de avaliação individual com médico.',
+  },
+  {
+    slug: 'tirzepatida-ou-semaglutida',
+    titulo: 'Tirzepatida ou semaglutida: diferenças entre as canetas para emagrecer e como é a indicação em São Paulo',
+    tituloSeo: 'Tirzepatida ou semaglutida: diferenças | Médica em São Paulo',
+    descricao:
+      'Tirzepatida ou semaglutida? Entenda como cada uma age, o que mostraram os estudos e os efeitos colaterais. Acompanhamento médico em São Paulo.',
+    tituloSocial: 'Tirzepatida ou semaglutida: diferenças entre as canetas para emagrecer',
+    descricaoSocial:
+      'Mecanismo, resultados dos estudos, efeitos colaterais e quem não deve usar: entenda a diferença entre tirzepatida e semaglutida.',
+    publicadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Duas canetas injetáveis para emagrecer, uma de tirzepatida e outra de semaglutida, lado a lado sobre uma mesa',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'Drug', name: 'Tirzepatida', nonProprietaryName: 'tirzepatida', prescriptionStatus: 'https://schema.org/PrescriptionOnly' },
+      { '@type': 'Drug', name: 'Semaglutida', nonProprietaryName: 'semaglutida', prescriptionStatus: 'https://schema.org/PrescriptionOnly' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Todo tratamento medicamentoso envolve riscos, exige prescrição e depende de avaliação individual com médico.',
   },
 ];

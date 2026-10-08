@@ -6,3 +6,6 @@ export const WHATSAPP_UNYQUE_URL = 'https://api.whatsapp.com/send?phone=55119997
 
 // CTAs das páginas do blog: mesmo número, mensagem que identifica a origem para a equipe.
 export const WHATSAPP_BLOG_URL = 'https://api.whatsapp.com/send?phone=5511999758182&text=Ol%C3%A1!%20Vim%20pelo%20Blog%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Dra.%20Isabela';
+
+// Link com mensagem própria, para os posts do blog que pedem uma (`mensagemWhatsapp` em src/blog/posts/index.js).
+export const linkWhatsapp = (mensagem) => `https://api.whatsapp.com/send?phone=5511999758182&text=${encodeURIComponent(mensagem)}`;

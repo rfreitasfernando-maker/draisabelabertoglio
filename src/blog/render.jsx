@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { POSTS } from '@/blog/posts';
 import { prepararConteudo } from '@/blog/conteudo';
+import { linkWhatsapp } from '@/lib/whatsapp';
 import { headDoPost, headDoBlog, SITE_URL, URL_DO_BLOG, urlDoPost } from '@/blog/seo';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
@@ -20,7 +21,8 @@ const conteudos = new Map(
   posts.map((post) => {
     const html = textos[`./posts/${post.slug}.html`];
     if (html === undefined) throw new Error(`blog: falta o texto src/blog/posts/${post.slug}.html`);
-    return [post.slug, prepararConteudo(html, slugs)];
+    const link = post.mensagemWhatsapp ? linkWhatsapp(post.mensagemWhatsapp) : undefined;
+    return [post.slug, prepararConteudo(html, slugs, link)];
   }),
 );
 const minutosDe = (post) => conteudos.get(post.slug).minutosDeLeitura;

@@ -24,13 +24,13 @@ export const slugDe = (texto) =>
 /**
  * Prepara o HTML de um post (src/blog/posts/<slug>.html) para a página:
  * - dá um id a cada <h2> e devolve a lista para o índice "Neste artigo";
- * - completa os CTAs `<a data-whatsapp="origem">` com o link de WhatsApp do blog;
+ * - completa os CTAs `<a data-whatsapp="origem">` com o link de WhatsApp do blog (ou o do post);
  * - desfaz links para posts do blog que ainda não existem (o texto fica, o link volta sozinho
  *   quando o post for publicado);
  * - extrai as perguntas frequentes (<details> com <summary><h3>) para os dados estruturados;
  * - calcula o tempo de leitura.
  */
-export function prepararConteudo(html, slugsPublicados) {
+export function prepararConteudo(html, slugsPublicados, linkWhatsapp = WHATSAPP_BLOG_URL) {
   const secoes = [];
   const idsUsados = new Set();
 
@@ -44,7 +44,7 @@ export function prepararConteudo(html, slugsPublicados) {
 
   pronto = pronto.replace(
     /<a ([^>]*?)data-whatsapp="([^"]+)"/g,
-    (_, antes, origem) => `<a href="${WHATSAPP_BLOG_URL.replace(/&/g, '&amp;')}" target="_blank" rel="noopener noreferrer" ${antes}data-whatsapp="${origem}"`,
+    (_, antes, origem) => `<a href="${linkWhatsapp.replace(/&/g, '&amp;')}" target="_blank" rel="noopener noreferrer" ${antes}data-whatsapp="${origem}"`,
   );
 
   pronto = pronto.replace(/<a href="\/blog\/([a-z0-9-]+)"[^>]*>([\s\S]*?)<\/a>/g, (link, slug, texto) => {

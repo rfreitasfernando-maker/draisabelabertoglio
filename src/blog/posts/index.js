@@ -1,7 +1,8 @@
 // Posts do blog. Cada post tem uma entrada aqui e o texto em ./<slug>.html (o HTML do artigo, sem o título,
 // a assinatura e o aviso, que a página monta). Datas no formato AAAA-MM-DD.
 //
-// Opcional: `aviso` troca o aviso final padrão.
+// Opcionais: `aviso` troca o aviso final padrão; `mensagemWhatsapp` troca a mensagem dos botões de WhatsApp
+// dentro do texto (cabeçalho e botão flutuante seguem com a mensagem padrão do blog).
 // Não use o tipo `Drug` nos dados estruturados: o Google o lê como produto à venda e acusa erro
 // por falta de preço e avaliação.
 //
@@ -98,5 +99,34 @@ export const POSTS = [
     tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Todo tratamento medicamentoso envolve riscos, exige prescrição e depende de avaliação individual com médico.',
+  },
+  {
+    slug: 'unyque-pro-celulite-flacidez',
+    // Lipedema fica só no corpo do texto, não no título nem no endereço (pedido da clínica).
+    titulo: 'Unyque Pro para celulite e flacidez: como é o tratamento na Clínica Belvitá, em São Paulo',
+    tituloSeo: 'Unyque Pro para celulite e flacidez em São Paulo',
+    descricao:
+      'Unyque Pro para celulite, flacidez, gordura localizada e lipedema: veja como age cada tecnologia e como é o tratamento na Clínica Belvitá, em São Paulo.',
+    tituloSocial: 'Unyque Pro para celulite e flacidez na Clínica Belvitá',
+    descricaoSocial:
+      'Três tecnologias em um só equipamento para celulite, flacidez e gordura localizada, com uso complementar no lipedema. Sem cortes e sem agulhas.',
+    publicadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Equipamento Unyque Pro com as ponteiras ReFreeze, Cryo RF Max e HImFU ao lado de paciente para tratamento de celulite e flacidez',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: {
+      '@type': 'MedicalProcedure',
+      name: 'Unyque Pro',
+      procedureType: 'https://schema.org/NoninvasiveProcedure',
+      bodyLocation: 'Abdômen, flancos, coxas, glúteos, braços e pernas',
+    },
+    // Mensagem própria dos botões de WhatsApp no texto deste post
+    mensagemWhatsapp: 'Olá, tenho interesse no Unyque Pro com a Dra. Isabela Bertoglio. Pode me ajudar?',
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Todo procedimento, inclusive não invasivo, pode ter efeitos adversos, e a indicação depende de avaliação individual com médico. Os resultados variam de pessoa para pessoa.',
   },
 ];

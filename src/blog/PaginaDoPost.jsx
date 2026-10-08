@@ -6,6 +6,7 @@ import { formatarData, CardDoPost, Trilha, CLASSE_SOBRETITULO } from '@/blog/par
 
 const AVATAR = `${PASTA_IMAGENS}/dra-isabela-bertoglio-avatar.webp`;
 
+// Aviso padrão ao fim do post; um post pode trazer o seu em `aviso` (src/blog/posts/index.js).
 const AVISO =
   'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Todo tratamento, inclusive medicamentoso, envolve riscos, e a indicação depende de avaliação individual com médico.';
 
@@ -89,7 +90,7 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
 
               <div className="post-conteudo" dangerouslySetInnerHTML={{ __html: conteudo.html }} />
 
-              <p className="mt-12 pt-6 border-t border-brand-gold/15 text-sm font-sans italic text-brand-light-gray leading-relaxed">{AVISO}</p>
+              <p className="mt-12 pt-6 border-t border-brand-gold/15 text-sm font-sans italic text-brand-light-gray leading-relaxed">{post.aviso ?? AVISO}</p>
             </div>
 
             <aside className="hidden lg:block">

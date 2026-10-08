@@ -36,6 +36,7 @@ const CLINICA = {
   image: `${SITE_URL}/logo-belvita-quadrado.png`,
   telephone: '(11) 99975-8182',
   address: ENDERECO,
+  areaServed: { '@type': 'City', name: 'São Paulo' },
   priceRange: '$$$',
 };
 
@@ -55,6 +56,7 @@ const MEDICA = {
     { '@type': 'PropertyValue', propertyID: 'RQE', value: '86835' },
   ],
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo' },
+  areaServed: { '@type': 'City', name: 'São Paulo' },
 };
 
 const atributo = (valor) => String(valor).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');

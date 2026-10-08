@@ -17,6 +17,14 @@ const Footer = () => {
             className="h-16 w-auto opacity-80"
             loading="lazy"
           />
+          <nav aria-label="Rodapé">
+            <a
+              href="/blog"
+              className="inline-flex items-center min-h-[44px] px-2 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors duration-300"
+            >
+              Blog
+            </a>
+          </nav>
           <div className="space-y-1.5 text-xs font-sans font-light text-brand-dark-gray/80 leading-relaxed">
             <p>
               Responsável técnica: <span className="font-medium text-brand-dark-gray/80">{DOCTOR_NAME}</span> · {DOCTOR_CREDENTIALS}

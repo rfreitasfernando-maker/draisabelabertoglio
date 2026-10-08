@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MapModal from '@/components/MapModal';
-import { WHATSAPP_URL } from '@/lib/whatsapp';
-import { trackWhatsappClick } from '@/lib/tracking';
+import { CTA_SITE, CTA_BLOG } from '@/lib/cta';
 
-const Header = () => {
+// `blog`: nas páginas do blog os itens levam de volta às seções da página inicial (em vez de rolar até elas)
+// e o CTA usa o link e o evento do blog.
+const Header = ({ blog = false }) => {
+  const cta = blog ? CTA_BLOG : CTA_SITE;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,12 +33,50 @@ const Header = () => {
 
   const solid = scrolled || isMenuOpen;
 
+  const linkDaSecao = (id) => (id === 'hero' ? '/' : `/#${id}`);
+
   const navItems = [
-    { label: 'Início', onClick: () => scrollToSection('hero') },
-    { label: 'Sobre', onClick: () => scrollToSection('about') },
-    { label: 'Tecnologia', onClick: () => scrollToSection('tecnologia') },
+    { label: 'Início', secao: 'hero' },
+    { label: 'Sobre', secao: 'about' },
+    { label: 'Tecnologia', secao: 'tecnologia' },
     { label: 'Endereço', onClick: openMap, icon: MapPin },
+    { label: 'Blog', href: '/blog', atual: blog },
   ];
+
+  // Links de verdade (<a>) onde há outra página, para o Google seguir; botões para o que acontece nesta página.
+  const renderItem = (item, className) => {
+    const conteudo = (
+      <>
+        {item.icon && <item.icon className="w-3.5 h-3.5" />}
+        {item.label}
+      </>
+    );
+    const href = item.href ?? (blog && item.secao ? linkDaSecao(item.secao) : null);
+    if (href) {
+      return (
+        <a key={item.label} href={href} aria-current={item.atual ? 'page' : undefined} className={`${className} ${item.atual ? '!text-brand-gold' : ''}`}>
+          {conteudo}
+        </a>
+      );
+    }
+    return (
+      <button key={item.label} onClick={item.onClick ?? (() => scrollToSection(item.secao))} className={className}>
+        {conteudo}
+      </button>
+    );
+  };
+
+  const logo = (
+    <img
+      src="/logo-monograma.webp"
+      srcSet="/logo-monograma-118.webp 119w, /logo-monograma.webp 203w"
+      sizes="(min-width: 768px) 59px, 46px"
+      alt="Clínica Belvitá – logotipo"
+      width="203"
+      height="192"
+      className="h-11 md:h-14 w-auto"
+    />
+  );
 
   return (
     <>
@@ -47,40 +87,34 @@ const Header = () => {
       }`}>
         <nav className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center h-20 md:h-24 gap-10">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="flex items-center flex-shrink-0"
-              aria-label="Clínica Belvitá - voltar ao início"
-            >
-              <img
-                src="/logo-monograma.webp"
-                srcSet="/logo-monograma-118.webp 119w, /logo-monograma.webp 203w"
-                sizes="(min-width: 768px) 59px, 46px"
-                alt="Clínica Belvitá – logotipo"
-                width="203"
-                height="192"
-                className="h-11 md:h-14 w-auto"
-              />
-            </button>
+            {blog ? (
+              <a href="/" className="flex items-center flex-shrink-0" aria-label="Clínica Belvitá - página inicial">
+                {logo}
+              </a>
+            ) : (
+              <button
+                onClick={() => scrollToSection('hero')}
+                className="flex items-center flex-shrink-0"
+                aria-label="Clínica Belvitá - voltar ao início"
+              >
+                {logo}
+              </button>
+            )}
 
             <div className="hidden md:flex items-center gap-8 flex-1">
-              {navItems.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={item.onClick}
-                  className={`flex items-center gap-1.5 text-sm font-sans font-medium tracking-widest uppercase hover:text-brand-gold transition-colors duration-300 ${
+              {navItems.map((item) =>
+                renderItem(
+                  item,
+                  `flex items-center gap-1.5 text-sm font-sans font-medium tracking-widest uppercase hover:text-brand-gold transition-colors duration-300 ${
                     solid ? 'text-brand-dark-gray/80' : 'text-white/80'
-                  }`}
-                >
-                  {item.icon && <item.icon className="w-3.5 h-3.5" />}
-                  {item.label}
-                </button>
-              ))}
+                  }`,
+                ),
+              )}
             </div>
 
             <a
-              href={WHATSAPP_URL}
-              onClick={(e) => trackWhatsappClick('menu', e)}
+              href={cta.href}
+              onClick={(e) => cta.rastrear('menu', e)}
               target="_blank"
               rel="noopener noreferrer"
               className={`hidden md:block text-sm font-sans font-medium tracking-widest uppercase px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
@@ -111,20 +145,16 @@ const Header = () => {
                 className="md:hidden overflow-hidden border-t border-brand-gold/10"
               >
                 <div className="py-6 flex flex-col gap-1">
-                  {navItems.map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={item.onClick}
-                      className="flex items-center gap-2 px-2 py-4 min-h-[44px] text-sm font-sans font-medium tracking-widest uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors"
-                    >
-                      {item.icon && <item.icon className="w-3.5 h-3.5" />}
-                      {item.label}
-                    </button>
-                  ))}
+                  {navItems.map((item) =>
+                    renderItem(
+                      item,
+                      'flex items-center gap-2 px-2 py-4 min-h-[44px] text-sm font-sans font-medium tracking-widest uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors',
+                    ),
+                  )}
                   <a
-                    href={WHATSAPP_URL}
+                    href={cta.href}
                     onClick={(e) => {
-                      trackWhatsappClick('menu_mobile', e);
+                      cta.rastrear('menu_mobile', e);
                       setIsMenuOpen(false);
                     }}
                     target="_blank"

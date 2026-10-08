@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { createLogger, defineConfig } from 'vite';
@@ -5,6 +6,7 @@ import inlineEditPlugin from './plugins/visual-editor/vite-plugin-react-inline-e
 import editModeDevPlugin from './plugins/visual-editor/vite-plugin-edit-mode.js';
 import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-restoration.js';
 import selectionModePlugin from './plugins/selection-mode/vite-plugin-selection-mode.js';
+import { montarPaginaBlog } from './tools/blog-html.js';
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -264,6 +266,30 @@ const addTransformIndexHtml = {
 	},
 };
 
+// Páginas do blog no `npm run dev`: montadas no servidor a cada requisição, com o mesmo código do build
+// (src/blog/render.jsx). No build, quem gera os arquivos é tools/prerender.js.
+const blogDevPlugin = {
+	name: 'blog-dev',
+	configureServer(server) {
+		server.middlewares.use(async (req, res, next) => {
+			const caminho = req.url.split(/[?#]/)[0];
+			// Arquivos (imagens em /blog/imagens/...) seguem para o servidor de estáticos.
+			if (!/^\/blog(\/[^.]*)?$/.test(caminho)) return next();
+			try {
+				const { renderBlog } = await server.ssrLoadModule('/src/entry-server.jsx');
+				const pagina = renderBlog(caminho);
+				if (!pagina) return next();
+				const modelo = await server.transformIndexHtml(req.url, fs.readFileSync(path.resolve(__dirname, 'blog.html'), 'utf8'));
+				res.setHeader('Content-Type', 'text/html; charset=utf-8');
+				res.end(montarPaginaBlog(modelo, pagina));
+			} catch (erro) {
+				server.ssrFixStacktrace(erro);
+				next(erro);
+			}
+		});
+	},
+};
+
 console.warn = () => {};
 
 const logger = createLogger()
@@ -282,7 +308,7 @@ export default defineConfig({
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), iframeRouteRestorationPlugin(), selectionModePlugin()] : []),
 		react(),
-		...(isDev ? [addTransformIndexHtml] : []),
+		...(isDev ? [addTransformIndexHtml, blogDevPlugin] : []),
 	],
 	server: {
 		cors: true,
@@ -296,6 +322,11 @@ export default defineConfig({
 	},
 	build: {
 		rollupOptions: {
+			// blog.html é o modelo das páginas do blog; tools/prerender.js gera uma página por rota a partir dele.
+			input: {
+				main: path.resolve(__dirname, 'index.html'),
+				blog: path.resolve(__dirname, 'blog.html'),
+			},
 			external: [
 				'@babel/parser',
 				'@babel/traverse',

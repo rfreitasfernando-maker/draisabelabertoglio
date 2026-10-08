@@ -1,0 +1,198 @@
+/*
+ * Texto dos posts do blog (HTML de src/blog/posts/*.html). Importado só em src/blog/client.jsx,
+ * para a página inicial não carregar estes estilos.
+ * Fora de @layer de propósito: o Tailwind não procura classes nesses arquivos e descartaria estilos em camada.
+ */
+.post-conteudo {
+  --ouro-texto: #7f6536; /* dourado escurecido: contraste de leitura (4,5:1) sobre o branco */
+  @apply font-sans text-brand-dark-gray;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.post-conteudo > * + * {
+  margin-top: 1.25em;
+}
+.post-conteudo h2 {
+  @apply font-serif font-light text-brand-dark;
+  clear: both;
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-top: 2.25em;
+  scroll-margin-top: 7rem;
+}
+.post-conteudo h3 {
+  @apply font-serif font-normal text-brand-dark;
+  clear: both;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-top: 1.75em;
+}
+.post-conteudo h2 + *,
+.post-conteudo h3 + * {
+  margin-top: 0.75em;
+}
+.post-conteudo a {
+  color: var(--ouro-texto);
+  text-decoration: underline;
+  text-decoration-color: theme('colors.brand-gold / 40%');
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.3s;
+}
+.post-conteudo a:hover {
+  text-decoration-color: currentColor;
+}
+.post-conteudo strong {
+  @apply font-medium text-brand-dark;
+}
+.post-conteudo ul,
+.post-conteudo ol {
+  padding-left: 1.4em;
+}
+.post-conteudo ul {
+  list-style: disc;
+}
+.post-conteudo ol {
+  list-style: decimal;
+}
+.post-conteudo li + li {
+  margin-top: 0.5em;
+}
+.post-conteudo li::marker {
+  color: theme('colors.brand-gold');
+}
+
+/* Caixa "Resumo rápido" */
+.post-resumo {
+  @apply bg-brand-warm border-t-2 border-brand-gold;
+  padding: 1.5rem 1.75rem;
+}
+.post-resumo-titulo {
+  @apply text-xs font-medium uppercase text-brand-gold;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+.post-resumo ul {
+  margin: 0;
+}
+
+/* Chamada para o WhatsApp no meio do texto: mesmo tom escuro e botão dourado do hero */
+.post-cta {
+  @apply bg-brand-dark text-white/70;
+  clear: both;
+  margin-block: 2.5rem !important;
+  padding: 2rem 1.75rem;
+}
+@media (min-width: 768px) {
+  .post-cta {
+    padding: 2.5rem 2.75rem;
+  }
+}
+.post-cta-titulo {
+  @apply font-serif font-light text-white;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.post-conteudo a.post-cta-botao {
+  @apply inline-flex items-center justify-center bg-brand-gold text-white text-xs font-medium uppercase no-underline transition-all duration-500 hover:bg-white hover:text-brand-dark;
+  letter-spacing: 0.2em;
+  min-height: 52px;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+/* Tabela comparativa: rola na horizontal no celular */
+.post-tabela {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.post-tabela table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.post-tabela caption {
+  @apply text-left text-sm text-brand-light-gray;
+  caption-side: top;
+  padding-bottom: 0.75rem;
+}
+.post-tabela th,
+.post-tabela td {
+  @apply border-b border-brand-gold/15;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+.post-tabela thead th {
+  @apply bg-brand-dark text-white text-xs font-medium uppercase border-b-0;
+  letter-spacing: 0.12em;
+}
+.post-tabela tbody th {
+  @apply font-medium text-brand-dark;
+}
+.post-tabela tbody tr:nth-child(even) {
+  @apply bg-brand-cream;
+}
+
+/* Imagem dentro do texto: ao lado dos parágrafos no desktop, centralizada no celular */
+.post-figura {
+  width: 130px;
+  margin-inline: auto;
+}
+.post-figura img {
+  width: 100%;
+  height: auto;
+}
+.post-figura figcaption {
+  @apply text-xs text-brand-light-gray text-center;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .post-figura {
+    float: right;
+    width: 200px;
+    margin: 0.25rem 0 1.5rem 2.5rem !important;
+  }
+}
+
+/* Perguntas frequentes: sanfona sem JavaScript, como a da página inicial */
+.post-faq details {
+  @apply border-b border-brand-gold/15;
+}
+.post-faq h2 + details {
+  margin-top: 1.5rem;
+}
+.post-faq details + details {
+  margin-top: 0;
+}
+.post-faq summary {
+  @apply flex items-center justify-between gap-6 cursor-pointer list-none;
+  padding: 1.1rem 0;
+}
+.post-faq summary::-webkit-details-marker {
+  display: none;
+}
+.post-faq summary::after {
+  content: '+';
+  @apply font-sans font-light text-brand-gold text-2xl leading-none transition-transform duration-300;
+}
+.post-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.post-faq summary h3 {
+  @apply font-serif text-brand-dark;
+  clear: none;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.post-faq details p {
+  margin: 0 0 1.25rem;
+}
+
+.post-referencias {
+  @apply text-sm text-brand-light-gray;
+  line-height: 1.65;
+}

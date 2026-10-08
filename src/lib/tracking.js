@@ -18,3 +18,15 @@ export function trackWhatsappClick(origem, event) {
 
   link.href = linkComRefDoClique(url);
 }
+
+/**
+ * Chamado nos CTAs de WhatsApp das páginas do blog, com o próprio link clicado.
+ *
+ * Usa um evento próprio, 'blog_whatsapp_click': o gatilho da conversão do Google Ads no GTM compara
+ * o nome exato 'whatsapp_click', então os cliques do blog ficam fora da contagem de conversões.
+ * Pelo mesmo motivo não anexa o `[ref:CODIGO]` da BEL.IA.
+ */
+export function trackBlogWhatsappClick(origem, link) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'blog_whatsapp_click', whatsapp_url: link.getAttribute('href'), cta_location: origem });
+}

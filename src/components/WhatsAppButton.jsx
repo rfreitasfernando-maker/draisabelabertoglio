@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
-import { WHATSAPP_URL } from '@/lib/whatsapp';
-import { trackWhatsappClick } from '@/lib/tracking';
+import { CTA_SITE, CTA_BLOG } from '@/lib/cta';
 
-const WhatsAppButton = () => {
+// `blog`: nas páginas do blog usa o link e o evento do blog (fora da conversão do Google Ads).
+const WhatsAppButton = ({ blog = false }) => {
+  const cta = blog ? CTA_BLOG : CTA_SITE;
   // A barra do mobile só aparece depois da primeira dobra, para não competir com os botões do topo
   const [showBar, setShowBar] = useState(false);
 
@@ -19,8 +20,8 @@ const WhatsAppButton = () => {
     <>
       {/* Desktop: botão flutuante */}
       <motion.a
-        href={WHATSAPP_URL}
-        onClick={(e) => trackWhatsappClick('flutuante', e)}
+        href={cta.href}
+        onClick={(e) => cta.rastrear('flutuante', e)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco pelo WhatsApp"
@@ -48,8 +49,8 @@ const WhatsAppButton = () => {
             className="md:hidden fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur-md border-t border-brand-gold/15 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgba(0,0,0,0.06)]"
           >
             <a
-              href={WHATSAPP_URL}
-              onClick={(e) => trackWhatsappClick('barra_mobile', e)}
+              href={cta.href}
+              onClick={(e) => cta.rastrear('barra_mobile', e)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full min-h-[50px] bg-[#25D366] text-white font-sans text-xs font-semibold tracking-[0.15em] uppercase active:scale-[0.98] transition-transform"

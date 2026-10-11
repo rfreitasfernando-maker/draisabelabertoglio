@@ -16,7 +16,7 @@ const KeywordRow = () => (
     {keywords.map((word, i) => (
       <span key={i} className="flex items-center mx-6">
         <span className="w-1 h-1 rounded-full bg-brand-gold/40 mr-3 flex-shrink-0" />
-        <span className="text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold/60 whitespace-nowrap">
+        <span className="text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold whitespace-nowrap">
           {word}
         </span>
       </span>

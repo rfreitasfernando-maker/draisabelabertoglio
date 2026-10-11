@@ -72,7 +72,7 @@ const AboutDoctor = () => {
             >
               <div className="inline-flex items-center gap-3">
                 <div className="w-8 h-px bg-brand-gold" />
-                <span className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/60">{DOCTOR_CREDENTIALS}</span>
+                <span className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/80">{DOCTOR_CREDENTIALS}</span>
               </div>
               
               <ul className="space-y-4">

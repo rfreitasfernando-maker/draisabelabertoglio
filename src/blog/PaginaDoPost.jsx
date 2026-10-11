@@ -39,11 +39,11 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
               </p>
               <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-white leading-[1.08]">{post.titulo}</h1>
               <div className="mt-8 flex items-center gap-4">
-                <img src={AVATAR} alt="" width="128" height="128" className="w-12 h-12 rounded-full object-cover ring-1 ring-brand-gold/40" />
+                <img src={AVATAR} alt="" width="128" height="128" className="w-12 h-12 rounded-full object-cover ring-1 ring-brand-gold-light/40" />
                 <div className="font-sans leading-snug">
                   <p className="text-sm text-white/80">
                     Por{' '}
-                    <a href="/#about" className="font-medium text-white hover:text-brand-gold transition-colors duration-300">
+                    <a href="/#about" className="font-medium text-white hover:text-brand-gold-light transition-colors duration-300">
                       {DOCTOR_NAME}
                     </a>
                   </p>

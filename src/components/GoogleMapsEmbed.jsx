@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
-import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
@@ -29,6 +29,8 @@ const GoogleMapsEmbed = () => {
               {CLINIC_NAME}
               <br />
               {ADDRESS}
+              <br />
+              {HOURS}
               <br />
               <a
                 href={WHATSAPP_URL}

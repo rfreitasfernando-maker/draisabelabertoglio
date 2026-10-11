@@ -9,7 +9,7 @@ export const formatarData = (iso) => FORMATO_DATA.format(new Date(`${iso}T00:00:
 
 // Mesmo dourado claro do sobretítulo do hero da página inicial
 export const CLASSE_SOBRETITULO =
-  'text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold)_85%,white)]';
+  'text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold-light)_85%,white)]';
 
 export const Trilha = ({ itens }) => (
   <nav aria-label="Trilha de navegação" className="mb-8 md:mb-10">

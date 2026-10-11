@@ -1,6 +1,6 @@
 // Dados estruturados (JSON-LD) do site. A clínica e a médica têm o mesmo @id em todas as páginas,
 // para o Google tratá-las como as mesmas entidades. NAP igual ao da página e ao da ficha do Google (src/lib/location.js).
-import { DOCTOR_NAME } from '@/lib/doctor';
+import { DOCTOR_NAME, INSTAGRAM_URL } from '@/lib/doctor';
 import { CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { FAQ } from '@/lib/faq';
 
@@ -28,6 +28,16 @@ const ENDERECO = {
 
 // Posição do pin da ficha do Google (cid em src/lib/location.js).
 const COORDENADAS = { '@type': 'GeoCoordinates', latitude: -23.568869, longitude: -46.646175 };
+
+// Segunda a sexta, das 8h às 18h (HOURS em src/lib/location.js).
+const HORARIO = [
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+];
 
 const SAO_PAULO = { '@type': 'City', name: 'São Paulo' };
 
@@ -66,6 +76,7 @@ export const CLINICA = {
   address: ENDERECO,
   geo: COORDENADAS,
   hasMap: MAP_DIRECTIONS_URL,
+  openingHoursSpecification: HORARIO,
   areaServed: SAO_PAULO,
   availableService: SERVICOS,
   employee: { '@id': ID_MEDICA },
@@ -82,7 +93,11 @@ export const MEDICA = {
   worksFor: { '@id': ID_CLINICA },
   telephone: PHONE,
   address: ENDERECO,
+  geo: COORDENADAS,
   hasMap: MAP_DIRECTIONS_URL,
+  openingHoursSpecification: HORARIO,
+  medicalSpecialty: { '@type': 'MedicalSpecialty', name: 'Nutrologia' },
+  sameAs: [INSTAGRAM_URL, MAP_DIRECTIONS_URL],
   identifier: [
     { '@type': 'PropertyValue', propertyID: 'CRM-SP', value: '194436' },
     { '@type': 'PropertyValue', propertyID: 'RQE', value: '84645' },

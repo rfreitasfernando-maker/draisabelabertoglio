@@ -1,5 +1,5 @@
 import React from 'react';
-import { DOCTOR_NAME, DOCTOR_CREDENTIALS, COMPANY } from '@/lib/doctor';
+import { DOCTOR_NAME, DOCTOR_CREDENTIALS, COMPANY, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/doctor';
 import { ADDRESS } from '@/lib/location';
 
 const Footer = () => {
@@ -23,6 +23,15 @@ const Footer = () => {
               className="inline-flex items-center min-h-[44px] px-2 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors duration-300"
             >
               Blog
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Instagram da ${DOCTOR_NAME} (${INSTAGRAM_HANDLE}), abre em nova aba`}
+              className="inline-flex items-center min-h-[44px] px-2 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors duration-300"
+            >
+              Instagram {INSTAGRAM_HANDLE}
             </a>
           </nav>
           <div className="space-y-1.5 text-xs font-sans font-light text-brand-dark-gray/80 leading-relaxed">

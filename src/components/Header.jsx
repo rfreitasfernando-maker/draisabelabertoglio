@@ -105,8 +105,8 @@ const Header = ({ blog = false }) => {
               {navItems.map((item) =>
                 renderItem(
                   item,
-                  `flex items-center gap-1.5 text-sm font-sans font-medium tracking-widest uppercase hover:text-brand-gold transition-colors duration-300 ${
-                    solid ? 'text-brand-dark-gray/80' : 'text-white/80'
+                  `flex items-center gap-1.5 text-sm font-sans font-medium tracking-widest uppercase transition-colors duration-300 ${
+                    solid ? 'text-brand-dark-gray/80 hover:text-brand-gold' : 'text-white/80 hover:text-brand-gold-light'
                   }`,
                 ),
               )}
@@ -128,7 +128,7 @@ const Header = ({ blog = false }) => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center hover:text-brand-gold transition-colors ml-auto ${solid ? 'text-brand-dark-gray' : 'text-white'}`}
+              className={`md:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
               aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={isMenuOpen}
             >

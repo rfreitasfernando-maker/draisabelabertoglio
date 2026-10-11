@@ -25,12 +25,12 @@ const Hero = () => {
       <div className="relative z-10 md:min-h-screen flex items-center">
         <div className="container mx-auto px-6 lg:px-8 pt-24 pb-10 xl:pt-28 md:pb-12">
           <div className="max-w-xl lg:max-w-2xl md:w-[56%] xl:w-[52%]">
-            <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold)_85%,white)] mb-4 md:mb-5">
+            <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold-light)_85%,white)] mb-4 md:mb-5">
               Nutrologia · Emagrecimento · Paraíso, SP
             </p>
 
             <h1 className="text-[2.125rem] md:text-5xl lg:text-6xl font-serif font-light text-white leading-[1.08] mb-4 md:mb-6">
-              Emagrecimento com <span className="text-brand-gold italic">acompanhamento médico</span> de perto
+              Emagrecimento com <span className="text-brand-gold-light italic">acompanhamento médico</span> de perto
             </h1>
 
             <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 md:mb-8 max-w-lg">
@@ -68,13 +68,13 @@ const Hero = () => {
             {/* Prova social */}
             <div className="mt-6 md:mt-8 pt-5 border-t border-white/10">
               <p className="text-sm font-sans text-white/75 leading-relaxed">
-                <span className="text-brand-gold tracking-wide" aria-hidden="true">★★★★★</span>{' '}
+                <span className="text-brand-gold-light tracking-wide" aria-hidden="true">★★★★★</span>{' '}
                 <a
                   href={GOOGLE_REVIEWS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Nota 5,0 no Google: ver as avaliações (abre em nova aba)"
-                  className="font-medium text-white underline underline-offset-4 decoration-white/30 hover:decoration-brand-gold"
+                  className="font-medium text-white underline underline-offset-4 decoration-white/30 hover:decoration-brand-gold-light"
                 >
                   5,0 no Google
                 </a>
@@ -94,7 +94,7 @@ const Hero = () => {
                 key={item.texto}
                 className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 md:bg-brand-dark/70 md:backdrop-blur-sm px-3 py-2 text-[11px] md:text-xs font-sans text-white/80 leading-tight"
               >
-                <item.icon className="w-3.5 h-3.5 flex-shrink-0 text-brand-gold" strokeWidth={1.75} aria-hidden="true" />
+                <item.icon className="w-3.5 h-3.5 flex-shrink-0 text-brand-gold-light" strokeWidth={1.75} aria-hidden="true" />
                 {item.texto}
               </li>
             ))}

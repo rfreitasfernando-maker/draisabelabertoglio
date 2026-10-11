@@ -53,9 +53,10 @@ const WhatsAppButton = ({ blog = false }) => {
               onClick={(e) => cta.rastrear('barra_mobile', e)}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full min-h-[50px] bg-[#25D366] text-white font-sans text-xs font-semibold tracking-[0.15em] uppercase active:scale-[0.98] transition-transform"
+              className="flex items-center justify-center gap-3 w-full min-h-[50px] bg-[#25D366] text-brand-dark font-sans text-xs font-semibold tracking-[0.15em] uppercase active:scale-[0.98] transition-transform"
             >
-              <MessageCircle className="w-5 h-5 fill-white text-white" />
+              {/* Texto escuro no verde do WhatsApp: branco ficaria com contraste 2:1 */}
+              <MessageCircle className="w-5 h-5 fill-brand-dark text-brand-dark" />
               Agendar pelo WhatsApp
             </a>
           </motion.div>

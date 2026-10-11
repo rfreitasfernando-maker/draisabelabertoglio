@@ -21,10 +21,13 @@ module.exports = {
 				sans: ['Inter', 'Inter Fallback', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			colors: {
-				"brand-gold": "#A58A59",
+				// Dourado com contraste AA (≥ 4,5:1) sobre branco, creme e areia: texto pequeno e botões com texto branco.
+				"brand-gold": "#7E6944",
+				// Dourado original da marca: só sobre fundo escuro (brand-dark), onde ele tem contraste.
+				"brand-gold-light": "#A58A59",
 				"brand-dark": "#2C2824",
 				"brand-dark-gray": "#3A3530",
-				"brand-light-gray": "#7A756E",
+				"brand-light-gray": "#6E6962",
 				"brand-cream": "#FAF8F5",
 				"brand-warm": "#F5F0EB",
 

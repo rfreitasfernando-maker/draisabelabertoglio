@@ -1,7 +1,7 @@
 // llms.txt: resumo do site em Markdown para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
 // Gerado no build (tools/prerender.js) com os mesmos dados da página. Não acrescentar nada que a página não diga.
-import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
-import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { DOCTOR_NAME, DOCTOR_CREDENTIALS, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/doctor';
+import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { FAQ } from '@/lib/faq';
 import { SITE_URL, DESCRICAO_DA_CLINICA } from '@/lib/schema';
@@ -58,6 +58,7 @@ ${faq}
 - Endereço: ${ADDRESS}
 - Perto da estação Paraíso do metrô (linhas 1-Azul e 2-Verde)
 - Telefone e WhatsApp: ${PHONE}
+- Horário: ${HOURS}
 - Mapa: ${MAP_DIRECTIONS_URL}
 - Consultas particulares, com nota fiscal para reembolso
 
@@ -66,6 +67,7 @@ ${faq}
 - [Página inicial](${SITE_URL}/)
 - [Agendar pelo WhatsApp](${WHATSAPP_URL})
 - [Blog](${SITE_URL}/blog)
+- [Instagram ${INSTAGRAM_HANDLE}](${INSTAGRAM_URL})
 
 ## Artigos do blog
 

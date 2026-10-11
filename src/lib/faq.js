@@ -79,6 +79,6 @@ export const FAQ = [
   {
     pergunta: 'Como agendar uma avaliação com a Dra. Isabela Bertoglio?',
     resposta:
-      'Pelo WhatsApp (11) 99975-8182, que atende tanto o emagrecimento com acompanhamento médico quanto o Unyque Pro. As consultas são particulares e acontecem na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, em São Paulo, perto da estação Paraíso do metrô.',
+      'Pelo WhatsApp (11) 99975-8182, que atende tanto o emagrecimento com acompanhamento médico quanto o Unyque Pro. O atendimento é de segunda a sexta, das 8h às 18h. As consultas são particulares e acontecem na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, em São Paulo, perto da estação Paraíso do metrô.',
   },
 ];

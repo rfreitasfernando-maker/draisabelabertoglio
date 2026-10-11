@@ -13,7 +13,7 @@ const FAQItem = ({ question, answer, index }) => (
     <details className="group">
       <summary className="w-full flex items-center justify-between py-5 md:py-6 text-left cursor-pointer list-none [&::-webkit-details-marker]:hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-gold/40">
         <span className="flex items-center gap-4 pr-6">
-          <span className="flex-shrink-0 text-xs font-sans text-brand-gold/40 tracking-wider">
+          <span className="flex-shrink-0 text-xs font-sans text-brand-gold tracking-wider">
             {String(index + 1).padStart(2, '0')}
           </span>
           <h3 className="text-base md:text-lg font-serif font-normal transition-colors duration-300 text-brand-dark group-hover:text-brand-gold group-open:text-brand-gold">
@@ -22,7 +22,7 @@ const FAQItem = ({ question, answer, index }) => (
         </span>
         <ChevronDown className="w-4 h-4 flex-shrink-0 text-brand-gold/40 transition-transform duration-300 group-open:rotate-180" />
       </summary>
-      <p className="pb-6 pl-10 md:pl-12 text-sm md:text-base text-brand-dark-gray/55 leading-[1.9] font-light max-w-2xl">
+      <p className="pb-6 pl-10 md:pl-12 text-sm md:text-base text-brand-dark-gray/75 leading-[1.9] font-light max-w-2xl">
         {answer}
       </p>
     </details>

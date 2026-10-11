@@ -7,10 +7,10 @@ import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
 const photos = [
-  { src: '/clinica/recepcao.webp', label: 'Recepção' },
-  { src: '/clinica/espera.webp', label: 'Espaço de espera' },
-  { src: '/clinica/consultorio.webp', label: 'Consultório' },
-  { src: '/clinica/detalhes.webp', label: 'Detalhes do consultório' },
+  { src: '/clinica/clinica-belvita-recepcao.webp', label: 'Recepção' },
+  { src: '/clinica/clinica-belvita-sala-de-espera.webp', label: 'Espaço de espera' },
+  { src: '/clinica/clinica-belvita-consultorio.webp', label: 'Consultório' },
+  { src: '/clinica/clinica-belvita-detalhes-consultorio.webp', label: 'Detalhes do consultório' },
 ];
 
 const Clinica = () => {
@@ -82,7 +82,7 @@ const Clinica = () => {
                     <div className="relative overflow-hidden aspect-[2/3] md:aspect-[3/4] bg-brand-warm">
                       <img
                         src={photo.src}
-                        alt={`Clínica Belvitá - ${photo.label}`}
+                        alt={`${photo.label} da Clínica Belvitá, no Paraíso, em São Paulo`}
                         width="667"
                         height="1000"
                         loading="lazy"

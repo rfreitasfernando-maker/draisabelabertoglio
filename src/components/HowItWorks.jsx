@@ -82,8 +82,8 @@ const HowItWorks = () => {
           {/* Destaque do equipamento de bioimpedância da clínica */}
           <div className="mt-6 flex items-center gap-5 md:gap-8 bg-brand-cream border border-brand-gold/15 p-4 md:p-6">
             <img
-              src="/inbody-380.webp"
-              alt="Bioimpedância InBody 380"
+              src="/bioimpedancia-inbody-380.webp"
+              alt="Aparelho de bioimpedância InBody 380 usado na avaliação de emagrecimento"
               width="219"
               height="560"
               loading="lazy"

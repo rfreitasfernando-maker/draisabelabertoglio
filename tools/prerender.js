@@ -2,7 +2,8 @@
 // - página inicial: injeta o HTML do <App /> no #root do dist/index.html;
 // - blog: gera dist/blog.html e dist/blog/<slug>.html a partir do modelo (o próprio dist/blog.html que o Vite gerou).
 //   Com "cleanUrls" no vercel.json, a Vercel serve blog.html em /blog e blog/<slug>.html em /blog/<slug>;
-// - sitemap: gera dist/sitemap.xml com todas as páginas.
+// - sitemap: gera dist/sitemap.xml com todas as páginas;
+// - llms.txt: gera dist/llms.txt, o resumo do site para assistentes de IA.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -14,12 +15,17 @@ const indexPath = path.join(dist, 'index.html');
 const modeloBlogPath = path.join(dist, 'blog.html');
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js');
 
-const { render, renderBlog, rotasDoBlog, gerarSitemap } = await import(pathToFileURL(serverEntry).href);
+const { render, renderBlog, rotasDoBlog, gerarSitemap, gerarLlmsTxt, jsonLdDaHome } = await import(pathToFileURL(serverEntry).href);
 
 const html = fs.readFileSync(indexPath, 'utf8');
 const marcador = '<div id="root"></div>';
 if (!html.includes(marcador)) throw new Error('prerender: <div id="root"></div> não encontrado em dist/index.html');
-fs.writeFileSync(indexPath, html.replace(marcador, () => `<div id="root">${render()}</div>`));
+const marcadorJsonLd = '<!--json-ld-->';
+if (!html.includes(marcadorJsonLd)) throw new Error('prerender: <!--json-ld--> não encontrado em dist/index.html');
+fs.writeFileSync(
+  indexPath,
+  html.replace(marcadorJsonLd, () => jsonLdDaHome()).replace(marcador, () => `<div id="root">${render()}</div>`),
+);
 console.log('prerender: dist/index.html gerado com o HTML da página');
 
 // O modelo é lido antes de tudo: a página /blog vai ocupar o mesmo arquivo.
@@ -36,5 +42,8 @@ for (const rota of rotasDoBlog()) {
 
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), gerarSitemap());
 console.log('prerender: dist/sitemap.xml');
+
+fs.writeFileSync(path.join(dist, 'llms.txt'), gerarLlmsTxt());
+console.log('prerender: dist/llms.txt');
 
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true });

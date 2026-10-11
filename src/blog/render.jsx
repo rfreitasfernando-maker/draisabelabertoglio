@@ -10,6 +10,8 @@ import { linkWhatsapp } from '@/lib/whatsapp';
 import { headDoPost, headDoBlog, SITE_URL, URL_DO_BLOG, urlDoPost } from '@/blog/seo';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
+import { capaDoPost } from '@/blog/imagens';
+import { montarLlmsTxt } from '@/lib/llms';
 
 const textos = import.meta.glob('./posts/*.html', { query: '?raw', import: 'default', eager: true });
 
@@ -66,14 +68,46 @@ export function renderBlog(url) {
   };
 }
 
-/** sitemap.xml do site inteiro: página inicial, lista do blog e cada post. */
-export function gerarSitemap() {
+// Imagens da página inicial que valem aparecer na busca de imagens.
+const IMAGENS_DA_HOME = [
+  '/dra-isabela-bertoglio.jpg',
+  '/dra-isabela-consultorio.webp',
+  '/bioimpedancia-inbody-380.webp',
+  '/unyque/unyque-pro-equipamento.webp',
+  '/unyque/unyque-pro-antes-depois-coxas.webp',
+  '/unyque/unyque-pro-antes-depois-gluteo-coxa.webp',
+  '/unyque/unyque-pro-antes-depois-coxas-2.webp',
+  '/resultados/emagrecimento-antes-depois-1.webp',
+  '/resultados/emagrecimento-antes-depois-2.webp',
+  '/resultados/emagrecimento-antes-depois-3.webp',
+  '/resultados/emagrecimento-antes-depois-4.webp',
+  '/resultados/emagrecimento-antes-depois-5.webp',
+  '/clinica/clinica-belvita-recepcao.webp',
+  '/clinica/clinica-belvita-sala-de-espera.webp',
+  '/clinica/clinica-belvita-consultorio.webp',
+  '/clinica/clinica-belvita-detalhes-consultorio.webp',
+];
+
+/** sitemap.xml do site inteiro: página inicial, lista do blog e cada post, com as imagens de cada página. */
+export function gerarSitemap(hoje = new Date().toISOString().slice(0, 10)) {
   const maisRecente = posts.map((post) => post.atualizadoEm).sort().at(-1);
   const urls = [
-    { loc: `${SITE_URL}/` },
+    { loc: `${SITE_URL}/`, lastmod: hoje, imagens: IMAGENS_DA_HOME },
     ...(posts.length ? [{ loc: URL_DO_BLOG, lastmod: maisRecente }] : []),
-    ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm })),
+    ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm, imagens: [capaDoPost(post).social] })),
   ];
-  const itens = urls.map(({ loc, lastmod }) => `  <url>\n    <loc>${loc}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`);
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${itens.join('\n')}\n</urlset>\n`;
+  const itens = urls.map(({ loc, lastmod, imagens = [] }) =>
+    [
+      '  <url>',
+      `    <loc>${loc}</loc>`,
+      ...(lastmod ? [`    <lastmod>${lastmod}</lastmod>`] : []),
+      ...imagens.map((src) => `    <image:image>\n      <image:loc>${SITE_URL}${src}</image:loc>\n    </image:image>`),
+      '  </url>',
+    ].join('\n'),
+  );
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${itens.join('\n')}\n</urlset>\n`;
 }
+
+/** llms.txt do site: resumo da página inicial e lista dos posts (src/lib/llms.js). */
+export const gerarLlmsTxt = () =>
+  montarLlmsTxt(posts.map((post) => ({ titulo: post.titulo, descricao: post.descricao, url: urlDoPost(post) })));

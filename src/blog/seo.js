@@ -1,8 +1,9 @@
 // <head> das páginas do blog: título, descrição, canonical, prévia de compartilhamento e dados estruturados.
 import { DOCTOR_NAME } from '@/lib/doctor';
 import { capaDoPost, TAMANHOS_CAPA } from '@/blog/imagens';
+import { SITE_URL, NOME_DO_SITE, ID_CLINICA, ID_MEDICA, CLINICA, MEDICA, jsonLd } from '@/lib/schema';
 
-export const SITE_URL = 'https://www.draisabelabertoglio.com.br';
+export { SITE_URL };
 export const URL_DO_BLOG = `${SITE_URL}/blog`;
 export const urlDoPost = (post) => `${URL_DO_BLOG}/${post.slug}`;
 
@@ -12,58 +13,11 @@ export const BLOG = {
     'Artigos da Dra. Isabela Bertoglio, médica em São Paulo, sobre emagrecimento com acompanhamento médico, bioimpedância, medicamentos e manutenção do peso.',
 };
 
-const NOME_DO_SITE = 'Clínica Belvitá – Dra. Isabela Bertoglio';
-
-// Mesmos @id do index.html, para o Google tratar a clínica e a médica como as mesmas entidades em todo o site.
-const ID_CLINICA = `${SITE_URL}/#clinica`;
-const ID_MEDICA = `${SITE_URL}/#dra-isabela`;
-
-const ENDERECO = {
-  '@type': 'PostalAddress',
-  streetAddress: 'Rua Teixeira da Silva, 54, Conj. 81/82 – Paraíso',
-  addressLocality: 'São Paulo',
-  addressRegion: 'SP',
-  postalCode: '04002-030',
-  addressCountry: 'BR',
-};
-
-const CLINICA = {
-  '@type': 'MedicalClinic',
-  '@id': ID_CLINICA,
-  name: 'Clínica Belvitá',
-  url: `${SITE_URL}/`,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo-belvita-quadrado.png`, width: 1200, height: 1200 },
-  image: `${SITE_URL}/logo-belvita-quadrado.png`,
-  telephone: '(11) 99975-8182',
-  address: ENDERECO,
-  areaServed: { '@type': 'City', name: 'São Paulo' },
-  priceRange: '$$$',
-};
-
-const MEDICA = {
-  '@type': 'Physician',
-  '@id': ID_MEDICA,
-  name: DOCTOR_NAME,
-  url: `${SITE_URL}/`,
-  image: `${SITE_URL}/dra-isabela-bertoglio.jpg`,
-  worksFor: { '@id': ID_CLINICA },
-  telephone: '(11) 99975-8182',
-  address: ENDERECO,
-  priceRange: '$$$',
-  identifier: [
-    { '@type': 'PropertyValue', propertyID: 'CRM-SP', value: '194436' },
-    { '@type': 'PropertyValue', propertyID: 'RQE', value: '84645' },
-    { '@type': 'PropertyValue', propertyID: 'RQE', value: '86835' },
-  ],
-  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo' },
-  areaServed: { '@type': 'City', name: 'São Paulo' },
-};
+// Mesma diretiva da página inicial (index.html).
+const ROBOTS = 'index, follow, max-image-preview:large, max-video-preview:-1, max-snippet:-1';
 
 const atributo = (valor) => String(valor).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 const meta = (chave, nome, valor) => `<meta ${chave}="${nome}" content="${atributo(valor)}" />`;
-// `<` escapado: nenhum texto do grafo consegue fechar o <script> antes da hora.
-const jsonLd = (grafo) =>
-  `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo }).replace(/</g, '\\u003c')}</script>`;
 
 const trilha = (id, itens) => ({
   '@type': 'BreadcrumbList',
@@ -81,7 +35,7 @@ function headDaPagina({ titulo, descricao, url, tipo, tituloSocial, descricaoSoc
     `<title>${titulo.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</title>`,
     meta('name', 'description', descricao),
     `<link rel="canonical" href="${atributo(url)}" />`,
-    meta('name', 'robots', 'index, follow, max-image-preview:large'),
+    meta('name', 'robots', ROBOTS),
     meta('property', 'og:type', tipo),
     meta('property', 'og:locale', 'pt_BR'),
     meta('property', 'og:site_name', NOME_DO_SITE),

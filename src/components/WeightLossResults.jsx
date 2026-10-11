@@ -5,15 +5,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  * Antes e depois de pacientes da Dra. Isabela no acompanhamento de emagrecimento.
  *
  * Para incluir um caso: gere o par padronizado (900×600, metades 3:4, sem rosto e sem marca
- * d'água) em public/resultados/emagrecimento-N.webp e acrescente uma linha abaixo.
+ * d'água) em public/resultados/emagrecimento-antes-depois-N.webp e acrescente uma linha abaixo.
  * Só entram fotos reais, sem edição, de pacientes que autorizaram o uso.
  */
 const results = [
-  { src: '/resultados/emagrecimento-4.webp' },
-  { src: '/resultados/emagrecimento-5.webp' },
-  { src: '/resultados/emagrecimento-1.webp' },
-  { src: '/resultados/emagrecimento-2.webp' },
-  { src: '/resultados/emagrecimento-3.webp' },
+  { src: '/resultados/emagrecimento-antes-depois-4.webp' },
+  { src: '/resultados/emagrecimento-antes-depois-5.webp' },
+  { src: '/resultados/emagrecimento-antes-depois-1.webp' },
+  { src: '/resultados/emagrecimento-antes-depois-2.webp' },
+  { src: '/resultados/emagrecimento-antes-depois-3.webp' },
 ];
 
 const WeightLossResults = () => {
@@ -58,7 +58,7 @@ const WeightLossResults = () => {
                 src={result.src}
                 srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 900w`}
                 sizes="(min-width: 768px) 33vw, 85vw"
-                alt={`Antes e depois de paciente no acompanhamento de emagrecimento, caso ${index + 1}`}
+                alt={`Antes e depois de paciente no emagrecimento com acompanhamento médico da Dra. Isabela Bertoglio, caso ${index + 1}`}
                 width="900"
                 height="600"
                 loading="lazy"
@@ -73,6 +73,9 @@ const WeightLossResults = () => {
                 Depois
               </span>
             </div>
+            <figcaption className="mt-2.5 text-[11px] font-sans font-medium tracking-[0.2em] uppercase text-brand-light-gray">
+              Emagrecimento com acompanhamento médico · caso {index + 1}
+            </figcaption>
           </figure>
         ))}
       </div>

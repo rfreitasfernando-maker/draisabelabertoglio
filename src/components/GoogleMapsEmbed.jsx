@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
-import { ADDRESS, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { ADDRESS, CLINIC_NAME, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { DOCTOR_NAME } from '@/lib/doctor';
+import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { trackWhatsappClick } from '@/lib/tracking';
 
 const GoogleMapsEmbed = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
@@ -22,9 +25,20 @@ const GoogleMapsEmbed = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-brand-dark mb-4">
               Onde nos encontrar
             </h2>
-            <p className="text-base text-brand-light-gray font-light max-w-xl mx-auto">
+            <address className="not-italic text-base text-brand-light-gray font-light max-w-xl mx-auto leading-relaxed">
+              <strong className="block font-medium text-brand-dark">{CLINIC_NAME} – {DOCTOR_NAME}</strong>
               {ADDRESS}
-            </p>
+              <br />
+              <a
+                href={WHATSAPP_URL}
+                onClick={(e) => trackWhatsappClick('localizacao', e)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block py-2 underline underline-offset-4 decoration-brand-gold/40 hover:text-brand-gold"
+              >
+                WhatsApp: {PHONE}
+              </a>
+            </address>
           </div>
 
           <div className="w-full h-80 md:h-[450px] overflow-hidden border border-brand-gold/10">
@@ -36,7 +50,7 @@ const GoogleMapsEmbed = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização da Clínica Dra. Isabela Bertoglio"
+              title={`Mapa: ${CLINIC_NAME} – ${DOCTOR_NAME}, Rua Teixeira da Silva, 54, Paraíso, São Paulo`}
             ></iframe>
           </div>
 

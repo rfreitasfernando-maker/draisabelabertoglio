@@ -16,21 +16,21 @@ const indications = ['Gordura localizada', 'Celulite', 'Flacidez corporal', 'Con
 const technologies = [
   {
     name: 'ReFreeze',
-    image: '/unyque/refreeze.webp',
+    image: '/unyque/unyque-pro-ponteira-refreeze.webp',
     width: 196,
     description: 'Radiofrequência com sucção suave, como uma massagem profunda. Ativa a circulação.',
     tags: 'Celulite · Contorno',
   },
   {
     name: 'Cryo RF Max',
-    image: '/unyque/cryo-rf-max.webp',
+    image: '/unyque/unyque-pro-ponteira-cryo-rf-max.webp',
     width: 213,
     description: 'Aquece por dentro e resfria por fora. Estimula o colágeno e contribui para a firmeza da pele.',
     tags: 'Flacidez · Celulite',
   },
   {
     name: 'HImFU',
-    image: '/unyque/himfu.webp',
+    image: '/unyque/unyque-pro-ponteira-himfu.webp',
     width: 155,
     description: 'Ultrassom focado de alta intensidade, direcionado à gordura localizada.',
     tags: 'Gordura localizada',
@@ -38,9 +38,9 @@ const technologies = [
 ];
 
 const results = [
-  { src: '/unyque/resultado-1.webp', area: 'Coxas' },
-  { src: '/unyque/resultado-2.webp', area: 'Glúteo e coxa' },
-  { src: '/unyque/resultado-3.webp', area: 'Coxas' },
+  { src: '/unyque/unyque-pro-antes-depois-coxas.webp', area: 'Coxas' },
+  { src: '/unyque/unyque-pro-antes-depois-gluteo-coxa.webp', area: 'Glúteo e coxa' },
+  { src: '/unyque/unyque-pro-antes-depois-coxas-2.webp', area: 'Coxas' },
 ];
 
 const Technology = () => {
@@ -71,6 +71,9 @@ const Technology = () => {
             <p className="mt-2 text-lg md:text-xl font-serif text-brand-dark-gray">
               Tecnologia médica para o <span className="italic text-brand-gold">contorno do corpo</span>
             </p>
+            <p className="mt-5 text-base text-brand-light-gray font-light max-w-2xl mx-auto leading-relaxed">
+              Na Clínica Belvitá, no Paraíso, em São Paulo, o Unyque Pro trata celulite, flacidez e gordura localizada sem cortes e sem agulhas, com indicação e acompanhamento da Dra. Isabela Bertoglio.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -78,8 +81,8 @@ const Technology = () => {
             <div className="relative flex justify-center">
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] aspect-square rounded-full bg-brand-warm" />
               <img
-                src="/unyque/equipamento.webp"
-                alt="Equipamento Unyque Pro"
+                src="/unyque/unyque-pro-equipamento.webp"
+                alt="Equipamento Unyque Pro para celulite, flacidez e gordura localizada na Clínica Belvitá, em São Paulo"
                 width="637"
                 height="900"
                 loading="lazy"
@@ -139,7 +142,7 @@ const Technology = () => {
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-white flex items-center justify-center flex-shrink-0">
                     <img
                       src={tech.image}
-                      alt={`Ponteira ${tech.name}`}
+                      alt={`Ponteira ${tech.name} do Unyque Pro`}
                       width={tech.width}
                       height="240"
                       loading="lazy"
@@ -175,7 +178,7 @@ const Technology = () => {
                         src={result.src}
                         srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 800w`}
                         sizes="(min-width: 768px) 33vw, 85vw"
-                        alt={`Antes e depois com Unyque Pro - ${result.area}`}
+                        alt={`Antes e depois de tratamento com Unyque Pro: ${result.area.toLowerCase()}, na Clínica Belvitá, em São Paulo`}
                         width="800"
                         height="400"
                         loading="lazy"
@@ -200,7 +203,7 @@ const Technology = () => {
             </div>
 
             <p className="mt-6 text-center text-xs font-sans font-light text-brand-light-gray leading-relaxed">
-              Os resultados variam de pessoa para pessoa. A indicação depende de avaliação médica.
+              Resultados variam de pessoa para pessoa e dependem da avaliação e do protocolo indicado.
               <span className="block sm:inline"> Equipamento com registro ANVISA nº 80832479008.</span>
             </p>
           </div>

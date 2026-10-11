@@ -204,7 +204,7 @@ const Technology = () => {
 
             <p className="mt-6 text-center text-xs font-sans font-light text-brand-light-gray leading-relaxed">
               Resultados variam de pessoa para pessoa e dependem da avaliação e do protocolo indicado.
-              <span className="block sm:inline"> Equipamento com registro ANVISA nº 80832479008.</span>
+              <span className="block sm:inline"> Unyque Pro, tecnologia Contourline, com registro ANVISA nº 80832479008.</span>
             </p>
           </div>
 

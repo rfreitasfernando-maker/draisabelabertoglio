@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
-import { ADDRESS, CLINIC_NAME, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
-import { DOCTOR_NAME } from '@/lib/doctor';
+import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
@@ -26,7 +25,9 @@ const GoogleMapsEmbed = () => {
               Onde nos encontrar
             </h2>
             <address className="not-italic text-base text-brand-light-gray font-light max-w-xl mx-auto leading-relaxed">
-              <strong className="block font-medium text-brand-dark">{CLINIC_NAME} – {DOCTOR_NAME}</strong>
+              <strong className="block font-medium text-brand-dark">{GOOGLE_BUSINESS_NAME}</strong>
+              {CLINIC_NAME}
+              <br />
               {ADDRESS}
               <br />
               <a
@@ -50,7 +51,7 @@ const GoogleMapsEmbed = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title={`Mapa: ${CLINIC_NAME} – ${DOCTOR_NAME}, Rua Teixeira da Silva, 54, Paraíso, São Paulo`}
+              title={`Mapa: ${GOOGLE_BUSINESS_NAME}, ${CLINIC_NAME}, Rua Teixeira da Silva, 54, São Paulo`}
             ></iframe>
           </div>
 

@@ -1,12 +1,12 @@
 // llms.txt: resumo do site em Markdown para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
 // Gerado no build (tools/prerender.js) com os mesmos dados da página. Não acrescentar nada que a página não diga.
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
-import { ADDRESS, CLINIC_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { FAQ } from '@/lib/faq';
 import { SITE_URL, DESCRICAO_DA_CLINICA } from '@/lib/schema';
 
-const credenciais = DOCTOR_CREDENTIALS.replace(/ /g, ' ');
+const credenciais = DOCTOR_CREDENTIALS.replace(/\u00A0/g, ' ');
 
 /** @param {{ titulo: string, descricao: string, url: string }[]} posts posts do blog, mais recentes primeiro */
 export function montarLlmsTxt(posts) {
@@ -39,7 +39,7 @@ A bioimpedância InBody 380 (músculo, gordura e água corporal) está inclusa n
 
 ## Unyque Pro em São Paulo
 
-O Unyque Pro é um equipamento de uso exclusivamente médico (registro Anvisa nº 80832479008) para o contorno do corpo. Reúne três tecnologias que agem em camadas diferentes, na mesma sessão, sem cortes e sem agulhas:
+O Unyque Pro é um equipamento de uso exclusivamente médico, fabricado pela Contourline (registro Anvisa nº 80832479008), para o contorno do corpo. Reúne três tecnologias que agem em camadas diferentes, na mesma sessão, sem cortes e sem agulhas:
 
 - **ReFreeze**: radiofrequência com sucção suave, como uma massagem profunda. Ativa a circulação. Indicado para celulite e contorno.
 - **Cryo RF Max**: aquece por dentro e resfria por fora. Estimula o colágeno e contribui para a firmeza da pele. Indicado para flacidez e celulite.
@@ -53,7 +53,8 @@ ${faq}
 
 ## Onde fazer emagrecimento com acompanhamento médico e Unyque Pro em São Paulo
 
-- Nome: ${CLINIC_NAME} – ${DOCTOR_NAME}
+- Nome no Google: ${GOOGLE_BUSINESS_NAME}
+- Clínica: ${CLINIC_NAME}
 - Endereço: ${ADDRESS}
 - Perto da estação Paraíso do metrô (linhas 1-Azul e 2-Verde)
 - Telefone e WhatsApp: ${PHONE}

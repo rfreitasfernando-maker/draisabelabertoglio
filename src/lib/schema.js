@@ -1,7 +1,7 @@
 // Dados estruturados (JSON-LD) do site. A clínica e a médica têm o mesmo @id em todas as páginas,
 // para o Google tratá-las como as mesmas entidades. NAP igual ao da página e ao da ficha do Google (src/lib/location.js).
 import { DOCTOR_NAME } from '@/lib/doctor';
-import { CLINIC_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { CLINIC_NAME, GOOGLE_BUSINESS_NAME, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { FAQ } from '@/lib/faq';
 
 export const SITE_URL = 'https://www.draisabelabertoglio.com.br';
@@ -41,8 +41,9 @@ const SERVICOS = [
     '@type': 'MedicalProcedure',
     name: 'Unyque Pro',
     procedureType: 'https://schema.org/NoninvasiveProcedure',
+    howPerformed: 'Equipamento Unyque Pro, fabricado pela Contourline, com registro Anvisa nº 80832479008.',
     description:
-      'Equipamento de uso médico com três tecnologias (ReFreeze, Cryo RF Max e HImFU) para celulite, flacidez corporal, gordura localizada e contorno corporal, sem cortes e sem agulhas.',
+      'Equipamento de uso médico da Contourline com três tecnologias (ReFreeze, Cryo RF Max e HImFU) para celulite, flacidez corporal, gordura localizada e contorno corporal, sem cortes e sem agulhas.',
   },
 ];
 
@@ -67,6 +68,8 @@ export const MEDICA = {
   '@type': 'Physician',
   '@id': ID_MEDICA,
   name: DOCTOR_NAME,
+  // A ficha do Google (hasMap) é da médica: o nome dela no Google entra como nome alternativo.
+  alternateName: GOOGLE_BUSINESS_NAME,
   url: `${SITE_URL}/`,
   image: `${SITE_URL}/dra-isabela-bertoglio.jpg`,
   worksFor: { '@id': ID_CLINICA },

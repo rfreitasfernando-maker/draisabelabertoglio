@@ -1,5 +1,7 @@
 // NAP (nome, endereço, telefone): mesmo formato do JSON-LD (src/lib/schema.js) e da ficha do Google. Manter os três iguais.
 export const CLINIC_NAME = 'Clínica Belvitá';
+// Nome exato da ficha no Google Meu Negócio (o pin do mapa). Se a ficha mudar de nome, mudar aqui também.
+export const GOOGLE_BUSINESS_NAME = 'Dra. Isabela Bertoglio - Nutrologia | Bela Vista e Paraíso';
 export const PHONE = '(11) 99975-8182';
 export const ADDRESS = 'Rua Teixeira da Silva, 54, Conj. 81/82 – Paraíso, São Paulo – SP, 04002-030';
 

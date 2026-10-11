@@ -4,7 +4,16 @@ import { ArrowRight, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
-import { DOCTOR_CREDENTIALS } from '@/lib/doctor';
+import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
+import { HOME_REVISADA_EM } from '@/lib/schema';
+
+// Fuso UTC: a data sai igual no build e no navegador, sem erro de hidratação.
+const revisadaEm = new Date(`${HOME_REVISADA_EM}T12:00:00Z`).toLocaleDateString('pt-BR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
 
 const education = [
   'Doutorado pela USP-SP',
@@ -85,6 +94,10 @@ const AboutDoctor = () => {
                   Ofereço uma abordagem acolhedora e baseada em ciência, onde o objetivo não é apenas a perda de peso, mas a construção de uma saúde robusta e de uma relação equilibrada com seu próprio corpo.
                 </p>
               </div>
+
+              <p className="text-xs font-sans font-light text-brand-dark-gray/70">
+                Conteúdo desta página revisado por {DOCTOR_NAME} em <time dateTime={HOME_REVISADA_EM}>{revisadaEm}</time>.
+              </p>
 
               <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('sobre', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
                 Agendar com a Dra. Isabela

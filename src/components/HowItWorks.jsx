@@ -100,8 +100,17 @@ const HowItWorks = () => {
               <p className="mt-2 text-sm font-sans font-light text-brand-dark-gray/70 leading-relaxed">
                 InBody 380: músculo, gordura e água corporal medidos em detalhe, para acompanhar sua evolução real.
               </p>
+              <a href="/blog/bioimpedancia" className="inline-block mt-1 py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+                Como funciona a bioimpedância e como ler o resultado
+              </a>
             </div>
           </div>
+
+          <p className="mt-6 text-center">
+            <a href="/blog/emagrecimento-com-acompanhamento-medico" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+              Passo a passo do emagrecimento com acompanhamento médico
+            </a>
+          </p>
 
           <div className="text-center mt-10">
             <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('metodo', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">

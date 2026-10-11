@@ -7,6 +7,10 @@ import { FAQ } from '@/lib/faq';
 export const SITE_URL = 'https://www.draisabelabertoglio.com.br';
 export const NOME_DO_SITE = `${CLINIC_NAME} – ${DOCTOR_NAME}`;
 
+// Data da última revisão do conteúdo da página inicial pela Dra. Isabela. Aparece na página (AboutDoctor),
+// no dateModified do JSON-LD e no <lastmod> do sitemap: atualizar sempre que o texto da página mudar.
+export const HOME_REVISADA_EM = '2026-10-11';
+
 export const ID_CLINICA = `${SITE_URL}/#clinica`;
 export const ID_MEDICA = `${SITE_URL}/#dra-isabela`;
 
@@ -21,6 +25,9 @@ const ENDERECO = {
   postalCode: '04002-030',
   addressCountry: 'BR',
 };
+
+// Posição do pin da ficha do Google (cid em src/lib/location.js).
+const COORDENADAS = { '@type': 'GeoCoordinates', latitude: -23.568869, longitude: -46.646175 };
 
 const SAO_PAULO = { '@type': 'City', name: 'São Paulo' };
 
@@ -57,11 +64,11 @@ export const CLINICA = {
   image: [`${SITE_URL}/logo-belvita-quadrado.png`, `${SITE_URL}/clinica/clinica-belvita-recepcao.webp`],
   telephone: PHONE,
   address: ENDERECO,
+  geo: COORDENADAS,
   hasMap: MAP_DIRECTIONS_URL,
   areaServed: SAO_PAULO,
   availableService: SERVICOS,
   employee: { '@id': ID_MEDICA },
-  priceRange: '$$$',
 };
 
 export const MEDICA = {
@@ -76,7 +83,6 @@ export const MEDICA = {
   telephone: PHONE,
   address: ENDERECO,
   hasMap: MAP_DIRECTIONS_URL,
-  priceRange: '$$$',
   identifier: [
     { '@type': 'PropertyValue', propertyID: 'CRM-SP', value: '194436' },
     { '@type': 'PropertyValue', propertyID: 'RQE', value: '84645' },
@@ -109,10 +115,17 @@ export function jsonLdDaHome() {
       name: 'Emagrecimento com acompanhamento médico em São Paulo',
       description: DESCRICAO_DA_CLINICA,
       inLanguage: 'pt-BR',
+      dateModified: HOME_REVISADA_EM,
+      lastReviewed: HOME_REVISADA_EM,
       isPartOf: { '@id': `${SITE_URL}/#site` },
       about: { '@id': ID_CLINICA },
       reviewedBy: { '@id': ID_MEDICA },
-      primaryImageOfPage: `${SITE_URL}/dra-isabela-bertoglio.jpg`,
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg`,
+        width: 1200,
+        height: 630,
+      },
     },
     CLINICA,
     MEDICA,

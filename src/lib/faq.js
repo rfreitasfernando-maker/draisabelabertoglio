@@ -48,6 +48,16 @@ export const FAQ = [
       'Na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, São Paulo – SP, CEP 04002-030, perto da estação Paraíso do metrô. O tratamento com Unyque Pro é indicado e acompanhado pela Dra. Isabela Bertoglio, com avaliação médica e bioimpedância InBody 380 antes do protocolo. O agendamento é feito pelo WhatsApp (11) 99975-8182.',
   },
   {
+    pergunta: 'Para quem o Unyque Pro é indicado?',
+    resposta:
+      'Para quem tem celulite em glúteos, coxas, culote ou abdômen, flacidez corporal leve a moderada (inclusive depois de emagrecer ou da gestação), gordura localizada que não sai com dieta e exercício, ou quer melhorar o contorno do corpo sem cirurgia. No lipedema, pode complementar o tratamento conservador. Quando há grande sobra de pele, com dobras, o plano pode incluir avaliação cirúrgica.',
+  },
+  {
+    pergunta: 'Quem não pode fazer Unyque Pro?',
+    resposta:
+      'O Unyque Pro é contraindicado na gestação e na amamentação, para quem tem marcapasso, desfibrilador ou implantes metálicos ou eletrônicos na área, câncer em tratamento ou lesão suspeita na região, ferida, infecção ou doença de pele ativa no local, e alterações de sensibilidade ou hérnia na região a ser tratada. A avaliação médica antes do protocolo confirma se a indicação é segura.',
+  },
+  {
     pergunta: 'O Unyque Pro dói?',
     resposta:
       'O Unyque Pro não usa cortes, agulhas nem anestesia. As sessões são feitas no consultório, com a paciente deitada, e a sensação é de calor, sucção suave ou leve formigamento, conforme a ponteira usada.',

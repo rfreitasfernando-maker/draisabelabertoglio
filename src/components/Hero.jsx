@@ -34,7 +34,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 md:mb-8 max-w-lg">
-              Para quem já tentou de tudo: investigamos a causa do ganho de peso e acompanhamos você por 3 a 6 meses, com bioimpedância para medir gordura e músculo — não só o peso.
+              Para quem já tentou de tudo: na Clínica Belvitá, em São Paulo, investigamos a causa do ganho de peso e acompanhamos você por 3 a 6 meses, com bioimpedância para medir gordura e músculo — não só o peso.
             </p>
 
             <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">

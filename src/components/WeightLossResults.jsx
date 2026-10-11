@@ -34,9 +34,9 @@ const WeightLossResults = () => {
         <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-4">
           Resultados
         </span>
-        <h3 className="text-2xl md:text-4xl font-serif font-light text-brand-dark">
+        <h2 className="text-2xl md:text-4xl font-serif font-light text-brand-dark">
           Antes <span className="italic text-brand-gold">e depois</span>
-        </h3>
+        </h2>
       </div>
 
       <div className="relative">

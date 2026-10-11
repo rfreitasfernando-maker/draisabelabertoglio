@@ -12,6 +12,7 @@ import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
 import { capaDoPost } from '@/blog/imagens';
 import { montarLlmsTxt } from '@/lib/llms';
+import { HOME_REVISADA_EM } from '@/lib/schema';
 
 const textos = import.meta.glob('./posts/*.html', { query: '?raw', import: 'default', eager: true });
 
@@ -70,6 +71,7 @@ export function renderBlog(url) {
 
 // Imagens da página inicial que valem aparecer na busca de imagens.
 const IMAGENS_DA_HOME = [
+  '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg',
   '/dra-isabela-bertoglio.jpg',
   '/dra-isabela-consultorio.webp',
   '/bioimpedancia-inbody-380.webp',
@@ -89,10 +91,10 @@ const IMAGENS_DA_HOME = [
 ];
 
 /** sitemap.xml do site inteiro: página inicial, lista do blog e cada post, com as imagens de cada página. */
-export function gerarSitemap(hoje = new Date().toISOString().slice(0, 10)) {
+export function gerarSitemap() {
   const maisRecente = posts.map((post) => post.atualizadoEm).sort().at(-1);
   const urls = [
-    { loc: `${SITE_URL}/`, lastmod: hoje, imagens: IMAGENS_DA_HOME },
+    { loc: `${SITE_URL}/`, lastmod: HOME_REVISADA_EM, imagens: IMAGENS_DA_HOME },
     ...(posts.length ? [{ loc: URL_DO_BLOG, lastmod: maisRecente }] : []),
     ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm, imagens: [capaDoPost(post).social] })),
   ];

@@ -15,7 +15,7 @@ export const DESCRICAO_DA_CLINICA =
 
 const ENDERECO = {
   '@type': 'PostalAddress',
-  streetAddress: 'Rua Teixeira da Silva, 54, Conj. 81/82 – Paraíso',
+  streetAddress: 'Rua Teixeira da Silva, 54, Conj. 81/82 – Bela Vista',
   addressLocality: 'São Paulo',
   addressRegion: 'SP',
   postalCode: '04002-030',

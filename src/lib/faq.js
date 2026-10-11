@@ -5,7 +5,7 @@ export const FAQ = [
   {
     pergunta: 'Onde fazer emagrecimento com acompanhamento médico em São Paulo?',
     resposta:
-      'Na Clínica Belvitá, com a Dra. Isabela Bertoglio, na Rua Teixeira da Silva, 54, Conj. 81/82, no Paraíso, São Paulo – SP, CEP 04002-030, perto da estação Paraíso do metrô. A avaliação inclui bioimpedância InBody 380, e o acompanhamento dura de 3 a 6 meses. O agendamento é feito pelo WhatsApp (11) 99975-8182.',
+      'Na Clínica Belvitá, com a Dra. Isabela Bertoglio, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, São Paulo – SP, CEP 04002-030, perto da estação Paraíso do metrô. A avaliação inclui bioimpedância InBody 380, e o acompanhamento dura de 3 a 6 meses. O agendamento é feito pelo WhatsApp (11) 99975-8182.',
   },
   {
     pergunta: 'Já tentei de tudo, por que agora seria diferente?',
@@ -45,7 +45,7 @@ export const FAQ = [
   {
     pergunta: 'Onde fazer Unyque Pro em São Paulo?',
     resposta:
-      'Na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, no Paraíso, São Paulo – SP, CEP 04002-030, perto da estação Paraíso do metrô. O tratamento com Unyque Pro é indicado e acompanhado pela Dra. Isabela Bertoglio, com avaliação médica e bioimpedância InBody 380 antes do protocolo. O agendamento é feito pelo WhatsApp (11) 99975-8182.',
+      'Na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, São Paulo – SP, CEP 04002-030, perto da estação Paraíso do metrô. O tratamento com Unyque Pro é indicado e acompanhado pela Dra. Isabela Bertoglio, com avaliação médica e bioimpedância InBody 380 antes do protocolo. O agendamento é feito pelo WhatsApp (11) 99975-8182.',
   },
   {
     pergunta: 'O Unyque Pro dói?',
@@ -69,6 +69,6 @@ export const FAQ = [
   {
     pergunta: 'Como agendar uma avaliação com a Dra. Isabela Bertoglio?',
     resposta:
-      'Pelo WhatsApp (11) 99975-8182, que atende tanto o emagrecimento com acompanhamento médico quanto o Unyque Pro. As consultas são particulares e acontecem na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, no Paraíso, em São Paulo.',
+      'Pelo WhatsApp (11) 99975-8182, que atende tanto o emagrecimento com acompanhamento médico quanto o Unyque Pro. As consultas são particulares e acontecem na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, em São Paulo, perto da estação Paraíso do metrô.',
   },
 ];

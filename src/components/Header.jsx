@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import MapModal from '@/components/MapModal';
 import { CTA_SITE, CTA_BLOG } from '@/lib/cta';
 
@@ -69,7 +68,7 @@ const Header = ({ blog = false }) => {
   const logo = (
     <img
       src="/logo-monograma.webp"
-      srcSet="/logo-monograma-118.webp 119w, /logo-monograma.webp 203w"
+      srcSet="/logo-monograma-92.webp 92w, /logo-monograma-118.webp 119w, /logo-monograma.webp 203w"
       sizes="(min-width: 768px) 59px, 46px"
       alt="Clínica Belvitá – logotipo"
       width="203"
@@ -136,37 +135,30 @@ const Header = ({ blog = false }) => {
             </button>
           </div>
 
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="md:hidden overflow-hidden border-t border-brand-gold/10"
-              >
-                <div className="py-6 flex flex-col gap-1">
-                  {navItems.map((item) =>
-                    renderItem(
-                      item,
-                      'flex items-center gap-2 px-2 py-4 min-h-[44px] text-sm font-sans font-medium tracking-widest uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors',
-                    ),
-                  )}
-                  <a
-                    href={cta.href}
-                    onClick={(e) => {
-                      cta.rastrear('menu_mobile', e);
-                      setIsMenuOpen(false);
-                    }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 text-sm font-sans font-medium tracking-widest uppercase border border-brand-gold text-brand-gold px-6 py-4 min-h-[48px] hover:bg-brand-gold hover:text-white transition-all duration-300 text-center"
-                  >
-                    Agendar Consulta
-                  </a>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {isMenuOpen && (
+            <div className="md:hidden overflow-hidden border-t border-brand-gold/10 animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="py-6 flex flex-col gap-1">
+                {navItems.map((item) =>
+                  renderItem(
+                    item,
+                    'flex items-center gap-2 px-2 py-4 min-h-[44px] text-sm font-sans font-medium tracking-widest uppercase text-brand-dark-gray/80 hover:text-brand-gold transition-colors',
+                  ),
+                )}
+                <a
+                  href={cta.href}
+                  onClick={(e) => {
+                    cta.rastrear('menu_mobile', e);
+                    setIsMenuOpen(false);
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 text-sm font-sans font-medium tracking-widest uppercase border border-brand-gold text-brand-gold px-6 py-4 min-h-[48px] hover:bg-brand-gold hover:text-white transition-all duration-300 text-center"
+                >
+                  Agendar Consulta
+                </a>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 

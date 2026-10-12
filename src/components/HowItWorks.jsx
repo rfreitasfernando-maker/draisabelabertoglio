@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Stethoscope, ClipboardList, Activity, Leaf, Repeat, ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
@@ -40,13 +39,7 @@ const HowItWorks = () => {
   return (
     <section id="metodo" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-5xl mx-auto"
-        >
+        <div ref={ref} className={`max-w-5xl mx-auto reveal${isInView ? ' is-visible' : ''}`}>
           <div className="text-center mb-12">
             <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-5">
               Método
@@ -61,13 +54,7 @@ const HowItWorks = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 25 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-brand-cream/40 p-6 md:p-8 border border-brand-gold/5 hover:border-brand-gold/15 transition-all duration-500 group"
-              >
+              <div key={index} className="bg-brand-cream/40 p-6 md:p-8 border border-brand-gold/5 hover:border-brand-gold/15 transition-all duration-500 group reveal reveal-sm" style={{ '--reveal-delay': `${index * 0.1}s` }}>
                 <div className="w-12 h-12 border border-brand-gold/20 flex items-center justify-center mb-6 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-500">
                   <step.icon className="w-5 h-5" strokeWidth={1.5} />
                 </div>
@@ -75,7 +62,7 @@ const HowItWorks = () => {
                 <p className="text-brand-light-gray text-sm leading-relaxed font-light">
                   {step.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -118,7 +105,7 @@ const HowItWorks = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

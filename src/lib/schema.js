@@ -127,7 +127,7 @@ export function jsonLdDaHome() {
       '@type': 'MedicalWebPage',
       '@id': `${url}#webpage`,
       url,
-      name: 'Emagrecimento com acompanhamento médico em São Paulo',
+      name: 'Dra. Isabela Bertoglio | Nutrologia, Emagrecimento e Saúde em São Paulo',
       description: DESCRICAO_DA_CLINICA,
       inLanguage: 'pt-BR',
       dateModified: HOME_REVISADA_EM,

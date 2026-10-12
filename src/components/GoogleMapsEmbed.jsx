@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
@@ -11,12 +10,7 @@ const GoogleMapsEmbed = () => {
   return (
     <section id="localizacao" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-brand-cream/50">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div ref={ref} className={`reveal${isInView ? ' is-visible' : ''}`}>
           <div className="text-center mb-12">
             <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-5">
               Localização
@@ -67,7 +61,7 @@ const GoogleMapsEmbed = () => {
               Como Chegar →
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -57,7 +57,7 @@ const WeightLossResults = () => {
               <img
                 src={result.src}
                 srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 900w`}
-                sizes="(min-width: 768px) 33vw, 85vw"
+                sizes="(min-width: 768px) 330px, (min-width: 640px) calc(60vw - 29px), calc(85vw - 41px)"
                 alt={`Antes e depois de paciente no emagrecimento com acompanhamento médico da Dra. Isabela Bertoglio, caso ${index + 1}`}
                 width="900"
                 height="600"

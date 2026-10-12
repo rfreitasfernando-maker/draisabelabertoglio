@@ -6,8 +6,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Emagrecimento com Acompanhamento Médico em SP | Dra. Isabela</title>
-    <meta name="description" content="Emagrecimento com acompanhamento médico no Paraíso, em São Paulo: bioimpedância InBody, plano adaptado à sua rotina e Unyque Pro. Agende pelo WhatsApp." />
+    <title>Dra. Isabela Bertoglio | Nutrologia, Emagrecimento e Saúde em SP</title>
+    <meta name="description" content="Nutróloga em São Paulo, no Paraíso: emagrecimento com acompanhamento médico de 3 a 6 meses, bioimpedância InBody e Unyque Pro. Agende pelo WhatsApp." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1, max-snippet:-1" />
     <link rel="canonical" href="https://www.draisabelabertoglio.com.br/" />
     <meta name="geo.region" content="BR-SP" />
@@ -25,7 +25,7 @@
     <meta property="og:site_name" content="Clínica Belvitá – Dra. Isabela Bertoglio" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://www.draisabelabertoglio.com.br/" />
-    <meta property="og:title" content="Emagrecimento com acompanhamento médico em São Paulo | Dra. Isabela Bertoglio" />
+    <meta property="og:title" content="Dra. Isabela Bertoglio | Nutrologia, Emagrecimento e Saúde em São Paulo" />
     <meta property="og:description" content="Acompanhamento médico de 3 a 6 meses no Paraíso, em São Paulo, com bioimpedância InBody e plano adaptado à sua rotina. Agende pelo WhatsApp." />
     <meta property="og:image" content="https://www.draisabelabertoglio.com.br/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -36,18 +36,19 @@
     <!-- Dados estruturados: o tools/prerender.js troca este marcador pelo JSON-LD de src/lib/schema.js (clínica, médica e FAQ) -->
     <!--json-ld-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Fontes sem bloquear a renderização: o texto aparece com a fonte do sistema e troca quando a fonte chega -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" /></noscript>
+    <!-- Fontes do próprio site (@font-face em src/index.css): o texto aparece já com a fonte de reserva e troca quando
+         estas chegam. Preload só das usadas na primeira dobra: Inter (texto) e Cormorant (título). -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-latin.woff2" crossorigin />
     <!-- No desktop a foto do hero é o maior elemento da primeira dobra: começa a baixar já -->
-    <link rel="preload" as="image" href="/dra-isabela-bertoglio.webp" imagesrcset="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w" imagesizes="48vw" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/dra-isabela-bertoglio.webp" imagesrcset="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-720.webp 720w, /dra-isabela-bertoglio.webp 892w" imagesizes="48vw" media="(min-width: 768px)" fetchpriority="high" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2GJVCZW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- Sem JavaScript as seções não recebem a classe is-visible: ficam visíveis desde o início -->
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -17,10 +17,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#2C2824" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" /></noscript>
+    <!-- Fontes do próprio site (@font-face em src/index.css): o texto aparece já com a fonte de reserva e troca quando
+         estas chegam. Preload só das usadas na primeira dobra: Inter (texto) e Cormorant (título). -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-latin.woff2" crossorigin />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

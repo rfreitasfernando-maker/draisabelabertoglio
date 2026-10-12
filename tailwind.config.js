@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ['class'],
+	// Só o que o site usa: a pasta src/components/ui (biblioteca de componentes não usada) fica de fora,
+	// senão as classes dela entram no CSS de todas as páginas.
 	content: [
-		'./pages/**/*.{js,jsx}',
-		'./components/**/*.{js,jsx}',
-		'./app/**/*.{js,jsx}',
-		'./src/**/*.{js,jsx}',
+		'./index.html',
+		'./blog.html',
+		'./src/*.{js,jsx}',
+		'./src/components/*.{js,jsx}',
+		'./src/{blog,lib,hooks,pages}/**/*.{js,jsx}',
+		'./tools/blog-html.js',
 	],
 	theme: {
 		container: {

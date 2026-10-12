@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Layers, ShieldCheck, Stethoscope } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_UNYQUE_URL } from '@/lib/whatsapp';
@@ -49,13 +48,7 @@ const Technology = () => {
   return (
     <section id="tecnologia" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-20 bg-white border-t border-brand-gold/10">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-6xl mx-auto"
-        >
+        <div ref={ref} className={`max-w-6xl mx-auto reveal${isInView ? ' is-visible' : ''}`}>
           <div className="text-center mb-10 md:mb-14">
             <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-5">
               Tecnologia na clínica
@@ -132,13 +125,7 @@ const Technology = () => {
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="flex md:flex-col items-start gap-5 bg-brand-cream/60 border border-brand-gold/10 p-5 md:p-7"
-                >
+                <div key={tech.name} className="flex md:flex-col items-start gap-5 bg-brand-cream/60 border border-brand-gold/10 p-5 md:p-7 reveal reveal-sm" style={{ '--reveal-delay': `${0.2 + index * 0.1}s` }}>
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-white flex items-center justify-center flex-shrink-0">
                     <img
                       src={tech.image}
@@ -155,7 +142,7 @@ const Technology = () => {
                     <p className="text-sm font-sans font-light text-brand-dark-gray/75 leading-relaxed">{tech.description}</p>
                     <p className="mt-3 text-xs font-sans font-medium text-brand-gold">{tech.tags}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -177,7 +164,7 @@ const Technology = () => {
                       <img
                         src={result.src}
                         srcSet={`${result.src.replace('.webp', '-600.webp')} 600w, ${result.src} 800w`}
-                        sizes="(min-width: 768px) 33vw, 85vw"
+                        sizes="(min-width: 768px) 370px, (min-width: 640px) calc(60vw - 29px), calc(85vw - 41px)"
                         alt={`Antes e depois de tratamento com Unyque Pro: ${result.area.toLowerCase()}, na Clínica Belvitá, em São Paulo`}
                         width="800"
                         height="400"
@@ -225,7 +212,7 @@ const Technology = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

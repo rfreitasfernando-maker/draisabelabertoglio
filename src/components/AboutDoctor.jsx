@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, GraduationCap } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
@@ -27,12 +26,7 @@ const AboutDoctor = () => {
   return (
     <section id="about" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div ref={ref} className={`reveal${isInView ? ' is-visible' : ''}`}>
           <div className="text-center mb-12">
             <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-5">
               Quem sou
@@ -43,33 +37,23 @@ const AboutDoctor = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div className="reveal reveal-sm" style={{ '--reveal-delay': '0.2s' }}>
               <div className="aspect-[3/4] overflow-hidden">
                 <img 
                   src="/dra-isabela-consultorio.webp"
-                  srcSet="/dra-isabela-consultorio-600.webp 600w, /dra-isabela-consultorio.webp 900w"
-                  sizes="(min-width: 768px) 40vw, 100vw"
-                  width="900"
-                  height="1149"
+                  srcSet="/dra-isabela-consultorio-480.webp 480w, /dra-isabela-consultorio-660.webp 660w, /dra-isabela-consultorio.webp 880w"
+                  sizes="(min-width: 1280px) 536px, (min-width: 768px) 45vw, calc(100vw - 48px)"
+                  width="880"
+                  height="1173"
                   alt="Dra. Isabela Bertoglio em seu consultório na Clínica Belvitá"
+                  // O arquivo já vem recortado centrado na Dra. Isabela (antes era um zoom via CSS, que baixava pixels a mais)
                   className="w-full h-full object-cover"
-                  // Zoom leve centrado na Dra. Isabela, para mostrar menos das bordas da sala
-                  style={{ objectPosition: '55% 50%', transform: 'scale(1.18)', transformOrigin: '95% 55%' }}
                   loading="lazy"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
-            >
+            <div className="space-y-8 reveal reveal-sm" style={{ '--reveal-delay': '0.4s' }}>
               <div className="inline-flex items-center gap-3">
                 <div className="w-8 h-px bg-brand-gold" />
                 <span className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-dark-gray/80">{DOCTOR_CREDENTIALS}</span>
@@ -103,9 +87,9 @@ const AboutDoctor = () => {
                 Agendar com a Dra. Isabela
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

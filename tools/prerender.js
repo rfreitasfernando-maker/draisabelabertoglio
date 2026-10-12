@@ -22,11 +22,19 @@ const marcador = '<div id="root"></div>';
 if (!html.includes(marcador)) throw new Error('prerender: <div id="root"></div> não encontrado em dist/index.html');
 const marcadorJsonLd = '<!--json-ld-->';
 if (!html.includes(marcadorJsonLd)) throw new Error('prerender: <!--json-ld--> não encontrado em dist/index.html');
+// CSS da página inicial embutido num <style>: a primeira pintura não espera um segundo pedido ao servidor
+// (o CSS bloqueava a renderização no celular). O arquivo continua em dist/assets para as páginas do blog.
+const linkCss = html.match(/<link rel="stylesheet"[^>]*href="(\/assets\/index-[^"]+\.css)"[^>]*>/);
+if (!linkCss) throw new Error('prerender: <link> do CSS principal não encontrado em dist/index.html');
+const css = fs.readFileSync(path.join(dist, linkCss[1]), 'utf8');
 fs.writeFileSync(
   indexPath,
-  html.replace(marcadorJsonLd, () => jsonLdDaHome()).replace(marcador, () => `<div id="root">${render()}</div>`),
+  html
+    .replace(linkCss[0], () => `<style>${css}</style>`)
+    .replace(marcadorJsonLd, () => jsonLdDaHome())
+    .replace(marcador, () => `<div id="root">${render()}</div>`),
 );
-console.log('prerender: dist/index.html gerado com o HTML da página');
+console.log(`prerender: dist/index.html gerado com o HTML da página e o CSS embutido (${(css.length / 1024).toFixed(1)} KB)`);
 
 // O modelo é lido antes de tudo: a página /blog vai ocupar o mesmo arquivo.
 const modeloBlog = fs.readFileSync(modeloBlogPath, 'utf8');

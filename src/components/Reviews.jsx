@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import { GOOGLE_REVIEWS_URL } from '@/lib/doctor';
 
@@ -38,13 +37,7 @@ const Reviews = () => {
   return (
     <section className="py-12 md:py-20 bg-brand-warm/60">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-6xl mx-auto"
-        >
+        <div ref={ref} className={`max-w-6xl mx-auto reveal${isInView ? ' is-visible' : ''}`}>
           <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-4">
             Avaliações
           </span>
@@ -94,7 +87,7 @@ const Reviews = () => {
           >
             Ver todas as avaliações no Google →
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

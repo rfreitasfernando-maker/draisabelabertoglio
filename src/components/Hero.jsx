@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Activity, ArrowRight, CalendarCheck, ClipboardList, MapPin } from 'lucide-react';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
@@ -38,19 +37,17 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
-              <motion.a
+              <a
                 href={WHATSAPP_URL}
                 onClick={(e) => trackWhatsappClick('hero', e)}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Agendar minha avaliação pelo WhatsApp"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group w-full md:w-auto whitespace-nowrap bg-brand-gold text-white px-8 md:px-5 xl:px-8 py-4 min-h-[52px] font-sans text-xs font-medium tracking-[0.2em] md:tracking-[0.12em] xl:tracking-[0.2em] uppercase hover:bg-white hover:text-brand-dark transition-all duration-500 flex items-center justify-center gap-3"
+                className="group w-full md:w-auto whitespace-nowrap bg-brand-gold text-white px-8 md:px-5 xl:px-8 py-4 min-h-[52px] font-sans text-xs font-medium tracking-[0.2em] md:tracking-[0.12em] xl:tracking-[0.2em] uppercase hover:bg-white hover:text-brand-dark hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 flex items-center justify-center gap-3"
               >
                 Agendar minha avaliação
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.a>
+              </a>
 
               {/* Desktop: botão outline. Mobile: link de texto discreto, para não competir com o CTA. */}
               <button
@@ -109,7 +106,7 @@ const Hero = () => {
           alt={`${DOCTOR_NAME}, médica – Nutrologia e Emagrecimento, em seu consultório`}
           width="892"
           height="1280"
-          srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio.webp 892w"
+          srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-720.webp 720w, /dra-isabela-bertoglio.webp 892w"
           sizes="(min-width: 768px) 48vw, 100vw"
           // lazy: no celular fica abaixo da dobra e não disputa banda com o título; no desktop o index.html faz o preload
           loading="lazy"

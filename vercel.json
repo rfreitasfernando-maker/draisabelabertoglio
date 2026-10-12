@@ -4,9 +4,43 @@
   "redirects": [
     {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "draisabelabertoglio.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "draisabelabertoglio.vercel.app"
+        }
+      ],
       "destination": "https://www.draisabelabertoglio.com.br/:path",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(webp|avif|jpg|png|svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }

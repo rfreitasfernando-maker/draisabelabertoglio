@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
@@ -36,13 +35,7 @@ const FAQ = () => {
   return (
     <section id="duvidas" className="scroll-mt-20 md:scroll-mt-24 py-12 md:py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl mx-auto"
-        >
+        <div ref={ref} className={`max-w-3xl mx-auto reveal${isInView ? ' is-visible' : ''}`}>
           <div className="text-center mb-12">
             <span className="inline-block text-xs font-sans font-medium tracking-[0.25em] uppercase text-brand-gold mb-5">
               Dúvidas
@@ -67,7 +60,7 @@ const FAQ = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

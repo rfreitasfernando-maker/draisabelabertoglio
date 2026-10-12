@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const keywords = [
   'Equilíbrio',
@@ -27,21 +26,11 @@ const KeywordRow = () => (
 const KeywordsTicker = () => {
   return (
     <div className="bg-white border-y border-brand-gold/10 py-4 overflow-hidden" aria-hidden="true">
-      <motion.div
-        className="flex"
-        animate={{ x: ['0%', '-50%'] }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: 'loop',
-            duration: 25,
-            ease: 'linear',
-          },
-        }}
-      >
+      {/* Animação em CSS (.letreiro em index.css) */}
+      <div className="flex w-max letreiro">
         <KeywordRow />
         <KeywordRow />
-      </motion.div>
+      </div>
     </div>
   );
 };

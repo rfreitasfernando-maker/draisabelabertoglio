@@ -22,17 +22,19 @@ function App() {
     <>
       <div className="min-h-screen bg-white text-brand-dark relative">
         <Header />
-        <Hero />
-        <IdentificationBlock />
-        <AboutDoctor />
-        <KeywordsTicker />
-        <Reviews />
-        <HowItWorks />
-        <Technology />
-        <Clinica />
-        <GoogleMapsEmbed />
-        <FAQ />
-        <FinalCTA />
+        <main>
+          <Hero />
+          <IdentificationBlock />
+          <AboutDoctor />
+          <KeywordsTicker />
+          <Reviews />
+          <HowItWorks />
+          <Technology />
+          <Clinica />
+          <GoogleMapsEmbed />
+          <FAQ />
+          <FinalCTA />
+        </main>
         <WhatsAppButton />
         <Footer />
       </div>

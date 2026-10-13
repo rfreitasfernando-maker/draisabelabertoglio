@@ -106,7 +106,7 @@ const Hero = () => {
           alt={`${DOCTOR_NAME}, médica – Nutrologia e Emagrecimento, em seu consultório`}
           width="892"
           height="1280"
-          srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-720.webp 720w, /dra-isabela-bertoglio.webp 892w"
+          srcSet="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-768.webp 768w, /dra-isabela-bertoglio.webp 892w"
           sizes="(min-width: 768px) 48vw, 100vw"
           // lazy: no celular fica abaixo da dobra e não disputa banda com o título; no desktop o index.html faz o preload
           loading="lazy"

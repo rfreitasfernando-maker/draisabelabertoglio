@@ -2,7 +2,8 @@
 // a assinatura e o aviso, que a página monta). Datas no formato AAAA-MM-DD.
 //
 // Opcionais: `aviso` troca o aviso final padrão; `mensagemWhatsapp` troca a mensagem dos botões de WhatsApp
-// dentro do texto (cabeçalho e botão flutuante seguem com a mensagem padrão do blog).
+// dentro do texto (cabeçalho e botão flutuante seguem com a mensagem padrão do blog); `mencoes` lista outros
+// temas citados no texto (schema.org `mentions`).
 // Não use o tipo `Drug` nos dados estruturados: o Google o lê como produto à venda e acusa erro
 // por falta de preço e avaliação.
 //
@@ -128,5 +129,33 @@ export const POSTS = [
     mensagemWhatsapp: 'Olá, tenho interesse no Unyque Pro com a Dra. Isabela Bertoglio. Pode me ajudar?',
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Todo procedimento, inclusive não invasivo, pode ter efeitos adversos, e a indicação depende de avaliação individual com médico. Os resultados variam de pessoa para pessoa.',
+  },
+  {
+    slug: 'nao-consigo-emagrecer',
+    titulo: 'Não consigo emagrecer: 9 causas que vale investigar e como é o tratamento em São Paulo',
+    tituloSeo: 'Não consigo emagrecer: causas e tratamento em São Paulo',
+    descricao:
+      'Não consigo emagrecer mesmo com dieta e treino: veja 9 causas, de hormônios a sono e massa muscular, os exames que ajudam e onde investigar em São Paulo.',
+    tituloSocial: 'Não consigo emagrecer: 9 causas que vale investigar',
+    descricaoSocial:
+      'Resistência à insulina, tireoide, sono, medicamentos, perda de músculo e adaptação metabólica: o que pode travar o emagrecimento e como investigar.',
+    publicadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-18',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher preocupada mede a cintura com fita métrica, cercada por ícones de causas que dificultam o emagrecimento: cérebro, sono, tireoide, estresse, intestino e massa muscular',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade', alternateName: 'Dificuldade para perder peso' },
+    // Outros temas citados no texto (schema.org `mentions`)
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Hipotireoidismo' },
+      { '@type': 'MedicalCondition', name: 'Síndrome dos ovários policísticos' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Não suspenda nem altere medicamentos sem orientação. A investigação e o tratamento dependem de avaliação individual com médico.',
   },
 ];

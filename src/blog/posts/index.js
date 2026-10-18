@@ -196,4 +196,37 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Não inicie, suspenda nem altere medicamentos sem orientação. O diagnóstico e o tratamento dependem de avaliação individual com médico.',
   },
+  {
+    slug: 'gordura-visceral',
+    titulo: 'Gordura visceral: o que é, por que é perigosa e como reduzir, com avaliação em São Paulo',
+    tituloSeo: 'Gordura visceral: riscos e como reduzir em São Paulo',
+    descricao:
+      'Gordura visceral: entenda o que é, por que aumenta o risco de diabetes e doenças do coração, como medir e o que reduz essa gordura. Avaliação em São Paulo.',
+    tituloSocial: 'Gordura visceral: o que é, riscos e como reduzir',
+    descricaoSocial:
+      'A gordura entre os órgãos do abdômen é a mais ligada a diabetes, gordura no fígado e doença cardiovascular. Como medir e como reduzir.',
+    publicadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-18',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Resultado da bioimpedância com o nível de gordura visceral acima da faixa desejável e a medida da cintura, com o consultório da Clínica Belvitá ao fundo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: {
+      '@type': 'MedicalCondition',
+      name: 'Excesso de gordura visceral',
+      alternateName: 'Obesidade abdominal',
+      riskFactor: [
+        { '@type': 'MedicalRiskFactor', name: 'Sedentarismo' },
+        { '@type': 'MedicalRiskFactor', name: 'Sono insuficiente' },
+        { '@type': 'MedicalRiskFactor', name: 'Menopausa' },
+      ],
+    },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Esteatose hepática' },
+    ],
+  },
 ];

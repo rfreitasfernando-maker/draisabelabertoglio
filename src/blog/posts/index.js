@@ -158,4 +158,42 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Não suspenda nem altere medicamentos sem orientação. A investigação e o tratamento dependem de avaliação individual com médico.',
   },
+  {
+    slug: 'resistencia-a-insulina',
+    titulo: 'Resistência à insulina: sintomas, exames e como ela dificulta o emagrecimento, com tratamento em São Paulo',
+    tituloSeo: 'Resistência à insulina: sintomas e tratamento em São Paulo',
+    descricao:
+      'Resistência à insulina: veja os sintomas, como o HOMA-IR e outros exames fazem o diagnóstico, por que ela trava o emagrecimento e como tratar em São Paulo.',
+    tituloSocial: 'Resistência à insulina: sintomas, exames e tratamento',
+    descricaoSocial:
+      'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
+    publicadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-18',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Resultado de exames com glicemia, insulina de jejum, HOMA-IR alto e hemoglobina glicada, ao lado da curva de glicose e insulina após a refeição, com o consultório da Clínica Belvitá ao fundo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: {
+      '@type': 'MedicalCondition',
+      name: 'Resistência à insulina',
+      alternateName: 'Insulinorresistência',
+      signOrSymptom: [
+        { '@type': 'MedicalSignOrSymptom', name: 'Gordura abdominal' },
+        { '@type': 'MedicalSignOrSymptom', name: 'Acantose nigricans' },
+      ],
+      possibleTreatment: [
+        { '@type': 'LifestyleModification', name: 'Atividade física e treino de força' },
+        { '@type': 'LifestyleModification', name: 'Mudança alimentar' },
+      ],
+    },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'HOMA-IR' },
+      { '@type': 'MedicalTest', name: 'Hemoglobina glicada' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Não inicie, suspenda nem altere medicamentos sem orientação. O diagnóstico e o tratamento dependem de avaliação individual com médico.',
+  },
 ];

@@ -14,6 +14,16 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(o-que-e-reumatismo|o-que-um-medico-reumatologista-pode-fazer-pela-minha-saude-2|reumatismo-nao-e-coisa-de-velho-2|quando-devo-procurar-um-reumatologista-2|doencas-reumatologicas-diagnostico-e-tratamento|fibromialgia-e-doencas-articulares-inflamatorias-como-diferenciar|conheca-os-tipos-de-reumatismo-mais-comuns-2|category|wp-content|wp-admin|wp-includes)(/.*)?",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/(wp-[^/]*\\.php|xmlrpc\\.php)",
+      "destination": "/api/gone"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

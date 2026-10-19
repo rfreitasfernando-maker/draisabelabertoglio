@@ -252,4 +252,27 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
   },
+  {
+    slug: 'semaglutida-generica',
+    titulo: 'Semaglutida genérica: o que muda, se funciona igual ao Ozempic e como usar com segurança em São Paulo',
+    tituloSeo: 'Semaglutida genérica: o que muda e se funciona | São Paulo',
+    descricao:
+      'Semaglutida genérica funciona igual ao Ozempic? Veja o que a Anvisa aprovou, a diferença entre genérico e similar e como trocar com orientação médica.',
+    tituloSocial: 'Semaglutida genérica: o que muda e se funciona igual ao Ozempic',
+    descricaoSocial:
+      'Genérico, similar e sintética: o que a Anvisa aprovou depois do fim da patente e o que continua valendo no tratamento com acompanhamento médico.',
+    publicadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-19',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Embalagem ilustrativa de semaglutida genérica com a faixa amarela e a letra G, ao lado de uma lista com os tipos de semaglutida: original, com marca, similar e genérica',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a semaglutida não entra nas menções.
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda, troque nem altere doses sem orientação médica.',
+  },
 ];

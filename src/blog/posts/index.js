@@ -229,4 +229,27 @@ export const POSTS = [
       { '@type': 'MedicalCondition', name: 'Esteatose hepática' },
     ],
   },
+  {
+    slug: 'parar-mounjaro',
+    titulo: 'Parar o Mounjaro: o que acontece com o peso, como é a retirada e como manter o resultado, com acompanhamento em São Paulo',
+    tituloSeo: 'Parar o Mounjaro: o que acontece com o peso | São Paulo',
+    descricao:
+      'Parar o Mounjaro faz o peso voltar? Veja o que mostrou o SURMOUNT-4, como é a retirada com acompanhamento médico em nutrologia e como manter o peso.',
+    tituloSocial: 'Parar o Mounjaro: o que acontece com o peso e como manter',
+    descricaoSocial:
+      'Reganho, retirada planejada e manutenção: o que os estudos mostram e como o acompanhamento médico ajuda a não perder o resultado.',
+    publicadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-19',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher mede a cintura com fita métrica ao lado de uma caneta injetável e de um gráfico de peso que cai e volta a subir, com ícones de fome, abdômen, treino de força, sono e acompanhamento médico',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a tirzepatida não entra nas menções.
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
+  },
 ];

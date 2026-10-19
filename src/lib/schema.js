@@ -9,7 +9,7 @@ export const NOME_DO_SITE = `${CLINIC_NAME} – ${DOCTOR_NAME}`;
 
 // Data da última revisão do conteúdo da página inicial pela Dra. Isabela. Aparece na página (AboutDoctor),
 // no dateModified do JSON-LD e no <lastmod> do sitemap: atualizar sempre que o texto da página mudar.
-export const HOME_REVISADA_EM = '2026-10-11';
+export const HOME_REVISADA_EM = '2026-10-19';
 
 export const ID_CLINICA = `${SITE_URL}/#clinica`;
 export const ID_MEDICA = `${SITE_URL}/#dra-isabela`;
@@ -27,7 +27,7 @@ const ENDERECO = {
 };
 
 // Posição do pin da ficha do Google (cid em src/lib/location.js).
-const COORDENADAS = { '@type': 'GeoCoordinates', latitude: -23.568869, longitude: -46.646175 };
+export const COORDENADAS = { '@type': 'GeoCoordinates', latitude: -23.568869, longitude: -46.646175 };
 
 // Segunda a sexta, das 8h às 18h (HOURS em src/lib/location.js).
 const HORARIO = [
@@ -40,6 +40,15 @@ const HORARIO = [
 ];
 
 const SAO_PAULO = { '@type': 'City', name: 'São Paulo' };
+
+// Bairros de onde vêm os pacientes (página /medico-para-emagrecer-paraiso), além da cidade.
+const AREA_ATENDIDA = [
+  ...['Paraíso', 'Bela Vista', 'Vila Mariana', 'Aclimação', 'Liberdade', 'Jardim Paulista', 'Cerqueira César'].map((bairro) => ({
+    '@type': 'Place',
+    name: `${bairro}, São Paulo - SP`,
+  })),
+  SAO_PAULO,
+];
 
 // Os serviços que a página apresenta, com as palavras da própria página.
 const SERVICOS = [
@@ -77,7 +86,10 @@ export const CLINICA = {
   geo: COORDENADAS,
   hasMap: MAP_DIRECTIONS_URL,
   openingHoursSpecification: HORARIO,
-  areaServed: SAO_PAULO,
+  areaServed: AREA_ATENDIDA,
+  amenityFeature: [{ '@type': 'LocationFeatureSpecification', name: 'Estacionamento conveniado com manobrista', value: true }],
+  isAcceptingNewPatients: true,
+  paymentAccepted: 'Consulta particular, com nota fiscal para reembolso',
   availableService: SERVICOS,
   employee: { '@id': ID_MEDICA },
 };

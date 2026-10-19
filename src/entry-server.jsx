@@ -6,5 +6,5 @@ import App from '@/App';
 // no `npm run dev`, monta as páginas do blog (plugin em vite.config.js).
 export const render = () => renderToString(<App />);
 
-export { renderBlog, rotasDoBlog, gerarSitemap, gerarLlmsTxt } from '@/blog/render';
+export { renderBlog, rotasDoBlog, rotasDasPaginas, gerarSitemap, gerarLlmsTxt } from '@/blog/render';
 export { jsonLdDaHome } from '@/lib/schema';

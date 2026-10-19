@@ -266,7 +266,7 @@ const addTransformIndexHtml = {
 	},
 };
 
-// Páginas do blog no `npm run dev`: montadas no servidor a cada requisição, com o mesmo código do build
+// Páginas do blog e páginas avulsas (src/paginas) no `npm run dev`: montadas no servidor a cada requisição, com o mesmo código do build
 // (src/blog/render.jsx). No build, quem gera os arquivos é tools/prerender.js.
 const blogDevPlugin = {
 	name: 'blog-dev',
@@ -274,7 +274,7 @@ const blogDevPlugin = {
 		server.middlewares.use(async (req, res, next) => {
 			const caminho = req.url.split(/[?#]/)[0];
 			// Arquivos (imagens em /blog/imagens/...) seguem para o servidor de estáticos.
-			if (!/^\/blog(\/[^.]*)?$/.test(caminho)) return next();
+			if (!/^\/(blog(\/[^.]*)?|[a-z0-9-]+)$/.test(caminho)) return next();
 			try {
 				const { renderBlog } = await server.ssrLoadModule('/src/entry-server.jsx');
 				const pagina = renderBlog(caminho);

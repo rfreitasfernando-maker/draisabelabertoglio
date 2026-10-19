@@ -23,7 +23,7 @@ export const POSTS = [
     descricaoSocial:
       'Avaliação, bioimpedância, plano individualizado e manutenção: entenda como funciona o emagrecimento com acompanhamento médico e quando ele é indicado.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1731,
       altura: 909,
@@ -43,7 +43,7 @@ export const POSTS = [
     descricaoSocial:
       'O que a bioimpedância mede, como se preparar para o exame e como ler gordura, massa muscular e gordura visceral no laudo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,
@@ -69,7 +69,7 @@ export const POSTS = [
     descricaoSocial:
       'Mecanismo, resultados dos estudos, efeitos colaterais e quem não deve usar: entenda a diferença entre tirzepatida e semaglutida.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,
@@ -90,7 +90,7 @@ export const POSTS = [
     descricaoSocial:
       'Quanto do peso perdido com tirzepatida é massa magra, por que isso importa e como proteína, treino de força e bioimpedância ajudam a preservar o músculo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,
@@ -112,7 +112,7 @@ export const POSTS = [
     descricaoSocial:
       'Três tecnologias em um só equipamento para celulite, flacidez e gordura localizada, com uso complementar no lipedema. Sem cortes e sem agulhas.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-08',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,
@@ -140,7 +140,7 @@ export const POSTS = [
     descricaoSocial:
       'Resistência à insulina, tireoide, sono, medicamentos, perda de músculo e adaptação metabólica: o que pode travar o emagrecimento e como investigar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1731,
       altura: 909,
@@ -168,7 +168,7 @@ export const POSTS = [
     descricaoSocial:
       'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,
@@ -206,7 +206,7 @@ export const POSTS = [
     descricaoSocial:
       'A gordura entre os órgãos do abdômen é a mais ligada a diabetes, gordura no fígado e doença cardiovascular. Como medir e como reduzir.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-18',
+    atualizadoEm: '2026-10-19',
     capa: {
       largura: 1734,
       altura: 907,

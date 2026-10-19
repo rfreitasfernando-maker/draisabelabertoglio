@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin } from 'lucide-react';
 import MapModal from '@/components/MapModal';
 import { CTA_SITE, CTA_BLOG } from '@/lib/cta';
+import { CONSULTORIO_PATH } from '@/lib/location';
 
 // `blog`: nas páginas do blog os itens levam de volta às seções da página inicial (em vez de rolar até elas)
-// e o CTA usa o link e o evento do blog.
-const Header = ({ blog = false }) => {
+// e o CTA usa o link e o evento do blog (também na página do consultório, que usa o mesmo modelo).
+// `atual`: item do menu da página aberta ('blog' ou o caminho da página avulsa, sem a barra).
+const Header = ({ blog = false, atual }) => {
   const cta = blog ? CTA_BLOG : CTA_SITE;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
@@ -39,7 +41,8 @@ const Header = ({ blog = false }) => {
     { label: 'Sobre', secao: 'about' },
     { label: 'Tecnologia', secao: 'tecnologia' },
     { label: 'Endereço', onClick: openMap, icon: MapPin },
-    { label: 'Blog', href: '/blog', atual: blog },
+    { label: 'Consultório', href: CONSULTORIO_PATH, atual: atual === CONSULTORIO_PATH.slice(1) },
+    { label: 'Blog', href: '/blog', atual: atual === 'blog' },
   ];
 
   // Links de verdade (<a>) onde há outra página, para o Google seguir; botões para o que acontece nesta página.
@@ -85,7 +88,7 @@ const Header = ({ blog = false }) => {
           : 'bg-transparent border-b border-transparent'
       }`}>
         <nav className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center h-20 md:h-24 gap-10">
+          <div className="flex items-center h-20 md:h-24 gap-6 xl:gap-10">
             {blog ? (
               <a href="/" className="flex items-center flex-shrink-0" aria-label="Clínica Belvitá - página inicial">
                 {logo}
@@ -100,11 +103,11 @@ const Header = ({ blog = false }) => {
               </button>
             )}
 
-            <div className="hidden md:flex items-center gap-8 flex-1">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1">
               {navItems.map((item) =>
                 renderItem(
                   item,
-                  `flex items-center gap-1.5 text-sm font-sans font-medium tracking-widest uppercase transition-colors duration-300 ${
+                  `flex items-center gap-1.5 text-sm font-sans font-medium tracking-wider xl:tracking-widest uppercase transition-colors duration-300 ${
                     solid ? 'text-brand-dark-gray/80 hover:text-brand-gold' : 'text-white/80 hover:text-brand-gold-light'
                   }`,
                 ),
@@ -116,7 +119,7 @@ const Header = ({ blog = false }) => {
               onClick={(e) => cta.rastrear('menu', e)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`hidden md:block text-sm font-sans font-medium tracking-widest uppercase px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
+              className={`hidden lg:block text-sm font-sans font-medium tracking-widest uppercase px-5 xl:px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
                 solid
                   ? 'border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white'
                   : 'bg-brand-gold text-white hover:bg-white hover:text-brand-dark'
@@ -127,7 +130,7 @@ const Header = ({ blog = false }) => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
+              className={`lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
               aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={isMenuOpen}
             >
@@ -136,7 +139,7 @@ const Header = ({ blog = false }) => {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden overflow-hidden border-t border-brand-gold/10 animate-in fade-in slide-in-from-top-2 duration-300">
+            <div className="lg:hidden overflow-hidden border-t border-brand-gold/10 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="py-6 flex flex-col gap-1">
                 {navItems.map((item) =>
                   renderItem(

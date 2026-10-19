@@ -8,8 +8,12 @@ import { SITE_URL, DESCRICAO_DA_CLINICA } from '@/lib/schema';
 
 const credenciais = DOCTOR_CREDENTIALS.replace(/\u00A0/g, ' ');
 
-/** @param {{ titulo: string, descricao: string, url: string }[]} posts posts do blog, mais recentes primeiro */
-export function montarLlmsTxt(posts) {
+/**
+ * @param {{ titulo: string, descricao: string, url: string }[]} posts posts do blog, mais recentes primeiro
+ * @param {{ titulo: string, descricao: string, url: string }[]} paginas páginas avulsas da raiz (src/paginas)
+ */
+export function montarLlmsTxt(posts, paginas = []) {
+  const outrasPaginas = paginas.map((pagina) => `- [${pagina.titulo}](${pagina.url}): ${pagina.descricao}`).join('\n');
   const faq = FAQ.map(({ pergunta, resposta }) => `### ${pergunta}\n\n${resposta}`).join('\n\n');
   const artigos = posts.map((post) => `- [${post.titulo}](${post.url}): ${post.descricao}`).join('\n');
 
@@ -68,6 +72,7 @@ ${faq}
 - [Agendar pelo WhatsApp](${WHATSAPP_URL})
 - [Blog](${SITE_URL}/blog)
 - [Instagram ${INSTAGRAM_HANDLE}](${INSTAGRAM_URL})
+${outrasPaginas}
 
 ## Artigos do blog
 

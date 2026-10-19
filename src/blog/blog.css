@@ -158,6 +158,29 @@
   }
 }
 
+/* Foto em retrato (pessoa): um pouco mais larga que a figura padrão */
+.post-figura-retrato {
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .post-figura-retrato {
+    width: 240px;
+  }
+}
+
+/* Mapa do Google dentro do texto */
+.post-mapa {
+  @apply border border-brand-gold/10 overflow-hidden;
+  clear: both;
+  height: 360px;
+}
+.post-mapa iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Perguntas frequentes: sanfona sem JavaScript, como a da página inicial */
 .post-faq details {
   @apply border-b border-brand-gold/15;

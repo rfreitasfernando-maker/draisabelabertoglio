@@ -2,6 +2,7 @@
 // - página inicial: injeta o HTML do <App /> no #root do dist/index.html;
 // - blog: gera dist/blog.html e dist/blog/<slug>.html a partir do modelo (o próprio dist/blog.html que o Vite gerou).
 //   Com "cleanUrls" no vercel.json, a Vercel serve blog.html em /blog e blog/<slug>.html em /blog/<slug>;
+// - páginas avulsas (src/paginas): dist/<slug>.html, com o mesmo modelo do blog, servidas em /<slug>;
 // - sitemap: gera dist/sitemap.xml com todas as páginas;
 // - llms.txt: gera dist/llms.txt, o resumo do site para assistentes de IA.
 import fs from 'node:fs';
@@ -15,7 +16,7 @@ const indexPath = path.join(dist, 'index.html');
 const modeloBlogPath = path.join(dist, 'blog.html');
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js');
 
-const { render, renderBlog, rotasDoBlog, gerarSitemap, gerarLlmsTxt, jsonLdDaHome } = await import(pathToFileURL(serverEntry).href);
+const { render, renderBlog, rotasDoBlog, rotasDasPaginas, gerarSitemap, gerarLlmsTxt, jsonLdDaHome } = await import(pathToFileURL(serverEntry).href);
 
 const html = fs.readFileSync(indexPath, 'utf8');
 const marcador = '<div id="root"></div>';
@@ -39,7 +40,7 @@ console.log(`prerender: dist/index.html gerado com o HTML da página e o CSS emb
 // O modelo é lido antes de tudo: a página /blog vai ocupar o mesmo arquivo.
 const modeloBlog = fs.readFileSync(modeloBlogPath, 'utf8');
 fs.rmSync(modeloBlogPath);
-for (const rota of rotasDoBlog()) {
+for (const rota of [...rotasDoBlog(), ...rotasDasPaginas()]) {
   const pagina = renderBlog(rota);
   if (!pagina) throw new Error(`prerender: ${rota} não gerou página`);
   const destino = path.join(dist, `${rota}.html`);

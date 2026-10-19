@@ -1,7 +1,7 @@
 // <head> das páginas do blog: título, descrição, canonical, prévia de compartilhamento e dados estruturados.
 import { DOCTOR_NAME } from '@/lib/doctor';
 import { capaDoPost, TAMANHOS_CAPA } from '@/blog/imagens';
-import { SITE_URL, NOME_DO_SITE, ID_CLINICA, ID_MEDICA, CLINICA, MEDICA, jsonLd } from '@/lib/schema';
+import { SITE_URL, NOME_DO_SITE, ID_CLINICA, ID_MEDICA, CLINICA, MEDICA, COORDENADAS, jsonLd } from '@/lib/schema';
 
 export { SITE_URL };
 export const URL_DO_BLOG = `${SITE_URL}/blog`;
@@ -131,6 +131,68 @@ export function headDoPost(post, conteudo) {
       meta('property', 'article:modified_time', post.atualizadoEm),
       // A capa é o maior elemento da primeira dobra: começa a baixar junto com o HTML.
       `<link rel="preload" as="image" href="${capa.src}" imagesrcset="${capa.srcSet}" imagesizes="${TAMANHOS_CAPA}" fetchpriority="high" />`,
+      jsonLd(grafo),
+    ],
+  });
+}
+
+export const urlDaPagina = (pagina) => `${SITE_URL}/${pagina.slug}`;
+
+/** <head> de uma página avulsa da raiz (src/paginas): a página fala da clínica, com a trilha Início › página. */
+export function headDaPaginaAvulsa(pagina, conteudo) {
+  const url = urlDaPagina(pagina);
+
+  const grafo = [
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: pagina.titulo,
+      description: pagina.descricao,
+      inLanguage: 'pt-BR',
+      dateModified: pagina.atualizadoEm,
+      lastReviewed: pagina.atualizadoEm,
+      audience: { '@type': 'MedicalAudience', audienceType: 'Pacientes' },
+      about: { '@id': ID_CLINICA },
+      reviewedBy: { '@id': ID_MEDICA },
+      publisher: { '@id': ID_CLINICA },
+      primaryImageOfPage: { '@type': 'ImageObject', url: `${SITE_URL}${pagina.imagemSocial.src}`, width: 1200, height: 630 },
+      breadcrumb: { '@id': `${url}#breadcrumb` },
+    },
+    CLINICA,
+    MEDICA,
+    trilha(`${url}#breadcrumb`, [
+      ['Início', `${SITE_URL}/`],
+      [pagina.nomeCurto, url],
+    ]),
+  ];
+
+  if (conteudo.faq.length) {
+    grafo.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: conteudo.faq.map(({ pergunta, resposta }) => ({
+        '@type': 'Question',
+        name: pergunta,
+        acceptedAnswer: { '@type': 'Answer', text: resposta },
+      })),
+    });
+  }
+
+  return headDaPagina({
+    titulo: pagina.tituloSeo,
+    descricao: pagina.descricao,
+    url,
+    tipo: 'website',
+    tituloSocial: pagina.tituloSocial,
+    descricaoSocial: pagina.descricaoSocial,
+    imagemSocial: pagina.imagemSocial.src,
+    imagemAlt: pagina.imagemSocial.alt,
+    extras: [
+      meta('name', 'geo.region', 'BR-SP'),
+      meta('name', 'geo.placename', 'Paraíso, São Paulo'),
+      meta('name', 'geo.position', `${COORDENADAS.latitude};${COORDENADAS.longitude}`),
+      meta('name', 'ICBM', `${COORDENADAS.latitude}, ${COORDENADAS.longitude}`),
       jsonLd(grafo),
     ],
   });

@@ -7,7 +7,9 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { POSTS } from '@/blog/posts';
 import { prepararConteudo } from '@/blog/conteudo';
 import { linkWhatsapp } from '@/lib/whatsapp';
-import { headDoPost, headDoBlog, SITE_URL, URL_DO_BLOG, urlDoPost } from '@/blog/seo';
+import { headDoPost, headDoBlog, headDaPaginaAvulsa, SITE_URL, URL_DO_BLOG, urlDoPost, urlDaPagina } from '@/blog/seo';
+import { PAGINAS } from '@/paginas';
+import PaginaAvulsa from '@/paginas/PaginaAvulsa';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
 import { capaDoPost } from '@/blog/imagens';
@@ -32,20 +34,41 @@ const conteudos = new Map(
 );
 const minutosDe = (post) => conteudos.get(post.slug).minutosDeLeitura;
 
+// Páginas avulsas da raiz (src/paginas): mesmo modelo, mesmo tratamento do texto que os posts.
+const textosDasPaginas = import.meta.glob('../paginas/*.html', { query: '?raw', import: 'default', eager: true });
+const conteudosDasPaginas = new Map(
+  PAGINAS.map((pagina) => {
+    const html = textosDasPaginas[`../paginas/${pagina.slug}.html`];
+    if (html === undefined) throw new Error(`páginas: falta o texto src/paginas/${pagina.slug}.html`);
+    const link = pagina.mensagemWhatsapp ? linkWhatsapp(pagina.mensagemWhatsapp) : undefined;
+    return [pagina.slug, prepararConteudo(html, slugs, link)];
+  }),
+);
+
 export const rotasDoBlog = () => (posts.length ? ['/blog', ...posts.map((post) => `/blog/${post.slug}`)] : []);
+export const rotasDasPaginas = () => PAGINAS.map((pagina) => `/${pagina.slug}`);
+
+/** Item do menu marcado como atual na rota (o mesmo cálculo no servidor e em src/blog/client.jsx). */
+export const itemAtualDoMenu = (caminho) => (caminho.startsWith('/blog') ? 'blog' : caminho.replace(/^\//, ''));
 
 /**
- * HTML de uma página do blog, em partes para o template blog.html; null se a rota não existe.
+ * HTML de uma página do blog ou de uma página avulsa, em partes para o template blog.html; null se a rota não existe.
  * Cabeçalho e botão de WhatsApp são ilhas hidratadas no navegador (src/blog/client.jsx);
  * o resto é HTML estático.
  */
 export function renderBlog(url) {
   const caminho = url.split(/[?#]/)[0].replace(/\/+$/, '');
-  if (!posts.length) return null;
 
   let head;
   let pagina;
-  if (caminho === '/blog') {
+  const avulsa = PAGINAS.find((p) => `/${p.slug}` === caminho);
+  if (avulsa) {
+    const conteudo = conteudosDasPaginas.get(avulsa.slug);
+    head = headDaPaginaAvulsa(avulsa, conteudo);
+    pagina = <PaginaAvulsa pagina={avulsa} conteudo={conteudo} />;
+  } else if (!posts.length) {
+    return null;
+  } else if (caminho === '/blog') {
     head = headDoBlog(posts);
     pagina = <PaginaDoBlog posts={posts} minutosDe={minutosDe} />;
   } else {
@@ -58,7 +81,7 @@ export function renderBlog(url) {
 
   return {
     head,
-    cabecalho: renderToString(<Header blog />),
+    cabecalho: renderToString(<Header blog atual={itemAtualDoMenu(caminho)} />),
     conteudo: renderToStaticMarkup(
       <>
         {pagina}
@@ -95,6 +118,7 @@ export function gerarSitemap() {
   const maisRecente = posts.map((post) => post.atualizadoEm).sort().at(-1);
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: HOME_REVISADA_EM, imagens: IMAGENS_DA_HOME },
+    ...PAGINAS.map((pagina) => ({ loc: urlDaPagina(pagina), lastmod: pagina.atualizadoEm })),
     ...(posts.length ? [{ loc: URL_DO_BLOG, lastmod: maisRecente }] : []),
     ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm, imagens: [capaDoPost(post).social] })),
   ];
@@ -112,4 +136,7 @@ export function gerarSitemap() {
 
 /** llms.txt do site: resumo da página inicial e lista dos posts (src/lib/llms.js). */
 export const gerarLlmsTxt = () =>
-  montarLlmsTxt(posts.map((post) => ({ titulo: post.titulo, descricao: post.descricao, url: urlDoPost(post) })));
+  montarLlmsTxt(
+    posts.map((post) => ({ titulo: post.titulo, descricao: post.descricao, url: urlDoPost(post) })),
+    PAGINAS.map((pagina) => ({ titulo: pagina.titulo, descricao: pagina.descricao, url: urlDaPagina(pagina) })),
+  );

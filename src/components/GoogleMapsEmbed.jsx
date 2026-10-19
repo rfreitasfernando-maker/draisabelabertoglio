@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from '@/hooks/useInView';
-import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL } from '@/lib/location';
+import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_EMBED_URL, MAP_DIRECTIONS_URL, CONSULTORIO_PATH } from '@/lib/location';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
@@ -51,14 +51,20 @@ const GoogleMapsEmbed = () => {
             ></iframe>
           </div>
 
-          <div className="text-center mt-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-6 mt-6">
+            <a
+              href={CONSULTORIO_PATH}
+              className="inline-flex items-center min-h-[44px] py-3 px-4 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
+            >
+              Como chegar, horários e estacionamento →
+            </a>
             <a
               href={MAP_DIRECTIONS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center min-h-[44px] py-3 px-4 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
             >
-              Como Chegar →
+              Rota no Google Maps →
             </a>
           </div>
         </div>

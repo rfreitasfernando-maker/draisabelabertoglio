@@ -1,6 +1,6 @@
 import React from 'react';
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS, COMPANY, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/doctor';
-import { ADDRESS } from '@/lib/location';
+import { ADDRESS, CONSULTORIO_PATH } from '@/lib/location';
 
 const Footer = () => {
   return (
@@ -39,7 +39,11 @@ const Footer = () => {
               Responsável técnica: <span className="font-medium text-brand-dark-gray/80">{DOCTOR_NAME}</span> · {DOCTOR_CREDENTIALS}
             </p>
             <p>{COMPANY}</p>
-            <p>{ADDRESS}</p>
+            <p>
+              <a href={CONSULTORIO_PATH} className="underline underline-offset-4 decoration-brand-gold/30 hover:text-brand-gold transition-colors duration-300">
+                {ADDRESS}
+              </a>
+            </p>
           </div>
           <p className="text-[10px] font-sans font-light tracking-[0.2em] uppercase text-brand-dark-gray/70">
             © 2026 {DOCTOR_NAME} — Todos os direitos reservados

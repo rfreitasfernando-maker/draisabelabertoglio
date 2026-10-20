@@ -12,6 +12,11 @@
       ],
       "destination": "https://www.draisabelabertoglio.com.br/:path",
       "permanent": true
+    },
+    {
+      "source": "/nutrologia/:path+",
+      "destination": "/nutrologia",
+      "permanent": true
     }
   ],
   "rewrites": [

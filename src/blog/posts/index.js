@@ -275,4 +275,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda, troque nem altere doses sem orientação médica.',
   },
+  {
+    slug: 'vontade-de-comer-doce-a-noite',
+    titulo: 'Vontade de comer doce à noite: por que acontece e o que fazer, com acompanhamento em São Paulo',
+    tituloSeo: 'Vontade de comer doce à noite: causas e o que fazer | SP',
+    descricao:
+      'Vontade de comer doce à noite tem explicação: relógio biológico, sono, estresse e o que você come de dia. Veja o que fazer, com nutrologia em SP.',
+    tituloSocial: 'Vontade de comer doce à noite: por que acontece e o que fazer',
+    descricaoSocial:
+      'Relógio biológico, sono, estresse e refeições do dia: entenda a vontade de doce depois do jantar e quando vale procurar avaliação médica.',
+    publicadoEm: '2026-10-20',
+    atualizadoEm: '2026-10-20',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher à noite olha para um prato com bolo de chocolate, cookie e chocolate, com a lua na janela e ícones de sono e de vontade de doce',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalSymptom', name: 'Vontade de comer doce à noite' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Transtorno de compulsão alimentar' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Mudanças na alimentação, uso de suplementos e medicamentos devem ser orientados por um profissional de saúde.',
+  },
 ];

@@ -6,9 +6,6 @@
 import { Activity, CalendarCheck, Car, MapPin, Stethoscope } from 'lucide-react';
 import { FAQ } from '@/lib/faq';
 
-// Perguntas da página inicial sem as do Unyque Pro (a de agendamento cita o Unyque na resposta).
-const FAQ_EMAGRECIMENTO = FAQ.filter(({ pergunta, resposta }) => !/unyque/i.test(pergunta + resposta));
-
 // Pergunta da página inicial pelo texto exato (erro no build se ela mudar de nome).
 const doFaq = (texto) => {
   const item = FAQ.find(({ pergunta }) => pergunta === texto);
@@ -95,16 +92,80 @@ export const LANDINGS = [
       sobretitulo: 'Nutrologia · Paraíso, SP',
       titulo: { antes: 'Nutróloga em São Paulo:', destaque: 'consulta de nutrologia', depois: 'no Paraíso' },
       texto:
-        'Na Clínica Belvitá, a Dra. Isabela Bertoglio, médica nutróloga, avalia peso, metabolismo, alimentação e exames, com bioimpedância InBody inclusa e acompanhamento de 3 a 6 meses. Perto do metrô Paraíso e da Avenida Paulista.',
+        'Na Clínica Belvitá, a Dra. Isabela Bertoglio, médica nutróloga, cuida da relação entre alimentação, metabolismo e saúde: peso, colesterol, gordura no fígado, glicose, vitaminas e energia. Perto do metrô Paraíso e da Avenida Paulista.',
       beneficios: [
         { icon: Stethoscope, texto: 'Consulta de nutrologia' },
-        { icon: Activity, texto: 'Bioimpedância InBody na avaliação' },
+        { icon: Activity, texto: 'Exames e bioimpedância InBody' },
         { icon: MapPin, texto: 'Metrô Paraíso, perto da Paulista' },
         { icon: Car, texto: 'Estacionamento com manobrista' },
       ],
+      cta: 'Agendar consulta particular',
+      nota: 'Nota fiscal para reembolso · Resposta rápida pelo WhatsApp',
+    },
+    // Temas mais abertos que o emagrecimento: quem busca "nutrólogo" nem sempre quer perder peso.
+    faixa: [
+      'Nutrologia',
+      'Metabolismo',
+      'Vitaminas e minerais',
+      'Colesterol',
+      'Resistência à insulina',
+      'Gordura no fígado',
+      'Longevidade',
+    ],
+    // No lugar do bloco "ideal para você que..." (emagrecimento, com antes e depois): os atendimentos da
+    // ficha do Google da clínica, sem o Unyque Pro, que é estético.
+    servicos: {
+      sobretitulo: 'Atendimentos',
+      titulo: { antes: 'O que a', destaque: 'nutrologia', depois: 'trata na Clínica Belvitá' },
+      texto:
+        'A nutrologia cuida da relação entre alimentação, metabolismo e saúde. Na consulta, a Dra. Isabela Bertoglio investiga, trata e acompanha:',
+      itens: [
+        {
+          titulo: 'Emagrecimento e reeducação alimentar',
+          descricao: 'Plano individualizado para perder peso e manter o resultado, com bioimpedância para acompanhar gordura e músculo.',
+        },
+        {
+          titulo: 'Resistência à insulina e pré-diabetes',
+          descricao: 'Investigação com exames e acompanhamento para melhorar a resposta à insulina e o controle da glicose.',
+        },
+        {
+          titulo: 'Síndrome metabólica',
+          descricao: 'Análise global da saúde para tratar juntos os pontos envolvidos: cintura, pressão, glicose e colesterol.',
+        },
+        {
+          titulo: 'Colesterol e triglicerídeos elevados',
+          descricao: 'Acompanhamento de pacientes com dislipidemia, com ajustes na alimentação e na rotina e controle dos exames.',
+        },
+        {
+          titulo: 'Esteatose hepática (gordura no fígado)',
+          descricao: 'Seguimento nutrológico para reduzir a gordura no fígado.',
+        },
+        {
+          titulo: 'Deficiências de vitaminas e minerais',
+          descricao: 'Investigação e correção de carências nutricionais de vitaminas e minerais.',
+        },
+        {
+          titulo: 'Fadiga e baixa energia',
+          descricao: 'Investigação das causas de cansaço e baixa energia e otimização metabólica.',
+        },
+        {
+          titulo: 'Lipedema',
+          descricao: 'Abordagem nutrológica específica para pacientes com lipedema, com plano alimentar e acompanhamento da composição corporal.',
+        },
+        {
+          titulo: 'Longevidade e saúde da mulher',
+          descricao: 'Avaliação completa de composição corporal, exames laboratoriais e hábitos nas diferentes fases da vida.',
+        },
+        {
+          titulo: 'Pré e pós-operatório de cirurgia plástica',
+          descricao: 'Preparo nutricional para favorecer a cicatrização e a recuperação.',
+        },
+      ],
+      cta: 'Agendar consulta de nutrologia',
     },
     faq: {
       subtitulo: 'Consulta de nutrologia em São Paulo',
+      // Perguntas sobre nutrologia em geral; das de emagrecimento ficam só as que valem para qualquer consulta.
       perguntas: [
         {
           pergunta: 'O que o nutrólogo faz na consulta?',
@@ -116,7 +177,14 @@ export const LANDINGS = [
           resposta:
             'O nutrólogo é médico, com especialidade em Nutrologia: investiga doenças ligadas ao peso e ao metabolismo, pede e interpreta exames e, quando indicado, prescreve medicamentos. O nutricionista é o profissional da nutrição que elabora o plano alimentar. Os dois trabalhos se complementam.',
         },
-        ...FAQ_EMAGRECIMENTO,
+        {
+          pergunta: 'Quais problemas a nutrologia trata?',
+          resposta:
+            'Na Clínica Belvitá, a Dra. Isabela Bertoglio atende emagrecimento e reeducação alimentar, resistência à insulina e pré-diabetes, síndrome metabólica, colesterol e triglicerídeos elevados, gordura no fígado, deficiências de vitaminas e minerais, fadiga e baixa energia, lipedema, longevidade e saúde da mulher, e o preparo para o pré e o pós-operatório de cirurgia plástica.',
+        },
+        doFaq('Você atende por convênio?'),
+        doFaq('O que está incluso na primeira consulta?'),
+        doFaq('Meus exames estão normais, mas não me sinto bem. Isso pode ser hormonal?'),
         {
           pergunta: 'Como agendar uma consulta de nutrologia?',
           resposta: `Pelo WhatsApp (11) 99975-8182. ${ATENDIMENTO}`,

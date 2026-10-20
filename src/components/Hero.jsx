@@ -4,14 +4,24 @@ import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS, GOOGLE_REVIEWS_URL } from '@/lib/doctor';
 
-const beneficios = [
+const BENEFICIOS = [
   { icon: Activity, texto: 'Bioimpedância InBody na avaliação' },
   { icon: CalendarCheck, texto: 'Acompanhamento de 3 a 6 meses' },
   { icon: ClipboardList, texto: 'Plano adaptado à sua rotina' },
   { icon: MapPin, texto: 'Consultório no Paraíso, SP' },
 ];
 
-const Hero = () => {
+// Textos da página inicial. As páginas de destino dos anúncios (src/lib/landings.js) trocam por outros.
+const PADRAO = {
+  sobretitulo: 'Nutrologia · Emagrecimento · Paraíso, SP',
+  titulo: { antes: 'Emagrecimento com', destaque: 'acompanhamento médico', depois: 'de perto' },
+  texto:
+    'Para quem já tentou de tudo: na Clínica Belvitá, em São Paulo, investigamos a causa do ganho de peso e acompanhamos você por 3 a 6 meses, com bioimpedância para medir gordura e músculo — não só o peso.',
+  beneficios: BENEFICIOS,
+};
+
+const Hero = ({ conteudo = PADRAO }) => {
+  const { sobretitulo, titulo, texto, beneficios } = conteudo;
   const scrollToAbout = () => {
     const el = document.getElementById('about');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -25,15 +35,17 @@ const Hero = () => {
         <div className="container mx-auto px-6 lg:px-8 pt-24 pb-10 xl:pt-28 md:pb-12">
           <div className="max-w-xl lg:max-w-2xl md:w-[56%] xl:w-[52%]">
             <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold-light)_85%,white)] mb-4 md:mb-5">
-              Nutrologia · Emagrecimento · Paraíso, SP
+              {sobretitulo}
             </p>
 
             <h1 className="text-[2.125rem] md:text-5xl lg:text-6xl font-serif font-light text-white leading-[1.08] mb-4 md:mb-6">
-              Emagrecimento com <span className="text-brand-gold-light italic">acompanhamento médico</span> de perto
+              {`${titulo.antes} `}
+              <span className="text-brand-gold-light italic">{titulo.destaque}</span>
+              {titulo.depois && ` ${titulo.depois}`}
             </h1>
 
             <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 md:mb-8 max-w-lg">
-              Para quem já tentou de tudo: na Clínica Belvitá, em São Paulo, investigamos a causa do ganho de peso e acompanhamos você por 3 a 6 meses, com bioimpedância para medir gordura e músculo — não só o peso.
+              {texto}
             </p>
 
             <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">

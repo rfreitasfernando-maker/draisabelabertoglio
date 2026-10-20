@@ -15,24 +15,27 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import Footer from '@/components/Footer';
 import { useScrollToHash } from '@/hooks/useScrollToHash';
 
-function App() {
+// `landing`: página de destino de um grupo de anúncios (src/lib/landings.js). Mesmas seções da página
+// inicial, com o topo e o FAQ do tema, cabeçalho sem menu e sem a seção do Unyque Pro.
+// Sem `landing`, é a página inicial.
+function App({ landing }) {
   useScrollToHash();
 
   return (
     <>
       <div className="min-h-screen bg-white text-brand-dark relative">
-        <Header />
+        <Header simples={Boolean(landing)} />
         <main>
-          <Hero />
+          <Hero conteudo={landing?.hero} />
           <IdentificationBlock />
           <AboutDoctor />
           <KeywordsTicker />
           <Reviews />
           <HowItWorks />
-          <Technology />
+          {!landing && <Technology />}
           <Clinica />
           <GoogleMapsEmbed />
-          <FAQ />
+          <FAQ perguntas={landing?.faq.perguntas} subtitulo={landing?.faq.subtitulo} />
           <FinalCTA />
         </main>
         <WhatsAppButton />

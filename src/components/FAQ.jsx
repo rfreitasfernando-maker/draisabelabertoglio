@@ -29,7 +29,8 @@ const FAQItem = ({ question, answer, index }) => (
   </div>
 );
 
-const FAQ = () => {
+// `perguntas` e `subtitulo`: as páginas de destino dos anúncios mostram só as perguntas do tema delas.
+const FAQ = ({ perguntas = PERGUNTAS, subtitulo = 'Emagrecimento com acompanhamento médico e Unyque Pro em São Paulo' }) => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
@@ -44,12 +45,12 @@ const FAQ = () => {
               Perguntas frequentes
             </h2>
             <p className="mt-4 text-base text-brand-light-gray font-light max-w-xl mx-auto">
-              Emagrecimento com acompanhamento médico e Unyque Pro em São Paulo
+              {subtitulo}
             </p>
           </div>
           
           <div>
-            {PERGUNTAS.map(({ pergunta, resposta }, index) => (
+            {perguntas.map(({ pergunta, resposta }, index) => (
               <FAQItem key={pergunta} index={index} question={pergunta} answer={resposta} />
             ))}
           </div>

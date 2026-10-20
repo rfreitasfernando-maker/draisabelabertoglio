@@ -1,5 +1,7 @@
 // Pré-renderiza as páginas no build, para título, texto e CTAs chegarem prontos no primeiro byte, sem esperar o JavaScript:
 // - página inicial: injeta o HTML do <App /> no #root do dist/index.html;
+// - páginas de destino dos anúncios (src/lib/landings.js): dist/<slug>.html, a partir do mesmo modelo da página inicial,
+//   com outro <head> (title, descrição, noindex, canonical, og) e o <App landing> no #root;
 // - blog: gera dist/blog.html e dist/blog/<slug>.html a partir do modelo (o próprio dist/blog.html que o Vite gerou).
 //   Com "cleanUrls" no vercel.json, a Vercel serve blog.html em /blog e blog/<slug>.html em /blog/<slug>;
 // - páginas avulsas (src/paginas): dist/<slug>.html, com o mesmo modelo do blog, servidas em /<slug>;
@@ -16,7 +18,9 @@ const indexPath = path.join(dist, 'index.html');
 const modeloBlogPath = path.join(dist, 'blog.html');
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js');
 
-const { render, renderBlog, rotasDoBlog, rotasDasPaginas, gerarSitemap, gerarLlmsTxt, jsonLdDaHome } = await import(pathToFileURL(serverEntry).href);
+const { render, renderBlog, rotasDoBlog, rotasDasPaginas, gerarSitemap, gerarLlmsTxt, jsonLdDaHome, jsonLdDaLanding, LANDINGS } = await import(
+  pathToFileURL(serverEntry).href
+);
 
 const html = fs.readFileSync(indexPath, 'utf8');
 const marcador = '<div id="root"></div>';
@@ -36,6 +40,36 @@ fs.writeFileSync(
     .replace(marcador, () => `<div id="root">${render()}</div>`),
 );
 console.log(`prerender: dist/index.html gerado com o HTML da página e o CSS embutido (${(css.length / 1024).toFixed(1)} KB)`);
+
+// Páginas de destino: o mesmo modelo, com o <head> trocado tag a tag (cada uma precisa existir uma única vez).
+const SITE = 'https://www.draisabelabertoglio.com.br';
+const atributo = (valor) => String(valor).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+const trocar = (texto, padrao, novo) => {
+  const achados = texto.match(new RegExp(padrao.source, 'g')) ?? [];
+  if (achados.length !== 1) throw new Error(`prerender: ${padrao} aparece ${achados.length} vezes em dist/index.html`);
+  return texto.replace(padrao, () => novo);
+};
+for (const landing of LANDINGS) {
+  const url = `${SITE}/${landing.slug}`;
+  let pagina = html;
+  pagina = trocar(pagina, /<title>[^<]*<\/title>/, `<title>${landing.tituloSeo.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</title>`);
+  pagina = trocar(pagina, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${atributo(landing.descricao)}" />`);
+  // Página feita para o anúncio: fora da busca orgânica (o robô do Google Ads avalia a página mesmo assim).
+  pagina = trocar(pagina, /<meta name="robots" content="[^"]*" \/>/, '<meta name="robots" content="noindex, follow" />');
+  pagina = trocar(pagina, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`);
+  pagina = trocar(pagina, /<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${url}" />`);
+  pagina = trocar(pagina, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${atributo(landing.tituloSocial)}" />`);
+  pagina = trocar(pagina, /<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${atributo(landing.descricao)}" />`);
+  const destino = path.join(dist, `${landing.slug}.html`);
+  fs.writeFileSync(
+    destino,
+    pagina
+      .replace(linkCss[0], () => `<style>${css}</style>`)
+      .replace(marcadorJsonLd, () => jsonLdDaLanding(landing))
+      .replace(marcador, () => `<div id="root">${render(landing)}</div>`),
+  );
+  console.log(`prerender: ${path.relative(root, destino)} (página de destino, noindex)`);
+}
 
 // O modelo é lido antes de tudo: a página /blog vai ocupar o mesmo arquivo.
 const modeloBlog = fs.readFileSync(modeloBlogPath, 'utf8');

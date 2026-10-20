@@ -167,3 +167,32 @@ export function jsonLdDaHome() {
     },
   ]);
 }
+
+/** JSON-LD de uma página de destino de anúncio (src/lib/landings.js): página, clínica, médica e o FAQ dela. */
+export function jsonLdDaLanding(landing) {
+  const url = `${SITE_URL}/${landing.slug}`;
+  return jsonLd([
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: landing.tituloSeo,
+      description: landing.descricao,
+      inLanguage: 'pt-BR',
+      isPartOf: { '@id': `${SITE_URL}/#site` },
+      about: { '@id': ID_CLINICA },
+      reviewedBy: { '@id': ID_MEDICA },
+    },
+    CLINICA,
+    MEDICA,
+    {
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: landing.faq.perguntas.map(({ pergunta, resposta }) => ({
+        '@type': 'Question',
+        name: pergunta,
+        acceptedAnswer: { '@type': 'Answer', text: resposta },
+      })),
+    },
+  ]);
+}

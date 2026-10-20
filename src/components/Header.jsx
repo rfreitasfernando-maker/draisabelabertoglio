@@ -7,7 +7,8 @@ import { CONSULTORIO_PATH } from '@/lib/location';
 // `blog`: nas páginas do blog os itens levam de volta às seções da página inicial (em vez de rolar até elas)
 // e o CTA usa o link e o evento do blog (também na página do consultório, que usa o mesmo modelo).
 // `atual`: item do menu da página aberta ('blog' ou o caminho da página avulsa, sem a barra).
-const Header = ({ blog = false, atual }) => {
+// `simples`: só o logo e o botão de agendar, sem menu (páginas de destino dos anúncios, src/lib/landings.js).
+const Header = ({ blog = false, atual, simples = false }) => {
   const cta = blog ? CTA_BLOG : CTA_SITE;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
@@ -103,7 +104,7 @@ const Header = ({ blog = false, atual }) => {
               </button>
             )}
 
-            <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1">
+            <div className={`hidden ${simples ? '' : 'lg:flex'} items-center gap-6 xl:gap-8 flex-1`}>
               {navItems.map((item) =>
                 renderItem(
                   item,
@@ -119,7 +120,7 @@ const Header = ({ blog = false, atual }) => {
               onClick={(e) => cta.rastrear('menu', e)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`hidden lg:block text-sm font-sans font-medium tracking-widest uppercase px-5 xl:px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
+              className={`${simples ? 'block ml-auto' : 'hidden lg:block'} text-sm font-sans font-medium tracking-widest uppercase px-5 xl:px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
                 solid
                   ? 'border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white'
                   : 'bg-brand-gold text-white hover:bg-white hover:text-brand-dark'
@@ -130,7 +131,7 @@ const Header = ({ blog = false, atual }) => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
+              className={`${simples ? 'hidden' : 'lg:hidden'} p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
               aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={isMenuOpen}
             >

@@ -27,28 +27,28 @@ const Servicos = ({ sobretitulo, titulo, texto, itens, cta }) => {
 
           <ul className="grid sm:grid-cols-2 gap-4 md:gap-5">
             {itens.map((item, index) => {
-              // Desktop (2 colunas): xadrez escuro/claro para os cartões se destacarem um do outro.
-              // Celular (1 coluna): todos claros; empilhado, o xadrez viraria pares escuro-escuro, claro-claro.
-              const escuro = index % 4 % 3 === 0;
+              // Desktop (2 colunas): xadrez branco / dourado bem suave, para os cartões se destacarem um do outro.
+              // Celular (1 coluna): todos brancos; empilhado, o xadrez viraria pares iguais.
+              const tingido = index % 4 % 3 === 0;
               return (
                 <li
                   key={item.titulo}
                   className={`flex gap-4 rounded-xl p-6 md:p-7 bg-white border border-brand-gold/15 shadow-sm shadow-black/[0.03] transition-all duration-500 reveal reveal-sm ${
-                    escuro ? 'sm:bg-brand-dark sm:border-brand-dark' : ''
+                    tingido ? 'sm:bg-brand-gold/10 sm:border-brand-gold/20' : ''
                   }`}
                   style={{ '--reveal-delay': `${(index % 4) * 0.06}s` }}
                 >
                   <span
-                    className={`pt-1 text-xs font-sans font-medium tracking-wider text-brand-gold ${escuro ? 'sm:text-brand-gold-light' : ''}`}
+                    className="pt-2 text-xs font-sans font-medium tracking-wider text-brand-gold"
                     aria-hidden="true"
                   >
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className={`text-base md:text-lg font-sans font-semibold leading-snug text-brand-dark ${escuro ? 'sm:text-white' : ''}`}>
+                    <h3 className="text-xl md:text-2xl font-serif font-medium leading-snug text-brand-dark">
                       {item.titulo}
                     </h3>
-                    <p className={`mt-1.5 text-sm md:text-[15px] leading-relaxed text-brand-dark-gray/80 ${escuro ? 'sm:text-white/75' : ''}`}>
+                    <p className="mt-1.5 text-sm md:text-[15px] leading-relaxed text-brand-dark-gray/80">
                       {item.descricao}
                     </p>
                   </div>

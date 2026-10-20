@@ -69,7 +69,7 @@ export const POSTS = [
     descricaoSocial:
       'Mecanismo, resultados dos estudos, efeitos colaterais e quem não deve usar: entenda a diferença entre tirzepatida e semaglutida.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-20',
     capa: {
       largura: 1734,
       altura: 907,
@@ -262,7 +262,7 @@ export const POSTS = [
     descricaoSocial:
       'Genérico, similar e sintética: o que a Anvisa aprovou depois do fim da patente e o que continua valendo no tratamento com acompanhamento médico.',
     publicadoEm: '2026-10-19',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-20',
     capa: {
       largura: 1734,
       altura: 907,
@@ -300,5 +300,29 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Mudanças na alimentação, uso de suplementos e medicamentos devem ser orientados por um profissional de saúde.',
+  },
+  {
+    slug: 'canetas-emagrecedoras',
+    // Pilar do grupo de medicamentos: tirzepatida-ou-semaglutida e semaglutida-generica linkam para cá.
+    titulo: 'Canetas emagrecedoras: quais são aprovadas, para quem são indicadas, riscos e acompanhamento médico em São Paulo',
+    tituloSeo: 'Canetas emagrecedoras: quais são, para quem e riscos | SP',
+    descricao:
+      'Canetas emagrecedoras aprovadas no Brasil: como agem, quanto ajudam a emagrecer, para quem são indicadas e os riscos. Acompanhamento médico em SP.',
+    tituloSocial: 'Canetas emagrecedoras: quais são aprovadas, para quem e os riscos',
+    descricaoSocial:
+      'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
+    publicadoEm: '2026-10-20',
+    atualizadoEm: '2026-10-20',
+    capa: {
+      largura: 1536,
+      altura: 1024,
+      alt: 'Mulher aplica caneta emagrecedora no braço, com ícones de cintura, gráfico de peso em queda, alimentação e bem-estar',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): os princípios ativos não entram nas menções.
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
   },
 ];

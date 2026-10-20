@@ -18,10 +18,12 @@ const PADRAO = {
   texto:
     'Para quem já tentou de tudo: na Clínica Belvitá, em São Paulo, investigamos a causa do ganho de peso e acompanhamos você por 3 a 6 meses, com bioimpedância para medir gordura e músculo — não só o peso.',
   beneficios: BENEFICIOS,
+  cta: 'Agendar minha avaliação',
+  nota: 'Consulta particular · Resposta rápida pelo WhatsApp',
 };
 
 const Hero = ({ conteudo = PADRAO }) => {
-  const { sobretitulo, titulo, texto, beneficios } = conteudo;
+  const { sobretitulo, titulo, texto, beneficios, cta, nota } = { ...PADRAO, ...conteudo };
   const scrollToAbout = () => {
     const el = document.getElementById('about');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -54,10 +56,10 @@ const Hero = ({ conteudo = PADRAO }) => {
                 onClick={(e) => trackWhatsappClick('hero', e)}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Agendar minha avaliação pelo WhatsApp"
+                aria-label={`${cta} pelo WhatsApp`}
                 className="group w-full md:w-auto whitespace-nowrap bg-brand-gold text-white px-8 md:px-5 xl:px-8 py-4 min-h-[52px] font-sans text-xs font-medium tracking-[0.2em] md:tracking-[0.12em] xl:tracking-[0.2em] uppercase hover:bg-white hover:text-brand-dark hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 flex items-center justify-center gap-3"
               >
-                Agendar minha avaliação
+                {cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
 
@@ -71,7 +73,7 @@ const Hero = ({ conteudo = PADRAO }) => {
             </div>
 
             <p className="mt-3 text-center md:text-left text-xs font-sans text-white/50">
-              Consulta particular · Resposta rápida pelo WhatsApp
+              {nota}
             </p>
 
             {/* Prova social */}

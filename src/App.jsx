@@ -29,7 +29,7 @@ function App({ landing }) {
           <Hero conteudo={landing?.hero} />
           <IdentificationBlock />
           <AboutDoctor />
-          <KeywordsTicker />
+          <KeywordsTicker palavras={landing?.faixa} />
           <Reviews />
           <HowItWorks />
           {!landing && <Technology />}

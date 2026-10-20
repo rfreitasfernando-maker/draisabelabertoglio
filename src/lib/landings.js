@@ -9,6 +9,13 @@ import { FAQ } from '@/lib/faq';
 // Perguntas da página inicial sem as do Unyque Pro (a de agendamento cita o Unyque na resposta).
 const FAQ_EMAGRECIMENTO = FAQ.filter(({ pergunta, resposta }) => !/unyque/i.test(pergunta + resposta));
 
+// Pergunta da página inicial pelo texto exato (erro no build se ela mudar de nome).
+const doFaq = (texto) => {
+  const item = FAQ.find(({ pergunta }) => pergunta === texto);
+  if (!item) throw new Error(`landings: pergunta "${texto}" não existe em src/lib/faq.js`);
+  return item;
+};
+
 // Fim da resposta "como agendar" das páginas de destino (a da página inicial cita o Unyque Pro).
 const ATENDIMENTO =
   'O atendimento é de segunda a sexta, das 8h às 18h. As consultas são particulares, com nota fiscal para reembolso, e acontecem na Clínica Belvitá, na Rua Teixeira da Silva, 54, Conj. 81/82, Bela Vista, em São Paulo, perto da estação Paraíso do metrô, com estacionamento conveniado com manobrista.';
@@ -22,6 +29,16 @@ export const LANDINGS = [
     descricao:
       'Clínica de emagrecimento em São Paulo, no Paraíso: acompanhamento médico de 3 a 6 meses com a Dra. Isabela Bertoglio e bioimpedância inclusa. Agende.',
     tituloSocial: 'Clínica de emagrecimento em São Paulo | Dra. Isabela Bertoglio',
+    // Faixa de palavras entre as seções: o tema da busca, em vez das palavras genéricas da página inicial
+    faixa: [
+      'Clínica de emagrecimento',
+      'Acompanhamento médico',
+      'Bioimpedância InBody',
+      '3 a 6 meses',
+      'Metrô Paraíso',
+      'Perto da Paulista',
+      'Consulta particular',
+    ],
     hero: {
       sobretitulo: 'Clínica de emagrecimento · Paraíso, SP',
       titulo: { antes: 'Clínica de emagrecimento em São Paulo', destaque: 'com acompanhamento médico' },
@@ -33,16 +50,32 @@ export const LANDINGS = [
         { icon: MapPin, texto: 'Metrô Paraíso, perto da Paulista' },
         { icon: Car, texto: 'Estacionamento com manobrista' },
       ],
+      // "Particular" no botão: quem procura convênio já sabe antes de clicar.
+      cta: 'Agendar consulta particular',
+      nota: 'Sem fórmulas prontas e sem promessas · Resposta rápida pelo WhatsApp',
     },
     faq: {
       subtitulo: 'Clínica de emagrecimento com acompanhamento médico em São Paulo',
+      // As objeções que decidem o agendamento vêm primeiro.
       perguntas: [
         {
           pergunta: 'Como funciona o tratamento na clínica de emagrecimento?',
           resposta:
             'Começa com uma consulta médica que revisa o histórico de peso, o sono, a rotina, os medicamentos e os exames, com bioimpedância InBody 380 inclusa. A partir daí, a Dra. Isabela Bertoglio monta um plano adaptado à sua rotina e acompanha a evolução por 3 a 6 meses, com retornos para medir gordura e massa muscular e ajustar o tratamento.',
         },
-        ...FAQ_EMAGRECIMENTO,
+        {
+          pergunta: 'O tratamento inclui medicação?',
+          resposta:
+            'Depende da avaliação. A conduta é definida na consulta, depois de revisar o histórico, os exames e a composição corporal. Quando há indicação, o plano pode incluir medicamentos para obesidade, como as canetas da família GLP-1, sempre com receita, acompanhamento e plano para a fase de manutenção. Quando não há, o tratamento segue com ajustes na alimentação, no sono, na atividade física e na rotina.',
+        },
+        doFaq('Você atende por convênio?'),
+        doFaq('O que está incluso na primeira consulta?'),
+        doFaq('Já tentei de tudo, por que agora seria diferente?'),
+        doFaq('Vou precisar mudar tudo na minha vida?'),
+        doFaq('É só para quem quer emagrecer muito?'),
+        doFaq('Em quanto tempo começo a ver resultados?'),
+        doFaq('Meus exames estão normais, mas não me sinto bem. Isso pode ser hormonal?'),
+        doFaq('Onde fazer emagrecimento com acompanhamento médico em São Paulo?'),
         {
           pergunta: 'Como agendar uma avaliação na clínica de emagrecimento?',
           resposta: `Pelo WhatsApp (11) 99975-8182. ${ATENDIMENTO}`,

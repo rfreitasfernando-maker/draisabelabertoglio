@@ -325,4 +325,27 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
   },
+  {
+    slug: 'mounjaro-efeitos-colaterais',
+    titulo: 'Mounjaro: efeitos colaterais, como usar e por que precisa de acompanhamento médico em São Paulo',
+    tituloSeo: 'Mounjaro: efeitos colaterais, como usar e cuidados | SP',
+    descricao:
+      'Efeitos colaterais do Mounjaro: o que mostram os estudos, sinais de alerta, como diminuir o enjoo e como usar a caneta com acompanhamento médico em SP.',
+    tituloSocial: 'Mounjaro: efeitos colaterais, sinais de alerta e como usar',
+    descricaoSocial:
+      'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
+    publicadoEm: '2026-10-21',
+    atualizadoEm: '2026-10-21',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Caneta injetável sem marca ao lado de um quadro com os efeitos colaterais mais comuns da tirzepatida no estudo SURMOUNT-1: náusea, diarreia, intestino preso e vômitos',
+      legenda: 'Imagem ilustrativa',
+    },
+    // `Drug` no `about` do texto original vira Obesidade (ver o topo deste arquivo).
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica nem a leitura da bula, e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
+  },
 ];

@@ -348,4 +348,28 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica nem a leitura da bula, e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
   },
+  {
+    slug: 'remedios-para-emagrecer',
+    // Pilar dos remédios (comprimidos e canetas); canetas-emagrecedoras é o pilar das injetáveis.
+    titulo: 'Remédios para emagrecer: quais são aprovados, como agem, riscos e quando usar, com acompanhamento em São Paulo',
+    tituloSeo: 'Remédios para emagrecer: quais são aprovados e riscos | SP',
+    descricao:
+      'Remédios para emagrecer aprovados no Brasil: comprimidos e canetas, como agem, quanto ajudam, riscos e inibidores proibidos. Acompanhamento em SP.',
+    tituloSocial: 'Remédios para emagrecer: quais são aprovados, como agem e os riscos',
+    descricaoSocial:
+      'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
+    publicadoEm: '2026-10-21',
+    atualizadoEm: '2026-10-21',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Comprimidos e caneta injetável sem marca ao lado de um quadro com os remédios para obesidade aprovados no Brasil, em comprimido e em injeção',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): os princípios ativos não entram nas menções.
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere tratamentos sem orientação médica.',
+  },
 ];

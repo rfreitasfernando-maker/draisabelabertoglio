@@ -312,7 +312,7 @@ export const POSTS = [
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-10-20',
+    atualizadoEm: '2026-10-21',
     capa: {
       largura: 1536,
       altura: 1024,

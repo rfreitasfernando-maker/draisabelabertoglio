@@ -35,15 +35,15 @@ export const POSTS = [
   },
   {
     slug: 'bioimpedancia',
-    titulo: 'Bioimpedância em São Paulo: o que é, como é feita e como interpretar o resultado',
-    tituloSeo: 'Bioimpedância em São Paulo: o que é e como interpretar',
+    titulo: 'Bioimpedância: o que é, como é feito o exame InBody e como interpretar o resultado em São Paulo',
+    tituloSeo: 'Bioimpedância: o que é, exame InBody e como interpretar | SP',
     descricao:
-      'Bioimpedância em São Paulo: entenda o que o exame mede, como se preparar e como interpretar gordura, músculo e água no laudo. Atendimento no Paraíso.',
-    tituloSocial: 'Bioimpedância em São Paulo: o que é e como interpretar',
+      'Bioimpedância: o que é, como é feito o exame no InBody 380, como se preparar e como ler gordura, músculo e gordura visceral. Onde fazer em São Paulo.',
+    tituloSocial: 'Bioimpedância: o que é, como é feito o exame InBody e como interpretar',
     descricaoSocial:
-      'O que a bioimpedância mede, como se preparar para o exame e como ler gordura, massa muscular e gordura visceral no laudo.',
+      'O que a bioimpedância mede, como é o exame no InBody 380, como se preparar e como ler gordura, massa muscular e gordura visceral no laudo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-23',
     capa: {
       largura: 1734,
       altura: 907,
@@ -56,6 +56,10 @@ export const POSTS = [
       alternateName: 'Análise de bioimpedância elétrica (BIA)',
       usedToDiagnose: { '@type': 'MedicalCondition', name: 'Obesidade' },
     },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+      { '@type': 'MedicalCondition', name: 'Gordura visceral' },
+    ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e a indicação de qualquer tratamento dependem de avaliação individual com médico.',
   },

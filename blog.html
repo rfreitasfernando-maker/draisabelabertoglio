@@ -3,8 +3,9 @@
   <head>
     <!-- Google Tag Manager, carregado no evento load (logo depois que a página termina de carregar).
          Assim o gtm.js nunca roda antes da primeira pintura, o que inflava o LCP no PageSpeed.
-         O dataLayer começa já: page_view e cliques (whatsapp_click) ficam na fila e o GTM processa todos quando chega. -->
-    <script>(function(w,d,i){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});function carregar(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);}if(d.readyState==='complete')carregar();else w.addEventListener('load',carregar);})(window,document,'GTM-P2GJVCZW');</script>
+         O dataLayer começa já: page_view e cliques (whatsapp_click) ficam na fila e o GTM processa todos quando chega.
+         Só carrega no domínio de produção: os previews da Vercel (*.vercel.app) e o localhost ficam sem a tag do Google Ads. -->
+    <script>(function(w,d,i){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});if(['www.draisabelabertoglio.com.br','draisabelabertoglio.com.br'].indexOf(w.location.hostname)<0)return;function carregar(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);}if(d.readyState==='complete')carregar();else w.addEventListener('load',carregar);})(window,document,'GTM-P2GJVCZW');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

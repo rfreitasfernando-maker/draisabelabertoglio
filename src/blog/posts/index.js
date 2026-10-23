@@ -427,4 +427,31 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou psicológica. Se você se identificou com os sintomas descritos, procure avaliação profissional.',
   },
+  {
+    slug: 'obesidade-tratamento',
+    // Pilar da obesidade: remedios-para-emagrecer e bioimpedancia linkam para cá.
+    titulo: 'Obesidade: o que é, como saber se você tem, riscos e opções de tratamento médico em São Paulo',
+    tituloSeo: 'Obesidade: o que é, riscos e tratamento médico | São Paulo',
+    descricao:
+      'Obesidade é doença crônica e tem tratamento. Entenda o IMC, as causas, os riscos e as opções atuais: estilo de vida, remédios e cirurgia. Nutrologia em SP.',
+    tituloSocial: 'Obesidade: o que é, riscos e opções de tratamento',
+    descricaoSocial:
+      'IMC, cintura e composição corporal, causas, riscos e o que a medicina oferece hoje para tratar a obesidade com segurança.',
+    publicadoEm: '2026-10-23',
+    atualizadoEm: '2026-10-23',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Paciente conversa com a médica, que mostra a composição corporal em um tablet, com fita métrica sobre a mesa e ícones de avaliação, riscos, tratamento clínico e cirurgia bariátrica',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): semaglutida e tirzepatida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalProcedure', name: 'Cirurgia bariátrica' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Toda cirurgia envolve riscos, e a indicação de qualquer tratamento depende de avaliação individual.',
+  },
 ];

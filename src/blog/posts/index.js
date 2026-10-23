@@ -372,4 +372,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere tratamentos sem orientação médica.',
   },
+  {
+    slug: 'ozempic-para-que-serve',
+    titulo: 'Ozempic: para que serve, se emagrece, efeitos colaterais e diferença para o Wegovy, com acompanhamento em São Paulo',
+    tituloSeo: 'Ozempic: para que serve, se emagrece e riscos | SP',
+    descricao:
+      'Ozempic serve para quê? Entenda se emagrece, a diferença para o Wegovy, efeitos colaterais e quando faz mal. Acompanhamento médico em São Paulo.',
+    tituloSocial: 'Ozempic: para que serve, se emagrece e quais os riscos',
+    descricaoSocial:
+      'Bula para diabetes, uso para emagrecer, diferença para o Wegovy e efeitos colaterais: o que você precisa saber antes de usar semaglutida.',
+    publicadoEm: '2026-10-23',
+    atualizadoEm: '2026-10-23',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Caneta injetável sem marca ao lado de um quadro comparando a indicação, a dose e a perda de peso do Ozempic e do Wegovy',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Tema principal: diabetes tipo 2 (indicação em bula do Ozempic). Sem o tipo `Drug` (ver o topo deste arquivo).
+    tema: { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica nem a leitura da bula, e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
+  },
 ];

@@ -402,4 +402,29 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica nem a leitura da bula, e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere doses sem orientação médica.',
   },
+  {
+    slug: 'compulsao-alimentar',
+    titulo: 'Compulsão alimentar e fome emocional: sintomas, diferença e como tratar, com acompanhamento em São Paulo',
+    tituloSeo: 'Compulsão alimentar: sintomas e como tratar | São Paulo',
+    descricao:
+      'Compulsão alimentar: sintomas, diferença para a fome emocional, o ciclo de restrição e como é o tratamento com psicoterapia e acompanhamento médico em SP.',
+    tituloSocial: 'Compulsão alimentar: sintomas, diferença para fome emocional e tratamento',
+    descricaoSocial:
+      'Episódios de comer muito com perda de controle têm nome e tratamento. Entenda os sinais e como psicoterapia e cuidado médico se combinam.',
+    publicadoEm: '2026-10-23',
+    atualizadoEm: '2026-10-23',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Mulher pensativa diante de bolo de chocolate, cookies e chocolates, com ícones de estresse, sono, ansiedade e fome emocional',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Transtorno da compulsão alimentar', alternateName: 'Compulsão alimentar' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalTherapy', name: 'Terapia cognitivo-comportamental' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou psicológica. Se você se identificou com os sintomas descritos, procure avaliação profissional.',
+  },
 ];

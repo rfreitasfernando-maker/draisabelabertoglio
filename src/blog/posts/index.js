@@ -454,4 +454,81 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Toda cirurgia envolve riscos, e a indicação de qualquer tratamento depende de avaliação individual.',
   },
+  {
+    slug: 'efeito-sanfona',
+    titulo: 'Efeito sanfona: por que o peso volta depois da dieta e como evitar o reganho, com acompanhamento em São Paulo',
+    tituloSeo: 'Efeito sanfona: por que o peso volta e como evitar | SP',
+    descricao:
+      'Efeito sanfona tem explicação: hormônios da fome, metabolismo e perda de músculo. Veja como evitar o reganho de peso, inclusive após as canetas, em SP.',
+    tituloSocial: 'Efeito sanfona: por que o peso volta e como evitar o reganho',
+    descricaoSocial:
+      'O que os estudos mostram sobre fome, metabolismo e reganho depois da dieta, e o que ajuda a manter o peso perdido.',
+    publicadoEm: '2026-10-25',
+    atualizadoEm: '2026-10-25',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher pensativa ao lado de uma balança e de uma fita métrica, com uma linha que sobe e desce representando o efeito sanfona',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Reganho de peso', alternateName: 'Efeito sanfona' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a tirzepatida não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. Não inicie, suspenda nem altere tratamentos sem orientação médica.',
+  },
+  {
+    slug: 'reeducacao-alimentar',
+    titulo: 'Reeducação alimentar para emagrecer: o que é, como começar e como manter, com acompanhamento em São Paulo',
+    tituloSeo: 'Reeducação alimentar para emagrecer: como começar | SP',
+    descricao:
+      'Reeducação alimentar para emagrecer sem dieta da moda: diferença para a dieta, princípios, passo a passo para começar e erros comuns. Nutrologia em SP.',
+    tituloSocial: 'Reeducação alimentar para emagrecer: o que é e como começar',
+    descricaoSocial:
+      'Comida de verdade, proteína, fibras e regularidade: como trocar a dieta com data para acabar por hábitos que mantêm o peso.',
+    publicadoEm: '2026-10-25',
+    atualizadoEm: '2026-10-25',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher sorridente almoça um prato com frango grelhado, quinoa, salada, tomate, brócolis e abacate, ao lado de frutas, castanhas e água com limão',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'Diet', name: 'Reeducação alimentar' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. O plano alimentar adequado depende de avaliação individual.',
+  },
+  {
+    slug: 'sarcopenia',
+    titulo: 'Sarcopenia: o que é, sintomas, diagnóstico e como prevenir a perda de massa muscular, com acompanhamento em São Paulo',
+    tituloSeo: 'Sarcopenia: o que é, sintomas e como prevenir | São Paulo',
+    descricao:
+      'Sarcopenia é a perda de força e massa muscular. Veja sintomas, quem tem mais risco, diagnóstico com bioimpedância e como prevenir. Nutrologia em SP.',
+    tituloSocial: 'Sarcopenia: o que é, sintomas e como prevenir a perda de músculo',
+    descricaoSocial:
+      'Perda de força e de massa muscular com a idade ou depois de emagrecer: sinais, diagnóstico, relação com as canetas e o que funciona para prevenir.',
+    publicadoEm: '2026-10-25',
+    atualizadoEm: '2026-10-25',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher madura faz exercício com halter, com a musculatura do braço em destaque, ilustrando a prevenção da sarcopenia com treino de força',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade sarcopênica' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+      { '@type': 'MedicalTest', name: 'Força de preensão palmar' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de suplementos e a definição do plano alimentar e de exercícios dependem de avaliação individual.',
+  },
 ];

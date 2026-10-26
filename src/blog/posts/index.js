@@ -589,4 +589,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de suplementos ou medicamentos. A interpretação de exames e a definição de doses dependem de avaliação individual.',
   },
+  {
+    slug: 'preparo-nutricional-cirurgia-plastica',
+    titulo: 'Preparo nutricional antes da cirurgia plástica: exames, alimentação e cuidados para uma recuperação mais segura em São Paulo',
+    tituloSeo: 'Preparo nutricional antes da cirurgia plástica | São Paulo',
+    descricao:
+      'Preparo nutricional antes da cirurgia plástica: anemia, ferro, proteína, glicose, canetas e suplementos. Avaliação em nutrologia na Clínica Belvitá, SP.',
+    tituloSocial: 'Preparo nutricional antes da cirurgia plástica',
+    descricaoSocial:
+      'O que avaliar nas semanas antes da cirurgia: anemia, ferro, proteína, glicose, peso estável, canetas emagrecedoras e suplementos.',
+    publicadoEm: '2026-10-26',
+    atualizadoEm: '2026-10-26',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher à mesa com salada de frango, salmão, castanhas e água, ao lado de um plano nutricional, com ícones de exames, alimentação, massa muscular e recuperação',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalProcedure', name: 'Avaliação nutricional pré-operatória' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): semaglutida e tirzepatida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalProcedure', name: 'Cirurgia plástica' },
+      { '@type': 'MedicalCondition', name: 'Anemia por deficiência de ferro' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Toda cirurgia plástica envolve riscos, e a indicação e o preparo dependem de avaliação individual com o cirurgião, o anestesista e a equipe médica.',
+  },
 ];

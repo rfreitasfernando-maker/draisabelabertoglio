@@ -531,4 +531,62 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de suplementos e a definição do plano alimentar e de exercícios dependem de avaliação individual.',
   },
+  {
+    slug: 'gordura-no-figado',
+    titulo: 'Gordura no fígado: o que é, graus, exames, riscos e tratamento, com acompanhamento em São Paulo',
+    tituloSeo: 'Gordura no fígado: causas, graus e tratamento | São Paulo',
+    descricao:
+      'Gordura no fígado: o que é, o que significam os graus do ultrassom, exames, riscos e tratamento. Perder 5% a 10% do peso ajuda. Nutrologia em São Paulo.',
+    tituloSocial: 'Gordura no fígado: o que é, graus, riscos e tratamento',
+    descricaoSocial:
+      'Esteatose hepática é comum, silenciosa e reversível nas fases iniciais. Entenda os graus do ultrassom, os exames de fibrose e o que trata.',
+    publicadoEm: '2026-10-26',
+    atualizadoEm: '2026-10-26',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher com as mãos na barriga e a ilustração de um fígado com gordura acumulada, com ícones de causas, graus e exames, riscos e tratamento',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: {
+      '@type': 'MedicalCondition',
+      name: 'Esteatose hepática',
+      alternateName: 'Doença hepática esteatótica associada à disfunção metabólica (MASLD)',
+    },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalTest', name: 'Elastografia hepática' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. A interpretação de exames e a indicação de tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'vitamina-d-b12-ferritina',
+    titulo: 'Vitamina D, B12 e ferritina baixas: sintomas, exames, causas e quando tratar, com acompanhamento em São Paulo',
+    tituloSeo: 'Vitamina D, B12 e ferritina baixas: sintomas e exames | SP',
+    descricao:
+      'Vitamina D, B12 e ferritina baixas: sintomas, valores de referência, causas e por que não suplementar por conta própria. Avaliação em nutrologia em SP.',
+    tituloSocial: 'Vitamina D, B12 e ferritina baixas: sintomas e quando tratar',
+    descricaoSocial:
+      'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
+    publicadoEm: '2026-10-26',
+    atualizadoEm: '2026-10-26',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher pensativa ao lado de um quadro com vitamina D, vitamina B12 e ferritina e para que serve cada uma: ossos e músculos, sistema nervoso e sangue, disposição e cabelo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Deficiências nutricionais' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: '25-hidroxivitamina D' },
+      { '@type': 'MedicalTest', name: 'Vitamina B12 sérica' },
+      { '@type': 'MedicalTest', name: 'Ferritina' },
+      { '@type': 'MedicalCondition', name: 'Anemia por deficiência de ferro' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de suplementos ou medicamentos. A interpretação de exames e a definição de doses dependem de avaliação individual.',
+  },
 ];

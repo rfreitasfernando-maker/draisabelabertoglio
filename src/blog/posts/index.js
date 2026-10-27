@@ -13,25 +13,27 @@
 export const POSTS = [
   {
     slug: 'emagrecimento-com-acompanhamento-medico',
-    titulo: 'Emagrecimento com acompanhamento médico em São Paulo: como funciona e para quem é indicado',
+    titulo: 'Emagrecimento com acompanhamento médico: como funciona, para quem é indicado e quais tratamentos existem, em São Paulo',
     // <title> e descrição do resultado do Google
-    tituloSeo: 'Emagrecimento com acompanhamento médico em São Paulo',
+    tituloSeo: 'Emagrecimento com acompanhamento médico: como funciona | SP',
     descricao:
-      'Emagrecimento com acompanhamento médico em São Paulo: veja como funciona a avaliação, o que é medido, quanto dura o tratamento e quando é indicado.',
+      'Emagrecimento com acompanhamento médico e nutrologia: avaliação, bioimpedância, plano, remédios quando indicados e manutenção. Veja como funciona em SP.',
     // Prévia ao compartilhar o link (e resumo no card da lista de posts)
-    tituloSocial: 'Emagrecimento com acompanhamento médico em São Paulo: como funciona',
+    tituloSocial: 'Emagrecimento com acompanhamento médico: como funciona',
     descricaoSocial:
-      'Avaliação, bioimpedância, plano individualizado e manutenção: entenda como funciona o emagrecimento com acompanhamento médico e quando ele é indicado.',
+      'Avaliação, bioimpedância, tratamentos e manutenção: o guia do emagrecimento saudável com acompanhamento médico em nutrologia.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-10-27',
     capa: {
-      largura: 1731,
-      altura: 909,
-      alt: 'Médica explica o resultado da bioimpedância a uma paciente durante consulta de emagrecimento com acompanhamento médico',
+      largura: 1672,
+      altura: 941,
+      alt: 'Mulher sorri pensativa, com ícones de avaliação individualizada, plano nutricional, estratégias e qualidade de vida no emagrecimento com acompanhamento médico',
       legenda: 'Imagem ilustrativa',
     },
     // Tema do artigo nos dados estruturados (schema.org `about`)
     tema: { '@type': 'MedicalCondition', name: 'Obesidade', alternateName: 'Excesso de peso' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): semaglutida e tirzepatida não entram nas menções.
+    mencoes: [{ '@type': 'MedicalTest', name: 'Bioimpedância' }],
   },
   {
     slug: 'bioimpedancia',
@@ -614,5 +616,57 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Toda cirurgia plástica envolve riscos, e a indicação e o preparo dependem de avaliação individual com o cirurgião, o anestesista e a equipe médica.',
+  },
+  {
+    slug: 'sop-emagrecer',
+    titulo: 'SOP e emagrecimento: por que é mais difícil perder peso com ovário policístico e o que funciona, com acompanhamento em São Paulo',
+    tituloSeo: 'SOP e emagrecimento: por que é difícil e o que funciona | SP',
+    descricao:
+      'Emagrecer com SOP é mais difícil por causa da resistência à insulina. Veja por que, o que funciona na alimentação, treino e remédios. Nutrologia em SP.',
+    tituloSocial: 'SOP e emagrecimento: por que é mais difícil e o que funciona',
+    descricaoSocial:
+      'Resistência à insulina, fome e gordura na barriga: entenda a relação entre SOP e peso e o que ajuda a emagrecer com ovário policístico.',
+    publicadoEm: '2026-10-27',
+    atualizadoEm: '2026-10-27',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher pensativa ao lado da ilustração do útero e dos ovários, com ícones de hormônios, resistência à insulina, ganho de peso e opções de tratamento da SOP',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Síndrome dos ovários policísticos', alternateName: 'SOP' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a metformina não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. O diagnóstico e o tratamento da SOP dependem de avaliação individual com ginecologista e equipe médica.',
+  },
+  {
+    slug: 'emagrecer-depois-dos-40',
+    titulo: 'Emagrecer depois dos 40: o que realmente muda no corpo e o que fazer, com acompanhamento em São Paulo',
+    tituloSeo: 'Emagrecer depois dos 40: o que muda e o que fazer | SP',
+    descricao:
+      'Emagrecer depois dos 40 fica mais difícil, mas não pelo motivo que você pensa. Veja o que muda no corpo e o que funciona. Nutrologia em São Paulo.',
+    tituloSocial: 'Emagrecer depois dos 40: o que realmente muda e o que fazer',
+    descricaoSocial:
+      'O metabolismo não desliga aos 40. Entenda o papel do músculo, do sono e dos hormônios e o que funciona para emagrecer nessa fase.',
+    publicadoEm: '2026-10-27',
+    atualizadoEm: '2026-10-27',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher de cerca de 40 anos sorri pensativa, com ícones de metabolismo, composição corporal, treino e saúde para emagrecer depois dos 40',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+      { '@type': 'MedicalCondition', name: 'Perimenopausa' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de exames, medicamentos e terapias hormonais depende de avaliação individual.',
   },
 ];

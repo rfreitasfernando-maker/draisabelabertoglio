@@ -695,4 +695,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. O diagnóstico e o tratamento dependem de avaliação individual.',
   },
+  {
+    slug: 'proteina-para-emagrecer',
+    titulo: 'Proteína para emagrecer: quanto de proteína por dia, alimentos ricos em proteína e se o whey emagrece, com acompanhamento em São Paulo',
+    tituloSeo: 'Quanto de proteína por dia para emagrecer? | SP',
+    descricao:
+      'Quanto de proteína por dia para emagrecer, cálculo por kg, alimentos ricos em proteína e se o whey emagrece ou engorda. Nutrologia em São Paulo.',
+    tituloSocial: 'Quanto de proteína por dia para emagrecer? Cálculo e alimentos',
+    descricaoSocial:
+      'Proteína dá saciedade e protege o músculo no emagrecimento. Veja quanto comer por dia, as melhores fontes e se o whey ajuda.',
+    publicadoEm: '2026-10-29',
+    atualizadoEm: '2026-10-29',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Alimentos ricos em proteína sobre a mesa: frango grelhado, salmão, ovos, iogurte, castanhas, sementes e uma dose de whey protein, com ícones de quantidade ideal e cálculo por kg',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'Diet', name: 'Dieta rica em proteína' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. A quantidade de proteína e o uso de suplementos dependem de avaliação individual.',
+  },
 ];

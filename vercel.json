@@ -14,6 +14,17 @@
       "permanent": true
     },
     {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "draisabelabertoglio.com.br"
+        }
+      ],
+      "destination": "https://www.draisabelabertoglio.com.br/:path",
+      "permanent": true
+    },
+    {
       "source": "/nutrologia/:path+",
       "destination": "/nutrologia",
       "permanent": true

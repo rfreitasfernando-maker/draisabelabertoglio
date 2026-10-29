@@ -669,4 +669,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de exames, medicamentos e terapias hormonais depende de avaliação individual.',
   },
+  {
+    slug: 'pre-diabetes',
+    titulo: 'Pré-diabetes: o que é, a partir de quanto, sintomas, o que comer e como reverter, com acompanhamento em São Paulo',
+    tituloSeo: 'Pré-diabetes: a partir de quanto, sintomas e como reverter',
+    descricao:
+      'Pré-diabetes a partir de quanto? Veja os valores de glicemia e glicada 5,7, os sintomas, o que comer e como reverter. Nutrologia em São Paulo.',
+    tituloSocial: 'Pré-diabetes: a partir de quanto, sintomas, o que comer e como reverter',
+    descricaoSocial:
+      'Glicemia entre 100 e 125 ou glicada entre 5,7% e 6,4%? Entenda o que é pré-diabetes e o que fazer para reverter.',
+    publicadoEm: '2026-10-29',
+    atualizadoEm: '2026-10-29',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mãos medindo a glicemia no glicosímetro, que mostra 100 mg/dL, ao lado de mingau de aveia com frutas, castanhas e água, com ícones de glicemia, sintomas, alimentação e prevenção',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Pré-diabetes', alternateName: 'Pré-diabetes tipo 2' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+      { '@type': 'MedicalTest', name: 'Hemoglobina glicada' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica e não é recomendação de uso de qualquer medicamento. O diagnóstico e o tratamento dependem de avaliação individual.',
+  },
 ];

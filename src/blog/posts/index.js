@@ -721,4 +721,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. A quantidade de proteína e o uso de suplementos dependem de avaliação individual.',
   },
+  {
+    slug: 'hipotireoidismo-engorda',
+    titulo: 'Hipotireoidismo engorda ou emagrece? Tireoide, TSH alto, levotiroxina e como emagrecer, com acompanhamento em São Paulo',
+    tituloSeo: 'Hipotireoidismo engorda ou emagrece? Tireoide e peso | SP',
+    descricao:
+      'Hipotireoidismo engorda ou emagrece? Veja quantos quilos a tireoide engorda, o que o TSH alto indica e se a levotiroxina emagrece. Nutrologia em SP.',
+    tituloSocial: 'Hipotireoidismo engorda ou emagrece? Tireoide, TSH e levotiroxina',
+    descricaoSocial:
+      'A tireoide lenta engorda, mas geralmente pouco. Entenda o TSH, por que a levotiroxina não emagrece sozinha e como perder peso.',
+    publicadoEm: '2026-10-29',
+    atualizadoEm: '2026-10-29',
+    capa: {
+      largura: 1733,
+      altura: 907,
+      alt: 'Mulher com a mão no pescoço e a ilustração da tireoide em destaque, com ícones de peso, exames de TSH e T4 e tratamento do hipotireoidismo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipotireoidismo' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a levotiroxina não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Tireoidite de Hashimoto' },
+      { '@type': 'MedicalTest', name: 'TSH' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O diagnóstico e o tratamento do hipotireoidismo dependem de avaliação individual, e o uso de qualquer medicamento deve ser feito com prescrição e acompanhamento médico.',
+  },
 ];

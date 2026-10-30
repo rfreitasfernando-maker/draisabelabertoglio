@@ -799,4 +799,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de qualquer medicamento para emagrecer depende de avaliação individual, prescrição e acompanhamento médico.',
   },
+  {
+    slug: 'tirzepatida',
+    titulo: 'Tirzepatida: o que é, como funciona no corpo, para quem é indicada e cuidados, com acompanhamento em São Paulo',
+    tituloSeo: 'Tirzepatida: o que é, como funciona e para quem é | SP',
+    descricao:
+      'Tirzepatida (Mounjaro): o que é, como funciona no corpo, em quanto tempo faz efeito, para quem é indicada e riscos das canetas falsificadas.',
+    tituloSocial: 'Tirzepatida: o que é, como funciona e para quem é indicada',
+    descricaoSocial:
+      'O princípio ativo do Mounjaro age no GLP-1 e no GIP. Entenda o mecanismo, a indicação, onde aplicar e os cuidados.',
+    publicadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-30',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher aplicando uma caneta de tirzepatida na barriga, com caderno e estetoscópio sobre a mesa e ícones de ação no organismo, uso seguro e cuidados',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): tirzepatida e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de tirzepatida depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
 ];

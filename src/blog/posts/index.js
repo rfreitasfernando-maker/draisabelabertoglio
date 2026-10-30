@@ -851,4 +851,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Os números citados são médias de estudos clínicos e não representam garantia de resultado. O uso de tirzepatida depende de avaliação individual, prescrição e acompanhamento médico.',
   },
+  {
+    slug: 'metformina-emagrece',
+    titulo: 'Metformina emagrece? Para que serve, quando é indicada, efeitos colaterais e uso sem diabetes, com acompanhamento em São Paulo',
+    tituloSeo: 'Metformina emagrece? Para que serve e quando é indicada',
+    descricao:
+      'Metformina emagrece? Veja quanto peso ela ajuda a perder, quando é indicada sem diabetes, a relação com pré-diabetes, SOP e lipedema e os efeitos.',
+    tituloSocial: 'Metformina emagrece? Para que serve e quando é indicada',
+    descricaoSocial:
+      'O efeito da metformina no peso é pequeno. Entenda quando ela faz sentido, os efeitos colaterais e a relação com a vitamina B12.',
+    publicadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-30',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Frasco de comprimidos brancos sobre a bancada, com balança, fita métrica e caderno com gráfico de estudos, e ícones de estudos, perda de peso e limites da metformina',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a metformina não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Pré-diabetes' },
+      { '@type': 'MedicalCondition', name: 'Síndrome dos ovários policísticos' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de metformina depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
 ];

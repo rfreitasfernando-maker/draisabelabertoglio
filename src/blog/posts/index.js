@@ -825,4 +825,30 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de tirzepatida depende de avaliação individual, prescrição e acompanhamento médico.',
   },
+  {
+    slug: 'mounjaro-emagrece-quantos-quilos',
+    titulo: 'Mounjaro emagrece quantos quilos? O que os estudos mostram, em quanto tempo e por que varia, com acompanhamento em São Paulo',
+    tituloSeo: 'Mounjaro emagrece quantos quilos? O que os estudos mostram',
+    descricao:
+      'Mounjaro emagrece quantos quilos? Veja a perda média nos estudos, em quanto tempo, por que algumas pessoas emagrecem menos e o que acontece ao parar.',
+    tituloSocial: 'Mounjaro emagrece quantos quilos? Os números dos estudos',
+    descricaoSocial:
+      'Perda média de 15% a 21% do peso em 72 semanas, conforme a dose. Entenda o ritmo, o platô e por que a resposta varia.',
+    publicadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-30',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mulher medindo a cintura com fita métrica, ao lado de balança, caneta injetável e gráfico de perda de peso, com ícones de estudos, perda de peso e resultados',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): tirzepatida e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Os números citados são médias de estudos clínicos e não representam garantia de resultado. O uso de tirzepatida depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
 ];

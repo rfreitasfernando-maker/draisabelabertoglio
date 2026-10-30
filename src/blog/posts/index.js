@@ -747,4 +747,56 @@ export const POSTS = [
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O diagnóstico e o tratamento do hipotireoidismo dependem de avaliação individual, e o uso de qualquer medicamento deve ser feito com prescrição e acompanhamento médico.',
   },
+  {
+    slug: 'wegovy',
+    titulo: 'Wegovy: o que é, como funciona, quanto emagrece e diferença para o Ozempic, com acompanhamento em São Paulo',
+    tituloSeo: 'Wegovy: o que é, quanto emagrece e diferença do Ozempic',
+    descricao:
+      'Wegovy: o que é, como funciona, quanto emagrece nos estudos, diferença para o Ozempic, efeitos colaterais e quem pode usar. Nutrologia em São Paulo.',
+    tituloSocial: 'Wegovy: o que é, quanto emagrece e diferença para o Ozempic',
+    descricaoSocial:
+      'Semaglutida aprovada para obesidade: como age, o que os estudos mostram, efeitos colaterais e o que acontece quando para.',
+    publicadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-30',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Mão segurando uma caneta injetável de semaglutida, com outra caneta ao fundo, e ícones de como funciona, indicações e diferenças em relação ao Ozempic',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): semaglutida, Ozempic e tirzepatida não entram nas menções.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de qualquer medicamento para emagrecer depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
+  {
+    slug: 'inibidor-de-apetite',
+    titulo: 'Inibidor de apetite: o que é, quais existem, se o natural funciona e quais os riscos, com acompanhamento em São Paulo',
+    tituloSeo: 'Inibidor de apetite: o que é, quais existem e riscos | SP',
+    descricao:
+      'Inibidor de apetite: quais são permitidos no Brasil, quais foram proibidos, se o natural funciona e os riscos de usar sem acompanhamento médico.',
+    tituloSocial: 'Inibidor de apetite: quais existem, o natural funciona e riscos',
+    descricaoSocial:
+      'Sibutramina, naltrexona com bupropiona e canetas: como reduzem a fome, quem não pode usar e o que foi proibido no Brasil.',
+    publicadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-30',
+    capa: {
+      largura: 1731,
+      altura: 909,
+      alt: 'Frasco de cápsulas ao lado de um prato com frango, quinoa, brócolis e tomate, copo de água e fita métrica, com ícones de como agem, tipos e riscos dos inibidores de apetite',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): sibutramina, naltrexona/bupropiona e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Compulsão alimentar' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de qualquer medicamento para emagrecer depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
 ];

@@ -318,7 +318,7 @@ export const POSTS = [
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-10-21',
+    atualizadoEm: '2026-10-31',
     capa: {
       largura: 1536,
       altura: 1024,
@@ -341,7 +341,7 @@ export const POSTS = [
     descricaoSocial:
       'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-10-21',
+    atualizadoEm: '2026-10-31',
     capa: {
       largura: 1734,
       altura: 907,
@@ -365,7 +365,7 @@ export const POSTS = [
     descricaoSocial:
       'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-10-21',
+    atualizadoEm: '2026-10-31',
     capa: {
       largura: 1734,
       altura: 907,
@@ -783,7 +783,7 @@ export const POSTS = [
     descricaoSocial:
       'Sibutramina, naltrexona com bupropiona e canetas: como reduzem a fome, quem não pode usar e o que foi proibido no Brasil.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-30',
+    atualizadoEm: '2026-10-31',
     capa: {
       largura: 1731,
       altura: 909,
@@ -876,5 +876,159 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de metformina depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
+  {
+    slug: 'liraglutida',
+    titulo: 'Liraglutida (Saxenda): o que é, como funciona, quanto emagrece e diferença para Ozempic e Mounjaro, com acompanhamento em São Paulo',
+    tituloSeo: 'Liraglutida (Saxenda): o que é, como age e quanto emagrece',
+    descricao:
+      'Liraglutida (Saxenda): o que é, como funciona, quanto emagrece, versão nacional e diferença para Ozempic e Mounjaro. Acompanhamento em São Paulo.',
+    tituloSocial: 'Liraglutida (Saxenda): como funciona e quanto emagrece',
+    descricaoSocial:
+      'A caneta diária da classe do GLP-1: perda média nos estudos, versões nacionais, efeitos e comparação com semaglutida e tirzepatida.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com aplicação diária, hormônio GLP-1, perda média de cerca de 8% e versão nacional da liraglutida, ao lado de uma caneta injetável ilustrativa',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): liraglutida, semaglutida e tirzepatida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de liraglutida depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
+  {
+    slug: 'sibutramina',
+    titulo: 'Sibutramina: o que é, como age, se emagrece, efeitos colaterais e quem não pode usar, com acompanhamento em São Paulo',
+    tituloSeo: 'Sibutramina: como age, se emagrece e quem não pode usar',
+    descricao:
+      'Sibutramina: como age, quanto emagrece, regras da receita no Brasil, efeitos colaterais, riscos para o coração e quem não pode usar. Nutrologia em SP.',
+    tituloSocial: 'Sibutramina: como age, se emagrece e quem não pode usar',
+    descricaoSocial:
+      'Regras da Anvisa, efeitos colaterais, o estudo SCOUT e a comparação com as canetas emagrecedoras.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com as regras da sibutramina no Brasil, indicação para IMC a partir de 30, receita controlada e cuidado com o coração, ao lado de cápsulas ilustrativas',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): sibutramina e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Hipertensão arterial' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de sibutramina depende de avaliação individual, prescrição em receita controlada e acompanhamento médico.',
+  },
+  {
+    slug: 'orlistate',
+    titulo: 'Orlistate: o que é, como funciona, quanto emagrece, efeitos colaterais e para quem é indicado, com acompanhamento em São Paulo',
+    tituloSeo: 'Orlistate: como funciona, quanto emagrece e efeitos | SP',
+    descricao:
+      'Orlistate (Xenical): como funciona, quanto emagrece, efeitos colaterais, cuidado com vitaminas e interações e para quem é indicado. Nutrologia em SP.',
+    tituloSocial: 'Orlistate: como funciona, quanto emagrece e efeitos colaterais',
+    descricaoSocial:
+      'O remédio que reduz a absorção de gordura e não age no cérebro: resultados, efeitos intestinais e cuidados.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro explicando que o orlistate age no intestino, reduz a absorção de cerca de um terço da gordura e não tira a fome, ao lado de cápsulas ilustrativas',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): orlistate, sibutramina e liraglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de orlistate depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
+  {
+    slug: 'rosto-de-ozempic',
+    titulo: 'Rosto de Ozempic: o que é, por que acontece, como prevenir e tratar a flacidez no rosto ao emagrecer, com acompanhamento em São Paulo',
+    tituloSeo: 'Rosto de Ozempic: por que acontece e como prevenir | SP',
+    descricao:
+      'Rosto de Ozempic: por que o rosto fica fino e flácido ao emagrecer com canetas, quem tem mais risco, como prevenir e as opções de tratamento.',
+    tituloSocial: 'Rosto de Ozempic: por que acontece e como prevenir',
+    descricaoSocial:
+      'A perda de volume e a flacidez no rosto ao emagrecer com canetas: causas, prevenção com proteína e treino, e tratamentos.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o que ajuda a prevenir a flacidez no rosto ao emagrecer: ritmo gradual de perda, proteína, treino de força e cuidado com a pele',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Flacidez facial' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): semaglutida e tirzepatida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de qualquer tratamento depende de avaliação individual, e todo procedimento tem riscos.',
+  },
+  {
+    slug: 'o-que-comer-usando-mounjaro',
+    titulo: 'O que comer usando Mounjaro ou Ozempic: alimentação para emagrecer, evitar enjoo e preservar o músculo, com acompanhamento em São Paulo',
+    tituloSeo: 'O que comer usando Mounjaro ou Ozempic | Nutrologia SP',
+    descricao:
+      'O que comer usando Mounjaro ou Ozempic: proteína, porções, o que evitar, alimentação contra enjoo e intestino preso e quando usar suplementos.',
+    tituloSocial: 'O que comer usando Mounjaro ou Ozempic',
+    descricaoSocial:
+      'Proteína primeiro, porções menores e o que evitar para reduzir o enjoo e preservar o músculo durante o uso das canetas.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com a ordem do prato durante o uso de canetas, proteína primeiro, depois verduras e legumes e carboidrato em porção menor, ao lado de um prato dividido',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): tirzepatida e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'Diet', name: 'Alimentação durante o uso de agonistas de GLP-1' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. O plano alimentar e o uso de suplementos dependem de avaliação individual.',
+  },
+  {
+    slug: 'flacidez-depois-de-emagrecer',
+    titulo: 'Flacidez depois de emagrecer: por que acontece, como prevenir e como tratar em São Paulo',
+    tituloSeo: 'Flacidez depois de emagrecer: como prevenir e tratar | SP',
+    descricao:
+      'Flacidez depois de emagrecer: entenda por que a pele não acompanha, como prevenir com proteína e treino e quando tratar com Unyque Pro em São Paulo.',
+    tituloSocial: 'Flacidez depois de emagrecer: por que acontece e como tratar',
+    descricaoSocial:
+      'Pele ou músculo? Entenda a flacidez depois de emagrecer, como prevenir durante o tratamento e as opções para cada grau, do Unyque Pro à cirurgia.',
+    publicadoEm: '2026-10-31',
+    atualizadoEm: '2026-10-31',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o tratamento da flacidez depois de emagrecer por grau, de treino e proteína ao Unyque Pro e à avaliação com cirurgião plástico',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Flacidez de pele após perda de peso' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Os resultados de tratamentos variam de pessoa para pessoa, e toda cirurgia plástica envolve riscos. A indicação depende de avaliação individual.',
   },
 ];

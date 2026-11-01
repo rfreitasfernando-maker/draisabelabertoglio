@@ -23,7 +23,7 @@ export const POSTS = [
     descricaoSocial:
       'Avaliação, bioimpedância, tratamentos e manutenção: o guia do emagrecimento saudável com acompanhamento médico em nutrologia.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-27',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1672,
       altura: 941,
@@ -341,7 +341,7 @@ export const POSTS = [
     descricaoSocial:
       'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1734,
       altura: 907,
@@ -574,7 +574,7 @@ export const POSTS = [
     descricaoSocial:
       'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-10-26',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1733,
       altura: 907,
@@ -653,7 +653,7 @@ export const POSTS = [
     descricaoSocial:
       'O metabolismo não desliga aos 40. Entenda o papel do músculo, do sono e dos hormônios e o que funciona para emagrecer nessa fase.',
     publicadoEm: '2026-10-27',
-    atualizadoEm: '2026-10-27',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1733,
       altura: 907,
@@ -835,7 +835,7 @@ export const POSTS = [
     descricaoSocial:
       'Perda média de 15% a 21% do peso em 72 semanas, conforme a dose. Entenda o ritmo, o platô e por que a resposta varia.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-30',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1731,
       altura: 909,
@@ -990,7 +990,7 @@ export const POSTS = [
     descricaoSocial:
       'Proteína primeiro, porções menores e o que evitar para reduzir o enjoo e preservar o músculo durante o uso das canetas.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-01',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1030,5 +1030,131 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Os resultados de tratamentos variam de pessoa para pessoa, e toda cirurgia plástica envolve riscos. A indicação depende de avaliação individual.',
+  },
+  {
+    slug: 'mounjaro-e-alcool',
+    titulo: 'Pode beber álcool usando Mounjaro ou Ozempic? Riscos, efeitos e cuidados, com acompanhamento em São Paulo',
+    tituloSeo: 'Pode beber álcool usando Mounjaro ou Ozempic? Riscos',
+    descricao:
+      'Pode beber álcool usando Mounjaro ou Ozempic? Entenda os riscos para estômago, glicose, fígado e pâncreas, quem deve evitar e os cuidados.',
+    tituloSocial: 'Pode beber álcool usando Mounjaro ou Ozempic?',
+    descricaoSocial:
+      'O que acontece quando se bebe usando canetas emagrecedoras, quem deve evitar e por que muita gente perde a vontade de beber.',
+    publicadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-01',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com os riscos do álcool durante o uso de canetas emagrecedoras: enjoo, desidratação, hipoglicemia em quem tem diabetes e sobrecarga do fígado e do pâncreas',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): tirzepatida e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Pancreatite' },
+      { '@type': 'MedicalCondition', name: 'Hipoglicemia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de canetas emagrecedoras depende de avaliação individual, prescrição e acompanhamento médico.',
+  },
+  {
+    slug: 'mounjaro-queda-de-cabelo',
+    titulo: 'Mounjaro dá queda de cabelo? Por que acontece, quanto dura e como prevenir, com acompanhamento em São Paulo',
+    tituloSeo: 'Mounjaro dá queda de cabelo? Causas e como prevenir | SP',
+    descricao:
+      'Mounjaro dá queda de cabelo? Veja quantas pessoas têm queda nos estudos, por que acontece, quanto dura, quais exames fazer e como prevenir.',
+    tituloSocial: 'Mounjaro dá queda de cabelo? Causas, duração e prevenção',
+    descricaoSocial:
+      'A queda de cabelo com canetas costuma ser um eflúvio temporário ligado à perda de peso. Entenda e saiba como prevenir.',
+    publicadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-01',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a queda de cabelo com Mounjaro: frequência nos estudos, quando começa, quanto dura e o que ajuda a prevenir',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Eflúvio telógeno' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): tirzepatida e semaglutida não entram nas menções.
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Ferritina' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de canetas emagrecedoras e de suplementos depende de avaliação individual e acompanhamento médico.',
+  },
+  {
+    slug: 'consulta-nutrologia-plano-de-saude',
+    titulo: 'Consulta de nutrologia pelo plano de saúde: o plano cobre nutrólogo, como pedir reembolso e quais documentos guardar, em São Paulo',
+    tituloSeo: 'Nutrólogo pelo plano de saúde: cobertura e reembolso | SP',
+    descricao:
+      'O plano de saúde cobre nutrólogo? Veja como pedir reembolso de consulta particular, documentos, prazos da ANS e o que o plano costuma não cobrir.',
+    tituloSocial: 'Nutrólogo pelo plano de saúde: cobertura e reembolso',
+    descricaoSocial:
+      'Como funciona a consulta de nutrologia pelo plano, o reembolso de consulta particular e os exames pedidos por médico fora da rede.',
+    publicadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-01',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o passo a passo do reembolso da consulta de nutrologia pelo plano de saúde: contrato, nota fiscal, pedido e prazo de 30 dias',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo. As regras de cobertura e reembolso variam conforme o contrato de cada plano de saúde. Em caso de dúvida, consulte sua operadora ou a ANS.',
+  },
+  {
+    slug: 'exames-para-emagrecer',
+    titulo: 'Exames para emagrecer: o check-up metabólico antes de começar, o que cada exame mostra e quando repetir, em São Paulo',
+    tituloSeo: 'Exames para emagrecer: o check-up antes de começar | SP',
+    descricao:
+      'Exames para emagrecer: quais pedir, o que cada um mostra, exames antes de usar canetas, com que frequência repetir e se o plano cobre. Nutrologia SP.',
+    tituloSocial: 'Exames para emagrecer: o check-up metabólico antes de começar',
+    descricaoSocial:
+      'Glicose, insulina, tireoide, fígado, rins e vitaminas: o que cada exame mostra e por que importa no emagrecimento.',
+    publicadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-01',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o check-up metabólico antes de emagrecer: glicose e hemoglobina glicada, tireoide, fígado e vitaminas, ao lado de tubos de coleta',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Hemoglobina glicada' },
+      { '@type': 'MedicalTest', name: 'TSH' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Os exames necessários e a interpretação dos resultados dependem de avaliação individual.',
+  },
+  {
+    slug: 'nutrologo-o-que-faz',
+    titulo: 'Nutrólogo: o que faz, se é médico, diferença para o nutricionista e para o endocrinologista para emagrecer, em São Paulo',
+    tituloSeo: 'Nutrólogo ou endocrinologista para emagrecer? O que faz | SP',
+    descricao:
+      'Nutrólogo é médico? Veja o que faz, a diferença para o nutricionista e se é melhor nutrólogo ou endocrinologista para emagrecer. Consulta em SP.',
+    tituloSocial: 'Nutrólogo ou endocrinologista para emagrecer? O que faz o nutrólogo',
+    descricaoSocial:
+      'Nutrologia, nutricionista ou endocrinologista? Entenda as diferenças, quando procurar cada um e como é uma consulta em nutrologia para emagrecer.',
+    publicadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-01',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro comparando nutrólogo, nutricionista e endocrinologista: formação, registro, diagnóstico e prescrição de medicamentos',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica.',
   },
 ];

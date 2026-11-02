@@ -174,7 +174,7 @@ export const POSTS = [
     descricaoSocial:
       'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1734,
       altura: 907,
@@ -543,7 +543,7 @@ export const POSTS = [
     descricaoSocial:
       'Esteatose hepática é comum, silenciosa e reversível nas fases iniciais. Entenda os graus do ultrassom, os exames de fibrose e o que trata.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-10-26',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1733,
       altura: 907,
@@ -574,7 +574,7 @@ export const POSTS = [
     descricaoSocial:
       'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1733,
       altura: 907,
@@ -679,7 +679,7 @@ export const POSTS = [
     descricaoSocial:
       'Glicemia entre 100 e 125 ou glicada entre 5,7% e 6,4%? Entenda o que é pré-diabetes e o que fazer para reverter.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-10-29',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1731,
       altura: 909,
@@ -731,7 +731,7 @@ export const POSTS = [
     descricaoSocial:
       'A tireoide lenta engorda, mas geralmente pouco. Entenda o TSH, por que a levotiroxina não emagrece sozinha e como perder peso.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-10-29',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1733,
       altura: 907,
@@ -1116,7 +1116,7 @@ export const POSTS = [
     descricaoSocial:
       'Glicose, insulina, tireoide, fígado, rins e vitaminas: o que cada exame mostra e por que importa no emagrecimento.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-02',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1156,5 +1156,135 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica.',
+  },
+  {
+    slug: 'hipotireoidismo-subclinico',
+    titulo: 'Hipotireoidismo subclínico: o que é, sintomas, valores do TSH, quando tratar e se tem cura, com acompanhamento em São Paulo',
+    tituloSeo: 'Hipotireoidismo subclínico: o que é e quando tratar | SP',
+    descricao:
+      'Hipotireoidismo subclínico: o que é, sintomas, valores do TSH, quando tratar, se tem cura e a relação com o peso. Acompanhamento em São Paulo.',
+    tituloSocial: 'Hipotireoidismo subclínico: o que é, sintomas e quando tratar',
+    descricaoSocial:
+      'TSH alto com T4 normal: como confirmar o diagnóstico, quando o remédio é indicado e por que muitas vezes o TSH normaliza sozinho.',
+    publicadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-02',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com a diferença entre hipotireoidismo subclínico e clínico pelo TSH e pelo T4 livre e quando o tratamento costuma ser indicado',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipotireoidismo subclínico' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a levotiroxina não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'TSH' },
+      { '@type': 'MedicalCondition', name: 'Tireoidite de Hashimoto' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O diagnóstico e o tratamento da tireoide dependem de avaliação individual e devem ser acompanhados por médico.',
+  },
+  {
+    slug: 'hemoglobina-glicada',
+    titulo: 'Hemoglobina glicada: o que é, valores normais, o que significa alta e como baixar, com acompanhamento em São Paulo',
+    tituloSeo: 'Hemoglobina glicada: valores normais e o que significa',
+    descricao:
+      'Hemoglobina glicada: o que é, valores normais, o que significa alta, o que altera o resultado, se precisa de jejum e como baixar. Nutrologia em SP.',
+    tituloSocial: 'Hemoglobina glicada: valores normais e o que significa alta',
+    descricaoSocial:
+      'O exame que mostra a média da glicose dos últimos 3 meses: valores, metas no diabetes, interferências e como baixar.',
+    publicadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-02',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com os valores de hemoglobina glicada: normal abaixo de 5,7%, pré-diabetes de 5,7% a 6,4% e diabetes a partir de 6,5%',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalTest', name: 'Hemoglobina glicada' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Pré-diabetes' },
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'triglicerides-alto',
+    titulo: 'Triglicérides alto: o que é, valores de referência, causas e como baixar com alimentação, com acompanhamento em São Paulo',
+    tituloSeo: 'Triglicérides alto: causas, valores e como baixar | SP',
+    descricao:
+      'Triglicérides alto: valores de referência, causas, riscos, o que comer e o que evitar e quando usar remédio. Acompanhamento em nutrologia em São Paulo.',
+    tituloSocial: 'Triglicérides alto: causas, valores e como baixar',
+    descricaoSocial:
+      'Açúcar, álcool e excesso de peso são os principais vilões. Veja os valores de referência e o que funciona para baixar.',
+    publicadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-02',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com os valores de triglicérides: desejável abaixo de 150 mg/dL em jejum e acima de 500 mg/dL com risco de pancreatite',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipertrigliceridemia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome metabólica' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Esteatose hepática' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'ferritina-alta',
+    titulo: 'Ferritina alta: o que significa, causas, quando se preocupar e quais exames fazer, com acompanhamento em São Paulo',
+    tituloSeo: 'Ferritina alta: o que significa e quando se preocupar',
+    descricao:
+      'Ferritina alta: o que significa, causas como gordura no fígado e inflamação, exames para investigar, quando se preocupar e o que fazer. Nutrologia SP.',
+    tituloSocial: 'Ferritina alta: o que significa e quando se preocupar',
+    descricaoSocial:
+      'Na maioria das vezes não é excesso de ferro. Entenda as causas e o papel da saturação de transferrina.',
+    publicadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-02',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com as causas de ferritina alta, como inflamação, gordura no fígado e álcool, e o papel da saturação de transferrina na investigação',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hiperferritinemia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Hemocromatose' },
+      { '@type': 'MedicalCondition', name: 'Esteatose hepática' },
+      { '@type': 'MedicalTest', name: 'Saturação de transferrina' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'colesterol-alto',
+    titulo: 'Colesterol alto: o que comer, o que evitar, valores de LDL e HDL e como baixar, com acompanhamento em São Paulo',
+    tituloSeo: 'Colesterol alto: o que comer, o que evitar e metas | SP',
+    descricao:
+      'Colesterol alto: o que comer e o que evitar, metas de LDL da diretriz brasileira de 2025, causas e quando usar remédio. Nutrologia em São Paulo.',
+    tituloSocial: 'Colesterol alto: o que comer, o que evitar e as metas de LDL',
+    descricaoSocial:
+      'Fibras, peixes e gorduras boas ajudam; gordura saturada e trans atrapalham. Veja as metas de LDL de 2025 por risco.',
+    publicadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-02',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com as metas de LDL por risco cardiovascular na diretriz brasileira de 2025, de menos de 115 a menos de 40 mg/dL',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipercolesterolemia' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Colesterol LDL' },
+      { '@type': 'MedicalCondition', name: 'Aterosclerose' },
+      { '@type': 'MedicalTest', name: 'Lipoproteína(a)' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A definição do risco cardiovascular, das metas e do tratamento depende de avaliação individual.',
   },
 ];

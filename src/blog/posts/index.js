@@ -174,7 +174,7 @@ export const POSTS = [
     descricaoSocial:
       'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-03',
     capa: {
       largura: 1734,
       altura: 907,
@@ -212,7 +212,7 @@ export const POSTS = [
     descricaoSocial:
       'A gordura entre os órgãos do abdômen é a mais ligada a diabetes, gordura no fígado e doença cardiovascular. Como medir e como reduzir.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-03',
     capa: {
       largura: 1734,
       altura: 907,
@@ -517,7 +517,7 @@ export const POSTS = [
     descricaoSocial:
       'Perda de força e de massa muscular com a idade ou depois de emagrecer: sinais, diagnóstico, relação com as canetas e o que funciona para prevenir.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-10-25',
+    atualizadoEm: '2026-11-03',
     capa: {
       largura: 1731,
       altura: 909,
@@ -653,7 +653,7 @@ export const POSTS = [
     descricaoSocial:
       'O metabolismo não desliga aos 40. Entenda o papel do músculo, do sono e dos hormônios e o que funciona para emagrecer nessa fase.',
     publicadoEm: '2026-10-27',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-03',
     capa: {
       largura: 1733,
       altura: 907,
@@ -1219,7 +1219,7 @@ export const POSTS = [
     descricaoSocial:
       'Açúcar, álcool e excesso de peso são os principais vilões. Veja os valores de referência e o que funciona para baixar.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-03',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1286,5 +1286,135 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A definição do risco cardiovascular, das metas e do tratamento depende de avaliação individual.',
+  },
+  {
+    slug: 'acido-urico-alto',
+    titulo: 'Ácido úrico alto: o que é, valores, causas, o que comer e a relação com o peso, com acompanhamento em São Paulo',
+    tituloSeo: 'Ácido úrico alto: causas, o que comer e valores | SP',
+    descricao:
+      'Ácido úrico alto: valores de referência, causas, riscos de gota, o que comer e o que evitar e a relação com o peso. Acompanhamento em nutrologia em SP.',
+    tituloSocial: 'Ácido úrico alto: causas, o que comer e valores',
+    descricaoSocial:
+      'Excesso de peso, álcool e bebidas açucaradas elevam o ácido úrico. Veja o que comer, o que evitar e quando precisa de remédio.',
+    publicadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-03',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre ácido úrico alto: limite por volta de 6 a 7 mg/dL, risco de cristais a partir de 6,8 mg/dL, meta abaixo de 6 mg/dL na gota e o que reduzir na alimentação',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hiperuricemia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Gota' },
+      { '@type': 'MedicalCondition', name: 'Síndrome metabólica' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A interpretação de exames e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'sindrome-metabolica',
+    titulo: 'Síndrome metabólica: o que é, critérios de diagnóstico, riscos e tratamento, com acompanhamento em São Paulo',
+    tituloSeo: 'Síndrome metabólica: o que é, critérios e tratamento',
+    descricao:
+      'Síndrome metabólica: o que é, os 5 critérios de diagnóstico, causas, riscos de diabetes e infarto, tratamento e se tem cura. Nutrologia em São Paulo.',
+    tituloSocial: 'Síndrome metabólica: o que é, critérios e tratamento',
+    descricaoSocial:
+      'Cintura, triglicérides, HDL, pressão e glicose: veja os critérios, os riscos e como a perda de peso melhora todos ao mesmo tempo.',
+    publicadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-03',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com os cinco critérios da síndrome metabólica: cintura, triglicérides, HDL, pressão e glicemia de jejum',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Síndrome metabólica' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+      { '@type': 'MedicalCondition', name: 'Hipertensão arterial' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O diagnóstico e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'como-perder-gordura-abdominal',
+    titulo: 'Como perder gordura abdominal: o que funciona de verdade, mitos e por que a barriga não sai, com acompanhamento em São Paulo',
+    tituloSeo: 'Como perder gordura abdominal: o que funciona | SP',
+    descricao:
+      'Como perder gordura abdominal e barriga: o que funciona, o que é mito, por que a barriga não sai e como medir a cintura. Acompanhamento em São Paulo.',
+    tituloSocial: 'Como perder gordura abdominal: o que funciona de verdade',
+    descricaoSocial:
+      'Abdominal, cinta e chá não tiram gordura da barriga. Veja o que funciona e por que às vezes ela não sai.',
+    publicadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-03',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro comparando o que funciona para perder gordura abdominal, como alimentação, treino de força e sono, com os mitos, como abdominais, cintas e chás',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade abdominal' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Gordura visceral' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalTest', name: 'Circunferência abdominal' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano para emagrecer e a indicação de qualquer tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'creatina',
+    titulo: 'Creatina: para que serve, se mulher pode tomar, se engorda e se faz mal aos rins, com acompanhamento em São Paulo',
+    tituloSeo: 'Creatina: para que serve, engorda e faz mal aos rins?',
+    descricao:
+      'Creatina: para que serve, se mulher pode tomar, se engorda ou incha, se faz mal aos rins e o papel no emagrecimento. Nutrologia em São Paulo.',
+    tituloSocial: 'Creatina: para que serve, engorda e faz mal aos rins?',
+    descricaoSocial:
+      'O suplemento mais estudado para força e massa muscular: benefícios, mitos, cuidados com os rins e uso no emagrecimento.',
+    publicadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-03',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a creatina: ajuda na força e na massa muscular com treino, não aumenta gordura, é considerada segura em rins saudáveis e pode elevar a creatinina no exame',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    // Sem o tipo `DietarySupplement`: como `Drug` (ver o topo deste arquivo), o Google o lê como produto à venda.
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Creatinina' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de suplementos depende de avaliação individual e acompanhamento.',
+  },
+  {
+    slug: 'jejum-intermitente',
+    titulo: 'Jejum intermitente funciona para emagrecer? O que dizem os estudos, riscos e quem não deve fazer, com acompanhamento em São Paulo',
+    tituloSeo: 'Jejum intermitente funciona para emagrecer? Riscos | SP',
+    descricao:
+      'Jejum intermitente funciona para emagrecer? Veja o que dizem os estudos, os tipos, os riscos, quem não deve fazer e a relação com canetas. Nutrologia SP.',
+    tituloSocial: 'Jejum intermitente funciona para emagrecer?',
+    descricaoSocial:
+      'Nos estudos, o resultado foi parecido com o de dietas comuns. Entenda benefícios, riscos e quem não deve fazer.',
+    publicadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-03',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre jejum intermitente: resultado parecido com o de dietas comuns nos estudos, risco de perda de músculo e grupos que não devem fazer',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'Diet', name: 'Jejum intermitente' },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a tirzepatida não entra nas menções.
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. Qualquer estratégia alimentar para emagrecer depende de avaliação individual.',
   },
 ];

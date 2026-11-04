@@ -146,7 +146,7 @@ export const POSTS = [
     descricaoSocial:
       'Resistência à insulina, tireoide, sono, medicamentos, perda de músculo e adaptação metabólica: o que pode travar o emagrecimento e como investigar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-04',
     capa: {
       largura: 1731,
       altura: 909,
@@ -365,7 +365,7 @@ export const POSTS = [
     descricaoSocial:
       'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-04',
     capa: {
       largura: 1734,
       altura: 907,
@@ -492,7 +492,7 @@ export const POSTS = [
     descricaoSocial:
       'Comida de verdade, proteína, fibras e regularidade: como trocar a dieta com data para acabar por hábitos que mantêm o peso.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-10-25',
+    atualizadoEm: '2026-11-04',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1401,7 +1401,7 @@ export const POSTS = [
     descricaoSocial:
       'Nos estudos, o resultado foi parecido com o de dietas comuns. Entenda benefícios, riscos e quem não deve fazer.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-04',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1416,5 +1416,156 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. Qualquer estratégia alimentar para emagrecer depende de avaliação individual.',
+  },
+  {
+    slug: 'deficit-calorico',
+    titulo: 'Déficit calórico: o que é, como calcular, quantas calorias comer por dia para emagrecer e por que só ele não basta, em São Paulo',
+    tituloSeo: 'Déficit calórico: o que é e quantas calorias comer | SP',
+    descricao:
+      'Déficit calórico: o que é, como calcular, quantas calorias comer por dia para emagrecer e por que só ele não basta. Acompanhamento em nutrologia em SP.',
+    tituloSocial: 'Déficit calórico: o que é e quantas calorias comer por dia',
+    descricaoSocial:
+      'Como o corpo gasta energia, como estimar o seu déficit e por que a conta nem sempre fecha.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre déficit calórico: o gasto diário soma metabolismo basal, digestão e atividade física, e o déficit moderado com proteína preserva o músculo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. A meta de calorias e o plano alimentar dependem de avaliação individual.',
+  },
+  {
+    slug: 'low-carb',
+    titulo: 'Dieta low carb funciona? Benefícios, riscos, diferença para a cetogênica e para quem serve, com acompanhamento em São Paulo',
+    tituloSeo: 'Dieta low carb funciona? Benefícios e riscos | SP',
+    descricao:
+      'Dieta low carb funciona? Veja o que dizem os estudos, a diferença para a cetogênica, benefícios, riscos e quem não deve fazer. Nutrologia em São Paulo.',
+    tituloSocial: 'Dieta low carb funciona? Benefícios, riscos e para quem serve',
+    descricaoSocial:
+      'Low carb ou cetogênica: o que mostram os estudos, efeitos no colesterol e na glicose e quem precisa de orientação.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre dieta low carb: perda de peso semelhante à de dietas com pouca gordura, melhora de glicose e triglicérides e atenção ao colesterol LDL',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'Diet', name: 'Dieta low carb' },
+    mencoes: [
+      { '@type': 'Diet', name: 'Dieta cetogênica' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Diabetes mellitus tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. Qualquer plano alimentar depende de avaliação individual.',
+  },
+  {
+    slug: 'suplementos-para-emagrecer',
+    titulo: 'Suplementos para emagrecer funcionam? Termogênicos, berberina, chá verde e o que diz a ciência, com acompanhamento em São Paulo',
+    tituloSeo: 'Suplementos para emagrecer funcionam? O que diz a ciência',
+    descricao:
+      'Suplementos para emagrecer funcionam? Veja o que a ciência diz sobre termogênicos, berberina, chá verde, cromo e CLA, os riscos e o que realmente ajuda.',
+    tituloSocial: 'Suplementos para emagrecer funcionam? O que diz a ciência',
+    descricaoSocial:
+      'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o efeito no peso de termogênicos, chá verde e berberina, os riscos para o fígado e o papel de apoio de proteína e creatina, ao lado de cápsulas',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    // Sem menções: os tipos `DietarySupplement` e `Drug` (ver o topo deste arquivo) o Google lê como produto à venda.
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de suplementos depende de avaliação individual e acompanhamento.',
+  },
+  {
+    slug: 'dieta-anti-inflamatoria',
+    titulo: 'Dieta anti-inflamatória: o que é, alimentos anti-inflamatórios, o que evitar e para quem ajuda, com acompanhamento em São Paulo',
+    tituloSeo: 'Dieta anti-inflamatória: o que é e alimentos | SP',
+    descricao:
+      'Dieta anti-inflamatória: o que é, alimentos anti-inflamatórios, o que evitar, mitos e para quem ajuda, incluindo obesidade e doenças reumatológicas.',
+    tituloSocial: 'Dieta anti-inflamatória: o que é e quais alimentos incluir',
+    descricaoSocial:
+      'Um padrão alimentar parecido com o mediterrâneo que ajuda a reduzir a inflamação ligada à obesidade.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre dieta anti-inflamatória: alimentos a priorizar, como verduras, peixes e azeite, e a reduzir, como ultraprocessados e açúcar, ao lado de um prato dividido',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'Diet', name: 'Dieta anti-inflamatória' },
+    mencoes: [
+      { '@type': 'Diet', name: 'Dieta mediterrânea' },
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Artrite reumatoide' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica ou nutricional. O plano alimentar e o tratamento de doenças inflamatórias dependem de avaliação individual.',
+  },
+  {
+    slug: 'cortisol-alto-engorda',
+    titulo: 'Cortisol alto engorda? Estresse, ansiedade, sono e ganho de peso, sintomas e quando investigar, com acompanhamento em São Paulo',
+    tituloSeo: 'Cortisol alto engorda? Estresse e ganho de peso | SP',
+    descricao:
+      'Cortisol alto engorda? Entenda como estresse e sono ruim favorecem o ganho de peso, os sinais de síndrome de Cushing, os exames certos e como baixar.',
+    tituloSocial: 'Cortisol alto engorda? Estresse, sono e ganho de peso',
+    descricaoSocial:
+      'Por que o estresse engorda, quando suspeitar de síndrome de Cushing e quais exames fazer.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre cortisol e peso: estresse e sono ruim aumentam a fome e a gordura abdominal, e a síndrome de Cushing é rara e exige exames específicos',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipercortisolismo' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome de Cushing' },
+      { '@type': 'MedicalCondition', name: 'Ansiedade' },
+      { '@type': 'MedicalCondition', name: 'Obesidade abdominal' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação de alterações hormonais e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'emagrecer-na-menopausa',
+    titulo: 'Emagrecer na menopausa: por que fica mais difícil e o que funciona, com acompanhamento em nutrologia em São Paulo',
+    tituloSeo: 'Emagrecer na menopausa: o que muda e o que fazer | SP',
+    descricao:
+      'Emagrecer na menopausa fica mais difícil? Entenda o papel do estrogênio, da perda de músculo e do sono, e o que reduz a barriga. Nutrologia em SP.',
+    tituloSocial: 'Emagrecer na menopausa: por que fica mais difícil e o que funciona',
+    descricaoSocial:
+      'Estrogênio, massa muscular, sono e gordura abdominal: o que muda na menopausa e o que ajuda a emagrecer nessa fase.',
+    publicadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-04',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o que muda na menopausa e o que ajuda a emagrecer: gordura na barriga, perda de músculo e sono pior, com treino de força e proteína como base',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Ganho de peso na menopausa' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Menopausa' },
+      { '@type': 'MedicalCondition', name: 'Gordura visceral' },
+      { '@type': 'MedicalTest', name: 'Bioimpedância' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de terapia hormonal, medicamentos ou qualquer tratamento depende de avaliação individual com médico.',
   },
 ];

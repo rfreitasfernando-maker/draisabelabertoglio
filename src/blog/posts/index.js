@@ -146,7 +146,7 @@ export const POSTS = [
     descricaoSocial:
       'Resistência à insulina, tireoide, sono, medicamentos, perda de músculo e adaptação metabólica: o que pode travar o emagrecimento e como investigar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-05',
     capa: {
       largura: 1731,
       altura: 909,
@@ -440,7 +440,7 @@ export const POSTS = [
     descricaoSocial:
       'IMC, cintura e composição corporal, causas, riscos e o que a medicina oferece hoje para tratar a obesidade com segurança.',
     publicadoEm: '2026-10-23',
-    atualizadoEm: '2026-10-23',
+    atualizadoEm: '2026-11-05',
     capa: {
       largura: 1733,
       altura: 907,
@@ -466,7 +466,7 @@ export const POSTS = [
     descricaoSocial:
       'O que os estudos mostram sobre fome, metabolismo e reganho depois da dieta, e o que ajuda a manter o peso perdido.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-10-25',
+    atualizadoEm: '2026-11-05',
     capa: {
       largura: 1731,
       altura: 909,
@@ -731,7 +731,7 @@ export const POSTS = [
     descricaoSocial:
       'A tireoide lenta engorda, mas geralmente pouco. Entenda o TSH, por que a levotiroxina não emagrece sozinha e como perder peso.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-05',
     capa: {
       largura: 1733,
       altura: 907,
@@ -1526,7 +1526,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o estresse engorda, quando suspeitar de síndrome de Cushing e quais exames fazer.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-05',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1567,5 +1567,135 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de terapia hormonal, medicamentos ou qualquer tratamento depende de avaliação individual com médico.',
+  },
+  {
+    slug: 'retencao-de-liquido',
+    titulo: 'Retenção de líquido: causas, sintomas, como desinchar e quando o inchaço é sinal de alerta, com acompanhamento em São Paulo',
+    tituloSeo: 'Retenção de líquido: causas e como desinchar | SP',
+    descricao:
+      'Retenção de líquido: entenda as causas do inchaço, os sintomas, como desinchar com segurança e quando o inchaço nas pernas é sinal de alerta.',
+    tituloSocial: 'Retenção de líquido: causas, sintomas e como desinchar',
+    descricaoSocial:
+      'Por que o corpo incha, o que ajuda a desinchar e quando investigar.',
+    publicadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-05',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre retenção de líquido: sal, calor, hormônios e remédios causam inchaço, e inchaço súbito em uma perna só ou com falta de ar é urgência',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Edema' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Linfedema' },
+      { '@type': 'MedicalCondition', name: 'Lipedema' },
+      { '@type': 'MedicalCondition', name: 'Insuficiência venosa crônica' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O inchaço persistente precisa de avaliação individual.',
+  },
+  {
+    slug: 'emagrecer-depois-da-gravidez',
+    titulo: 'Como emagrecer depois da gravidez com segurança: pós-parto, amamentação, barriga e quando procurar ajuda, em São Paulo',
+    tituloSeo: 'Como emagrecer depois da gravidez com segurança | SP',
+    descricao:
+      'Como emagrecer depois da gravidez com segurança: quando começar, amamentação, barriga pós-parto, exames e quando procurar acompanhamento médico em SP.',
+    tituloSocial: 'Como emagrecer depois da gravidez com segurança',
+    descricaoSocial:
+      'Quando começar, como conciliar com a amamentação e quando buscar ajuda.',
+    publicadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-05',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o peso no pós-parto: perda gradual ao longo dos meses, sem dietas extremas nem canetas durante a amamentação',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Retenção de peso pós-parto' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diástase abdominal' },
+      { '@type': 'MedicalCondition', name: 'Tireoidite pós-parto' },
+      { '@type': 'MedicalCondition', name: 'Anemia ferropriva' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano para emagrecer no pós-parto depende de avaliação individual e da liberação do obstetra.',
+  },
+  {
+    slug: 'reganho-apos-bariatrica',
+    titulo: 'Reganho de peso depois da bariátrica: por que acontece, sinais de alerta e como tratar, com acompanhamento em São Paulo',
+    tituloSeo: 'Reganho de peso após bariátrica: causas e o que fazer',
+    descricao:
+      'Reganho de peso após bariátrica: entenda por que acontece, os sinais de alerta, os exames e as opções de tratamento com acompanhamento médico em SP.',
+    tituloSocial: 'Reganho de peso após bariátrica: causas e tratamento',
+    descricaoSocial:
+      'Por que o peso volta depois da cirurgia e quais são as opções de tratamento.',
+    publicadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-05',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre reganho de peso após a bariátrica: adaptação do corpo, beliscos e calorias líquidas, vitaminas por toda a vida e tratamento com acompanhamento',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Reganho de peso após cirurgia bariátrica' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Deficiência de vitamina B12' },
+      { '@type': 'MedicalCondition', name: 'Anemia ferropriva' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento do reganho depende de avaliação individual.',
+  },
+  {
+    slug: 'apneia-do-sono-e-obesidade',
+    titulo: 'Apneia do sono e obesidade: sintomas, como o peso afeta o sono, diagnóstico e tratamento, com acompanhamento em São Paulo',
+    tituloSeo: 'Apneia do sono e obesidade: sintomas e tratamento | SP',
+    descricao:
+      'Apneia do sono e obesidade: veja os sintomas, como o excesso de peso afeta o sono, os exames de diagnóstico e como o emagrecimento ajuda no tratamento.',
+    tituloSocial: 'Apneia do sono e obesidade: sintomas e tratamento',
+    descricaoSocial:
+      'Como o peso piora a apneia, como diagnosticar e o papel do emagrecimento.',
+    publicadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-05',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre apneia do sono e obesidade: ronco e pausas na respiração, diagnóstico por polissonografia e efeito da perda de peso na gravidade',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Apneia obstrutiva do sono' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Hipertensão arterial' },
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O diagnóstico e o tratamento da apneia do sono dependem de avaliação individual.',
+  },
+  {
+    slug: 'dormir-mal-engorda',
+    titulo: 'Dormir mal engorda? Como o sono afeta a fome, o peso e o emagrecimento, e o que fazer, com acompanhamento em São Paulo',
+    tituloSeo: 'Dormir mal engorda? Sono, fome e emagrecimento | SP',
+    descricao:
+      'Dormir mal engorda? Entenda como o sono ruim aumenta a fome, quantas horas dormir, o que os estudos mostram e como melhorar o sono para emagrecer.',
+    tituloSocial: 'Dormir mal engorda? Sono, fome e emagrecimento',
+    descricaoSocial:
+      'Como o sono afeta a fome e o peso e o que fazer para dormir melhor.',
+    publicadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-05',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre sono e peso: sono curto aumenta a fome, e dormir mais reduziu o consumo em cerca de 270 calorias por dia',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Privação de sono' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Insônia' },
+      { '@type': 'MedicalCondition', name: 'Apneia obstrutiva do sono' },
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Problemas de sono e o plano para emagrecer dependem de avaliação individual.',
   },
 ];

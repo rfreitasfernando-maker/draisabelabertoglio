@@ -90,12 +90,24 @@ const HowItWorks = () => {
               <a href="/blog/bioimpedancia" className="inline-block mt-1 py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
                 Como funciona a bioimpedância e como ler o resultado
               </a>
+              <br />
+              <a href="/tecnologias/bioimpedancia-inbody" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+                Bioimpedância InBody 380 na consulta
+              </a>
             </div>
           </div>
 
           <p className="mt-6 text-center">
             <a href="/blog/emagrecimento-com-acompanhamento-medico" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
               Passo a passo do emagrecimento com acompanhamento médico
+            </a>
+            <span className="text-brand-gold/50" aria-hidden="true">{' · '}</span>
+            <a href="/tratamentos" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+              Todos os tratamentos
+            </a>
+            <span className="text-brand-gold/50" aria-hidden="true">{' · '}</span>
+            <a href="/consulta-nutrologia" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+              Como funciona a consulta
             </a>
           </p>
 

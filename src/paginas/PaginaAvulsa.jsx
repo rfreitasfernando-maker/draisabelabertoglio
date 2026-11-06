@@ -68,7 +68,7 @@ const PaginaAvulsa = ({ pagina, conteudo }) => (
             <div className="font-sans">
               <p className="text-xs font-medium tracking-[0.2em] uppercase text-brand-gold">Responsável técnica</p>
               <p className="mt-2 text-2xl md:text-3xl font-serif text-brand-dark">{DOCTOR_NAME}</p>
-              <p className="mt-1 text-sm text-brand-dark-gray">Médica · Atendimento em Nutrologia</p>
+              <p className="mt-1 text-sm text-brand-dark-gray">Médica Nutróloga</p>
               <p className="mt-3 text-sm text-brand-light-gray leading-relaxed">
                 {DOCTOR_CREDENTIALS}
                 <br />
@@ -78,7 +78,7 @@ const PaginaAvulsa = ({ pagina, conteudo }) => (
                 Atualizado em <time dateTime={pagina.atualizadoEm}>{formatarData(pagina.atualizadoEm)}</time>
               </p>
               <a
-                href="/#about"
+                href="/dra-isabela-bertoglio"
                 className="group mt-5 inline-flex items-center gap-2 min-h-[44px] text-xs font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
               >
                 Conheça a Dra. Isabela

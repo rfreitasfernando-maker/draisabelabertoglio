@@ -197,6 +197,10 @@ const Technology = () => {
               <a href="/blog/unyque-pro-celulite-flacidez" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
                 Guia do Unyque Pro: indicações, sessões e contraindicações
               </a>
+              <br />
+              <a href="/tecnologias/unyque-pro" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+                Unyque Pro como complemento ao emagrecimento
+              </a>
             </p>
           </div>
 

@@ -9,7 +9,7 @@ export const NOME_DO_SITE = `${CLINIC_NAME} – ${DOCTOR_NAME}`;
 
 // Data da última revisão do conteúdo da página inicial pela Dra. Isabela. Aparece na página (AboutDoctor),
 // no dateModified do JSON-LD e no <lastmod> do sitemap: atualizar sempre que o texto da página mudar.
-export const HOME_REVISADA_EM = '2026-10-19';
+export const HOME_REVISADA_EM = '2026-11-06';
 
 export const ID_CLINICA = `${SITE_URL}/#clinica`;
 export const ID_MEDICA = `${SITE_URL}/#dra-isabela`;

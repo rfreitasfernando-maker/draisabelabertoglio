@@ -23,7 +23,7 @@ export const POSTS = [
     descricaoSocial:
       'Avaliação, bioimpedância, tratamentos e manutenção: o guia do emagrecimento saudável com acompanhamento médico em nutrologia.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1672,
       altura: 941,
@@ -45,7 +45,7 @@ export const POSTS = [
     descricaoSocial:
       'O que a bioimpedância mede, como é o exame no InBody 380, como se preparar e como ler gordura, massa muscular e gordura visceral no laudo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-23',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -75,7 +75,7 @@ export const POSTS = [
     descricaoSocial:
       'Mecanismo, resultados dos estudos, efeitos colaterais e quem não deve usar: entenda a diferença entre tirzepatida e semaglutida.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-20',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -96,7 +96,7 @@ export const POSTS = [
     descricaoSocial:
       'Quanto do peso perdido com tirzepatida é massa magra, por que isso importa e como proteína, treino de força e bioimpedância ajudam a preservar o músculo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -111,14 +111,14 @@ export const POSTS = [
     slug: 'unyque-pro-celulite-flacidez',
     // Lipedema fica só no corpo do texto, não no título nem no endereço (pedido da clínica).
     titulo: 'Unyque Pro para celulite e flacidez: como é o tratamento na Clínica Belvitá, em São Paulo',
-    tituloSeo: 'Unyque Pro para celulite e flacidez em São Paulo',
+    tituloSeo: 'Unyque Pro: como funciona para celulite e flacidez',
     descricao:
       'Unyque Pro para celulite, flacidez, gordura localizada e lipedema: veja como age cada tecnologia e como é o tratamento na Clínica Belvitá, em São Paulo.',
-    tituloSocial: 'Unyque Pro para celulite e flacidez na Clínica Belvitá',
+    tituloSocial: 'Unyque Pro: como funciona para celulite e flacidez',
     descricaoSocial:
       'Três tecnologias em um só equipamento para celulite, flacidez e gordura localizada, com uso complementar no lipedema. Sem cortes e sem agulhas.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -146,7 +146,7 @@ export const POSTS = [
     descricaoSocial:
       'Resistência à insulina, tireoide, sono, medicamentos, perda de músculo e adaptação metabólica: o que pode travar o emagrecimento e como investigar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -167,14 +167,14 @@ export const POSTS = [
   {
     slug: 'resistencia-a-insulina',
     titulo: 'Resistência à insulina: sintomas, exames e como ela dificulta o emagrecimento, com tratamento em São Paulo',
-    tituloSeo: 'Resistência à insulina: sintomas e tratamento em São Paulo',
+    tituloSeo: 'Resistência à insulina: sintomas, exames e causas',
     descricao:
       'Resistência à insulina: veja os sintomas, como o HOMA-IR e outros exames fazem o diagnóstico, por que ela trava o emagrecimento e como tratar em São Paulo.',
-    tituloSocial: 'Resistência à insulina: sintomas, exames e tratamento',
+    tituloSocial: 'Resistência à insulina: sintomas, exames e causas',
     descricaoSocial:
       'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -212,7 +212,7 @@ export const POSTS = [
     descricaoSocial:
       'A gordura entre os órgãos do abdômen é a mais ligada a diabetes, gordura no fígado e doença cardiovascular. Como medir e como reduzir.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -245,7 +245,7 @@ export const POSTS = [
     descricaoSocial:
       'Reganho, retirada planejada e manutenção: o que os estudos mostram e como o acompanhamento médico ajuda a não perder o resultado.',
     publicadoEm: '2026-10-19',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -268,7 +268,7 @@ export const POSTS = [
     descricaoSocial:
       'Genérico, similar e sintética: o que a Anvisa aprovou depois do fim da patente e o que continua valendo no tratamento com acompanhamento médico.',
     publicadoEm: '2026-10-19',
-    atualizadoEm: '2026-10-20',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -291,7 +291,7 @@ export const POSTS = [
     descricaoSocial:
       'Relógio biológico, sono, estresse e refeições do dia: entenda a vontade de doce depois do jantar e quando vale procurar avaliação médica.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-10-20',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -318,7 +318,7 @@ export const POSTS = [
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1536,
       altura: 1024,
@@ -365,7 +365,7 @@ export const POSTS = [
     descricaoSocial:
       'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -388,7 +388,7 @@ export const POSTS = [
     descricaoSocial:
       'Bula para diabetes, uso para emagrecer, diferença para o Wegovy e efeitos colaterais: o que você precisa saber antes de usar semaglutida.',
     publicadoEm: '2026-10-23',
-    atualizadoEm: '2026-10-23',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -414,7 +414,7 @@ export const POSTS = [
     descricaoSocial:
       'Episódios de comer muito com perda de controle têm nome e tratamento. Entenda os sinais e como psicoterapia e cuidado médico se combinam.',
     publicadoEm: '2026-10-23',
-    atualizadoEm: '2026-10-23',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -433,10 +433,10 @@ export const POSTS = [
     slug: 'obesidade-tratamento',
     // Pilar da obesidade: remedios-para-emagrecer e bioimpedancia linkam para cá.
     titulo: 'Obesidade: o que é, como saber se você tem, riscos e opções de tratamento médico em São Paulo',
-    tituloSeo: 'Obesidade: o que é, riscos e tratamento médico | São Paulo',
+    tituloSeo: 'Obesidade: o que é, graus, riscos e opções de tratamento',
     descricao:
       'Obesidade é doença crônica e tem tratamento. Entenda o IMC, as causas, os riscos e as opções atuais: estilo de vida, remédios e cirurgia. Nutrologia em SP.',
-    tituloSocial: 'Obesidade: o que é, riscos e opções de tratamento',
+    tituloSocial: 'Obesidade: o que é, graus, riscos e opções de tratamento',
     descricaoSocial:
       'IMC, cintura e composição corporal, causas, riscos e o que a medicina oferece hoje para tratar a obesidade com segurança.',
     publicadoEm: '2026-10-23',
@@ -466,7 +466,7 @@ export const POSTS = [
     descricaoSocial:
       'O que os estudos mostram sobre fome, metabolismo e reganho depois da dieta, e o que ajuda a manter o peso perdido.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -517,7 +517,7 @@ export const POSTS = [
     descricaoSocial:
       'Perda de força e de massa muscular com a idade ou depois de emagrecer: sinais, diagnóstico, relação com as canetas e o que funciona para prevenir.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -536,14 +536,14 @@ export const POSTS = [
   {
     slug: 'gordura-no-figado',
     titulo: 'Gordura no fígado: o que é, graus, exames, riscos e tratamento, com acompanhamento em São Paulo',
-    tituloSeo: 'Gordura no fígado: causas, graus e tratamento | São Paulo',
+    tituloSeo: 'Gordura no fígado: o que é, graus, causas e exames',
     descricao:
       'Gordura no fígado: o que é, o que significam os graus do ultrassom, exames, riscos e tratamento. Perder 5% a 10% do peso ajuda. Nutrologia em São Paulo.',
-    tituloSocial: 'Gordura no fígado: o que é, graus, riscos e tratamento',
+    tituloSocial: 'Gordura no fígado: o que é, graus, causas e exames',
     descricaoSocial:
       'Esteatose hepática é comum, silenciosa e reversível nas fases iniciais. Entenda os graus do ultrassom, os exames de fibrose e o que trata.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -574,7 +574,7 @@ export const POSTS = [
     descricaoSocial:
       'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -601,7 +601,7 @@ export const POSTS = [
     descricaoSocial:
       'O que avaliar nas semanas antes da cirurgia: anemia, ferro, proteína, glicose, peso estável, canetas emagrecedoras e suplementos.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-10-26',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -627,7 +627,7 @@ export const POSTS = [
     descricaoSocial:
       'Resistência à insulina, fome e gordura na barriga: entenda a relação entre SOP e peso e o que ajuda a emagrecer com ovário policístico.',
     publicadoEm: '2026-10-27',
-    atualizadoEm: '2026-10-27',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -653,7 +653,7 @@ export const POSTS = [
     descricaoSocial:
       'O metabolismo não desliga aos 40. Entenda o papel do músculo, do sono e dos hormônios e o que funciona para emagrecer nessa fase.',
     publicadoEm: '2026-10-27',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -705,7 +705,7 @@ export const POSTS = [
     descricaoSocial:
       'Proteína dá saciedade e protege o músculo no emagrecimento. Veja quanto comer por dia, as melhores fontes e se o whey ajuda.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-10-29',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -731,7 +731,7 @@ export const POSTS = [
     descricaoSocial:
       'A tireoide lenta engorda, mas geralmente pouco. Entenda o TSH, por que a levotiroxina não emagrece sozinha e como perder peso.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -757,7 +757,7 @@ export const POSTS = [
     descricaoSocial:
       'Semaglutida aprovada para obesidade: como age, o que os estudos mostram, efeitos colaterais e o que acontece quando para.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-30',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -783,7 +783,7 @@ export const POSTS = [
     descricaoSocial:
       'Sibutramina, naltrexona com bupropiona e canetas: como reduzem a fome, quem não pode usar e o que foi proibido no Brasil.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -809,7 +809,7 @@ export const POSTS = [
     descricaoSocial:
       'O princípio ativo do Mounjaro age no GLP-1 e no GIP. Entenda o mecanismo, a indicação, onde aplicar e os cuidados.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-30',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -835,7 +835,7 @@ export const POSTS = [
     descricaoSocial:
       'Perda média de 15% a 21% do peso em 72 semanas, conforme a dose. Entenda o ritmo, o platô e por que a resposta varia.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -861,7 +861,7 @@ export const POSTS = [
     descricaoSocial:
       'O efeito da metformina no peso é pequeno. Entenda quando ela faz sentido, os efeitos colaterais e a relação com a vitamina B12.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-10-30',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -887,7 +887,7 @@ export const POSTS = [
     descricaoSocial:
       'A caneta diária da classe do GLP-1: perda média nos estudos, versões nacionais, efeitos e comparação com semaglutida e tirzepatida.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -913,7 +913,7 @@ export const POSTS = [
     descricaoSocial:
       'Regras da Anvisa, efeitos colaterais, o estudo SCOUT e a comparação com as canetas emagrecedoras.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -939,7 +939,7 @@ export const POSTS = [
     descricaoSocial:
       'O remédio que reduz a absorção de gordura e não age no cérebro: resultados, efeitos intestinais e cuidados.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -964,7 +964,7 @@ export const POSTS = [
     descricaoSocial:
       'A perda de volume e a flacidez no rosto ao emagrecer com canetas: causas, prevenção com proteína e treino, e tratamentos.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -990,7 +990,7 @@ export const POSTS = [
     descricaoSocial:
       'Proteína primeiro, porções menores e o que evitar para reduzir o enjoo e preservar o músculo durante o uso das canetas.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1016,7 +1016,7 @@ export const POSTS = [
     descricaoSocial:
       'Pele ou músculo? Entenda a flacidez depois de emagrecer, como prevenir durante o tratamento e as opções para cada grau, do Unyque Pro à cirurgia.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-10-31',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1041,7 +1041,7 @@ export const POSTS = [
     descricaoSocial:
       'O que acontece quando se bebe usando canetas emagrecedoras, quem deve evitar e por que muita gente perde a vontade de beber.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1067,7 +1067,7 @@ export const POSTS = [
     descricaoSocial:
       'A queda de cabelo com canetas costuma ser um eflúvio temporário ligado à perda de peso. Entenda e saiba como prevenir.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1092,7 +1092,7 @@ export const POSTS = [
     descricaoSocial:
       'Como funciona a consulta de nutrologia pelo plano, o reembolso de consulta particular e os exames pedidos por médico fora da rede.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1116,7 +1116,7 @@ export const POSTS = [
     descricaoSocial:
       'Glicose, insulina, tireoide, fígado, rins e vitaminas: o que cada exame mostra e por que importa no emagrecimento.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1142,7 +1142,7 @@ export const POSTS = [
     descricaoSocial:
       'Nutrologia, nutricionista ou endocrinologista? Entenda as diferenças, quando procurar cada um e como é uma consulta em nutrologia para emagrecer.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1167,7 +1167,7 @@ export const POSTS = [
     descricaoSocial:
       'TSH alto com T4 normal: como confirmar o diagnóstico, quando o remédio é indicado e por que muitas vezes o TSH normaliza sozinho.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1193,7 +1193,7 @@ export const POSTS = [
     descricaoSocial:
       'O exame que mostra a média da glicose dos últimos 3 meses: valores, metas no diabetes, interferências e como baixar.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1219,7 +1219,7 @@ export const POSTS = [
     descricaoSocial:
       'Açúcar, álcool e excesso de peso são os principais vilões. Veja os valores de referência e o que funciona para baixar.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1245,7 +1245,7 @@ export const POSTS = [
     descricaoSocial:
       'Na maioria das vezes não é excesso de ferro. Entenda as causas e o papel da saturação de transferrina.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1271,7 +1271,7 @@ export const POSTS = [
     descricaoSocial:
       'Fibras, peixes e gorduras boas ajudam; gordura saturada e trans atrapalham. Veja as metas de LDL de 2025 por risco.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1297,7 +1297,7 @@ export const POSTS = [
     descricaoSocial:
       'Excesso de peso, álcool e bebidas açucaradas elevam o ácido úrico. Veja o que comer, o que evitar e quando precisa de remédio.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1316,14 +1316,14 @@ export const POSTS = [
   {
     slug: 'sindrome-metabolica',
     titulo: 'Síndrome metabólica: o que é, critérios de diagnóstico, riscos e tratamento, com acompanhamento em São Paulo',
-    tituloSeo: 'Síndrome metabólica: o que é, critérios e tratamento',
+    tituloSeo: 'Síndrome metabólica: o que é, critérios e riscos',
     descricao:
       'Síndrome metabólica: o que é, os 5 critérios de diagnóstico, causas, riscos de diabetes e infarto, tratamento e se tem cura. Nutrologia em São Paulo.',
-    tituloSocial: 'Síndrome metabólica: o que é, critérios e tratamento',
+    tituloSocial: 'Síndrome metabólica: o que é, critérios e riscos',
     descricaoSocial:
       'Cintura, triglicérides, HDL, pressão e glicose: veja os critérios, os riscos e como a perda de peso melhora todos ao mesmo tempo.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1349,7 +1349,7 @@ export const POSTS = [
     descricaoSocial:
       'Abdominal, cinta e chá não tiram gordura da barriga. Veja o que funciona e por que às vezes ela não sai.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1375,7 +1375,7 @@ export const POSTS = [
     descricaoSocial:
       'O suplemento mais estudado para força e massa muscular: benefícios, mitos, cuidados com os rins e uso no emagrecimento.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-03',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1401,7 +1401,7 @@ export const POSTS = [
     descricaoSocial:
       'Nos estudos, o resultado foi parecido com o de dietas comuns. Entenda benefícios, riscos e quem não deve fazer.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1427,7 +1427,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o corpo gasta energia, como estimar o seu déficit e por que a conta nem sempre fecha.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1452,7 +1452,7 @@ export const POSTS = [
     descricaoSocial:
       'Low carb ou cetogênica: o que mostram os estudos, efeitos no colesterol e na glicose e quem precisa de orientação.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1526,7 +1526,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o estresse engorda, quando suspeitar de síndrome de Cushing e quais exames fazer.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1552,7 +1552,7 @@ export const POSTS = [
     descricaoSocial:
       'Estrogênio, massa muscular, sono e gordura abdominal: o que muda na menopausa e o que ajuda a emagrecer nessa fase.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1578,7 +1578,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o corpo incha, o que ajuda a desinchar e quando investigar.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1604,7 +1604,7 @@ export const POSTS = [
     descricaoSocial:
       'Quando começar, como conciliar com a amamentação e quando buscar ajuda.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1630,7 +1630,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o peso volta depois da cirurgia e quais são as opções de tratamento.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1656,7 +1656,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o peso piora a apneia, como diagnosticar e o papel do emagrecimento.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,

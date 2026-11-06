@@ -83,6 +83,12 @@ const AboutDoctor = () => {
                 Conteúdo desta página revisado por {DOCTOR_NAME} em <time dateTime={HOME_REVISADA_EM}>{revisadaEm}</time>.
               </p>
 
+              <p>
+                <a href="/dra-isabela-bertoglio" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">
+                  Formação e registros da Dra. Isabela
+                </a>
+              </p>
+
               <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('sobre', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
                 Agendar com a Dra. Isabela
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

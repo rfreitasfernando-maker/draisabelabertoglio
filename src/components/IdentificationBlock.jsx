@@ -53,6 +53,15 @@ const IdentificationBlock = () => {
             ))}
           </div>
 
+          <p className="mt-8 text-center text-sm font-sans font-light text-brand-dark-gray/70 leading-relaxed">
+            Conheça os tratamentos:{' '}
+            <a href="/tratamentos/obesidade" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">obesidade</a>
+            {' · '}
+            <a href="/tratamentos/canetas-emagrecedoras" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">canetas emagrecedoras</a>
+            {' · '}
+            <a href="/tratamentos" className="inline-block py-2 text-sm font-sans font-medium text-brand-gold underline underline-offset-4 hover:text-brand-dark transition-colors duration-300">todos os tratamentos</a>
+          </p>
+
           <div className="text-center mt-10">
             <a href={WHATSAPP_URL} onClick={(e) => trackWhatsappClick('identificacao', e)} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-brand-gold text-white px-8 py-4 min-h-[48px] font-sans text-xs font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500">
               Quero começar meu tratamento

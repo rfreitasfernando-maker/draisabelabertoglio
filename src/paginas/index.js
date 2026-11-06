@@ -15,7 +15,7 @@ export const PAGINAS = [
     tituloSocial: 'Médico para emagrecer no Paraíso, perto da Paulista',
     descricaoSocial:
       'Consultório da Dra. Isabela Bertoglio no Paraíso: perto do metrô, com estacionamento conveniado com manobrista e bioimpedância inclusa. Segunda a sexta, 8h às 18h.',
-    atualizadoEm: '2026-10-19',
+    atualizadoEm: '2026-11-06',
     imagemSocial: { src: '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg', alt: 'Dra. Isabela Bertoglio em seu consultório, ao lado do símbolo da Clínica Belvitá' },
     mensagemWhatsapp: 'Olá! Vim pela página do consultório no Paraíso e gostaria de agendar uma avaliação com a Dra. Isabela.',
     aviso:

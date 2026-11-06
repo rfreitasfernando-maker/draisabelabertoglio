@@ -341,7 +341,7 @@ export const POSTS = [
     descricaoSocial:
       'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-01',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -440,7 +440,7 @@ export const POSTS = [
     descricaoSocial:
       'IMC, cintura e composição corporal, causas, riscos e o que a medicina oferece hoje para tratar a obesidade com segurança.',
     publicadoEm: '2026-10-23',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1733,
       altura: 907,
@@ -492,7 +492,7 @@ export const POSTS = [
     descricaoSocial:
       'Comida de verdade, proteína, fibras e regularidade: como trocar a dieta com data para acabar por hábitos que mantêm o peso.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -679,7 +679,7 @@ export const POSTS = [
     descricaoSocial:
       'Glicemia entre 100 e 125 ou glicada entre 5,7% e 6,4%? Entenda o que é pré-diabetes e o que fazer para reverter.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-11-02',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1500,7 +1500,7 @@ export const POSTS = [
     descricaoSocial:
       'Um padrão alimentar parecido com o mediterrâneo que ajuda a reduzir a inflamação ligada à obesidade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-04',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1682,7 +1682,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o sono afeta a fome e o peso e o que fazer para dormir melhor.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-05',
+    atualizadoEm: '2026-11-06',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1697,5 +1697,135 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Problemas de sono e o plano para emagrecer dependem de avaliação individual.',
+  },
+  {
+    slug: 'anticoncepcional-engorda',
+    titulo: 'Anticoncepcional engorda? O que a ciência mostra sobre pílula, DIU, injeção e implante, e quando investigar o ganho de peso, em São Paulo',
+    tituloSeo: 'Anticoncepcional engorda? O que a ciência mostra | SP',
+    descricao:
+      'Anticoncepcional engorda? Veja o que os estudos mostram sobre pílula, DIU hormonal, implante e injeção, e quando investigar outras causas do ganho de peso.',
+    tituloSocial: 'Anticoncepcional engorda? O que a ciência mostra',
+    descricaoSocial:
+      'Pílula, DIU, implante e injeção: o efeito real de cada método no peso.',
+    publicadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-06',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o efeito dos anticoncepcionais no peso: pílula combinada, DIU hormonal e implante com efeito pequeno, e injeção trimestral como o método mais associado a ganho de peso',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Ganho de peso' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome dos ovários policísticos' },
+      { '@type': 'MedicalCondition', name: 'Retenção de líquido' },
+      { '@type': 'MedicalCondition', name: 'Hipotireoidismo' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A escolha e a troca do método contraceptivo devem ser feitas com o ginecologista.',
+  },
+  {
+    slug: 'obesidade-e-dor-no-joelho',
+    titulo: 'Obesidade e dor no joelho: perder peso alivia a dor? Artrose, articulações e como emagrecer protegendo o joelho, em São Paulo',
+    tituloSeo: 'Obesidade e dor no joelho: perder peso alivia? | SP',
+    descricao:
+      'Obesidade e dor no joelho: entenda como o peso sobrecarrega a articulação, quanto perder para aliviar a dor e como emagrecer protegendo o joelho.',
+    tituloSocial: 'Obesidade e dor no joelho: perder peso alivia a dor?',
+    descricaoSocial:
+      'Como o peso afeta o joelho e como emagrecer protegendo a articulação.',
+    publicadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-06',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre peso e dor no joelho: cada quilo perdido reduz cerca de 4 kg de carga no joelho a cada passo, com exercícios de baixo impacto e fortalecimento da coxa',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Osteoartrite de joelho' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+      { '@type': 'MedicalCondition', name: 'Inflamação crônica' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Dor no joelho deve ser avaliada por ortopedista, e o plano para emagrecer depende de avaliação individual.',
+  },
+  {
+    slug: 'magnesio-para-que-serve',
+    titulo: 'Magnésio: para que serve, sintomas de falta, alimentos, tipos de suplemento e quando suplementar, com orientação médica em São Paulo',
+    tituloSeo: 'Magnésio: para que serve e quando suplementar | SP',
+    descricao:
+      'Magnésio: para que serve, sintomas de falta, alimentos ricos, tipos de suplemento, efeito no sono e na glicose e quando suplementar com segurança.',
+    tituloSocial: 'Magnésio: para que serve e quando suplementar',
+    descricaoSocial:
+      'Funções, sinais de falta, alimentos, tipos e cuidados com o suplemento.',
+    publicadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-06',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o magnésio: melhores fontes na alimentação, evidência limitada para o sono, não emagrece e exige orientação em doença nos rins',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Deficiência de magnésio' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Insônia' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Doença renal crônica' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos depende de avaliação individual.',
+  },
+  {
+    slug: 'alimentos-ricos-em-fibras',
+    titulo: 'Alimentos ricos em fibras: como as fibras ajudam a emagrecer, quanto comer por dia e como aumentar sem desconforto, com orientação em São Paulo',
+    tituloSeo: 'Alimentos ricos em fibras: como ajudam a emagrecer | SP',
+    descricao:
+      'Alimentos ricos em fibras: veja como as fibras aumentam a saciedade, quanto comer por dia, a tabela de alimentos e como aumentar sem gases.',
+    tituloSocial: 'Alimentos ricos em fibras: como ajudam a emagrecer',
+    descricaoSocial:
+      'Saciedade, glicose e intestino: quanto comer por dia e como aumentar.',
+    publicadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-06',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com a quantidade aproximada de fibras em feijão, goiaba e aveia e a meta de pelo menos 25 g de fibras por dia',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Constipação intestinal' },
+      { '@type': 'MedicalCondition', name: 'Pré-diabetes' },
+      { '@type': 'MedicalCondition', name: 'Colesterol alto' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano alimentar depende de avaliação individual.',
+  },
+  {
+    slug: 'imc',
+    titulo: 'IMC: como calcular, tabela de classificação e por que o índice de massa corporal sozinho não basta, com avaliação em São Paulo',
+    tituloSeo: 'IMC: como calcular, tabela e limitações | SP',
+    descricao:
+      'IMC: aprenda a calcular o índice de massa corporal, veja a tabela para adultos e entenda por que cintura e bioimpedância completam a avaliação.',
+    tituloSocial: 'IMC: como calcular, tabela e por que ele não basta',
+    descricaoSocial:
+      'Calcule o IMC e entenda o que ele mostra e o que ele não mostra.',
+    publicadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-06',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com a classificação do IMC em adultos, de peso normal a obesidade, e o que o índice não mostra, como a diferença entre gordura e músculo',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalCondition', name: 'Obesidade abdominal' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A avaliação do peso e o tratamento dependem de avaliação individual.',
   },
 ];

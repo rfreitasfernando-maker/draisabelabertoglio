@@ -72,7 +72,19 @@ for (const landing of LANDINGS) {
 }
 
 // O modelo é lido antes de tudo: a página /blog vai ocupar o mesmo arquivo.
-const modeloBlog = fs.readFileSync(modeloBlogPath, 'utf8');
+// Como na página inicial, o CSS entra embutido em <style>: no celular, os dois arquivos de CSS seguravam a
+// pintura da capa (o maior elemento da tela) por mais de um segundo, mesmo com a imagem já baixada.
+let modeloBlog = fs.readFileSync(modeloBlogPath, 'utf8');
+const linksCssBlog = [...modeloBlog.matchAll(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g)];
+if (linksCssBlog.length === 0) throw new Error('prerender: nenhum <link> de CSS encontrado em dist/blog.html');
+for (const [tag, href] of linksCssBlog) {
+  const cssDoArquivo = fs.readFileSync(path.join(dist, href), 'utf8');
+  modeloBlog = modeloBlog.replace(tag, () => `<style>${cssDoArquivo}</style>`);
+}
+console.log(`prerender: CSS embutido no modelo do blog (${linksCssBlog.length} arquivos)`);
+// O JavaScript dessas páginas só cuida do menu e do botão de WhatsApp: sem o modulepreload, ele deixa de
+// disputar a banda com a capa e as fontes (o <script type="module"> continua carregando e importando o resto).
+modeloBlog = modeloBlog.replace(/<link rel="modulepreload"[^>]*>\s*/g, '');
 fs.rmSync(modeloBlogPath);
 for (const rota of [...rotasDoBlog(), ...rotasDasPaginas()]) {
   const pagina = renderBlog(rota);

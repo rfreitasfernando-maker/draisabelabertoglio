@@ -38,12 +38,18 @@ export function prepararServico(html, opcoes) {
   if (marcadorHero) {
     abertura = texto.slice(0, marcadorHero.index).trim();
     texto = texto.slice(marcadorHero.index + marcadorHero[0].length);
-  } else if (opcoes.cards) {
-    // Página /tratamentos: a introdução (antes do primeiro card) fica no topo, sem botão.
-    const primeiroH2 = texto.search(/<h2>/);
-    abertura = texto.slice(0, primeiroH2).trim();
-    texto = texto.slice(primeiroH2);
+  } else {
+    // Páginas sem botão no topo (/tratamentos e Sobre): a introdução, até o primeiro <h2> ou marcador, fica no topo.
+    const fimDaIntroducao = texto.search(/<h2>|<!--/);
+    abertura = texto.slice(0, fimDaIntroducao).trim();
+    texto = texto.slice(fimDaIntroducao);
   }
+
+  // Pendências marcadas com TODO: continuam no código (comentário no HTML), mas não aparecem na página.
+  texto = texto.replace(/<(li|p)>\s*(TODO:[\s\S]*?)<\/\1>/g, (_, tag, pendencia) => {
+    console.warn(`serviços: ${pendencia.slice(0, 80)}...`);
+    return `<!-- ${pendencia.replace(/--/g, '—')} -->`;
+  });
 
   // Fim da página: autora, local e aviso são componentes; o texto acaba no primeiro desses marcadores.
   const temAutora = /<!--\s*\[BLOCO AUTORA/.test(texto);
@@ -73,7 +79,7 @@ export function prepararServico(html, opcoes) {
   // Foto da Dra. Isabela (página Sobre)
   texto = texto.replace(
     /<!--\s*\[FOTO DA DRA\. ISABELA\]\s*-->/g,
-    '<figure class="servico-foto"><img src="/dra-isabela-bertoglio.webp" srcset="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-768.webp 768w, /dra-isabela-bertoglio.webp 892w" sizes="(min-width: 768px) 240px, 200px" width="892" height="1280" alt="Dra. Isabela Bertoglio, nutróloga, no consultório da Clínica Belvitá" loading="lazy" decoding="async" /></figure>',
+    '<figure class="servico-foto"><img src="/dra-isabela-bertoglio.webp" srcset="/dra-isabela-bertoglio-640.webp 640w, /dra-isabela-bertoglio-768.webp 768w, /dra-isabela-bertoglio.webp 892w" sizes="(min-width: 768px) 240px, 200px" width="892" height="1280" alt="Dra. Isabela Bertoglio, nutróloga, no consultório da Clínica Belvitá em São Paulo" loading="lazy" decoding="async" /></figure>',
   );
 
   // Perguntas frequentes: do <h2> até o fim do texto, cada <h3> com um <p>.

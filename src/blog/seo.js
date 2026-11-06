@@ -218,7 +218,9 @@ export function headDoServico(servico, conteudo, itensDaTrilha, outrosServicos =
   const hub = servico.grupo === 'hub';
 
   const pagina = {
-    '@type': hub ? 'CollectionPage' : 'MedicalWebPage',
+    '@type': hub ? 'CollectionPage' : servico.perfil ? 'ProfilePage' : 'MedicalWebPage',
+    // Página de perfil: o assunto é a própria médica (dados completos no nó Physician abaixo).
+    ...(servico.perfil && { mainEntity: { '@id': ID_MEDICA }, about: { '@id': ID_MEDICA } }),
     '@id': `${url}#webpage`,
     url,
     name: conteudo.h1,
@@ -243,6 +245,11 @@ export function headDoServico(servico, conteudo, itensDaTrilha, outrosServicos =
       itensDaTrilha.map(([nome, caminho], i) => [nome, i === itensDaTrilha.length - 1 ? url : `${SITE_URL}${caminho === '/' ? '/' : caminho}`]),
     ),
   ];
+
+  // Página Sobre: o Physician completo (o mesmo @id e os mesmos dados da página inicial).
+  if (servico.perfil) {
+    grafo.push(MEDICA);
+  }
 
   if (hub) {
     grafo.push({

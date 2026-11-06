@@ -324,4 +324,9 @@
     width: 240px;
     margin: 0.25rem 0 1.5rem 2.5rem !important;
   }
+  /* A seção logo depois da foto corre ao lado dela (os <h2> seguintes voltam a limpar o float) */
+  .post-conteudo .servico-foto + h2 {
+    clear: none;
+    margin-top: 0;
+  }
 }

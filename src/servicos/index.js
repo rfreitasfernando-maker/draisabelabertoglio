@@ -32,7 +32,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalCondition', name: 'Obesidade' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de tratamento da obesidade e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/canetas-emagrecedoras',
@@ -59,7 +59,7 @@ export const SERVICOS = [
     ],
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de resistência à insulina e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/sindrome-metabolica',
@@ -71,7 +71,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalCondition', name: 'Síndrome metabólica' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de síndrome metabólica e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/gordura-no-figado',
@@ -83,7 +83,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalCondition', name: 'Doença hepática esteatótica associada à disfunção metabólica (MASLD)' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de gordura no fígado e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/cansaco-e-deficiencia-de-vitaminas',
@@ -166,13 +166,16 @@ export const SERVICOS = [
   {
     caminho: 'dra-isabela-bertoglio',
     grupo: 'institucional',
-    nomeCurto: 'Sobre a Dra. Isabela',
+    nomeCurto: 'Dra. Isabela Bertoglio',
+    rotuloNoRodape: 'Sobre a Dra. Isabela',
+    // Página de perfil: ProfilePage com o Physician completo (src/blog/seo.js).
+    perfil: true,
     tituloSeo: 'Dra. Isabela Bertoglio | Nutróloga em São Paulo',
     descricao:
       'Conheça a Dra. Isabela Bertoglio, nutróloga em São Paulo: formação, registros, abordagem e onde atende, no Paraíso. Agende pelo WhatsApp.',
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página da Dra. Isabela no site e gostaria de agendar uma consulta.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'consulta-nutrologia',

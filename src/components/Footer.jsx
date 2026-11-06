@@ -30,7 +30,7 @@ const Footer = () => {
   ];
   const tecnologias = MENU_TECNOLOGIAS.map((s) => [s.nomeCurto, `/${s.caminho}`]);
   const institucional = [
-    ...(PAGINA_SOBRE ? [[PAGINA_SOBRE.nomeCurto, `/${PAGINA_SOBRE.caminho}`]] : []),
+    ...(PAGINA_SOBRE ? [[PAGINA_SOBRE.rotuloNoRodape ?? PAGINA_SOBRE.nomeCurto, `/${PAGINA_SOBRE.caminho}`]] : []),
     ...(PAGINA_CONSULTA ? [[PAGINA_CONSULTA.nomeCurto, `/${PAGINA_CONSULTA.caminho}`]] : []),
     ['Consultório no Paraíso', CONSULTORIO_PATH],
     ['Blog', '/blog'],

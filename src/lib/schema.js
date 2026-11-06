@@ -120,7 +120,8 @@ export const MEDICA = {
   name: DOCTOR_NAME,
   // A ficha do Google (hasMap) é da médica: o nome dela no Google entra como nome alternativo.
   alternateName: GOOGLE_BUSINESS_NAME,
-  url: `${SITE_URL}/`,
+  // Página de perfil da médica (src/servicos): formação, registros e onde atende.
+  url: `${SITE_URL}/dra-isabela-bertoglio`,
   image: `${SITE_URL}/dra-isabela-bertoglio.jpg`,
   worksFor: { '@id': ID_CLINICA },
   telephone: PHONE,

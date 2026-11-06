@@ -168,9 +168,15 @@ export function gerarSitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${itens.join('\n')}\n</urlset>\n`;
 }
 
-/** llms.txt do site: resumo da página inicial e lista dos posts (src/lib/llms.js). */
+/** llms.txt do site: resumo da página inicial, páginas de serviço e lista dos posts (src/lib/llms.js). */
 export const gerarLlmsTxt = () =>
   montarLlmsTxt(
     posts.map((post) => ({ titulo: post.titulo, descricao: post.descricao, url: urlDoPost(post) })),
     PAGINAS.map((pagina) => ({ titulo: pagina.titulo, descricao: pagina.descricao, url: urlDaPagina(pagina) })),
+    SERVICOS_PUBLICADOS.map((servico) => ({
+      grupo: servico.grupo,
+      titulo: conteudosDosServicos.get(servico.caminho).h1,
+      descricao: servico.descricao,
+      url: urlDoServico(servico),
+    })),
   );

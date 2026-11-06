@@ -1,21 +1,29 @@
 // llms.txt: resumo do site em Markdown para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
-// Gerado no build (tools/prerender.js) com os mesmos dados da página. Não acrescentar nada que a página não diga.
+// Gerado no build (tools/prerender.js) com os mesmos dados das páginas. Não acrescentar nada que as páginas não digam.
+// As páginas dos anúncios (/nutrologia, /clinica-de-emagrecimento) ficam de fora: são noindex.
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/doctor';
 import { ADDRESS, CLINIC_NAME, GOOGLE_BUSINESS_NAME, HOURS, PHONE, MAP_DIRECTIONS_URL } from '@/lib/location';
-import { WHATSAPP_URL } from '@/lib/whatsapp';
+import { WHATSAPP_PAGINAS_URL } from '@/lib/whatsapp';
 import { FAQ } from '@/lib/faq';
 import { SITE_URL, DESCRICAO_DA_CLINICA } from '@/lib/schema';
 
-const credenciais = DOCTOR_CREDENTIALS.replace(/\u00A0/g, ' ');
+// Só os registros (CRM e RQEs): o texto já diz "médica nutróloga" antes deles.
+const credenciais = DOCTOR_CREDENTIALS.replace(/ /g, ' ').replace(/^[^·]*·\s*/, '');
+// Descrição curta de cada página de serviço: a meta description, sem o convite final para agendar.
+const semConvite = (texto) => texto.replace(/\s*Agende( sua avaliação)? pelo WhatsApp\.$/, '');
+const item = ({ titulo, descricao, url }) => `- [${titulo}](${url}): ${semConvite(descricao)}`;
 
 /**
  * @param {{ titulo: string, descricao: string, url: string }[]} posts posts do blog, mais recentes primeiro
  * @param {{ titulo: string, descricao: string, url: string }[]} paginas páginas avulsas da raiz (src/paginas)
+ * @param {{ grupo: string, titulo: string, descricao: string, url: string }[]} servicos páginas de serviço publicadas (src/servicos)
  */
-export function montarLlmsTxt(posts, paginas = []) {
-  const outrasPaginas = paginas.map((pagina) => `- [${pagina.titulo}](${pagina.url}): ${pagina.descricao}`).join('\n');
+export function montarLlmsTxt(posts, paginas = [], servicos = []) {
+  const doGrupo = (grupo) => servicos.filter((s) => s.grupo === grupo).map(item).join('\n');
+  const hub = servicos.find((s) => s.grupo === 'hub');
+  const institucionais = [...servicos.filter((s) => s.grupo === 'institucional'), ...paginas].map(item).join('\n');
   const faq = FAQ.map(({ pergunta, resposta }) => `### ${pergunta}\n\n${resposta}`).join('\n\n');
-  const artigos = posts.map((post) => `- [${post.titulo}](${post.url}): ${post.descricao}`).join('\n');
+  const artigos = posts.map(item).join('\n');
 
   return `# ${CLINIC_NAME} – ${DOCTOR_NAME}
 
@@ -23,9 +31,21 @@ export function montarLlmsTxt(posts, paginas = []) {
 
 Site oficial: ${SITE_URL}/
 
-## Quem atende
+## Quem é a ${DOCTOR_NAME}
 
-${DOCTOR_NAME} (${credenciais}). Doutorado pela USP-SP, especialização pela USP-SP e Nutrologia Clínica pelo Hospital Albert Einstein. Atuação individualizada, sem protocolos genéricos: o objetivo não é apenas a perda de peso, mas a saúde metabólica e uma relação equilibrada com o próprio corpo. Nota 5,0 nas avaliações do Google.
+${DOCTOR_NAME} é médica nutróloga em São Paulo (${credenciais}). Doutorado pela USP | Nutrologia Clínica — Hospital Israelita Albert Einstein. Atuação individualizada, sem protocolos genéricos: o objetivo não é apenas a perda de peso, mas a saúde metabólica e uma relação equilibrada com o próprio corpo. Perfil completo: ${SITE_URL}/dra-isabela-bertoglio
+
+## Tratamentos
+
+${hub ? `Lista completa: ${hub.url}\n\n` : ''}${doGrupo('tratamentos')}
+
+## Tecnologias
+
+${doGrupo('tecnologias')}
+
+## Consulta e consultório
+
+${institucionais}
 
 ## Emagrecimento com acompanhamento médico
 
@@ -55,24 +75,24 @@ Indicações: gordura localizada, celulite, flacidez corporal e contorno corpora
 
 ${faq}
 
-## Onde fazer emagrecimento com acompanhamento médico e Unyque Pro em São Paulo
+## Onde fazer acompanhamento para emagrecer em São Paulo
 
-- Nome no Google: ${GOOGLE_BUSINESS_NAME}
+- Médica: ${DOCTOR_NAME}, nutróloga (${credenciais})
 - Clínica: ${CLINIC_NAME}
+- Nome no Google: ${GOOGLE_BUSINESS_NAME}
 - Endereço: ${ADDRESS}
-- Perto da estação Paraíso do metrô (linhas 1-Azul e 2-Verde)
-- Telefone e WhatsApp: ${PHONE}
+- Perto da estação Paraíso do metrô (linhas 1-Azul e 2-Verde) e da Avenida Paulista
+- Estacionamento conveniado com manobrista
 - Horário: ${HOURS}
+- Telefone e WhatsApp: ${PHONE} ([agendar pelo WhatsApp](${WHATSAPP_PAGINAS_URL}))
 - Mapa: ${MAP_DIRECTIONS_URL}
-- Consultas particulares, com nota fiscal para reembolso
+- Consultas particulares, com nota fiscal para pedido de reembolso ao plano de saúde
 
 ## Links
 
 - [Página inicial](${SITE_URL}/)
-- [Agendar pelo WhatsApp](${WHATSAPP_URL})
 - [Blog](${SITE_URL}/blog)
 - [Instagram ${INSTAGRAM_HANDLE}](${INSTAGRAM_URL})
-${outrasPaginas}
 
 ## Artigos do blog
 

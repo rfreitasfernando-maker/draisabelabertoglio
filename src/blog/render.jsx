@@ -7,9 +7,12 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { POSTS } from '@/blog/posts';
 import { prepararConteudo } from '@/blog/conteudo';
 import { linkWhatsapp } from '@/lib/whatsapp';
-import { headDoPost, headDoBlog, headDaPaginaAvulsa, SITE_URL, URL_DO_BLOG, urlDoPost, urlDaPagina } from '@/blog/seo';
+import { headDoPost, headDoBlog, headDaPaginaAvulsa, headDoServico, SITE_URL, URL_DO_BLOG, urlDoPost, urlDaPagina, urlDoServico } from '@/blog/seo';
 import { PAGINAS } from '@/paginas';
 import PaginaAvulsa from '@/paginas/PaginaAvulsa';
+import { SERVICOS_PUBLICADOS, caminhosPublicados, arquivoDoServico } from '@/servicos';
+import { prepararServico } from '@/servicos/conteudo';
+import PaginaDeServico, { itensDaTrilha } from '@/servicos/PaginaDeServico';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
 import { capaDoPost } from '@/blog/imagens';
@@ -45,8 +48,25 @@ const conteudosDasPaginas = new Map(
   }),
 );
 
+// Páginas de serviço (src/servicos): só as publicadas. Links do texto para páginas que não existem viram texto.
+const textosDosServicos = import.meta.glob('../servicos/textos/*.html', { query: '?raw', import: 'default', eager: true });
+const caminhosDoSite = new Set(['/', '/blog', ...PAGINAS.map((pagina) => `/${pagina.slug}`), ...caminhosPublicados]);
+const conteudosDosServicos = new Map(
+  SERVICOS_PUBLICADOS.map((servico) => {
+    const html = textosDosServicos[`../servicos/textos/${arquivoDoServico(servico)}`];
+    if (html === undefined) throw new Error(`serviços: falta o texto src/servicos/textos/${arquivoDoServico(servico)}`);
+    const conteudo = prepararServico(html, {
+      slugsDoBlog: slugs,
+      caminhosDoSite,
+      linkWhatsapp: linkWhatsapp(servico.mensagemWhatsapp),
+      cards: servico.grupo === 'hub',
+    });
+    return [servico.caminho, conteudo];
+  }),
+);
+
 export const rotasDoBlog = () => (posts.length ? ['/blog', ...posts.map((post) => `/blog/${post.slug}`)] : []);
-export const rotasDasPaginas = () => PAGINAS.map((pagina) => `/${pagina.slug}`);
+export const rotasDasPaginas = () => [...PAGINAS.map((pagina) => `/${pagina.slug}`), ...SERVICOS_PUBLICADOS.map((servico) => `/${servico.caminho}`)];
 
 /** Item do menu marcado como atual na rota (o mesmo cálculo no servidor e em src/blog/client.jsx). */
 export const itemAtualDoMenu = (caminho) => (caminho.startsWith('/blog') ? 'blog' : caminho.replace(/^\//, ''));
@@ -62,7 +82,13 @@ export function renderBlog(url) {
   let head;
   let pagina;
   const avulsa = PAGINAS.find((p) => `/${p.slug}` === caminho);
-  if (avulsa) {
+  const servico = SERVICOS_PUBLICADOS.find((s) => `/${s.caminho}` === caminho);
+  if (servico) {
+    const conteudo = conteudosDosServicos.get(servico.caminho);
+    const tratamentos = SERVICOS_PUBLICADOS.filter((s) => s.grupo === 'tratamentos');
+    head = headDoServico(servico, conteudo, itensDaTrilha(servico), tratamentos);
+    pagina = <PaginaDeServico servico={servico} conteudo={conteudo} linkWhatsapp={linkWhatsapp(servico.mensagemWhatsapp)} />;
+  } else if (avulsa) {
     const conteudo = conteudosDasPaginas.get(avulsa.slug);
     head = headDaPaginaAvulsa(avulsa, conteudo);
     pagina = <PaginaAvulsa pagina={avulsa} conteudo={conteudo} />;
@@ -79,16 +105,19 @@ export function renderBlog(url) {
     pagina = <PaginaDoPost post={post} conteudo={conteudo} outros={posts.filter((p) => p !== post).slice(0, 3)} minutosDe={minutosDe} />;
   }
 
+  // Fora do blog (páginas de serviço e do consultório), cabeçalho e botão flutuante usam a mensagem do site.
+  // O mesmo cálculo é feito no navegador (src/blog/client.jsx), senão a hidratação diverge.
+  const foraDoBlog = !caminho.startsWith('/blog');
   return {
     head,
-    cabecalho: renderToString(<Header blog atual={itemAtualDoMenu(caminho)} />),
+    cabecalho: renderToString(<Header blog={!foraDoBlog} pagina={foraDoBlog} atual={itemAtualDoMenu(caminho)} />),
     conteudo: renderToStaticMarkup(
       <>
         {pagina}
         <Footer />
       </>,
     ),
-    whatsapp: renderToString(<WhatsAppButton blog />),
+    whatsapp: renderToString(<WhatsAppButton blog={!foraDoBlog} pagina={foraDoBlog} />),
   };
 }
 
@@ -119,6 +148,11 @@ export function gerarSitemap() {
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: HOME_REVISADA_EM, imagens: IMAGENS_DA_HOME },
     ...PAGINAS.map((pagina) => ({ loc: urlDaPagina(pagina), lastmod: pagina.atualizadoEm })),
+    ...SERVICOS_PUBLICADOS.map((servico) => ({
+      loc: urlDoServico(servico),
+      lastmod: servico.revisadoEm,
+      ...(servico.caminho === 'dra-isabela-bertoglio' && { imagens: ['/dra-isabela-bertoglio.webp'] }),
+    })),
     ...(posts.length ? [{ loc: URL_DO_BLOG, lastmod: maisRecente }] : []),
     ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm, imagens: [capaDoPost(post).social] })),
   ];

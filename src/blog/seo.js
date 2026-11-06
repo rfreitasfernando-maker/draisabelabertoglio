@@ -30,12 +30,12 @@ const trilha = (id, itens) => ({
   })),
 });
 
-function headDaPagina({ titulo, descricao, url, tipo, tituloSocial, descricaoSocial, imagemSocial, imagemAlt, extras }) {
+function headDaPagina({ titulo, descricao, url, tipo, tituloSocial, descricaoSocial, imagemSocial, imagemAlt, extras, robots = ROBOTS }) {
   return [
     `<title>${titulo.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</title>`,
     meta('name', 'description', descricao),
     `<link rel="canonical" href="${atributo(url)}" />`,
-    meta('name', 'robots', ROBOTS),
+    meta('name', 'robots', robots),
     meta('property', 'og:type', tipo),
     meta('property', 'og:locale', 'pt_BR'),
     meta('property', 'og:site_name', NOME_DO_SITE),
@@ -191,6 +191,95 @@ export function headDaPaginaAvulsa(pagina, conteudo) {
     extras: [
       meta('name', 'geo.region', 'BR-SP'),
       meta('name', 'geo.placename', 'Paraíso, São Paulo'),
+      meta('name', 'geo.position', `${COORDENADAS.latitude};${COORDENADAS.longitude}`),
+      meta('name', 'ICBM', `${COORDENADAS.latitude}, ${COORDENADAS.longitude}`),
+      jsonLd(grafo),
+    ],
+  });
+}
+
+// Diretiva das páginas de serviço (briefing): sem limite de trecho nem de prévia de imagem.
+const ROBOTS_SERVICO = 'index, follow, max-image-preview:large, max-snippet:-1';
+// Imagem de compartilhamento das páginas de serviço: a mesma da página inicial, já em 1200 × 630.
+const IMAGEM_SOCIAL_SERVICO = {
+  src: '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg',
+  alt: 'Dra. Isabela Bertoglio em seu consultório, ao lado do símbolo da Clínica Belvitá',
+};
+
+export const urlDoServico = (servico) => `${SITE_URL}/${servico.caminho}`;
+
+/**
+ * <head> de uma página de serviço (src/servicos): um único @graph com a página, a trilha e o FAQ.
+ * A clínica e a médica entram só pelo @id (os dados completos estão na página inicial).
+ * `itensDaTrilha`: [[nome, caminho]], o mesmo da trilha visível.
+ */
+export function headDoServico(servico, conteudo, itensDaTrilha, outrosServicos = []) {
+  const url = urlDoServico(servico);
+  const hub = servico.grupo === 'hub';
+
+  const pagina = {
+    '@type': hub ? 'CollectionPage' : 'MedicalWebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: conteudo.h1,
+    description: servico.descricao,
+    inLanguage: 'pt-BR',
+    isPartOf: { '@id': `${SITE_URL}/#site` },
+    ...(servico.sobre && { about: servico.sobre }),
+    ...(!hub && { audience: { '@type': 'MedicalAudience', audienceType: 'Pacientes' } }),
+    author: { '@id': ID_MEDICA },
+    reviewedBy: { '@id': ID_MEDICA },
+    publisher: { '@id': ID_CLINICA },
+    lastReviewed: servico.revisadoEm,
+    dateModified: servico.revisadoEm,
+    breadcrumb: { '@id': `${url}#breadcrumb` },
+    ...(hub && { mainEntity: { '@id': `${url}#tratamentos` } }),
+  };
+
+  const grafo = [
+    pagina,
+    trilha(
+      `${url}#breadcrumb`,
+      itensDaTrilha.map(([nome, caminho], i) => [nome, i === itensDaTrilha.length - 1 ? url : `${SITE_URL}${caminho === '/' ? '/' : caminho}`]),
+    ),
+  ];
+
+  if (hub) {
+    grafo.push({
+      '@type': 'ItemList',
+      '@id': `${url}#tratamentos`,
+      itemListElement: outrosServicos.map((s, i) => ({ '@type': 'ListItem', position: i + 1, name: s.nomeCurto, url: urlDoServico(s) })),
+    });
+  }
+
+  if (conteudo.faq.length) {
+    grafo.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: conteudo.faq.map(({ pergunta, resposta }) => ({
+        '@type': 'Question',
+        name: pergunta,
+        acceptedAnswer: { '@type': 'Answer', text: resposta },
+      })),
+    });
+  }
+
+  return headDaPagina({
+    titulo: servico.tituloSeo,
+    descricao: servico.descricao,
+    url,
+    tipo: 'website',
+    tituloSocial: servico.tituloSeo,
+    descricaoSocial: servico.descricao,
+    imagemSocial: IMAGEM_SOCIAL_SERVICO.src,
+    imagemAlt: IMAGEM_SOCIAL_SERVICO.alt,
+    robots: ROBOTS_SERVICO,
+    extras: [
+      meta('name', 'twitter:title', servico.tituloSeo),
+      meta('name', 'twitter:description', servico.descricao),
+      meta('name', 'twitter:image', `${SITE_URL}${IMAGEM_SOCIAL_SERVICO.src}`),
+      meta('name', 'geo.region', 'BR-SP'),
+      meta('name', 'geo.placename', 'São Paulo'),
       meta('name', 'geo.position', `${COORDENADAS.latitude};${COORDENADAS.longitude}`),
       meta('name', 'ICBM', `${COORDENADAS.latitude}, ${COORDENADAS.longitude}`),
       jsonLd(grafo),

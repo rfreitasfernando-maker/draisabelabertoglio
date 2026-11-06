@@ -92,7 +92,27 @@ export const CLINICA = {
   paymentAccepted: 'Consulta particular, com nota fiscal para reembolso',
   availableService: SERVICOS,
   employee: { '@id': ID_MEDICA },
+  sameAs: [INSTAGRAM_URL, MAP_DIRECTIONS_URL],
 };
+
+// Temas que a Dra. Isabela atende, os mesmos das páginas de tratamento (src/servicos).
+const TEMAS = [
+  'Nutrologia',
+  'Obesidade',
+  'Emagrecimento',
+  'Canetas emagrecedoras (tirzepatida e semaglutida)',
+  'Resistência à insulina',
+  'Pré-diabetes',
+  'Síndrome metabólica',
+  'Colesterol e triglicérides',
+  'Gordura no fígado',
+  'Deficiência de vitaminas e minerais',
+  'Menopausa',
+  'Síndrome dos ovários policísticos',
+  'Lipedema',
+  'Preparo nutrológico para cirurgia plástica',
+  'Composição corporal e bioimpedância',
+];
 
 export const MEDICA = {
   '@type': 'Physician',
@@ -109,6 +129,7 @@ export const MEDICA = {
   hasMap: MAP_DIRECTIONS_URL,
   openingHoursSpecification: HORARIO,
   medicalSpecialty: { '@type': 'MedicalSpecialty', name: 'Nutrologia' },
+  knowsAbout: TEMAS,
   sameAs: [INSTAGRAM_URL, MAP_DIRECTIONS_URL],
   identifier: [
     { '@type': 'PropertyValue', propertyID: 'CRM-SP', value: '194436' },

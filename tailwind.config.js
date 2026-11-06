@@ -8,7 +8,7 @@ module.exports = {
 		'./blog.html',
 		'./src/*.{js,jsx}',
 		'./src/components/*.{js,jsx}',
-		'./src/{blog,lib,hooks,pages,paginas}/**/*.{js,jsx}',
+		'./src/{blog,lib,hooks,pages,paginas,servicos}/**/*.{js,jsx}',
 		'./tools/blog-html.js',
 	],
 	theme: {

@@ -9,9 +9,11 @@ import '@/blog/blog.css';
 // Nas páginas do blog só o cabeçalho e o botão de WhatsApp têm interação: são hidratados como ilhas.
 // O texto do post é HTML estático (src/blog/render.jsx) e não entra no JavaScript.
 // Mesmo item atual do menu que o servidor marcou (src/blog/render.jsx), senão a hidratação diverge.
-const atual = location.pathname.replace(/\/+$/, '').startsWith('/blog') ? 'blog' : location.pathname.replace(/^\/|\/+$/g, '');
-ReactDOM.hydrateRoot(document.getElementById('cabecalho'), <Header blog atual={atual} />);
-ReactDOM.hydrateRoot(document.getElementById('whatsapp'), <WhatsAppButton blog />);
+// Fora do blog (páginas de serviço e do consultório): CTA com a mensagem do site, como em src/blog/render.jsx.
+const noBlog = location.pathname.replace(/\/+$/, '').startsWith('/blog');
+const atual = noBlog ? 'blog' : location.pathname.replace(/^\/|\/+$/g, '');
+ReactDOM.hydrateRoot(document.getElementById('cabecalho'), <Header blog={noBlog} pagina={!noBlog} atual={atual} />);
+ReactDOM.hydrateRoot(document.getElementById('whatsapp'), <WhatsAppButton blog={noBlog} pagina={!noBlog} />);
 
 // CTAs dentro do texto (<a data-whatsapp="origem">): rastreados por delegação, já que não são componentes.
 document.addEventListener('click', (e) => {

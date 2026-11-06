@@ -274,7 +274,8 @@ const blogDevPlugin = {
 		server.middlewares.use(async (req, res, next) => {
 			const caminho = req.url.split(/[?#]/)[0];
 			// Arquivos (imagens em /blog/imagens/...) seguem para o servidor de estáticos.
-			if (!/^\/(blog(\/[^.]*)?|[a-z0-9-]+)$/.test(caminho)) return next();
+			// Páginas de serviço (src/servicos) têm um nível a mais: /tratamentos/<slug> e /tecnologias/<slug>.
+			if (!/^\/(blog(\/[^.]*)?|(tratamentos|tecnologias)\/[a-z0-9-]+|[a-z0-9-]+)$/.test(caminho)) return next();
 			try {
 				const { renderBlog } = await server.ssrLoadModule('/src/entry-server.jsx');
 				const pagina = renderBlog(caminho);

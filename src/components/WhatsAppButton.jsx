@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
-import { CTA_SITE, CTA_BLOG } from '@/lib/cta';
+import { ctaDaPagina } from '@/lib/cta';
 
 // `blog`: nas páginas do blog usa o link e o evento do blog (fora da conversão do Google Ads).
-const WhatsAppButton = ({ blog = false }) => {
-  const cta = blog ? CTA_BLOG : CTA_SITE;
+// `pagina`: páginas de serviço e do consultório, com o evento do blog e a mensagem do site.
+const WhatsAppButton = ({ blog = false, pagina = false }) => {
+  const cta = ctaDaPagina({ blog, pagina });
   // A barra do mobile só aparece depois da primeira dobra, para não competir com os botões do topo
   const [showBar, setShowBar] = useState(false);
 

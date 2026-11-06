@@ -137,7 +137,12 @@ export const MEDICA = {
     { '@type': 'PropertyValue', propertyID: 'RQE', value: '84645' },
     { '@type': 'PropertyValue', propertyID: 'RQE', value: '86835' },
   ],
-  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo' },
+  // Formação (página /dra-isabela-bertoglio): Clínica Médica na UEL, Reumatologia e doutorado na USP, Nutrologia no Einstein.
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Universidade de São Paulo' },
+    { '@type': 'CollegeOrUniversity', name: 'Universidade Estadual de Londrina' },
+    { '@type': 'EducationalOrganization', name: 'Hospital Israelita Albert Einstein' },
+  ],
   areaServed: SAO_PAULO,
 };
 

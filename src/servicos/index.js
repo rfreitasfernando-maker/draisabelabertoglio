@@ -13,6 +13,7 @@ const REVISADO_EM = '2026-11-06';
 export const SERVICOS = [
   {
     caminho: 'tratamentos',
+    imagemSocial: { src: '/servicos/tratamentos-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Tratamentos em nutrologia e emagrecimento' },
     grupo: 'hub',
     nomeCurto: 'Tratamentos',
     tituloSeo: 'Tratamentos em nutrologia e emagrecimento | São Paulo',
@@ -24,6 +25,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/obesidade',
+    imagemSocial: { src: '/servicos/tratamentos-obesidade-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Tratamento da obesidade com acompanhamento médico' },
     grupo: 'tratamentos',
     nomeCurto: 'Obesidade',
     tituloSeo: 'Tratamento da obesidade em São Paulo | Dra. Isabela',
@@ -36,6 +38,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/canetas-emagrecedoras',
+    imagemSocial: { src: '/servicos/tratamentos-canetas-emagrecedoras-og.jpg', alt: 'Dra. Isabela Bertoglio no consultório da Clínica Belvitá, ao lado do título Canetas emagrecedoras com acompanhamento médico' },
     grupo: 'tratamentos',
     nomeCurto: 'Canetas emagrecedoras',
     tituloSeo: 'Canetas emagrecedoras com acompanhamento médico | SP',
@@ -48,6 +51,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/resistencia-a-insulina',
+    imagemSocial: { src: '/servicos/tratamentos-resistencia-a-insulina-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Resistência à insulina e pré-diabetes' },
     grupo: 'tratamentos',
     nomeCurto: 'Resistência à insulina e pré-diabetes',
     tituloSeo: 'Resistência à insulina e pré-diabetes: tratamento | SP',
@@ -63,6 +67,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/sindrome-metabolica',
+    imagemSocial: { src: '/servicos/tratamentos-sindrome-metabolica-og.jpg', alt: 'Dra. Isabela Bertoglio no consultório da Clínica Belvitá, ao lado do título Síndrome metabólica' },
     grupo: 'tratamentos',
     nomeCurto: 'Síndrome metabólica',
     tituloSeo: 'Síndrome metabólica: tratamento em São Paulo | Dra. Isabela',
@@ -75,6 +80,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/gordura-no-figado',
+    imagemSocial: { src: '/servicos/tratamentos-gordura-no-figado-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Gordura no fígado' },
     grupo: 'tratamentos',
     nomeCurto: 'Gordura no fígado',
     tituloSeo: 'Gordura no fígado: tratamento em São Paulo | Dra. Isabela',
@@ -87,6 +93,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/cansaco-e-deficiencia-de-vitaminas',
+    imagemSocial: { src: '/servicos/tratamentos-cansaco-e-deficiencia-de-vitaminas-og.jpg', alt: 'Dra. Isabela Bertoglio no consultório da Clínica Belvitá, ao lado do título Cansaço constante e deficiência de vitaminas' },
     grupo: 'tratamentos',
     nomeCurto: 'Cansaço e deficiência de vitaminas',
     tituloSeo: 'Cansaço constante e falta de vitaminas: investigação | SP',
@@ -102,6 +109,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/saude-da-mulher',
+    imagemSocial: { src: '/servicos/tratamentos-saude-da-mulher-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Saúde da mulher: menopausa, SOP e pós-parto' },
     grupo: 'tratamentos',
     nomeCurto: 'Saúde da mulher',
     tituloSeo: 'Nutróloga para menopausa e saúde da mulher | SP',
@@ -117,6 +125,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/nutrologia-no-lipedema',
+    imagemSocial: { src: '/servicos/tratamentos-nutrologia-no-lipedema-og.jpg', alt: 'Dra. Isabela Bertoglio no consultório da Clínica Belvitá, ao lado do título Acompanhamento nutrológico no lipedema' },
     grupo: 'tratamentos',
     nomeCurto: 'Nutrologia no lipedema',
     tituloSeo: 'Nutróloga para lipedema: acompanhamento clínico | SP',
@@ -129,6 +138,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tratamentos/preparo-para-cirurgia-plastica',
+    imagemSocial: { src: '/servicos/tratamentos-preparo-para-cirurgia-plastica-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga, ao lado do título Preparo nutrológico para cirurgia plástica' },
     grupo: 'tratamentos',
     nomeCurto: 'Preparo para cirurgia plástica',
     tituloSeo: 'Preparo nutrológico para cirurgia plástica | São Paulo',
@@ -141,6 +151,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tecnologias/bioimpedancia-inbody',
+    imagemSocial: { src: '/servicos/tecnologias-bioimpedancia-inbody-og.jpg', alt: 'Aparelho de bioimpedância InBody 380 da Clínica Belvitá, ao lado do título Bioimpedância InBody 380' },
     grupo: 'tecnologias',
     nomeCurto: 'Bioimpedância InBody',
     tituloSeo: 'Bioimpedância InBody 380 em São Paulo | Dra. Isabela',
@@ -153,6 +164,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'tecnologias/unyque-pro',
+    imagemSocial: { src: '/servicos/tecnologias-unyque-pro-og.jpg', alt: 'Equipamento Unyque Pro da Clínica Belvitá, ao lado do título Unyque Pro: contorno depois de emagrecer' },
     grupo: 'tecnologias',
     nomeCurto: 'Unyque Pro',
     tituloSeo: 'Unyque Pro depois de emagrecer: flacidez e celulite | SP',
@@ -165,6 +177,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'dra-isabela-bertoglio',
+    imagemSocial: { src: '/servicos/dra-isabela-bertoglio-og.jpg', alt: 'Dra. Isabela Bertoglio, nutróloga em São Paulo, no consultório' },
     grupo: 'institucional',
     nomeCurto: 'Dra. Isabela Bertoglio',
     rotuloNoRodape: 'Sobre a Dra. Isabela',
@@ -179,6 +192,7 @@ export const SERVICOS = [
   },
   {
     caminho: 'consulta-nutrologia',
+    imagemSocial: { src: '/servicos/consulta-nutrologia-og.jpg', alt: 'Recepção da Clínica Belvitá, ao lado do título Consulta de nutrologia: como funciona' },
     grupo: 'institucional',
     nomeCurto: 'Consulta de nutrologia',
     tituloSeo: 'Consulta com nutróloga em São Paulo: como funciona',

@@ -200,7 +200,8 @@ export function headDaPaginaAvulsa(pagina, conteudo) {
 
 // Diretiva das páginas de serviço (briefing): sem limite de trecho nem de prévia de imagem.
 const ROBOTS_SERVICO = 'index, follow, max-image-preview:large, max-snippet:-1';
-// Imagem de compartilhamento das páginas de serviço: a mesma da página inicial, já em 1200 × 630.
+// Imagem de compartilhamento padrão (a da página inicial, 1200 × 630), para página de serviço sem imagem própria.
+// Cada página tem a sua em public/servicos/<caminho>-og.jpg (`imagemSocial` em src/servicos/index.js).
 const IMAGEM_SOCIAL_SERVICO = {
   src: '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg',
   alt: 'Dra. Isabela Bertoglio em seu consultório, ao lado do símbolo da Clínica Belvitá',
@@ -278,13 +279,13 @@ export function headDoServico(servico, conteudo, itensDaTrilha, outrosServicos =
     tipo: 'website',
     tituloSocial: servico.tituloSeo,
     descricaoSocial: servico.descricao,
-    imagemSocial: IMAGEM_SOCIAL_SERVICO.src,
-    imagemAlt: IMAGEM_SOCIAL_SERVICO.alt,
+    imagemSocial: (servico.imagemSocial ?? IMAGEM_SOCIAL_SERVICO).src,
+    imagemAlt: (servico.imagemSocial ?? IMAGEM_SOCIAL_SERVICO).alt,
     robots: ROBOTS_SERVICO,
     extras: [
       meta('name', 'twitter:title', servico.tituloSeo),
       meta('name', 'twitter:description', servico.descricao),
-      meta('name', 'twitter:image', `${SITE_URL}${IMAGEM_SOCIAL_SERVICO.src}`),
+      meta('name', 'twitter:image', `${SITE_URL}${(servico.imagemSocial ?? IMAGEM_SOCIAL_SERVICO).src}`),
       meta('name', 'geo.region', 'BR-SP'),
       meta('name', 'geo.placename', 'São Paulo'),
       meta('name', 'geo.position', `${COORDENADAS.latitude};${COORDENADAS.longitude}`),

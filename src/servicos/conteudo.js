@@ -50,6 +50,11 @@ export function prepararServico(html, opcoes) {
     console.warn(`serviços: ${pendencia.slice(0, 80)}...`);
     return `<!-- ${pendencia.replace(/--/g, '—')} -->`;
   });
+  // TODO no meio de um parágrafo: só a frase pendente sai da página (vira comentário); o resto do parágrafo fica.
+  texto = texto.replace(/\s*(?<!<!-- )(TODO:[^<]*?\.)(?=\s|<)/g, (_, pendencia) => {
+    console.warn(`serviços: ${pendencia.slice(0, 80)}...`);
+    return ` <!-- ${pendencia.replace(/--/g, '—')} -->`;
+  });
 
   // Fim da página: autora, local e aviso são componentes; o texto acaba no primeiro desses marcadores.
   const temAutora = /<!--\s*\[BLOCO AUTORA/.test(texto);

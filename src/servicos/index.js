@@ -98,7 +98,7 @@ export const SERVICOS = [
     ],
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de cansaço e deficiência de vitaminas e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/saude-da-mulher',
@@ -113,7 +113,7 @@ export const SERVICOS = [
     ],
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de saúde da mulher e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/nutrologia-no-lipedema',
@@ -125,7 +125,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalCondition', name: 'Lipedema' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de nutrologia no lipedema e gostaria de agendar uma consulta com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tratamentos/preparo-para-cirurgia-plastica',
@@ -137,7 +137,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalProcedure', name: 'Preparo nutrológico pré e pós-operatório' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página de preparo para cirurgia plástica e gostaria de agendar uma avaliação com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tecnologias/bioimpedancia-inbody',
@@ -149,7 +149,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalTest', name: 'Bioimpedância elétrica (InBody 380)' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página da bioimpedância InBody e gostaria de agendar uma consulta com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'tecnologias/unyque-pro',
@@ -161,7 +161,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalProcedure', name: 'Unyque Pro — tratamento não invasivo do contorno corporal' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página do Unyque Pro e gostaria de agendar uma avaliação.',
-    publicada: false,
+    publicada: true,
   },
   {
     caminho: 'dra-isabela-bertoglio',
@@ -187,7 +187,7 @@ export const SERVICOS = [
     sobre: { '@type': 'MedicalProcedure', name: 'Consulta de nutrologia', procedureType: 'https://schema.org/NoninvasiveProcedure' },
     revisadoEm: REVISADO_EM,
     mensagemWhatsapp: 'Olá! Vim pela página da consulta de nutrologia e gostaria de agendar a primeira consulta com a Dra. Isabela.',
-    publicada: false,
+    publicada: true,
   },
 ];
 

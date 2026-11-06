@@ -56,7 +56,7 @@ const Footer = () => {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Instagram da ${DOCTOR_NAME} (${INSTAGRAM_HANDLE}), abre em nova aba`}
+                aria-label={`Instagram ${INSTAGRAM_HANDLE}, da ${DOCTOR_NAME} (abre em nova aba)`}
                 className="block hover:text-brand-gold transition-colors duration-300"
               >
                 Instagram {INSTAGRAM_HANDLE}

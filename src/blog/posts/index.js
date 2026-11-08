@@ -291,7 +291,7 @@ export const POSTS = [
     descricaoSocial:
       'Relógio biológico, sono, estresse e refeições do dia: entenda a vontade de doce depois do jantar e quando vale procurar avaliação médica.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1731,
       altura: 909,
@@ -318,7 +318,7 @@ export const POSTS = [
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1536,
       altura: 1024,
@@ -574,7 +574,7 @@ export const POSTS = [
     descricaoSocial:
       'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1733,
       altura: 907,
@@ -757,7 +757,7 @@ export const POSTS = [
     descricaoSocial:
       'Semaglutida aprovada para obesidade: como age, o que os estudos mostram, efeitos colaterais e o que acontece quando para.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1731,
       altura: 909,
@@ -861,7 +861,7 @@ export const POSTS = [
     descricaoSocial:
       'O efeito da metformina no peso é pequeno. Entenda quando ela faz sentido, os efeitos colaterais e a relação com a vitamina B12.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1016,7 +1016,7 @@ export const POSTS = [
     descricaoSocial:
       'Pele ou músculo? Entenda a flacidez depois de emagrecer, como prevenir durante o tratamento e as opções para cada grau, do Unyque Pro à cirurgia.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1786,7 +1786,7 @@ export const POSTS = [
     descricaoSocial:
       'Saciedade, glicose e intestino: quanto comer por dia e como aumentar.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-07',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1827,5 +1827,135 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A avaliação do peso e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'wegovy-comprimido',
+    titulo: 'Wegovy em comprimido: como funciona, como tomar, resultados, efeitos colaterais e quando chega às farmácias',
+    tituloSeo: 'Wegovy em comprimido: como tomar, resultados e quando chega',
+    descricao:
+      'Wegovy em comprimido: entenda como funciona a semaglutida oral aprovada pela Anvisa, como tomar, resultados, efeitos colaterais e quando chega.',
+    tituloSocial: 'Wegovy em comprimido: como funciona e quando chega',
+    descricaoSocial:
+      'Semaglutida oral para obesidade: como tomar, resultados e diferença para a caneta.',
+    publicadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-07',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o Wegovy em comprimido: semaglutida oral tomada uma vez ao dia em jejum, esperar 30 minutos para comer, perda média de 13,6% do peso em 64 semanas no estudo OASIS 4 e aprovação no Brasil ainda sem data nas farmácias',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): a semaglutida não entra no tema nem nas menções.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação, a dose e o acompanhamento de qualquer medicamento para obesidade dependem de avaliação médica individual.',
+  },
+  {
+    slug: 'vitamina-b12-baixa',
+    titulo: 'Vitamina B12 baixa: sintomas, causas, exames e tratamento da falta de B12, com acompanhamento em São Paulo',
+    tituloSeo: 'Vitamina B12 baixa: sintomas, causas e tratamento | SP',
+    descricao:
+      'Vitamina B12 baixa: veja os sintomas da falta de B12, por que pode existir sem anemia, as causas, como é o diagnóstico e o tratamento.',
+    tituloSocial: 'Vitamina B12 baixa: sintomas, causas e tratamento',
+    descricaoSocial:
+      'Cansaço, formigamento e falhas de memória: quando investigar a falta de B12.',
+    publicadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-07',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a falta de vitamina B12: pode acontecer sem anemia, causas comuns como metformina, omeprazol e cirurgia bariátrica, diagnóstico por exame de sangue e tratamento oral ou injetável',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Deficiência de vitamina B12' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Anemia perniciosa' },
+      { '@type': 'MedicalCondition', name: 'Gastrite autoimune' },
+      { '@type': 'MedicalCondition', name: 'Neuropatia periférica' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação e a reposição de vitaminas dependem de avaliação médica individual. Não suspenda remédios por conta própria.',
+  },
+  {
+    slug: 'barriga-inchada',
+    titulo: 'Barriga inchada: causas mais comuns, por que incha depois de comer e quando investigar, com acompanhamento em São Paulo',
+    tituloSeo: 'Barriga inchada: causas comuns e quando investigar | SP',
+    descricao:
+      'Barriga inchada: entenda as causas mais comuns, por que a barriga incha depois de comer, a relação com intestino preso e quando investigar.',
+    tituloSocial: 'Barriga inchada: causas comuns e quando investigar',
+    descricaoSocial:
+      'Gases, intestino preso, intestino irritável e SIBO: o que causa o inchaço.',
+    publicadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-07',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre barriga inchada: causas mais comuns como intestino preso e gases, comer rápido e bebida com gás, probiótico sem efeito geral e sinais de alerta',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalSignOrSymptom', name: 'Distensão abdominal' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome do intestino irritável' },
+      { '@type': 'MedicalCondition', name: 'Constipação intestinal' },
+      { '@type': 'MedicalCondition', name: 'Supercrescimento bacteriano no intestino delgado' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Barriga inchada com sinais de alerta precisa de avaliação médica. A investigação e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'colageno-para-que-serve',
+    titulo: 'Colágeno funciona? Para que serve, o que a ciência mostra sobre pele, articulações e flacidez depois de emagrecer, em São Paulo',
+    tituloSeo: 'Colágeno funciona? Para que serve e o que a ciência mostra',
+    descricao:
+      'Colágeno funciona? Veja para que serve, o que os estudos mostram sobre pele e articulações e se o colágeno ajuda na flacidez depois de emagrecer.',
+    tituloSocial: 'Colágeno funciona? O que a ciência mostra',
+    descricaoSocial:
+      'Pele, articulações e flacidez: o que os estudos realmente dizem sobre o colágeno.',
+    publicadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-07',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o colágeno: sem benefício claro para a pele nos melhores estudos, efeito modesto na dor articular, não corrige excesso de pele e o que funciona é proteína, sono e protetor solar',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Envelhecimento da pele' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Osteoartrite' },
+      { '@type': 'MedicalCondition', name: 'Flacidez' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos depende de avaliação individual.',
+  },
+  {
+    slug: 'adocante-faz-mal',
+    titulo: 'Adoçante faz mal? O que diz a OMS, se adoçante engorda, causa câncer ou diabetes, e quem pode usar, em São Paulo',
+    tituloSeo: 'Adoçante faz mal? O que diz a OMS e a ciência | SP',
+    descricao:
+      'Adoçante faz mal? Entenda o que a OMS recomendou, se adoçante engorda, causa diabetes ou câncer, os tipos e quem pode usar com segurança.',
+    tituloSocial: 'Adoçante faz mal? O que diz a OMS e a ciência',
+    descricaoSocial:
+      'Adoçante engorda, causa diabetes ou câncer? O que os estudos mostram.',
+    publicadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-07',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre adoçantes: seguros dentro dos limites de consumo, não recomendados pela OMS para emagrecer, sem ligação comprovada com diabetes e câncer, e a melhor troca é bebida doce por água',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+      { '@type': 'MedicalCondition', name: 'Pré-diabetes' },
+      { '@type': 'MedicalCondition', name: 'Fenilcetonúria' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano alimentar depende de avaliação individual.',
   },
 ];

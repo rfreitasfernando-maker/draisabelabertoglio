@@ -341,7 +341,7 @@ export const POSTS = [
     descricaoSocial:
       'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -574,7 +574,7 @@ export const POSTS = [
     descricaoSocial:
       'Cansaço, queda de cabelo e formigamento podem ter relação com deficiências comuns. Veja os valores de referência e quando procurar o médico.',
     publicadoEm: '2026-10-26',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1733,
       altura: 907,
@@ -1067,7 +1067,7 @@ export const POSTS = [
     descricaoSocial:
       'A queda de cabelo com canetas costuma ser um eflúvio temporário ligado à perda de peso. Entenda e saiba como prevenir.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1219,7 +1219,7 @@ export const POSTS = [
     descricaoSocial:
       'Açúcar, álcool e excesso de peso são os principais vilões. Veja os valores de referência e o que funciona para baixar.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1500,7 +1500,7 @@ export const POSTS = [
     descricaoSocial:
       'Um padrão alimentar parecido com o mediterrâneo que ajuda a reduzir a inflamação ligada à obesidade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1786,7 +1786,7 @@ export const POSTS = [
     descricaoSocial:
       'Saciedade, glicose e intestino: quanto comer por dia e como aumentar.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1890,7 +1890,7 @@ export const POSTS = [
     descricaoSocial:
       'Gases, intestino preso, intestino irritável e SIBO: o que causa o inchaço.',
     publicadoEm: '2026-11-07',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-08',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1957,5 +1957,133 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano alimentar depende de avaliação individual.',
+  },
+  {
+    slug: 'intestino-preso',
+    titulo: 'Intestino preso: causas, o que comer, hábitos que ajudam e quando procurar o médico, com acompanhamento em São Paulo',
+    tituloSeo: 'Intestino preso: causas, o que comer e quando ir ao médico',
+    descricao:
+      'Intestino preso: entenda as causas da prisão de ventre, o que comer, os hábitos que ajudam, a relação com as canetas e quando procurar o médico.',
+    tituloSocial: 'Intestino preso: causas, o que comer e quando ir ao médico',
+    descricaoSocial:
+      'Prisão de ventre: o que causa, o que ajuda e os sinais de alerta.',
+    publicadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre intestino preso: menos de três evacuações por semana, fezes duras e muito esforço, cuidado com fibras, água e movimento, e sangue nas fezes ou dor constante como sinais de alerta',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Constipação intestinal' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome do intestino irritável' },
+      { '@type': 'MedicalCondition', name: 'Hipotireoidismo' },
+      { '@type': 'MedicalCondition', name: 'Disfunção do assoalho pélvico' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Intestino preso com sinais de alerta precisa de avaliação médica. O tratamento depende de avaliação individual.',
+  },
+  {
+    slug: 'omega-3-para-que-serve',
+    titulo: 'Ômega 3: para que serve, o que a ciência mostra sobre triglicérides, coração e fígado, e quem precisa suplementar, em São Paulo',
+    tituloSeo: 'Ômega 3: para que serve e quem precisa suplementar | SP',
+    descricao:
+      'Ômega 3: para que serve, o que a ciência mostra sobre triglicérides, coração e fígado, quem precisa suplementar e como ler o rótulo.',
+    tituloSocial: 'Ômega 3: para que serve e quem precisa suplementar',
+    descricaoSocial:
+      'Triglicérides, coração e fígado: o que os estudos mostram sobre o ômega 3.',
+    publicadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o ômega 3: redução média de cerca de 15% nos triglicérides, sem benefício claro contra infarto em quem não tem risco elevado, peixe como melhor fonte e EPA e DHA como o que importa no rótulo',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Hipertrigliceridemia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Doença cardiovascular' },
+      { '@type': 'MedicalCondition', name: 'Fibrilação atrial' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos depende de avaliação individual.',
+  },
+  {
+    slug: 'zinco-para-que-serve',
+    titulo: 'Zinco: para que serve, sinais de falta, alimentos, quem tem mais risco e os perigos do excesso, com orientação em São Paulo',
+    tituloSeo: 'Zinco: para que serve, sinais de falta e excesso | SP',
+    descricao:
+      'Zinco: para que serve, sintomas de falta, quem tem mais risco, alimentos ricos em zinco, quando suplementar e os riscos do excesso.',
+    tituloSocial: 'Zinco: para que serve e sinais de falta',
+    descricaoSocial:
+      'Imunidade, cabelo e cicatrização: quando o zinco faz falta e quando sobra.',
+    publicadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o zinco: participa da imunidade, da cicatrização e do paladar, maior risco de falta com bariátrica, doenças do intestino e álcool, queda de cabelo sozinha não confirma a falta e o excesso pode baixar o cobre',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Deficiência de zinco' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Deficiência de cobre' },
+      { '@type': 'MedicalCondition', name: 'Doença celíaca' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação e a indicação de suplementos dependem de avaliação individual.',
+  },
+  {
+    slug: 'curcuma-para-que-serve',
+    titulo: 'Cúrcuma: para que serve, o que a ciência mostra, diferença entre tempero e suplemento e quando faz mal, em São Paulo',
+    tituloSeo: 'Cúrcuma: para que serve e quando faz mal | SP',
+    descricao:
+      'Cúrcuma: para que serve, o que a ciência mostra, diferença entre tempero e suplemento de curcumina, riscos para o fígado e quem não deve usar.',
+    tituloSocial: 'Cúrcuma: para que serve e quando faz mal',
+    descricaoSocial:
+      'Tempero ou cápsula? O que os estudos mostram e os riscos da curcumina.',
+    publicadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a cúrcuma: segura como tempero, benefícios ainda não confirmados, resultados iniciais na artrose de joelho e relatos de lesão no fígado com cápsulas',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Osteoartrite de joelho' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Lesão hepática induzida por suplementos' },
+      { '@type': 'MedicalCondition', name: 'Doença hepática esteatótica' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos depende de avaliação individual. Não suspenda remédios por conta própria.',
+  },
+  {
+    slug: 'probioticos-emagrecem',
+    titulo: 'Probióticos emagrecem? O que a ciência mostra sobre microbiota intestinal, disbiose e peso, com acompanhamento em São Paulo',
+    tituloSeo: 'Probióticos emagrecem? O que a ciência mostra | SP',
+    descricao:
+      'Probióticos emagrecem? Veja o que os estudos mostram sobre microbiota intestinal, disbiose e peso, e por que não existe probiótico para emagrecer.',
+    tituloSocial: 'Probióticos emagrecem? O que a ciência mostra',
+    descricaoSocial:
+      'Microbiota, disbiose e peso: o que os estudos realmente dizem.',
+    publicadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-08',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre probióticos e peso: efeito pequeno ou nenhum, o resultado de um produto não vale para outro, testes sem validação para obesidade e fibras, sono e movimento como o que ajuda',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Disbiose' },
+      { '@type': 'MedicalCondition', name: 'Síndrome do intestino irritável' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento do peso depende de avaliação individual.',
   },
 ];

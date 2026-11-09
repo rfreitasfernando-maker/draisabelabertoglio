@@ -291,7 +291,7 @@ export const POSTS = [
     descricaoSocial:
       'Relógio biológico, sono, estresse e refeições do dia: entenda a vontade de doce depois do jantar e quando vale procurar avaliação médica.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1731,
       altura: 909,
@@ -466,7 +466,7 @@ export const POSTS = [
     descricaoSocial:
       'O que os estudos mostram sobre fome, metabolismo e reganho depois da dieta, e o que ajuda a manter o peso perdido.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1041,7 +1041,7 @@ export const POSTS = [
     descricaoSocial:
       'O que acontece quando se bebe usando canetas emagrecedoras, quem deve evitar e por que muita gente perde a vontade de beber.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1427,7 +1427,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o corpo gasta energia, como estimar o seu déficit e por que a conta nem sempre fecha.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1578,7 +1578,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o corpo incha, o que ajuda a desinchar e quando investigar.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1708,7 +1708,7 @@ export const POSTS = [
     descricaoSocial:
       'Pílula, DIU, implante e injeção: o efeito real de cada método no peso.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2214,5 +2214,83 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação de doenças ligadas ao glúten e o plano alimentar dependem de avaliação individual.',
+  },
+  {
+    slug: 'como-nao-engordar-nas-festas',
+    titulo: 'Como não engordar nas festas de fim de ano: o que fazer no Natal, no Ano Novo e nas confraternizações, sem dieta radical, em São Paulo',
+    tituloSeo: 'Como não engordar nas festas de fim de ano | SP',
+    descricao:
+      'Como não engordar nas festas de fim de ano: o que fazer antes, durante e depois do Natal e do Ano Novo, com álcool, doces e sem dieta radical.',
+    tituloSocial: 'Como não engordar nas festas de fim de ano',
+    descricaoSocial:
+      'Natal, Ano Novo e confraternizações: estratégias sem dieta radical.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre as festas de fim de ano: não chegar em jejum, começar pela salada e pela proteína, alternar cada dose de bebida com água e voltar à rotina sem compensar',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Ganho de peso' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Retenção de líquido' },
+      { '@type': 'MedicalCondition', name: 'Efeito sanfona' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano alimentar depende de avaliação individual.',
+  },
+  {
+    slug: 'emagrecer-para-o-casamento',
+    titulo: 'Emagrecer para o casamento: quanto dá para perder com segurança, como se preparar conforme o tempo até a data e o que evitar, em São Paulo',
+    tituloSeo: 'Emagrecer para o casamento: quanto dá e como se preparar',
+    descricao:
+      'Emagrecer para o casamento com segurança: quanto dá para perder, o que fazer conforme o tempo até a data, a prova do vestido e o que evitar.',
+    tituloSocial: 'Emagrecer para o casamento: quanto dá e como se preparar',
+    descricaoSocial:
+      'Plano a partir da data: o que é possível, o que evitar e cuidados com as canetas.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o foco do planejamento conforme o tempo até o casamento: perda gradual com mais de 6 meses, perda moderada de 3 a 6 meses, ajustes de rotina de 1 a 3 meses e desinchar, sem dieta de emergência, com menos de 1 mês',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalCondition', name: 'Colelitíase' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O ritmo de perda de peso e a indicação de qualquer tratamento dependem de avaliação individual. Resultados variam de pessoa para pessoa.',
+  },
+  {
+    slug: 'emagrecer-ate-o-carnaval',
+    titulo: 'Emagrecer até o Carnaval com saúde: o que dá para fazer até fevereiro, o que evitar e como ter energia para a folia, em São Paulo',
+    tituloSeo: 'Emagrecer até o Carnaval com saúde: o que dá para fazer | SP',
+    descricao:
+      'Emagrecer até o Carnaval de 2027 com saúde: quanto dá para perder, como organizar os meses até fevereiro, o que evitar e como ter energia.',
+    tituloSocial: 'Emagrecer até o Carnaval com saúde: o que dá para fazer',
+    descricaoSocial:
+      'Plano até fevereiro, festas no meio do caminho e energia para a folia.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro com o plano até o Carnaval: organizar refeições e treino em novembro, atravessar as festas com estratégia em dezembro, manter o ritmo em janeiro e, nos dias de folia, comer antes e beber água',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalCondition', name: 'Desidratação' },
+      { '@type': 'MedicalCondition', name: 'Efeito sanfona' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O ritmo de perda de peso e a indicação de qualquer tratamento dependem de avaliação individual. Resultados variam de pessoa para pessoa.',
   },
 ];

@@ -174,7 +174,7 @@ export const POSTS = [
     descricaoSocial:
       'Gordura abdominal, fome de doce e dificuldade para emagrecer: como reconhecer a resistência à insulina, entender o HOMA-IR e tratar.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -318,7 +318,7 @@ export const POSTS = [
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1536,
       altura: 1024,
@@ -809,7 +809,7 @@ export const POSTS = [
     descricaoSocial:
       'O princípio ativo do Mounjaro age no GLP-1 e no GIP. Entenda o mecanismo, a indicação, onde aplicar e os cuidados.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1271,7 +1271,7 @@ export const POSTS = [
     descricaoSocial:
       'Fibras, peixes e gorduras boas ajudam; gordura saturada e trans atrapalham. Veja as metas de LDL de 2025 por risco.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1452,7 +1452,7 @@ export const POSTS = [
     descricaoSocial:
       'Low carb ou cetogênica: o que mostram os estudos, efeitos no colesterol e na glicose e quem precisa de orientação.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1630,7 +1630,7 @@ export const POSTS = [
     descricaoSocial:
       'Por que o peso volta depois da cirurgia e quais são as opções de tratamento.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1838,7 +1838,7 @@ export const POSTS = [
     descricaoSocial:
       'Semaglutida oral para obesidade: como tomar, resultados e diferença para a caneta.',
     publicadoEm: '2026-11-07',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1890,7 +1890,7 @@ export const POSTS = [
     descricaoSocial:
       'Gases, intestino preso, intestino irritável e SIBO: o que causa o inchaço.',
     publicadoEm: '2026-11-07',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-09',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2085,5 +2085,134 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento do peso depende de avaliação individual.',
+  },
+  {
+    slug: 'orforgliprona-foundayo',
+    titulo: 'Orforgliprona (Foundayo): o que é a pílula da fabricante do Mounjaro, como funciona, efeitos colaterais e situação no Brasil',
+    tituloSeo: 'Orforgliprona (Foundayo): o que é a pílula da Lilly',
+    descricao:
+      'Orforgliprona (Foundayo): entenda a pílula para obesidade da fabricante do Mounjaro, como funciona, efeitos colaterais e situação no Brasil.',
+    tituloSocial: 'Orforgliprona (Foundayo): o que é a pílula da Lilly',
+    descricaoSocial:
+      'Não é o Mounjaro em comprimido: o que é, como age e se já chegou ao Brasil.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a orforgliprona: comprimido tomado uma vez ao dia, com ou sem comida, que age no receptor do GLP-1, aprovado nos Estados Unidos em abril de 2026 e sem aprovação confirmada no Brasil',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): o princípio ativo não entra no tema nem nas menções.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de qualquer medicamento para obesidade depende de avaliação médica individual. Informações regulatórias atualizadas em 09/11/2026.',
+  },
+  {
+    slug: 'retatrutida',
+    titulo: 'Retatrutida: o que é o novo medicamento em estudo para obesidade, como age em três hormônios e quando pode chegar',
+    tituloSeo: 'Retatrutida: o que é o novo remédio para obesidade em estudo',
+    descricao:
+      'Retatrutida: entenda o medicamento em estudo que age em GLP-1, GIP e glucagon, o que mostram os estudos de fase 3 e quando pode ser aprovado.',
+    tituloSocial: 'Retatrutida: o que é o novo remédio em estudo',
+    descricaoSocial:
+      'Agonista triplo, estudos TRIUMPH e por que ainda não está aprovada.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a retatrutida: age em GLP-1, GIP e glucagon, injeção semanal, dados de fase 3 divulgados pela fabricante e ainda sem aprovação para venda',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug` (ver o topo deste arquivo): o princípio ativo não entra no tema nem nas menções.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+      { '@type': 'MedicalCondition', name: 'Doença cardiovascular' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A retatrutida é um medicamento em estudo, sem aprovação para uso fora de pesquisas clínicas. Informações regulatórias atualizadas em 09/11/2026.',
+  },
+  {
+    slug: 'hipoglicemia-reativa',
+    titulo: 'Hipoglicemia reativa: quando sono, fome e tremor depois de comer merecem investigação, com acompanhamento em São Paulo',
+    tituloSeo: 'Hipoglicemia reativa: sintomas, causas e diagnóstico | SP',
+    descricao:
+      'Hipoglicemia reativa: entenda os sintomas, por que sono e fome depois de comer não confirmam o diagnóstico, como investigar e quando é urgência.',
+    tituloSocial: 'Hipoglicemia reativa: sintomas, causas e diagnóstico',
+    descricaoSocial:
+      'Sono e fome depois de comer: quando é hipoglicemia e quando não é.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre hipoglicemia reativa: tremor, suor e palpitação como sintomas, sono e fome sozinhos não confirmam, diagnóstico com glicose baixa durante os sintomas e confusão, desmaio ou convulsão como urgência',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Hipoglicemia reativa (pós-prandial)' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+      { '@type': 'MedicalCondition', name: 'Síndrome de dumping' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Sintomas graves de hipoglicemia são urgência médica. A investigação e o tratamento dependem de avaliação individual.',
+  },
+  {
+    slug: 'coenzima-q10-estatina',
+    titulo: 'Coenzima Q10: para que serve, se quem toma estatina precisa suplementar e o que fazer com a dor muscular, em São Paulo',
+    tituloSeo: 'Coenzima Q10: quem toma estatina precisa suplementar?',
+    descricao:
+      'Coenzima Q10: para que serve, se quem toma estatina precisa suplementar, o que os estudos mostram sobre dor muscular e quais os cuidados.',
+    tituloSocial: 'Coenzima Q10: quem toma estatina precisa suplementar?',
+    descricaoSocial:
+      'Dor muscular com estatina: o que os estudos mostram sobre a Q10.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre coenzima Q10 e estatina: estudos conflitantes sobre dor muscular, uso de rotina não recomendado, não reduz o colesterol nem substitui a estatina, que não deve ser interrompida por conta própria',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Miopatia associada a estatinas' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Hipercolesterolemia' },
+      { '@type': 'MedicalCondition', name: 'Doença cardiovascular' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos e qualquer mudança no uso de estatinas dependem de avaliação médica individual.',
+  },
+  {
+    slug: 'dieta-sem-gluten-emagrece',
+    titulo: 'Dieta sem glúten emagrece? O que a ciência mostra, quem realmente precisa tirar o glúten e por que investigar antes, em São Paulo',
+    tituloSeo: 'Dieta sem glúten emagrece? O que a ciência mostra | SP',
+    descricao:
+      'Dieta sem glúten emagrece? Entenda o que mostram os estudos, quem precisa tirar o glúten e a diferença entre doença celíaca, sensibilidade e alergia.',
+    tituloSocial: 'Dieta sem glúten emagrece? O que a ciência mostra',
+    descricaoSocial:
+      'Doença celíaca, sensibilidade e moda: quem precisa mesmo tirar o glúten.',
+    publicadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-09',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre dieta sem glúten: não emagrece por si só, produtos sem glúten podem ter mais calorias, é tratamento por toda a vida na doença celíaca e os exames devem ser feitos antes de cortar o glúten',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Doença celíaca' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sensibilidade ao glúten não celíaca' },
+      { '@type': 'MedicalCondition', name: 'Alergia ao trigo' },
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação de doenças ligadas ao glúten e o plano alimentar dependem de avaliação individual.',
   },
 ];

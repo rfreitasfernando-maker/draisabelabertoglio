@@ -1656,7 +1656,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o peso piora a apneia, como diagnosticar e o papel do emagrecimento.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1682,7 +1682,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o sono afeta a fome e o peso e o que fazer para dormir melhor.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1760,7 +1760,7 @@ export const POSTS = [
     descricaoSocial:
       'Funções, sinais de falta, alimentos, tipos e cuidados com o suplemento.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1890,7 +1890,7 @@ export const POSTS = [
     descricaoSocial:
       'Gases, intestino preso, intestino irritável e SIBO: o que causa o inchaço.',
     publicadoEm: '2026-11-07',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2071,7 +2071,7 @@ export const POSTS = [
     descricaoSocial:
       'Microbiota, disbiose e peso: o que os estudos realmente dizem.',
     publicadoEm: '2026-11-08',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2199,7 +2199,7 @@ export const POSTS = [
     descricaoSocial:
       'Doença celíaca, sensibilidade e moda: quem precisa mesmo tirar o glúten.',
     publicadoEm: '2026-11-09',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2292,5 +2292,57 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O ritmo de perda de peso e a indicação de qualquer tratamento dependem de avaliação individual. Resultados variam de pessoa para pessoa.',
+  },
+  {
+    slug: 'melatonina-para-que-serve',
+    titulo: 'Melatonina: para que serve, quem pode usar, o que a Anvisa permite e quando ela não resolve a insônia, em São Paulo',
+    tituloSeo: 'Melatonina: para que serve e quem pode usar | SP',
+    descricao:
+      'Melatonina: para que serve, quando ajuda e quando não resolve a insônia, o que a Anvisa permite, quem não deve usar e se melatonina emagrece.',
+    tituloSocial: 'Melatonina: para que serve e quem pode usar',
+    descricaoSocial:
+      'Insônia, fuso horário e regras da Anvisa: o que saber antes de usar.',
+    publicadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-10',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a melatonina: pode ajudar no fuso horário e no sono atrasado, benefício pequeno na insônia crônica, no Brasil só para adultos em quantidade baixa e forma sublingual não autorizada',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Insônia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Jet lag' },
+      { '@type': 'MedicalCondition', name: 'Distúrbio do ritmo circadiano' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de suplementos e o tratamento da insônia dependem de avaliação individual.',
+  },
+  {
+    slug: 'intolerancia-a-lactose',
+    titulo: 'Intolerância à lactose: sintomas, diagnóstico, o que comer e a diferença para a alergia ao leite, com acompanhamento em São Paulo',
+    tituloSeo: 'Intolerância à lactose: sintomas e o que comer | SP',
+    descricao:
+      'Intolerância à lactose: veja os sintomas, a diferença para a alergia ao leite, como é o diagnóstico, o que comer e como manter o cálcio.',
+    tituloSocial: 'Intolerância à lactose: sintomas e o que comer',
+    descricaoSocial:
+      'Sintomas, diagnóstico e alimentação sem cortar o que você não precisa.',
+    publicadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-10',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre intolerância à lactose: gases, inchaço e diarreia como sintomas, alergia ao leite é outra condição, iogurte e queijos maturados costumam ser tolerados e o cálcio precisa de outras fontes',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Intolerância à lactose' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Alergia à proteína do leite' },
+      { '@type': 'MedicalCondition', name: 'Síndrome do intestino irritável' },
+      { '@type': 'MedicalCondition', name: 'Doença celíaca' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação de sintomas digestivos e o plano alimentar dependem de avaliação individual.',
   },
 ];

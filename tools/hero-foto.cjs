@@ -6,6 +6,7 @@
 // 2. Desktop: recorte com a cadeira encostada na borda direita; a lateral esquerda, onde a foto encontra o
 //    texto, se funde ao creme do fundo (#FAF8F5). 4 larguras (800 a 2000 px), para telas comuns e Retina.
 // 3. Celular: recorte próprio, sem a fusão lateral. 2 larguras (640 e 960 px).
+// 4. Blog: retrato vertical (4:5), do rosto até a mesa, para o topo da lista de posts. 3 larguras (360 a 720 px).
 const sharp = require('sharp');
 
 const ORIGINAL = process.argv[2] || 'fotos-originais/IMG_9058.jpg';
@@ -56,4 +57,8 @@ async function salvar(buf, largura, nome, qualidade) {
   const Hc = Math.round(Wc / 0.85);
   const celular = await sharp(tratada).extract({ left: 0, top: 1235, width: Wc, height: Hc }).toBuffer();
   for (const w of [640, 960]) await salvar(celular, w, `dra-isabela-hero-${VERSAO}-celular-${w}.webp`, 80);
+
+  // Blog: retrato 4:5 centrado no rosto (x ≈ 1840), do alto da cabeça até a mesa.
+  const blog = await sharp(tratada).extract({ left: 640, top: 1700, width: 2400, height: 3000 }).toBuffer();
+  for (const w of [360, 540, 720]) await salvar(blog, w, `dra-isabela-blog-${VERSAO}-${w}.webp`, 82);
 })();

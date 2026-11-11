@@ -5,11 +5,19 @@ import { WHATSAPP_BLOG_URL } from '@/lib/whatsapp';
 import { CardDoPost, CardMini, Trilha, CLASSE_SOBRETITULO } from '@/blog/partes';
 import { CATEGORIAS, caminhoDaCategoria } from '@/blog/categorias';
 
-// Retrato da Dra. Isabela (tools/hero-foto.cjs). Só no desktop: no celular entra o avatar pequeno.
-const RETRATO = '/dra-isabela-blog-v2';
-const AVATAR = '/blog/imagens/dra-isabela-bertoglio-avatar.webp';
-// GIF transparente de 1 px: no celular a <picture> não baixa o retrato.
-const PIXEL = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+// Foto do topo: a Dra. Isabela diante do espelho (tools/blog-foto.cjs). Quadrada no desktop, horizontal no celular.
+const RETRATO = '/dra-isabela-blog-v3';
+
+// Fundo do topo: degradê da paleta (creme, areia e um brilho dourado atrás da foto)
+const FUNDO_DO_TOPO = [
+  'radial-gradient(55% 75% at 82% 38%, rgba(165,138,89,0.20) 0%, rgba(165,138,89,0) 70%)',
+  'radial-gradient(45% 65% at 0% 100%, rgba(226,205,190,0.55) 0%, rgba(226,205,190,0) 70%)',
+  'radial-gradient(35% 50% at 40% 0%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%)',
+  'linear-gradient(125deg, #FAF8F5 0%, #F5F0EB 45%, #ECE1D3 100%)',
+].join(', ');
+
+// Formato da moldura: cantos opostos bem arredondados
+const MOLDURA = 'rounded-tl-[5rem] rounded-br-[5rem] lg:rounded-tl-[9rem] lg:rounded-br-[9rem] rounded-tr-sm rounded-bl-sm';
 
 // Guias para quem está começando (posts-pilares)
 const PILARES = ['emagrecimento-com-acompanhamento-medico', 'canetas-emagrecedoras', 'obesidade-tratamento', 'nao-consigo-emagrecer'];
@@ -58,51 +66,84 @@ const PaginaDoBlog = ({ posts, minutosDe }) => {
 
   return (
     <main>
-      <header className="bg-brand-cream pt-28 md:pt-36 pb-12 md:pb-16">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16 lg:items-end">
+      <header className="relative overflow-hidden pt-28 md:pt-36 pb-14 md:pb-20 lg:pb-24" style={{ background: FUNDO_DO_TOPO }}>
+        {/* Arte do fundo: círculos finos dourados atrás da foto e uma linha diagonal suave */}
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-40 top-10 w-[46rem] max-w-none opacity-60 hidden md:block"
+          viewBox="0 0 600 600"
+          fill="none"
+        >
+          <circle cx="300" cy="300" r="298" stroke="#A58A59" strokeOpacity="0.28" />
+          <circle cx="300" cy="300" r="240" stroke="#A58A59" strokeOpacity="0.22" />
+          <circle cx="300" cy="300" r="182" stroke="#A58A59" strokeOpacity="0.16" />
+        </svg>
+        <svg aria-hidden="true" className="pointer-events-none absolute -left-24 -bottom-40 w-[28rem] max-w-none opacity-70" viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="198" stroke="#A58A59" strokeOpacity="0.18" />
+          <circle cx="200" cy="200" r="150" stroke="#A58A59" strokeOpacity="0.12" />
+        </svg>
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
+
+        <div className="relative container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,25rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:gap-16 xl:gap-20 lg:items-center">
             <div>
               <Trilha itens={[['Início', '/'], ['Blog']]} />
-              <p className={`${CLASSE_SOBRETITULO} mb-4 md:mb-5`}>Blog · {DOCTOR_NAME}</p>
-              <h1 className="max-w-3xl text-[2.125rem] md:text-5xl lg:text-6xl font-serif font-light text-brand-dark leading-[1.08]">
-                Emagrecimento e <span className="text-brand-gold-light italic">saúde metabólica</span>
+              <p className={`${CLASSE_SOBRETITULO} mb-4 md:mb-5 flex items-center gap-3`}>
+                <span aria-hidden="true" className="w-8 h-px bg-brand-gold/60" />
+                Blog · {DOCTOR_NAME}
+              </p>
+              <h1 className="max-w-3xl text-[2.375rem] md:text-6xl xl:text-[4.25rem] font-serif font-light text-brand-dark leading-[1.04]">
+                Emagrecimento e <span className="block text-brand-gold-light italic">saúde metabólica</span>
               </h1>
-              <p className="mt-5 md:mt-6 max-w-2xl text-base md:text-lg font-sans font-light text-brand-dark-gray/90 leading-relaxed">
+              <p className="mt-6 md:mt-7 max-w-xl text-base md:text-lg font-sans font-light text-brand-dark-gray/90 leading-relaxed">
                 Artigos da {DOCTOR_NAME} para explicar, sem complicação, como funciona o tratamento do excesso de peso: avaliação, composição
                 corporal, medicamentos e manutenção.
               </p>
-              <div className="mt-7 flex items-center gap-4">
-                <img src={AVATAR} alt="" width="128" height="128" className="lg:hidden w-12 h-12 rounded-full object-cover flex-shrink-0" />
-                <div className="font-sans leading-snug">
-                  <p className="text-sm text-brand-dark-gray">
-                    Conteúdo escrito e revisado por{' '}
-                    <a
-                      href="/dra-isabela-bertoglio"
-                      className="font-medium text-brand-dark underline underline-offset-4 decoration-brand-dark/25 hover:text-brand-gold"
-                    >
-                      médica nutróloga
-                    </a>
-                  </p>
-                  <p className="mt-1 text-[11px] font-medium tracking-[0.12em] uppercase text-brand-light-gray">{DOCTOR_CREDENTIALS}</p>
-                </div>
+              <div className="mt-8 pl-4 border-l border-brand-gold/40 font-sans leading-snug">
+                <p className="text-sm text-brand-dark-gray">
+                  Conteúdo escrito e revisado por{' '}
+                  <a
+                    href="/dra-isabela-bertoglio"
+                    className="font-medium text-brand-dark underline underline-offset-4 decoration-brand-dark/25 hover:text-brand-gold"
+                  >
+                    médica nutróloga
+                  </a>
+                </p>
+                <p className="mt-1 text-[11px] font-medium tracking-[0.12em] uppercase text-brand-light-gray">{DOCTOR_CREDENTIALS}</p>
               </div>
             </div>
-            <picture className="hidden lg:block">
-              <source
-                media="(min-width: 1024px)"
-                srcSet={`${RETRATO}-360.webp 360w, ${RETRATO}-540.webp 540w, ${RETRATO}-720.webp 720w`}
-                sizes="288px"
-              />
-              <img
-                src={PIXEL}
-                alt={`${DOCTOR_NAME}, médica nutróloga, no consultório`}
-                width="720"
-                height="900"
-                // eslint-disable-next-line react/no-unknown-property -- o React 18 só repassa este atributo escrito em minúsculas
-                fetchpriority="high"
-                className="w-full h-auto aspect-[4/5] object-cover rounded-sm shadow-xl shadow-black/[0.07]"
-              />
-            </picture>
+
+            <figure className="relative mt-12 lg:mt-0 mr-3 lg:mr-0">
+              {/* Moldura dourada deslocada atrás da foto */}
+              <div aria-hidden="true" className={`absolute inset-0 translate-x-3 translate-y-3 lg:translate-x-5 lg:translate-y-5 border border-brand-gold/45 ${MOLDURA}`} />
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcSet={`${RETRATO}-480.webp 480w, ${RETRATO}-720.webp 720w, ${RETRATO}-960.webp 960w, ${RETRATO}-1200.webp 1200w`}
+                  sizes="(min-width: 1280px) 28rem, 25rem"
+                />
+                <img
+                  src={`${RETRATO}-celular-640.webp`}
+                  srcSet={`${RETRATO}-celular-640.webp 640w, ${RETRATO}-celular-960.webp 960w`}
+                  sizes="calc(100vw - 3.75rem)"
+                  alt={`${DOCTOR_NAME}, médica nutróloga, no consultório`}
+                  width="960"
+                  height="600"
+                  // eslint-disable-next-line react/no-unknown-property -- o React 18 só repassa este atributo escrito em minúsculas
+                  fetchpriority="high"
+                  className={`relative w-full h-auto aspect-[8/5] lg:aspect-square object-cover shadow-2xl shadow-brand-dark/10 ${MOLDURA}`}
+                />
+              </picture>
+              {/* Selo sobre a foto */}
+              <figcaption className="absolute -bottom-6 left-4 lg:-left-10 lg:bottom-10 flex items-center gap-3 px-4 py-3 lg:px-5 lg:py-4 bg-white/85 backdrop-blur-md shadow-xl shadow-brand-dark/10 rounded-sm">
+                <span className="font-serif text-3xl lg:text-4xl font-light text-brand-gold leading-none lining-nums">{posts.length}</span>
+                <span className="text-[10px] lg:text-[11px] font-sans font-medium tracking-[0.14em] uppercase text-brand-dark-gray leading-tight">
+                  artigos revisados
+                  <br />
+                  pela médica
+                </span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </header>

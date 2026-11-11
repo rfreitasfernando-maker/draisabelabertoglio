@@ -119,7 +119,8 @@ export const SERVICOS = [
       { '@type': 'MedicalCondition', name: 'Menopausa' },
       { '@type': 'MedicalCondition', name: 'Síndrome dos ovários policísticos' },
     ],
-    revisadoEm: REVISADO_EM,
+    // Revisada em 11/11/2026 (link para o post de endometriose)
+    revisadoEm: '2026-11-11',
     mensagemWhatsapp: 'Olá! Vim pela página de saúde da mulher e gostaria de agendar uma avaliação com a Dra. Isabela.',
     publicada: true,
   },

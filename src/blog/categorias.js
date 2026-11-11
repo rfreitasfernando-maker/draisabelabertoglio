@@ -24,7 +24,7 @@ export const CATEGORIAS = [
       'mounjaro-emagrece-quantos-quilos', 'parar-mounjaro', 'mounjaro-e-alcool', 'mounjaro-queda-de-cabelo',
       'ozempic-para-que-serve', 'rosto-de-ozempic', 'semaglutida-generica', 'wegovy', 'wegovy-comprimido',
       'liraglutida', 'retatrutida', 'orforgliprona-foundayo', 'remedios-para-emagrecer', 'inibidor-de-apetite',
-      'sibutramina', 'orlistate', 'metformina-emagrece',
+      'sibutramina', 'orlistate', 'metformina-emagrece', 'bupropiona-emagrece-contrave',
     ],
   },
   {
@@ -96,7 +96,7 @@ export const CATEGORIAS = [
     posts: [
       'emagrecer-na-menopausa', 'emagrecer-depois-dos-40', 'emagrecer-depois-da-gravidez', 'sop-emagrecer',
       'anticoncepcional-engorda', 'cortisol-alto-engorda', 'como-nao-engordar-nas-festas',
-      'emagrecer-para-o-casamento', 'emagrecer-ate-o-carnaval',
+      'emagrecer-para-o-casamento', 'emagrecer-ate-o-carnaval', 'endometriose-alimentacao',
     ],
   },
   {
@@ -114,7 +114,8 @@ export const CATEGORIAS = [
     posts: [
       'bioimpedancia', 'sarcopenia', 'mounjaro-perda-de-massa-muscular', 'gordura-visceral',
       'como-perder-gordura-abdominal', 'flacidez-depois-de-emagrecer', 'unyque-pro-celulite-flacidez',
-      'retencao-de-liquido', 'obesidade-e-dor-no-joelho',
+      'retencao-de-liquido', 'obesidade-e-dor-no-joelho', 'exercicios-baixo-impacto-emagrecer',
+      'enzimas-gordura-localizada',
     ],
   },
   {

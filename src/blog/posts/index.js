@@ -118,7 +118,7 @@ export const POSTS = [
     descricaoSocial:
       'Três tecnologias em um só equipamento para celulite, flacidez e gordura localizada, com uso complementar no lipedema. Sem cortes e sem agulhas.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -365,7 +365,7 @@ export const POSTS = [
     descricaoSocial:
       'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -414,7 +414,7 @@ export const POSTS = [
     descricaoSocial:
       'Episódios de comer muito com perda de controle têm nome e tratamento. Entenda os sinais e como psicoterapia e cuidado médico se combinam.',
     publicadoEm: '2026-10-23',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -517,7 +517,7 @@ export const POSTS = [
     descricaoSocial:
       'Perda de força e de massa muscular com a idade ou depois de emagrecer: sinais, diagnóstico, relação com as canetas e o que funciona para prevenir.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1349,7 +1349,7 @@ export const POSTS = [
     descricaoSocial:
       'Abdominal, cinta e chá não tiram gordura da barriga. Veja o que funciona e por que às vezes ela não sai.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1427,7 +1427,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o corpo gasta energia, como estimar o seu déficit e por que a conta nem sempre fecha.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1500,7 +1500,7 @@ export const POSTS = [
     descricaoSocial:
       'Dieta anti-inflamatória: veja os alimentos para desinflamar o corpo, o que evitar, os mitos e para quem ajuda, incluindo obesidade e reumatismo.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1734,7 +1734,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o peso afeta o joelho e como emagrecer protegendo a articulação.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1890,7 +1890,7 @@ export const POSTS = [
     descricaoSocial:
       'Gases, intestino preso, intestino irritável e SIBO: o que causa o inchaço.',
     publicadoEm: '2026-11-07',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-11',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2344,5 +2344,103 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A investigação de sintomas digestivos e o plano alimentar dependem de avaliação individual.',
+  },
+  {
+    slug: 'bupropiona-emagrece-contrave',
+    titulo: 'Bupropiona emagrece? A diferença entre bupropiona e Contrave, o que mostram os estudos, os riscos e o acompanhamento necessário, em São Paulo',
+    tituloSeo: 'Bupropiona emagrece? O que saber sobre o Contrave | SP',
+    descricao:
+      'Bupropiona emagrece? Entenda a diferença para o Contrave, o que mostram os estudos, contraindicações e a atualização de segurança da Anvisa em 2026.',
+    tituloSocial: 'Bupropiona emagrece? Bupropiona x Contrave',
+    descricaoSocial:
+      'Diferenças, estudos, riscos e o alerta da Anvisa em 2026.',
+    publicadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-11',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre bupropiona e Contrave: a bupropiona sozinha é antidepressivo, o Contrave associa naltrexona e bupropiona, não pode com pressão alta não controlada ou opioides e exige reavaliação anual desde 2026',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação, a interrupção e o acompanhamento de qualquer medicamento dependem de avaliação médica individual. Informações regulatórias atualizadas em 11/11/2026.',
+  },
+  {
+    slug: 'exercicios-baixo-impacto-emagrecer',
+    titulo: 'Exercícios de baixo impacto para emagrecer: caminhada, bicicleta, natação e hidroginástica, e como escolher com segurança, em São Paulo',
+    tituloSeo: 'Exercícios de baixo impacto para emagrecer | SP',
+    descricao:
+      'Exercícios de baixo impacto para emagrecer: caminhada, bicicleta, natação e hidroginástica, treino de força e como começar com segurança.',
+    tituloSocial: 'Exercícios de baixo impacto para emagrecer',
+    descricaoSocial:
+      'Opções, quanto fazer e como começar sem sobrecarregar as articulações.',
+    publicadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-11',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre exercícios de baixo impacto: impacto não é intensidade, meta de 150 a 300 minutos por semana mais força em 2 dias, sozinho o exercício leva a perda de peso modesta e o começo deve ser gradual',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Artrose' },
+      { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano de atividade física depende de avaliação individual. Dor ou sintomas durante o exercício devem ser avaliados por um profissional.',
+  },
+  {
+    slug: 'enzimas-gordura-localizada',
+    titulo: 'Enzimas para gordura localizada funcionam? O que é aplicado, o que a ciência mostra, os riscos e o que verificar antes, em São Paulo',
+    tituloSeo: 'Enzimas para gordura localizada funcionam? | SP',
+    descricao:
+      'Enzimas para gordura localizada funcionam? Entenda o que é aplicado, o que os estudos mostram, os riscos e o que verificar na Anvisa antes de decidir.',
+    tituloSocial: 'Enzimas para gordura localizada funcionam?',
+    descricaoSocial:
+      'O que é aplicado, evidências, riscos e o que verificar na Anvisa.',
+    publicadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-11',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre enzimas para gordura localizada: melhor evidência para o ácido deoxicólico na papada, evidência limitada para a barriga, não tratam obesidade e cosmético não pode ser injetado',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Gordura localizada' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A indicação de qualquer procedimento depende de avaliação individual com profissional habilitado.',
+  },
+  {
+    slug: 'endometriose-alimentacao',
+    titulo: 'Endometriose e alimentação: o que a ciência mostra, a dieta low FODMAP, glúten, leite e suplementos, com acompanhamento em São Paulo',
+    tituloSeo: 'Endometriose e alimentação: o que a ciência mostra | SP',
+    descricao:
+      'Endometriose e alimentação: o que a ciência mostra, a dieta low FODMAP, se é preciso cortar glúten ou leite e o papel dos suplementos.',
+    tituloSocial: 'Endometriose e alimentação: o que a ciência mostra',
+    descricaoSocial:
+      'Dieta low FODMAP, glúten, leite e suplementos: evidências e limites.',
+    publicadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-11',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre endometriose e alimentação: não existe dieta que cure, a dieta low FODMAP alivia sintomas intestinais, cortar glúten e leite de todas não tem base e o tratamento é com o ginecologista',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Endometriose' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Síndrome do intestino irritável' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento da endometriose é conduzido pelo ginecologista. O plano alimentar depende de avaliação individual.',
   },
 ];

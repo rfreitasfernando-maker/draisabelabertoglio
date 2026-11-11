@@ -26,7 +26,7 @@ function App({ landing }) {
   return (
     <>
       <div className="min-h-screen bg-white text-brand-dark relative">
-        <Header simples={Boolean(landing)} />
+        <Header simples={Boolean(landing)} fundoClaro />
         <main>
           <Hero conteudo={landing?.hero} />
           {landing?.servicos ? <Servicos {...landing.servicos} /> : <IdentificationBlock />}

@@ -9,7 +9,9 @@ import { MENU_TRATAMENTOS, MENU_TECNOLOGIAS, PAGINA_SOBRE, HUB_TRATAMENTOS } fro
 // `pagina`: páginas de serviço e do consultório: links como no blog, CTA com o evento do blog e a mensagem do site.
 // `atual`: item do menu da página aberta ('blog' ou o caminho da página, sem a barra inicial).
 // `simples`: só o logo e o botão de agendar, sem menu (páginas de destino dos anúncios, src/lib/landings.js).
-const Header = ({ blog = false, pagina = false, atual, simples = false }) => {
+// `fundoClaro`: o topo da página é claro (hero da página inicial e das páginas de anúncio), então o menu
+// transparente usa texto escuro. No blog e nas páginas de serviço o topo é escuro e o menu fica claro.
+const Header = ({ blog = false, pagina = false, atual, simples = false, fundoClaro = false }) => {
   const cta = ctaDaPagina({ blog, pagina });
   const foraDaHome = blog || pagina;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,6 +57,8 @@ const Header = ({ blog = false, pagina = false, atual, simples = false }) => {
   };
 
   const solid = scrolled || isMenuOpen;
+  // Texto escuro quando há fundo branco (menu rolado/aberto) ou quando o topo da página é claro
+  const textoEscuro = solid || fundoClaro;
   const linkDaSecao = (id) => (id === 'hero' ? '/' : `/#${id}`);
 
   const itensTratamentos = [
@@ -94,7 +98,7 @@ const Header = ({ blog = false, pagina = false, atual, simples = false }) => {
   };
 
   const classeDesktop = `flex items-center gap-1.5 text-sm font-sans font-medium tracking-wider xl:tracking-widest uppercase transition-colors duration-300 ${
-    solid ? 'text-brand-dark-gray/80 hover:text-brand-gold' : 'text-white/80 hover:text-brand-gold-light'
+    textoEscuro ? 'text-brand-dark-gray/80 hover:text-brand-gold' : 'text-white/80 hover:text-brand-gold-light'
   }`;
 
   // Submenu do desktop: os links ficam sempre no HTML (invisíveis quando fechado), abrem com o mouse,
@@ -230,7 +234,9 @@ const Header = ({ blog = false, pagina = false, atual, simples = false }) => {
             className={`${simples ? 'block ml-auto' : 'hidden lg:block'} ${foco} text-sm font-sans font-medium tracking-widest uppercase px-5 xl:px-6 py-2.5 transition-all duration-500 flex-shrink-0 ${
               solid
                 ? 'border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white'
-                : 'bg-brand-gold text-white hover:bg-white hover:text-brand-dark'
+                : fundoClaro
+                  ? 'bg-brand-gold text-white hover:bg-brand-dark'
+                  : 'bg-brand-gold text-white hover:bg-white hover:text-brand-dark'
             }`}
           >
             Agendar Consulta
@@ -239,7 +245,7 @@ const Header = ({ blog = false, pagina = false, atual, simples = false }) => {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`${simples ? 'hidden' : 'lg:hidden'} ${foco} p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${solid ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
+            className={`${simples ? 'hidden' : 'lg:hidden'} ${foco} p-3 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ml-auto ${textoEscuro ? 'text-brand-dark-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold-light'}`}
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isMenuOpen}
             aria-controls="menu-celular"

@@ -136,9 +136,9 @@ const Hero = ({ conteudo = PADRAO }) => {
             style={{ objectPosition: '50% 30%' }}
           />
         </picture>
-        {/* Funde a foto com o fundo só na borda: pelo topo no celular, pela esquerda no desktop. O resto da foto fica limpo. */}
+        {/* Funde a foto com o fundo só na borda: pelo topo no celular; no desktop a própria imagem já traz a fusão, e aqui fica só uma faixa fina. */}
         <div className="md:hidden absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-brand-cream to-transparent" />
-        <div className="hidden md:block absolute inset-y-0 -left-px w-2/5 bg-gradient-to-r from-brand-cream via-brand-cream/70 to-transparent" />
+        <div className="hidden md:block absolute inset-y-0 -left-px w-[12%] bg-gradient-to-r from-brand-cream to-transparent" />
       </div>
     </section>
   );

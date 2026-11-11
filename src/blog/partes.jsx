@@ -38,8 +38,9 @@ export const Trilha = ({ itens }) => (
  * `destaque`: imagem e texto lado a lado no desktop. `principal`: card grande do topo do /blog (carrega a imagem já).
  * `compacto`: título menor, para as faixas de 4 cards por categoria.
  */
-export const CardDoPost = ({ post, minutos, Titulo = 'h2', destaque = false, principal = false, compacto = false }) => {
-  const prioridade = destaque || principal;
+export const CardDoPost = ({ post, minutos, Titulo = 'h2', destaque = false, principal = false, compacto = false, primeiro = false }) => {
+  // `primeiro`: primeiro card da página (página de categoria), na primeira dobra do celular
+  const prioridade = destaque || principal || primeiro;
   const capa = capaDoPost(post);
   return (
     <a href={`/blog/${post.slug}`} className={`group block ${destaque ? 'md:grid md:grid-cols-[3fr_2fr] md:gap-12 md:items-center' : ''}`}>

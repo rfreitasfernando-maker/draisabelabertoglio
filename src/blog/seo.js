@@ -2,6 +2,7 @@
 import { DOCTOR_NAME } from '@/lib/doctor';
 import { capaDoPost, TAMANHOS_CAPA } from '@/blog/imagens';
 import { SITE_URL, NOME_DO_SITE, ID_CLINICA, ID_MEDICA, CLINICA, MEDICA, COORDENADAS, jsonLd } from '@/lib/schema';
+import { categoriaDoPost, caminhoDaCategoria } from '@/blog/categorias';
 
 export { SITE_URL };
 export const URL_DO_BLOG = `${SITE_URL}/blog`;
@@ -101,6 +102,7 @@ export function headDoPost(post, conteudo) {
     trilha(`${url}#breadcrumb`, [
       ['Início', `${SITE_URL}/`],
       ['Blog', URL_DO_BLOG],
+      [categoriaDoPost(post).nome, `${SITE_URL}${caminhoDaCategoria(categoriaDoPost(post))}`],
       [post.titulo],
     ]),
   ];
@@ -331,6 +333,51 @@ export function headDoBlog(posts) {
     tipo: 'website',
     tituloSocial: BLOG.tituloSeo,
     descricaoSocial: BLOG.descricao,
+    imagemSocial: capaDoPost(recente).social,
+    imagemAlt: recente.capa.alt,
+    extras: [jsonLd(grafo)],
+  });
+}
+
+/**
+ * <head> de uma página de categoria do blog (/blog/categoria/<slug>): CollectionPage com a lista dos posts
+ * (ItemList) e a trilha Início › Blog › Categoria. Imagem de compartilhamento: a capa do post mais recente.
+ */
+export function headDaCategoria(categoria, posts) {
+  const url = `${SITE_URL}${caminhoDaCategoria(categoria)}`;
+  const recente = posts[0];
+  const grafo = [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: categoria.titulo,
+      description: categoria.descricao,
+      inLanguage: 'pt-BR',
+      isPartOf: { '@id': `${URL_DO_BLOG}#blog` },
+      about: categoria.nome,
+      author: { '@id': ID_MEDICA },
+      publisher: { '@id': ID_CLINICA },
+      breadcrumb: { '@id': `${url}#breadcrumb` },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: posts.length,
+        itemListElement: posts.map((post, i) => ({ '@type': 'ListItem', position: i + 1, url: urlDoPost(post), name: post.titulo })),
+      },
+    },
+    trilha(`${url}#breadcrumb`, [
+      ['Início', `${SITE_URL}/`],
+      ['Blog', URL_DO_BLOG],
+      [categoria.nome, url],
+    ]),
+  ];
+  return headDaPagina({
+    titulo: categoria.tituloSeo,
+    descricao: categoria.descricao,
+    url,
+    tipo: 'website',
+    tituloSocial: categoria.titulo,
+    descricaoSocial: categoria.descricao,
     imagemSocial: capaDoPost(recente).social,
     imagemAlt: recente.capa.alt,
     extras: [jsonLd(grafo)],

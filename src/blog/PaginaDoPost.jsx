@@ -4,7 +4,7 @@ import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
 import { WHATSAPP_BLOG_URL, linkWhatsapp } from '@/lib/whatsapp';
 import { capaDoPost, PASTA_IMAGENS, TAMANHOS_CAPA } from '@/blog/imagens';
 import { formatarData, CardDoPost, Trilha, CLASSE_SOBRETITULO } from '@/blog/partes';
-import { categoriaDoPost } from '@/blog/categorias';
+import { categoriaDoPost, caminhoDaCategoria } from '@/blog/categorias';
 
 const AVATAR = `${PASTA_IMAGENS}/dra-isabela-bertoglio-avatar.webp`;
 
@@ -40,7 +40,7 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
         <header className="bg-brand-cream pt-28 md:pt-36 pb-24 md:pb-36">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <Trilha itens={[['Início', '/'], ['Blog', '/blog']]} />
+              <Trilha itens={[['Início', '/'], ['Blog', '/blog'], [categoriaDoPost(post).nome, caminhoDaCategoria(categoriaDoPost(post))]]} />
               <p className={`${CLASSE_SOBRETITULO} mb-4 md:mb-5`}>
                 {categoriaDoPost(post).nome} · <time dateTime={post.publicadoEm}>{formatarData(post.publicadoEm)}</time> · {conteudo.minutosDeLeitura} min de leitura
               </p>
@@ -175,6 +175,13 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
                   <CardDoPost key={outro.slug} post={outro} minutos={minutosDe(outro)} Titulo="h3" />
                 ))}
               </div>
+              <a
+                href={caminhoDaCategoria(categoriaDoPost(post))}
+                className="group mt-12 inline-flex items-center gap-2 min-h-[44px] text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold hover:text-brand-dark transition-colors duration-300"
+              >
+                Mais artigos sobre {categoriaDoPost(post).nome.toLowerCase()}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </section>

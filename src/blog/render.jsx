@@ -7,7 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { POSTS } from '@/blog/posts';
 import { prepararConteudo } from '@/blog/conteudo';
 import { linkWhatsapp } from '@/lib/whatsapp';
-import { headDoPost, headDoBlog, headDaPaginaAvulsa, headDoServico, SITE_URL, URL_DO_BLOG, urlDoPost, urlDaPagina, urlDoServico } from '@/blog/seo';
+import { headDaCategoria, headDoPost, headDoBlog, headDaPaginaAvulsa, headDoServico, SITE_URL, URL_DO_BLOG, urlDoPost, urlDaPagina, urlDoServico } from '@/blog/seo';
 import { PAGINAS } from '@/paginas';
 import PaginaAvulsa from '@/paginas/PaginaAvulsa';
 import { SERVICOS_PUBLICADOS, caminhosPublicados, arquivoDoServico } from '@/servicos';
@@ -16,7 +16,8 @@ import PaginaDeServico, { itensDaTrilha } from '@/servicos/PaginaDeServico';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
 import { capaDoPost } from '@/blog/imagens';
-import { categoriaDoPost, validarCategorias } from '@/blog/categorias';
+import { CATEGORIAS, categoriaDoPost, caminhoDaCategoria, validarCategorias } from '@/blog/categorias';
+import PaginaDaCategoria from '@/blog/PaginaDaCategoria';
 import { montarLlmsTxt } from '@/lib/llms';
 import { HOME_REVISADA_EM } from '@/lib/schema';
 
@@ -94,7 +95,10 @@ const conteudosDosServicos = new Map(
   }),
 );
 
-export const rotasDoBlog = () => (posts.length ? ['/blog', ...posts.map((post) => `/blog/${post.slug}`)] : []);
+const postsDaCategoria = (categoria) => posts.filter((p) => categoriaDoPost(p) === categoria);
+
+export const rotasDoBlog = () =>
+  posts.length ? ['/blog', ...CATEGORIAS.map(caminhoDaCategoria), ...posts.map((post) => `/blog/${post.slug}`)] : [];
 export const rotasDasPaginas = () => [...PAGINAS.map((pagina) => `/${pagina.slug}`), ...SERVICOS_PUBLICADOS.map((servico) => `/${servico.caminho}`)];
 
 /** Item do menu marcado como atual na rota (o mesmo cálculo no servidor e em src/blog/client.jsx). */
@@ -123,6 +127,11 @@ export function renderBlog(url) {
     pagina = <PaginaAvulsa pagina={avulsa} conteudo={conteudo} />;
   } else if (!posts.length) {
     return null;
+  } else if (caminho.startsWith('/blog/categoria/')) {
+    const categoria = CATEGORIAS.find((c) => caminhoDaCategoria(c) === caminho);
+    if (!categoria) return null;
+    head = headDaCategoria(categoria, postsDaCategoria(categoria));
+    pagina = <PaginaDaCategoria categoria={categoria} posts={postsDaCategoria(categoria)} minutosDe={minutosDe} />;
   } else if (caminho === '/blog') {
     head = headDoBlog(posts);
     pagina = <PaginaDoBlog posts={posts} minutosDe={minutosDe} />;
@@ -183,6 +192,13 @@ export function gerarSitemap() {
       ...(servico.caminho === 'dra-isabela-bertoglio' && { imagens: ['/dra-isabela-bertoglio.webp'] }),
     })),
     ...(posts.length ? [{ loc: URL_DO_BLOG, lastmod: maisRecente }] : []),
+    // Páginas de categoria: lastmod = a última atualização entre os posts da categoria
+    ...(posts.length
+      ? CATEGORIAS.map((categoria) => ({
+          loc: `${SITE_URL}${caminhoDaCategoria(categoria)}`,
+          lastmod: postsDaCategoria(categoria).map((p) => p.atualizadoEm).sort().pop(),
+        }))
+      : []),
     ...posts.map((post) => ({ loc: urlDoPost(post), lastmod: post.atualizadoEm, imagens: [capaDoPost(post).social] })),
   ];
   const itens = urls.map(({ loc, lastmod, imagens = [] }) =>

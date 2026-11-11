@@ -39,16 +39,17 @@ const AboutDoctor = () => {
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto">
             <div className="reveal reveal-sm" style={{ '--reveal-delay': '0.2s' }}>
               <div className="aspect-[3/4] overflow-hidden">
-                <img 
-                  src="/dra-isabela-consultorio.webp"
-                  srcSet="/dra-isabela-consultorio-480.webp 480w, /dra-isabela-consultorio-660.webp 660w, /dra-isabela-consultorio.webp 880w"
+                <img
+                  // Foto e tratamento de luz: tools/sobre-foto.cjs
+                  src="/dra-isabela-bertoglio-nutrologa-consultorio-880.webp"
+                  srcSet="/dra-isabela-bertoglio-nutrologa-consultorio-480.webp 480w, /dra-isabela-bertoglio-nutrologa-consultorio-660.webp 660w, /dra-isabela-bertoglio-nutrologa-consultorio-880.webp 880w, /dra-isabela-bertoglio-nutrologa-consultorio-1200.webp 1200w"
                   sizes="(min-width: 1280px) 536px, (min-width: 768px) 45vw, calc(100vw - 48px)"
-                  width="880"
-                  height="1173"
-                  alt="Dra. Isabela Bertoglio em seu consultório na Clínica Belvitá"
-                  // O arquivo já vem recortado centrado na Dra. Isabela (antes era um zoom via CSS, que baixava pixels a mais)
+                  width="1200"
+                  height="1600"
+                  alt="Dra. Isabela Bertoglio, médica nutróloga, sorrindo em seu consultório na Clínica Belvitá, no Paraíso, em São Paulo"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

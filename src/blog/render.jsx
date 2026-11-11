@@ -163,7 +163,7 @@ export function renderBlog(url) {
 const IMAGENS_DA_HOME = [
   '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg',
   '/dra-isabela-bertoglio.jpg',
-  '/dra-isabela-consultorio.webp',
+  '/dra-isabela-bertoglio-nutrologa-consultorio-1200.webp',
   '/bioimpedancia-inbody-380.webp',
   '/unyque/unyque-pro-equipamento.webp',
   '/unyque/unyque-pro-antes-depois-coxas.webp',

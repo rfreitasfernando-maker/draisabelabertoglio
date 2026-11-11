@@ -16,6 +16,7 @@ import PaginaDeServico, { itensDaTrilha } from '@/servicos/PaginaDeServico';
 import PaginaDoPost from '@/blog/PaginaDoPost';
 import PaginaDoBlog from '@/blog/PaginaDoBlog';
 import { capaDoPost } from '@/blog/imagens';
+import { categoriaDoPost, validarCategorias } from '@/blog/categorias';
 import { montarLlmsTxt } from '@/lib/llms';
 import { HOME_REVISADA_EM } from '@/lib/schema';
 
@@ -36,6 +37,34 @@ const conteudos = new Map(
   }),
 );
 const minutosDe = (post) => conteudos.get(post.slug).minutosDeLeitura;
+
+// Toda a lista de posts precisa estar nas categorias (src/blog/categorias.js); o build falha se faltar algum.
+validarCategorias(slugs);
+posts.forEach(categoriaDoPost);
+
+// "Leia também": os 3 posts mais relacionados, e não os mais recentes.
+// Pontos: mesma categoria (peso maior), links entre os dois posts (nos dois sentidos) e links que os dois
+// fazem para os mesmos posts. Empate: o mais recente. Posts de outras categorias só entram se faltar.
+const linksDoPost = new Map(
+  posts.map((post) => [post.slug, new Set([...textos[`./posts/${post.slug}.html`].matchAll(/href="\/blog\/([a-z0-9-]+)"/g)].map((m) => m[1]))]),
+);
+function relacionados(post, quantos = 3) {
+  const categoria = categoriaDoPost(post);
+  const meus = linksDoPost.get(post.slug);
+  return posts
+    .filter((outro) => outro !== post)
+    .map((outro, recencia) => {
+      const deles = linksDoPost.get(outro.slug);
+      let pontos = categoriaDoPost(outro) === categoria ? 100 : 0;
+      if (meus.has(outro.slug)) pontos += 6;
+      if (deles.has(post.slug)) pontos += 6;
+      for (const slug of meus) if (deles.has(slug)) pontos += 1;
+      return { outro, pontos, recencia };
+    })
+    .sort((a, b) => b.pontos - a.pontos || a.recencia - b.recencia)
+    .slice(0, quantos)
+    .map(({ outro }) => outro);
+}
 
 // Páginas avulsas da raiz (src/paginas): mesmo modelo, mesmo tratamento do texto que os posts.
 const textosDasPaginas = import.meta.glob('../paginas/*.html', { query: '?raw', import: 'default', eager: true });
@@ -102,7 +131,7 @@ export function renderBlog(url) {
     if (!post) return null;
     const conteudo = conteudos.get(post.slug);
     head = headDoPost(post, conteudo);
-    pagina = <PaginaDoPost post={post} conteudo={conteudo} outros={posts.filter((p) => p !== post).slice(0, 3)} minutosDe={minutosDe} />;
+    pagina = <PaginaDoPost post={post} conteudo={conteudo} outros={relacionados(post)} minutosDe={minutosDe} />;
   }
 
   // Fora do blog (páginas de serviço e do consultório), cabeçalho e botão flutuante usam a mensagem do site.

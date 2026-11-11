@@ -20,3 +20,28 @@ document.addEventListener('click', (e) => {
   const link = e.target.closest?.('a[data-whatsapp]');
   if (link) trackBlogWhatsappClick(link.dataset.whatsapp, link);
 });
+
+// Índice fixo do post (desktop): destaca a seção que está sendo lida — o último título que já passou
+// da linha logo abaixo do cabeçalho fixo. Recalcula no máximo uma vez por quadro ao rolar.
+const linksDoIndice = document.querySelectorAll('a[data-indice]');
+if (linksDoIndice.length) {
+  const titulos = [...linksDoIndice].map((a) => document.getElementById(a.dataset.indice)).filter(Boolean);
+  let agendado = false;
+  const atualizar = () => {
+    agendado = false;
+    let atual = titulos[0]?.id;
+    for (const h of titulos) if (h.getBoundingClientRect().top <= 180) atual = h.id;
+    linksDoIndice.forEach((a) => a.setAttribute('aria-current', String(a.dataset.indice === atual)));
+  };
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!agendado) {
+        agendado = true;
+        requestAnimationFrame(atualizar);
+      }
+    },
+    { passive: true },
+  );
+  atualizar();
+}

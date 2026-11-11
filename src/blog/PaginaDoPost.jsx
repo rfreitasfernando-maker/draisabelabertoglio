@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { DOCTOR_NAME, DOCTOR_CREDENTIALS } from '@/lib/doctor';
+import { WHATSAPP_BLOG_URL, linkWhatsapp } from '@/lib/whatsapp';
 import { capaDoPost, PASTA_IMAGENS, TAMANHOS_CAPA } from '@/blog/imagens';
 import { formatarData, CardDoPost, Trilha, CLASSE_SOBRETITULO } from '@/blog/partes';
+import { categoriaDoPost } from '@/blog/categorias';
 
 const AVATAR = `${PASTA_IMAGENS}/dra-isabela-bertoglio-avatar.webp`;
 
@@ -10,11 +12,16 @@ const AVATAR = `${PASTA_IMAGENS}/dra-isabela-bertoglio-avatar.webp`;
 const AVISO =
   'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. Todo tratamento, inclusive medicamentoso, envolve riscos, e a indicação depende de avaliação individual com médico.';
 
-const Indice = ({ secoes }) => (
+// `lateral`: o índice fixo do desktop, que destaca a seção que está sendo lida (src/blog/client.jsx).
+const Indice = ({ secoes, lateral = false }) => (
   <ol className="space-y-3 font-sans">
     {secoes.map((secao) => (
       <li key={secao.id}>
-        <a href={`#${secao.id}`} className="block text-sm leading-snug text-brand-light-gray hover:text-brand-gold transition-colors duration-300">
+        <a
+          href={`#${secao.id}`}
+          data-indice={lateral ? secao.id : undefined}
+          className="block text-sm leading-snug text-brand-light-gray hover:text-brand-gold aria-[current=true]:text-brand-dark aria-[current=true]:font-medium transition-colors duration-300"
+        >
           {secao.titulo}
         </a>
       </li>
@@ -35,7 +42,7 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
             <div className="max-w-4xl mx-auto">
               <Trilha itens={[['Início', '/'], ['Blog', '/blog']]} />
               <p className={`${CLASSE_SOBRETITULO} mb-4 md:mb-5`}>
-                <time dateTime={post.publicadoEm}>{formatarData(post.publicadoEm)}</time> · {conteudo.minutosDeLeitura} min de leitura
+                {categoriaDoPost(post).nome} · <time dateTime={post.publicadoEm}>{formatarData(post.publicadoEm)}</time> · {conteudo.minutosDeLeitura} min de leitura
               </p>
               <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-brand-dark leading-[1.08]">{post.titulo}</h1>
               <div className="mt-8 flex items-center gap-4">
@@ -75,7 +82,7 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 pt-10 md:pt-14 pb-14 md:pb-20">
-          <div className="max-w-5xl mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-16">
+          <div className="max-w-5xl mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-14">
             <div className="min-w-0 max-w-[42rem]">
               {/* Celular e tablet: índice recolhido antes do texto. Desktop: índice fixo na lateral. */}
               <details className="group lg:hidden mb-10 border-y border-brand-gold/15">
@@ -93,11 +100,35 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
               <p className="mt-12 pt-6 border-t border-brand-gold/15 text-sm font-sans italic text-brand-light-gray leading-relaxed">{post.aviso ?? AVISO}</p>
             </div>
 
+            {/* Desktop: coluna fixa com o índice (seção atual em destaque), a autora e o botão de agendar */}
             <aside className="hidden lg:block">
-              <nav aria-label="Neste artigo" className="sticky top-32">
-                <p className="mb-4 text-[11px] font-sans font-medium tracking-[0.2em] uppercase text-brand-gold">Neste artigo</p>
-                <Indice secoes={conteudo.secoes} />
-              </nav>
+              <div className="sticky top-32 flex flex-col gap-8 max-h-[calc(100vh-9rem)]">
+                <nav aria-label="Neste artigo" className="min-h-0 overflow-y-auto pr-2">
+                  <p className="mb-4 text-[11px] font-sans font-medium tracking-[0.2em] uppercase text-brand-gold">Neste artigo</p>
+                  <Indice secoes={conteudo.secoes} lateral />
+                </nav>
+                <div className="flex-shrink-0 border-t border-brand-gold/15 pt-6 font-sans">
+                  <div className="flex items-center gap-3">
+                    <img src={AVATAR} alt="" width="128" height="128" loading="lazy" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+                    <div className="leading-snug">
+                      <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand-gold">Revisado por</p>
+                      <a href="/dra-isabela-bertoglio" className="text-sm font-medium text-brand-dark hover:text-brand-gold transition-colors duration-300">
+                        {DOCTOR_NAME}
+                      </a>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-xs text-brand-light-gray leading-relaxed">{DOCTOR_CREDENTIALS}</p>
+                  <a
+                    href={post.mensagemWhatsapp ? linkWhatsapp(post.mensagemWhatsapp) : WHATSAPP_BLOG_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-whatsapp="post_lateral"
+                    className="mt-5 flex items-center justify-center min-h-[48px] px-4 bg-brand-gold text-white text-[11px] font-medium tracking-[0.18em] uppercase hover:bg-brand-dark transition-colors duration-300"
+                  >
+                    Agendar consulta
+                  </a>
+                </div>
+              </div>
             </aside>
           </div>
         </div>

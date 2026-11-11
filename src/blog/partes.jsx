@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { capaDoPost, TAMANHOS_CARD } from '@/blog/imagens';
+import { categoriaDoPost, tituloDoCard } from '@/blog/categorias';
 
 const FORMATO_DATA = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
@@ -57,17 +58,20 @@ export const CardDoPost = ({ post, minutos, Titulo = 'h2', destaque = false }) =
         />
       </div>
       <div>
-        <p className={`mt-5 ${destaque ? 'md:mt-0' : ''} text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-brand-light-gray`}>
+        <p className={`mt-5 ${destaque ? 'md:mt-0' : ''} text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-brand-gold`}>
+          {categoriaDoPost(post).nome}
+        </p>
+        <p className="mt-1.5 text-[11px] font-sans font-medium tracking-[0.1em] uppercase text-brand-light-gray">
           <time dateTime={post.publicadoEm}>{formatarData(post.publicadoEm)}</time> · {minutos} min de leitura
         </p>
         <Titulo
-          className={`mt-2 font-serif text-brand-dark leading-snug group-hover:text-brand-gold transition-colors duration-300 ${
+          className={`mt-2 font-serif text-brand-dark leading-snug line-clamp-3 group-hover:text-brand-gold transition-colors duration-300 ${
             destaque ? 'text-3xl md:text-4xl font-light' : 'text-2xl'
           }`}
         >
-          {post.titulo}
+          {tituloDoCard(post)}
         </Titulo>
-        <p className="mt-3 text-sm md:text-base font-sans font-light text-brand-light-gray leading-relaxed">{post.descricaoSocial}</p>
+        <p className="mt-3 text-sm md:text-base font-sans font-light text-brand-light-gray leading-relaxed line-clamp-2">{post.descricaoSocial}</p>
         <span className="mt-5 inline-flex items-center gap-2 text-xs font-sans font-medium tracking-[0.2em] uppercase text-brand-gold">
           Ler artigo
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />

@@ -12,7 +12,7 @@ import '@/blog/blog.css';
 // Fora do blog (páginas de serviço e do consultório): CTA com a mensagem do site, como em src/blog/render.jsx.
 const noBlog = location.pathname.replace(/\/+$/, '').startsWith('/blog');
 const atual = noBlog ? 'blog' : location.pathname.replace(/^\/|\/+$/g, '');
-ReactDOM.hydrateRoot(document.getElementById('cabecalho'), <Header blog={noBlog} pagina={!noBlog} atual={atual} />);
+ReactDOM.hydrateRoot(document.getElementById('cabecalho'), <Header blog={noBlog} pagina={!noBlog} atual={atual} fundoClaro />);
 ReactDOM.hydrateRoot(document.getElementById('whatsapp'), <WhatsAppButton blog={noBlog} pagina={!noBlog} />);
 
 // CTAs dentro do texto (<a data-whatsapp="origem">): rastreados por delegação, já que não são componentes.

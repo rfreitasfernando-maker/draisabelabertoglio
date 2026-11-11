@@ -7,13 +7,13 @@ const FORMATO_DATA = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: '
 /** "2026-10-08" → "8 de outubro de 2026" */
 export const formatarData = (iso) => FORMATO_DATA.format(new Date(`${iso}T00:00:00Z`));
 
-// Mesmo dourado claro do sobretítulo do hero da página inicial
+// Mesmo dourado do sobretítulo do hero da página inicial (topo claro)
 export const CLASSE_SOBRETITULO =
-  'text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-[color-mix(in_srgb,theme(colors.brand-gold-light)_85%,white)]';
+  'text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-brand-gold';
 
 export const Trilha = ({ itens }) => (
   <nav aria-label="Trilha de navegação" className="mb-8 md:mb-10">
-    <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-white/50">
+    <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-sans font-medium tracking-[0.18em] uppercase text-brand-light-gray">
       {itens.map(([nome, href], i) => (
         <React.Fragment key={nome}>
           {i > 0 && <li aria-hidden="true">/</li>}

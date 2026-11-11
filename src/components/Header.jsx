@@ -9,8 +9,8 @@ import { MENU_TRATAMENTOS, MENU_TECNOLOGIAS, PAGINA_SOBRE, HUB_TRATAMENTOS } fro
 // `pagina`: páginas de serviço e do consultório: links como no blog, CTA com o evento do blog e a mensagem do site.
 // `atual`: item do menu da página aberta ('blog' ou o caminho da página, sem a barra inicial).
 // `simples`: só o logo e o botão de agendar, sem menu (páginas de destino dos anúncios, src/lib/landings.js).
-// `fundoClaro`: o topo da página é claro (hero da página inicial e das páginas de anúncio), então o menu
-// transparente usa texto escuro. No blog e nas páginas de serviço o topo é escuro e o menu fica claro.
+// `fundoClaro`: o topo da página é claro, então o menu transparente usa texto escuro. Hoje todas as páginas
+// (início, anúncios, blog, serviços e avulsas) têm o topo claro; sem a prop, o menu volta a ser claro sobre fundo escuro.
 const Header = ({ blog = false, pagina = false, atual, simples = false, fundoClaro = false }) => {
   const cta = ctaDaPagina({ blog, pagina });
   const foraDaHome = blog || pagina;

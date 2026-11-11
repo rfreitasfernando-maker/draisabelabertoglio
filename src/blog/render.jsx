@@ -110,7 +110,7 @@ export function renderBlog(url) {
   const foraDoBlog = !caminho.startsWith('/blog');
   return {
     head,
-    cabecalho: renderToString(<Header blog={!foraDoBlog} pagina={foraDoBlog} atual={itemAtualDoMenu(caminho)} />),
+    cabecalho: renderToString(<Header blog={!foraDoBlog} pagina={foraDoBlog} atual={itemAtualDoMenu(caminho)} fundoClaro />),
     conteudo: renderToStaticMarkup(
       <>
         {pagina}

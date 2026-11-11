@@ -24,7 +24,7 @@ const BotaoTopo = ({ href }) => (
     target="_blank"
     rel="noopener noreferrer"
     data-whatsapp="servico_topo"
-    className="mt-8 inline-flex items-center justify-center gap-3 min-h-[52px] px-7 py-4 bg-brand-gold text-white text-xs font-sans font-medium tracking-[0.2em] uppercase hover:bg-white hover:text-brand-dark transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold-light"
+    className="mt-8 inline-flex items-center justify-center gap-3 min-h-[52px] px-7 py-4 bg-brand-gold text-white text-xs font-sans font-medium tracking-[0.2em] uppercase hover:bg-brand-dark transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold"
   >
     <MessageCircle className="w-4 h-4" aria-hidden="true" />
     Agendar avaliação pelo WhatsApp
@@ -32,19 +32,19 @@ const BotaoTopo = ({ href }) => (
 );
 
 const Topo = ({ servico, conteudo, linkWhatsapp }) => (
-  <header className="bg-brand-dark pt-28 md:pt-36 pb-14 md:pb-20">
+  <header className="bg-brand-cream pt-28 md:pt-36 pb-14 md:pb-20">
     <div className="container mx-auto px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <Trilha itens={itensDaTrilha(servico)} />
-        <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-white leading-[1.08]">{conteudo.h1}</h1>
+        <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-brand-dark leading-[1.08]">{conteudo.h1}</h1>
         {conteudo.subtitulo && (
           <p
-            className="mt-6 max-w-3xl text-lg md:text-xl font-serif font-light text-[color-mix(in_srgb,theme(colors.brand-gold-light)_85%,white)] leading-snug"
+            className="mt-6 max-w-3xl text-lg md:text-xl font-serif font-light text-brand-gold leading-snug"
             dangerouslySetInnerHTML={{ __html: conteudo.subtitulo }}
           />
         )}
         {conteudo.abertura && (
-          <div className="servico-abertura mt-6 max-w-3xl text-base md:text-lg font-sans font-light text-white/80 leading-relaxed" dangerouslySetInnerHTML={{ __html: conteudo.abertura }} />
+          <div className="servico-abertura mt-6 max-w-3xl text-base md:text-lg font-sans font-light text-brand-dark-gray/90 leading-relaxed" dangerouslySetInnerHTML={{ __html: conteudo.abertura }} />
         )}
         {conteudo.botaoTopo && <BotaoTopo href={linkWhatsapp} />}
       </div>

@@ -22,12 +22,12 @@ const Indice = ({ secoes }) => (
 const PaginaAvulsa = ({ pagina, conteudo }) => (
   <main>
     <article>
-      <header className="bg-brand-dark pt-28 md:pt-36 pb-14 md:pb-20">
+      <header className="bg-brand-cream pt-28 md:pt-36 pb-14 md:pb-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <Trilha itens={[['Início', '/'], [pagina.nomeCurto]]} />
-            <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-white leading-[1.08]">{pagina.titulo}</h1>
-            {pagina.subtitulo && <p className="mt-6 max-w-3xl text-base md:text-lg font-sans font-light text-white/70 leading-relaxed">{pagina.subtitulo}</p>}
+            <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-brand-dark leading-[1.08]">{pagina.titulo}</h1>
+            {pagina.subtitulo && <p className="mt-6 max-w-3xl text-base md:text-lg font-sans font-light text-brand-dark-gray/90 leading-relaxed">{pagina.subtitulo}</p>}
           </div>
         </div>
       </header>

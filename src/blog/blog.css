@@ -227,10 +227,10 @@
   margin-top: 1em;
 }
 .servico-abertura a {
-  @apply text-brand-gold-light underline underline-offset-4 decoration-brand-gold-light/40 hover:decoration-current;
+  @apply text-brand-gold underline underline-offset-4 decoration-brand-gold/40 hover:decoration-current;
 }
 .servico-abertura strong {
-  @apply font-medium text-white;
+  @apply font-medium text-brand-dark;
 }
 
 /* Caixa de CTA: mesmas cores dos boxes do blog */

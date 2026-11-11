@@ -29,25 +29,25 @@ const PaginaDoPost = ({ post, conteudo, outros, minutosDe }) => {
   return (
     <main>
       <article>
-        {/* Topo escuro, como o hero da página inicial; a capa sobe por cima da borda */}
-        <header className="bg-brand-dark pt-28 md:pt-36 pb-24 md:pb-36">
+        {/* Topo claro, como o hero da página inicial; a capa sobe por cima da borda */}
+        <header className="bg-brand-cream pt-28 md:pt-36 pb-24 md:pb-36">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <Trilha itens={[['Início', '/'], ['Blog', '/blog']]} />
               <p className={`${CLASSE_SOBRETITULO} mb-4 md:mb-5`}>
                 <time dateTime={post.publicadoEm}>{formatarData(post.publicadoEm)}</time> · {conteudo.minutosDeLeitura} min de leitura
               </p>
-              <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-white leading-[1.08]">{post.titulo}</h1>
+              <h1 className="text-[2.125rem] md:text-5xl lg:text-[3.5rem] font-serif font-light text-brand-dark leading-[1.08]">{post.titulo}</h1>
               <div className="mt-8 flex items-center gap-4">
                 <img src={AVATAR} alt="" width="128" height="128" className="w-12 h-12 rounded-full object-cover ring-1 ring-brand-gold-light/40" />
                 <div className="font-sans leading-snug">
-                  <p className="text-sm text-white/80">
+                  <p className="text-sm text-brand-dark-gray">
                     Por{' '}
-                    <a href="/dra-isabela-bertoglio" className="font-medium text-white hover:text-brand-gold-light transition-colors duration-300">
+                    <a href="/dra-isabela-bertoglio" className="font-medium text-brand-dark hover:text-brand-gold transition-colors duration-300">
                       {DOCTOR_NAME}
                     </a>
                   </p>
-                  <p className="mt-1 text-[11px] font-medium tracking-[0.12em] uppercase text-white/50">{DOCTOR_CREDENTIALS}</p>
+                  <p className="mt-1 text-[11px] font-medium tracking-[0.12em] uppercase text-brand-light-gray">{DOCTOR_CREDENTIALS}</p>
                 </div>
               </div>
             </div>

@@ -24,6 +24,40 @@
 <li><strong>Divida o peso pelo resultado:</strong> 80 ÷ 2,72 = 29,4.</li>
 </ol>
 
+<div id="calc-imc" style="background-color: #f6f2ee; border-radius: 8px; padding: 22px 24px; margin: 28px 0;">
+<p style="margin: 0 0 6px 0; font-size: 19px; font-weight: 700; color: #2c2824;">Calculadora de IMC e faixa de peso saudável</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; color: #4a423c;">Para adultos de 20 a 64 anos. Digite o seu peso e a sua altura.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+<label style="flex: 1 1 140px; font-size: 15px; color: #2c2824;">Peso (kg)<input id="imc-peso" type="number" inputmode="decimal" min="20" max="350" step="0.1" placeholder="Ex.: 80" style="display: block; width: 100%; margin-top: 6px; padding: 10px 12px; font-size: 16px; border: 1px solid #e6dfd8; border-radius: 6px; box-sizing: border-box;"></label>
+<label style="flex: 1 1 140px; font-size: 15px; color: #2c2824;">Altura (m)<input id="imc-altura" type="number" inputmode="decimal" min="1" max="2.5" step="0.01" placeholder="Ex.: 1,65" style="display: block; width: 100%; margin-top: 6px; padding: 10px 12px; font-size: 16px; border: 1px solid #e6dfd8; border-radius: 6px; box-sizing: border-box;"></label>
+</div>
+<button id="imc-calcular" type="button" style="background-color: #2c2824; color: #ffffff; font-size: 16px; font-weight: 600; padding: 12px 24px; border: 0; border-radius: 6px; cursor: pointer;">Calcular IMC</button>
+<div id="imc-resultado" aria-live="polite" style="margin-top: 16px; font-size: 16px; line-height: 1.5; color: #2c2824;"></div>
+<p style="margin: 14px 0 0 0; font-size: 13px; color: #7a6f66;">O IMC é uma triagem e não diferencia gordura de músculo. Não vale para crianças, adolescentes, gestantes e idosos. O resultado não substitui a avaliação médica.</p>
+</div>
+<script>
+(function () {
+  var b = document.getElementById('imc-calcular');
+  if (!b) return;
+  function num(id) { return parseFloat(String(document.getElementById(id).value).replace(',', '.')); }
+  function fmt(n) { return n.toFixed(1).replace('.', ','); }
+  b.addEventListener('click', function () {
+    var p = num('imc-peso'), a = num('imc-altura'), out = document.getElementById('imc-resultado');
+    if (a > 3) a = a / 100;
+    if (!(p > 20 && p < 350 && a > 1 && a < 2.5)) { out.textContent = 'Confira o peso (em kg) e a altura (em metros, por exemplo 1,65).'; return; }
+    var imc = p / (a * a), c;
+    if (imc < 18.5) c = 'baixo peso';
+    else if (imc < 25) c = 'peso normal';
+    else if (imc < 30) c = 'sobrepeso';
+    else if (imc < 35) c = 'obesidade grau 1';
+    else if (imc < 40) c = 'obesidade grau 2';
+    else c = 'obesidade grau 3';
+    var min = 18.5 * a * a, max = 24.9 * a * a;
+    out.innerHTML = '<strong>Seu IMC: ' + fmt(imc) + '</strong> (' + c + ').<br>Para a sua altura, a faixa de peso considerada saudável pelo IMC vai de cerca de ' + fmt(min) + ' kg a ' + fmt(max) + ' kg.<br>Para saber quanto do seu peso é gordura e quanto é músculo, veja a <a href="/blog/bioimpedancia">bioimpedância</a>.';
+  });
+})();
+</script>
+
 <p>Nesse exemplo, uma pessoa com 80 kg e 1,65 m tem IMC de 29,4, na faixa de sobrepeso.</p>
 
 <h2>Tabela de IMC para adultos</h2>
@@ -73,6 +107,14 @@
 <p>Agende sua consulta de nutrologia com a Dra. Isabela Bertoglio na Clínica Belvitá, no Paraíso (SP). A avaliação inclui bioimpedância InBody 380, medida da cintura e exames para entender a sua composição corporal.</p>
 <a class="post-cta-botao" data-whatsapp="post_cta_1">Agendar avaliação pelo WhatsApp</a>
 </aside>
+
+<h2>Peso ideal: como calcular</h2>
+
+<p>Não existe um único peso ideal para cada altura. O que o IMC mostra é uma <strong>faixa de peso saudável</strong>: para adultos, os pesos que dão um IMC entre 18,5 e 24,9. Para calcular, multiplique a altura por ela mesma e depois por 18,5 e por 24,9.</p>
+
+<p>Por exemplo, para uma pessoa com 1,65 m: 1,65 × 1,65 = 2,72. Depois, 2,72 × 18,5 = 50,4 e 2,72 × 24,9 = 67,8. A faixa de peso saudável pelo IMC vai de cerca de 50 a 68 kg.</p>
+
+<p>Essa faixa é só um ponto de partida. O peso mais adequado para cada pessoa depende também da composição corporal, da idade, da cintura e da saúde metabólica. Duas pessoas com o mesmo peso podem ter quantidades muito diferentes de gordura e músculo. Veja <a href="/blog/bioimpedancia">bioimpedância</a>.</p>
 
 <h2>Limitações do IMC</h2>
 
@@ -146,8 +188,8 @@
 </details>
 
 <details>
-<summary><h3>Qual a diferença entre IMC e bioimpedância?</h3></summary>
-<p>O IMC usa só peso e altura. A bioimpedância estima quanto do peso é gordura, músculo e água. Duas pessoas com o mesmo IMC podem ter composições corporais muito diferentes, e a bioimpedância ajuda a ver se a perda de peso está vindo da gordura.</p>
+<summary><h3>Como calcular o peso ideal?</h3></summary>
+<p>Pelo IMC, a faixa de peso saudável para adultos é a que dá um IMC entre 18,5 e 24,9. Multiplique a altura por ela mesma e depois por 18,5 e por 24,9. Para 1,65 m, a faixa vai de cerca de 50 a 68 kg. O peso mais adequado também depende da composição corporal, da idade e da saúde.</p>
 </details>
 
 <details>

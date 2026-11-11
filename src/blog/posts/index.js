@@ -1135,14 +1135,14 @@ export const POSTS = [
   {
     slug: 'nutrologo-o-que-faz',
     titulo: 'Nutrólogo: o que faz, se é médico, diferença para o nutricionista e para o endocrinologista para emagrecer, em São Paulo',
-    tituloSeo: 'Nutrólogo ou endocrinologista para emagrecer? O que faz | SP',
+    tituloSeo: 'Nutrólogo, endocrinologista ou nutricionista: qual procurar?',
     descricao:
-      'Nutrólogo é médico? Veja o que faz, a diferença para o nutricionista e se é melhor nutrólogo ou endocrinologista para emagrecer. Consulta em SP.',
-    tituloSocial: 'Nutrólogo ou endocrinologista para emagrecer? O que faz o nutrólogo',
+      'Nutrólogo, endocrinologista ou nutricionista: veja a diferença entre eles, o que cada um faz no emagrecimento e qual procurar no seu caso.',
+    tituloSocial: 'Nutrólogo, endocrinologista ou nutricionista: qual procurar?',
     descricaoSocial:
-      'Nutrologia, nutricionista ou endocrinologista? Entenda as diferenças, quando procurar cada um e como é uma consulta em nutrologia para emagrecer.',
+      'Nutrólogo, endocrinologista ou nutricionista: veja a diferença entre eles, o que cada um faz no emagrecimento e qual procurar no seu caso.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1401,7 +1401,7 @@ export const POSTS = [
     descricaoSocial:
       'Nos estudos, o resultado foi parecido com o de dietas comuns. Entenda benefícios, riscos e quem não deve fazer.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1452,7 +1452,7 @@ export const POSTS = [
     descricaoSocial:
       'Low carb ou cetogênica: o que mostram os estudos, efeitos no colesterol e na glicose e quem precisa de orientação.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1492,15 +1492,15 @@ export const POSTS = [
   },
   {
     slug: 'dieta-anti-inflamatoria',
-    titulo: 'Dieta anti-inflamatória: o que é, alimentos anti-inflamatórios, o que evitar e para quem ajuda, com acompanhamento em São Paulo',
-    tituloSeo: 'Dieta anti-inflamatória: o que é e alimentos | SP',
+    titulo: 'Dieta anti-inflamatória: alimentos para desinflamar o corpo, o que evitar e para quem ajuda, com acompanhamento em São Paulo',
+    tituloSeo: 'Dieta anti-inflamatória: alimentos para desinflamar o corpo',
     descricao:
-      'Dieta anti-inflamatória: o que é, alimentos anti-inflamatórios, o que evitar, mitos e para quem ajuda, incluindo obesidade e doenças reumatológicas.',
-    tituloSocial: 'Dieta anti-inflamatória: o que é e quais alimentos incluir',
+      'Dieta anti-inflamatória: veja os alimentos para desinflamar o corpo, o que evitar, os mitos e para quem ajuda, incluindo obesidade e reumatismo.',
+    tituloSocial: 'Dieta anti-inflamatória: alimentos para desinflamar o corpo',
     descricaoSocial:
-      'Um padrão alimentar parecido com o mediterrâneo que ajuda a reduzir a inflamação ligada à obesidade.',
+      'Dieta anti-inflamatória: veja os alimentos para desinflamar o corpo, o que evitar, os mitos e para quem ajuda, incluindo obesidade e reumatismo.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1804,15 +1804,15 @@ export const POSTS = [
   },
   {
     slug: 'imc',
-    titulo: 'IMC: como calcular, tabela de classificação e por que o índice de massa corporal sozinho não basta, com avaliação em São Paulo',
-    tituloSeo: 'IMC: como calcular, tabela e limitações | SP',
+    titulo: 'IMC: calculadora, tabela de classificação, peso ideal e por que o índice de massa corporal sozinho não basta, em São Paulo',
+    tituloSeo: 'Calculadora de IMC e peso ideal: tabela e limitações | SP',
     descricao:
-      'IMC: aprenda a calcular o índice de massa corporal, veja a tabela para adultos e entenda por que cintura e bioimpedância completam a avaliação.',
-    tituloSocial: 'IMC: como calcular, tabela e por que ele não basta',
+      'Calculadora de IMC: calcule o seu índice de massa corporal e a faixa de peso ideal, veja a tabela para adultos e por que o IMC sozinho não basta.',
+    tituloSocial: 'Calculadora de IMC e peso ideal: tabela e limitações | SP',
     descricaoSocial:
-      'Calcule o IMC e entenda o que ele mostra e o que ele não mostra.',
+      'Calculadora de IMC: calcule o seu índice de massa corporal e a faixa de peso ideal, veja a tabela para adultos e por que o IMC sozinho não basta.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2045,7 +2045,7 @@ export const POSTS = [
     descricaoSocial:
       'Tempero ou cápsula? O que os estudos mostram e os riscos da curcumina.',
     publicadoEm: '2026-11-08',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-10',
     capa: {
       largura: 1734,
       altura: 907,

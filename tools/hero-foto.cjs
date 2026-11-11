@@ -10,6 +10,9 @@ const sharp = require('sharp');
 
 const ORIGINAL = process.argv[2] || 'fotos-originais/IMG_9058.jpg';
 const CREME = { r: 250, g: 248, b: 245 };
+// Muda a cada novo tratamento: as imagens ficam 7 dias no cache do navegador (vercel.json), então um nome novo
+// garante que todos vejam a versão nova. Atualizar também src/components/Hero.jsx e index.html.
+const VERSAO = 'v2';
 const TRATAMENTO = { brilho: 1.12, saturacao: 1.08, cor: [1.05, 0.985, 0.95], contrasteLocal: { width: 400, height: 400, maxSlope: 2 } };
 
 async function fotoTratada() {
@@ -46,11 +49,11 @@ async function salvar(buf, largura, nome, qualidade) {
     `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}"><defs><linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="#FAF8F5" stop-opacity="1"/><stop offset="${(pad / larguraFusao).toFixed(3)}" stop-color="#FAF8F5" stop-opacity="0.9"/><stop offset="1" stop-color="#FAF8F5" stop-opacity="0"/></linearGradient></defs><rect width="${larguraFusao}" height="${H}" fill="url(#a)"/></svg>`,
   );
   const desktop = await sharp(recorte).composite([{ input: fusao, left: 0, top: 0 }]).toBuffer();
-  for (const w of [800, 1200, 1600, 2000]) await salvar(desktop, w, `dra-isabela-hero-${w}.webp`, 82);
+  for (const w of [800, 1200, 1600, 2000]) await salvar(desktop, w, `dra-isabela-hero-${VERSAO}-${w}.webp`, 82);
 
   // Celular: largura total da foto, rosto no terço de cima, sem a fusão lateral.
   const Wc = 3940;
   const Hc = Math.round(Wc / 0.85);
   const celular = await sharp(tratada).extract({ left: 0, top: 1235, width: Wc, height: Hc }).toBuffer();
-  for (const w of [640, 960]) await salvar(celular, w, `dra-isabela-hero-celular-${w}.webp`, 80);
+  for (const w of [640, 960]) await salvar(celular, w, `dra-isabela-hero-${VERSAO}-celular-${w}.webp`, 80);
 })();

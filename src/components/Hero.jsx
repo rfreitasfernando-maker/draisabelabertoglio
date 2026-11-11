@@ -121,12 +121,12 @@ const Hero = ({ conteudo = PADRAO }) => {
         <picture>
           <source
             media="(min-width: 768px)"
-            srcSet="/dra-isabela-hero-800.webp 800w, /dra-isabela-hero-1200.webp 1200w, /dra-isabela-hero-1600.webp 1600w, /dra-isabela-hero-2000.webp 2000w"
+            srcSet="/dra-isabela-hero-v2-800.webp 800w, /dra-isabela-hero-v2-1200.webp 1200w, /dra-isabela-hero-v2-1600.webp 1600w, /dra-isabela-hero-v2-2000.webp 2000w"
             sizes="(min-width: 1280px) 50vw, 46vw"
           />
           <img
-            src="/dra-isabela-hero-celular-960.webp"
-            srcSet="/dra-isabela-hero-celular-640.webp 640w, /dra-isabela-hero-celular-960.webp 960w"
+            src="/dra-isabela-hero-v2-celular-960.webp"
+            srcSet="/dra-isabela-hero-v2-celular-640.webp 640w, /dra-isabela-hero-v2-celular-960.webp 960w"
             sizes="100vw"
             alt={`${DOCTOR_NAME}, médica – Nutrologia e Emagrecimento, em seu consultório`}
             width="960"

@@ -33,9 +33,9 @@ function App({ landing }) {
           <AboutDoctor />
           <KeywordsTicker palavras={landing?.faixa} />
           <Reviews />
+          <Clinica />
           <HowItWorks />
           {!landing && <Technology />}
-          <Clinica />
           <GoogleMapsEmbed />
           <FAQ perguntas={landing?.faq.perguntas} subtitulo={landing?.faq.subtitulo} />
           <FinalCTA />

@@ -23,7 +23,7 @@ export const POSTS = [
     descricaoSocial:
       'Avaliação, bioimpedância, tratamentos e manutenção: o guia do emagrecimento saudável com acompanhamento médico em nutrologia.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1672,
       altura: 941,

@@ -333,13 +333,13 @@ export const POSTS = [
   },
   {
     slug: 'mounjaro-efeitos-colaterais',
-    titulo: 'Mounjaro: efeitos colaterais, como usar e por que precisa de acompanhamento médico em São Paulo',
-    tituloSeo: 'Mounjaro: efeitos colaterais, como usar e cuidados | SP',
+    titulo: 'Mounjaro: efeitos colaterais, reações mais comuns, contraindicações e como usar, com acompanhamento em São Paulo',
+    tituloSeo: 'Mounjaro: efeitos colaterais, reações e contraindicações',
     descricao:
-      'Efeitos colaterais do Mounjaro: o que mostram os estudos, sinais de alerta, como diminuir o enjoo e como usar a caneta com acompanhamento médico em SP.',
-    tituloSocial: 'Mounjaro: efeitos colaterais, sinais de alerta e como usar',
+      'Mounjaro: efeitos colaterais mais comuns, reações na primeira dose, sinais de alerta e contraindicações. Veja como reduzir os enjoos com segurança.',
+    tituloSocial: 'Mounjaro: efeitos colaterais, reações e contraindicações',
     descricaoSocial:
-      'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
+      'Mounjaro: efeitos colaterais mais comuns, reações na primeira dose, sinais de alerta e contraindicações. Veja como reduzir os enjoos com segurança.',
     publicadoEm: '2026-10-21',
     atualizadoEm: '2026-11-12',
     capa: {
@@ -801,13 +801,13 @@ export const POSTS = [
   },
   {
     slug: 'tirzepatida',
-    titulo: 'Tirzepatida: o que é, como funciona no corpo, para quem é indicada e cuidados, com acompanhamento em São Paulo',
-    tituloSeo: 'Tirzepatida: o que é, como funciona e para quem é | SP',
+    titulo: 'O que é tirzepatida? Para que serve, como age no corpo, para quem é indicada e cuidados, com acompanhamento em São Paulo',
+    tituloSeo: 'O que é tirzepatida? Para que serve e como age no corpo | SP',
     descricao:
-      'Tirzepatida (Mounjaro): o que é, como funciona no corpo, em quanto tempo faz efeito, para quem é indicada e riscos das canetas falsificadas.',
-    tituloSocial: 'Tirzepatida: o que é, como funciona e para quem é indicada',
+      'O que é tirzepatida, para que serve, como age no corpo, se é insulina, para quem é indicada e quais os cuidados durante o uso do Mounjaro.',
+    tituloSocial: 'O que é tirzepatida? Para que serve e como age no corpo | SP',
     descricaoSocial:
-      'O princípio ativo do Mounjaro age no GLP-1 e no GIP. Entenda o mecanismo, a indicação, onde aplicar e os cuidados.',
+      'O que é tirzepatida, para que serve, como age no corpo, se é insulina, para quem é indicada e quais os cuidados durante o uso do Mounjaro.',
     publicadoEm: '2026-10-30',
     atualizadoEm: '2026-11-12',
     capa: {
@@ -827,15 +827,15 @@ export const POSTS = [
   },
   {
     slug: 'mounjaro-emagrece-quantos-quilos',
-    titulo: 'Mounjaro emagrece quantos quilos? O que os estudos mostram, em quanto tempo e por que varia, com acompanhamento em São Paulo',
-    tituloSeo: 'Mounjaro emagrece quantos quilos? O que os estudos mostram',
+    titulo: 'Mounjaro emagrece quantos quilos por semana e por mês? O que os estudos mostram e por que varia, com acompanhamento em São Paulo',
+    tituloSeo: 'Mounjaro emagrece quantos quilos por semana e por mês? | SP',
     descricao:
-      'Mounjaro emagrece quantos quilos? Veja a perda média nos estudos, em quanto tempo, por que algumas pessoas emagrecem menos e o que acontece ao parar.',
-    tituloSocial: 'Mounjaro emagrece quantos quilos? Os números dos estudos',
+      'Mounjaro emagrece quantos quilos por semana e por mês? Veja o que mostram os estudos, por que a perda varia e o que esperar em cada fase.',
+    tituloSocial: 'Mounjaro emagrece quantos quilos por semana e por mês? | SP',
     descricaoSocial:
-      'Perda média de 15% a 21% do peso em 72 semanas, conforme a dose. Entenda o ritmo, o platô e por que a resposta varia.',
+      'Mounjaro emagrece quantos quilos por semana e por mês? Veja o que mostram os estudos, por que a perda varia e o que esperar em cada fase.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1033,15 +1033,15 @@ export const POSTS = [
   },
   {
     slug: 'mounjaro-e-alcool',
-    titulo: 'Pode beber álcool usando Mounjaro ou Ozempic? Riscos, efeitos e cuidados, com acompanhamento em São Paulo',
-    tituloSeo: 'Pode beber álcool usando Mounjaro ou Ozempic? Riscos',
+    titulo: 'Quem toma Mounjaro pode beber? Álcool, Ozempic, riscos e cuidados, com acompanhamento em São Paulo',
+    tituloSeo: 'Quem toma Mounjaro pode beber? Álcool e canetas | SP',
     descricao:
-      'Pode beber álcool usando Mounjaro ou Ozempic? Entenda os riscos para estômago, glicose, fígado e pâncreas, quem deve evitar e os cuidados.',
-    tituloSocial: 'Pode beber álcool usando Mounjaro ou Ozempic?',
+      'Quem toma Mounjaro pode beber álcool ou refrigerante? Veja os riscos para estômago, glicose, fígado e pâncreas, e os cuidados se for beber.',
+    tituloSocial: 'Quem toma Mounjaro pode beber? Álcool e canetas | SP',
     descricaoSocial:
-      'O que acontece quando se bebe usando canetas emagrecedoras, quem deve evitar e por que muita gente perde a vontade de beber.',
+      'Quem toma Mounjaro pode beber álcool ou refrigerante? Veja os riscos para estômago, glicose, fígado e pâncreas, e os cuidados se for beber.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1186,12 +1186,12 @@ export const POSTS = [
   {
     slug: 'hemoglobina-glicada',
     titulo: 'Hemoglobina glicada: o que é, valores normais, o que significa alta e como baixar, com acompanhamento em São Paulo',
-    tituloSeo: 'Hemoglobina glicada: valores normais e o que significa',
+    tituloSeo: 'Hemoglobina glicada (glicemia glicada): valores normais | SP',
     descricao:
-      'Hemoglobina glicada: o que é, valores normais, o que significa alta, o que altera o resultado, se precisa de jejum e como baixar. Nutrologia em SP.',
-    tituloSocial: 'Hemoglobina glicada: valores normais e o que significa alta',
+      'Hemoglobina glicada (glicemia glicada): o que é, valores normais, o que significa 6,2% ou 11% e como baixar. Veja quando procurar o médico.',
+    tituloSocial: 'Hemoglobina glicada (glicemia glicada): valores normais | SP',
     descricaoSocial:
-      'O exame que mostra a média da glicose dos últimos 3 meses: valores, metas no diabetes, interferências e como baixar.',
+      'Hemoglobina glicada (glicemia glicada): o que é, valores normais, o que significa 6,2% ou 11% e como baixar. Veja quando procurar o médico.',
     publicadoEm: '2026-11-02',
     atualizadoEm: '2026-11-12',
     capa: {

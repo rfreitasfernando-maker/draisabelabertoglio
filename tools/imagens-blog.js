@@ -2,7 +2,7 @@
 // Gera as imagens otimizadas de um post do blog em public/blog/imagens/.
 //
 //   node tools/imagens-blog.js capa   <original> <slug>
-//     WebP em 640/960/1280/1600 px de largura (sem ampliar o original) e <slug>-og.jpg em 1200×630,
+//     WebP em 360/640/960/1280/1600 px de largura (sem ampliar o original) e <slug>-og.jpg em 1200×630,
 //     a prévia de compartilhamento (WhatsApp, Facebook, LinkedIn), que nem todos leem em WebP.
 //
 //   node tools/imagens-blog.js figura <original> <nome> [largura]

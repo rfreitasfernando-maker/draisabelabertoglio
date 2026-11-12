@@ -6,7 +6,7 @@ export const PASTA_IMAGENS = '/blog/imagens';
 // Larguras em que a capa é gerada e oferecida no srcset.
 // Nunca amplia o original: abaixo de 1600 px, a última versão tem a largura do próprio original.
 export const largurasDaCapa = (larguraOriginal) => {
-  const larguras = [640, 960, 1280, 1600].filter((l) => l <= larguraOriginal);
+  const larguras = [360, 640, 960, 1280, 1600].filter((l) => l <= larguraOriginal);
   if (larguraOriginal < 1600 && larguras.at(-1) !== larguraOriginal) larguras.push(larguraOriginal);
   return larguras;
 };

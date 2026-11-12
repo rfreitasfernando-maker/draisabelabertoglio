@@ -57,7 +57,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Instagram ${INSTAGRAM_HANDLE}, da ${DOCTOR_NAME} (abre em nova aba)`}
-                className="block hover:text-brand-gold transition-colors duration-300"
+                // after: amplia a área de toque para ~47 px de altura sem mexer no layout
+                className="relative block after:absolute after:inset-x-0 after:-inset-y-3 after:content-[''] hover:text-brand-gold transition-colors duration-300"
               >
                 Instagram {INSTAGRAM_HANDLE}
               </a>

@@ -45,7 +45,8 @@ export const SERVICOS = [
     descricao:
       'Acompanhamento médico com tirzepatida e semaglutida em São Paulo: indicação, ajuste de dose e cuidado com o músculo. Agende pelo WhatsApp.',
     sobre: { '@type': 'MedicalTherapy', name: 'Tratamento farmacológico da obesidade com agonistas de GLP-1 e GIP' },
-    revisadoEm: REVISADO_EM,
+    // Revisada em 12/11/2026 (H2 dos medicamentos)
+    revisadoEm: '2026-11-12',
     mensagemWhatsapp: 'Olá! Vim pela página de canetas emagrecedoras e gostaria de agendar uma avaliação com a Dra. Isabela.',
     publicada: true,
   },
@@ -155,11 +156,12 @@ export const SERVICOS = [
     imagemSocial: { src: '/servicos/tecnologias-bioimpedancia-inbody-og.jpg', alt: 'Aparelho de bioimpedância InBody 380 da Clínica Belvitá, ao lado do título Bioimpedância InBody 380' },
     grupo: 'tecnologias',
     nomeCurto: 'Bioimpedância InBody',
-    tituloSeo: 'Bioimpedância InBody 380 em São Paulo | Dra. Isabela',
+    tituloSeo: 'Exame de bioimpedância InBody em São Paulo | Dra. Isabela',
     descricao:
-      'Bioimpedância InBody 380 em São Paulo: veja quanto do seu peso é gordura, músculo e água e acompanhe a evolução. Agende pelo WhatsApp.',
+      'Exame de bioimpedância InBody 380 em São Paulo, no Paraíso: veja quanto do seu peso é gordura, músculo e água e acompanhe a evolução. Agende.',
     sobre: { '@type': 'MedicalTest', name: 'Bioimpedância elétrica (InBody 380)' },
-    revisadoEm: REVISADO_EM,
+    // Revisada em 12/11/2026 (title, meta, H1 e FAQ)
+    revisadoEm: '2026-11-12',
     mensagemWhatsapp: 'Olá! Vim pela página da bioimpedância InBody e gostaria de agendar uma consulta com a Dra. Isabela.',
     publicada: true,
   },

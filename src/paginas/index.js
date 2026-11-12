@@ -9,13 +9,13 @@ export const PAGINAS = [
       'Atendimento em nutrologia e emagrecimento · Pacientes do Paraíso, Bela Vista, Vila Mariana, Aclimação, Liberdade e região da Avenida Paulista',
     // Nome curto na trilha de navegação e no menu
     nomeCurto: 'Consultório no Paraíso',
-    tituloSeo: 'Médico para emagrecer no Paraíso, perto da Paulista | SP',
+    tituloSeo: 'Médico para emagrecer no Paraíso, São Paulo | Dra. Isabela',
     descricao:
-      'Médico para emagrecer no Paraíso, perto da Av. Paulista, do HCor e do Shopping Pátio Paulista. Estacionamento conveniado com manobrista e bioimpedância inclusa.',
-    tituloSocial: 'Médico para emagrecer no Paraíso, perto da Paulista',
+      'Médico para emagrecer no Paraíso, perto da Av. Paulista e do HCor. Estacionamento conveniado com manobrista e bioimpedância inclusa.',
+    tituloSocial: 'Médico para emagrecer no Paraíso, São Paulo | Dra. Isabela',
     descricaoSocial:
-      'Consultório da Dra. Isabela Bertoglio no Paraíso: perto do metrô, com estacionamento conveniado com manobrista e bioimpedância inclusa. Segunda a sexta, 8h às 18h.',
-    atualizadoEm: '2026-11-06',
+      'Médico para emagrecer no Paraíso, perto da Av. Paulista e do HCor. Estacionamento conveniado com manobrista e bioimpedância inclusa.',
+    atualizadoEm: '2026-11-12',
     imagemSocial: { src: '/emagrecimento-acompanhamento-medico-sao-paulo-og.jpg', alt: 'Dra. Isabela Bertoglio em seu consultório, ao lado do símbolo da Clínica Belvitá' },
     mensagemWhatsapp: 'Olá! Vim pela página do consultório no Paraíso e gostaria de agendar uma avaliação com a Dra. Isabela.',
     aviso:

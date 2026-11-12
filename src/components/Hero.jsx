@@ -22,8 +22,15 @@ const PADRAO = {
   nota: null,
 };
 
+// Só na página inicial: o H1 é a linha pequena de cima (no lugar do sobretítulo), e a frase grande
+// vira <p> com o mesmo visual. As páginas de anúncio mantêm a frase grande como H1.
+const H1_DA_HOME = 'Nutróloga em São Paulo: Dra. Isabela Bertoglio';
+
 const Hero = ({ conteudo = PADRAO }) => {
   const { sobretitulo, titulo, texto, beneficios, cta, nota } = { ...PADRAO, ...conteudo };
+  const ehHome = conteudo === PADRAO;
+  const Sobretitulo = ehHome ? 'h1' : 'p';
+  const Titulo = ehHome ? 'p' : 'h1';
   const scrollToAbout = () => {
     const el = document.getElementById('about');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -36,15 +43,15 @@ const Hero = ({ conteudo = PADRAO }) => {
       <div className="relative z-10 md:min-h-screen flex items-center">
         <div className="container mx-auto px-6 lg:px-8 pt-24 pb-10 xl:pt-28 md:pb-12">
           <div className="max-w-xl lg:max-w-2xl md:w-[56%] xl:w-[52%]">
-            <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-brand-gold mb-4 md:mb-5">
-              {sobretitulo}
-            </p>
+            <Sobretitulo className="text-[10px] md:text-xs font-sans font-medium tracking-[0.14em] md:tracking-[0.25em] uppercase text-brand-gold mb-4 md:mb-5">
+              {ehHome ? H1_DA_HOME : sobretitulo}
+            </Sobretitulo>
 
-            <h1 className="text-[2.125rem] md:text-5xl lg:text-6xl xl:text-[4rem] font-serif font-light text-brand-dark leading-[1.08] mb-4 md:mb-6">
+            <Titulo className="text-[2.125rem] md:text-5xl lg:text-6xl xl:text-[4rem] font-serif font-light text-brand-dark leading-[1.08] mb-4 md:mb-6">
               {`${titulo.antes} `}
               <span className="text-brand-gold-light italic">{titulo.destaque}</span>
               {titulo.depois && ` ${titulo.depois}`}
-            </h1>
+            </Titulo>
 
             <p className="text-base md:text-lg xl:text-xl text-brand-dark-gray/90 font-light leading-relaxed mb-6 md:mb-8 max-w-lg xl:max-w-xl">
               {texto}

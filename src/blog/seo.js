@@ -129,6 +129,8 @@ export function headDoPost(post, conteudo) {
     imagemSocial: capa.social,
     imagemAlt: post.capa.alt,
     extras: [
+      meta('name', 'twitter:title', post.tituloSocial),
+      meta('name', 'twitter:description', post.descricaoSocial),
       meta('property', 'article:published_time', post.publicadoEm),
       meta('property', 'article:modified_time', post.atualizadoEm),
       // A capa é o maior elemento da primeira dobra: começa a baixar junto com o HTML.
@@ -191,6 +193,8 @@ export function headDaPaginaAvulsa(pagina, conteudo) {
     imagemSocial: pagina.imagemSocial.src,
     imagemAlt: pagina.imagemSocial.alt,
     extras: [
+      meta('name', 'twitter:title', pagina.tituloSocial),
+      meta('name', 'twitter:description', pagina.descricaoSocial),
       meta('name', 'geo.region', 'BR-SP'),
       meta('name', 'geo.placename', 'Paraíso, São Paulo'),
       meta('name', 'geo.position', `${COORDENADAS.latitude};${COORDENADAS.longitude}`),

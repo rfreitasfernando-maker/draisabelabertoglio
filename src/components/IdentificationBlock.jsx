@@ -5,7 +5,8 @@ import WeightLossResults from '@/components/WeightLossResults';
 import { WHATSAPP_URL } from '@/lib/whatsapp';
 import { trackWhatsappClick } from '@/lib/tracking';
 
-const IdentificationBlock = () => {
+// `apresentacao`: só na página inicial, o parágrafo de apresentação da médica abre a seção.
+const IdentificationBlock = ({ apresentacao = false }) => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
   const items = [
@@ -31,6 +32,11 @@ const IdentificationBlock = () => {
     <section className="py-12 md:py-16 bg-brand-cream/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div ref={ref} className={`max-w-5xl mx-auto reveal${isInView ? ' is-visible' : ''}`}>
+          {apresentacao && (
+            <p className="max-w-3xl mx-auto mb-12 md:mb-14 text-center text-base md:text-lg font-sans font-light text-brand-dark-gray/90 leading-relaxed">
+              A Dra. Isabela Bertoglio é médica nutróloga em São Paulo, com consultório na Clínica Belvitá, no Paraíso, perto do metrô Paraíso. Ela acompanha emagrecimento, obesidade, tratamento com canetas emagrecedoras, resistência à insulina, gordura no fígado e deficiências de vitaminas, com exames, bioimpedância InBody 380 e plano individualizado. Atende presencialmente e por teleconsulta.
+            </p>
+          )}
           <WeightLossResults />
 
           <div className="text-center mt-14 md:mt-16 mb-12">

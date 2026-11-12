@@ -29,7 +29,7 @@ function App({ landing }) {
         <Header simples={Boolean(landing)} fundoClaro />
         <main>
           <Hero conteudo={landing?.hero} />
-          {landing?.servicos ? <Servicos {...landing.servicos} /> : <IdentificationBlock />}
+          {landing?.servicos ? <Servicos {...landing.servicos} /> : <IdentificationBlock apresentacao={!landing} />}
           <AboutDoctor />
           <KeywordsTicker palavras={landing?.faixa} />
           <Reviews />

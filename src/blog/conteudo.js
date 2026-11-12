@@ -10,6 +10,8 @@ export const textoDe = (html) =>
     .replace(/<[^>]+>/g, ' ')
     .replace(/&(?:amp|lt|gt|quot|#39|nbsp);/g, (e) => ENTIDADES[e])
     .replace(/\s+/g, ' ')
+    // A tag que fecha antes da pontuação ("…<a>low carb</a>.") não pode deixar espaço antes do ponto
+    .replace(/ ([.,;:!?)])/g, '$1')
     .trim();
 
 /** "Quando procurar um médico" → "quando-procurar-um-medico" */

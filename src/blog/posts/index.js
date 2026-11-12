@@ -38,14 +38,14 @@ export const POSTS = [
   {
     slug: 'bioimpedancia',
     titulo: 'Bioimpedância: o que é, como é feito o exame InBody e como interpretar o resultado em São Paulo',
-    tituloSeo: 'Bioimpedância: o que é, exame InBody e como interpretar | SP',
+    tituloSeo: 'Bioimpedância: o que é, como funciona e como ler o resultado',
     descricao:
       'Bioimpedância: o que é, como é feito o exame no InBody 380, como se preparar e como ler gordura, músculo e gordura visceral. Onde fazer em São Paulo.',
-    tituloSocial: 'Bioimpedância: o que é, como é feito o exame InBody e como interpretar',
+    tituloSocial: 'Bioimpedância: o que é, como funciona e como ler o resultado',
     descricaoSocial:
       'O que a bioimpedância mede, como é o exame no InBody 380, como se preparar e como ler gordura, massa muscular e gordura visceral no laudo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -67,15 +67,15 @@ export const POSTS = [
   },
   {
     slug: 'tirzepatida-ou-semaglutida',
-    titulo: 'Tirzepatida ou semaglutida: diferenças entre as canetas para emagrecer e como é a indicação em São Paulo',
-    tituloSeo: 'Tirzepatida ou semaglutida: diferenças | Médica em São Paulo',
+    titulo: 'Mounjaro ou Ozempic? A diferença entre tirzepatida e semaglutida e como é feita a escolha, em São Paulo',
+    tituloSeo: 'Mounjaro ou Ozempic: qual a diferença e qual escolher?',
     descricao:
-      'Tirzepatida ou semaglutida? Entenda como cada uma age, o que mostraram os estudos e os efeitos colaterais. Acompanhamento médico em São Paulo.',
-    tituloSocial: 'Tirzepatida ou semaglutida: diferenças entre as canetas para emagrecer',
+      'Mounjaro ou Ozempic: veja a diferença entre tirzepatida e semaglutida, o que mostrou o estudo que comparou as duas e como é feita a escolha.',
+    tituloSocial: 'Mounjaro ou Ozempic: qual a diferença e qual escolher?',
     descricaoSocial:
-      'Mecanismo, resultados dos estudos, efeitos colaterais e quem não deve usar: entenda a diferença entre tirzepatida e semaglutida.',
+      'Mounjaro ou Ozempic: veja a diferença entre tirzepatida e semaglutida, o que mostrou o estudo que comparou as duas e como é feita a escolha.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -205,14 +205,14 @@ export const POSTS = [
   {
     slug: 'gordura-visceral',
     titulo: 'Gordura visceral: o que é, por que é perigosa e como reduzir, com avaliação em São Paulo',
-    tituloSeo: 'Gordura visceral: riscos e como reduzir em São Paulo',
+    tituloSeo: 'Nível de gordura visceral: o que é normal e como reduzir',
     descricao:
-      'Gordura visceral: entenda o que é, por que aumenta o risco de diabetes e doenças do coração, como medir e o que reduz essa gordura. Avaliação em São Paulo.',
-    tituloSocial: 'Gordura visceral: o que é, riscos e como reduzir',
+      'Nível de gordura visceral: o que significa na bioimpedância, qual valor é considerado normal, os riscos e o que ajuda a reduzir.',
+    tituloSocial: 'Nível de gordura visceral: o que é normal e como reduzir',
     descricaoSocial:
-      'A gordura entre os órgãos do abdômen é a mais ligada a diabetes, gordura no fígado e doença cardiovascular. Como medir e como reduzir.',
+      'Nível de gordura visceral: o que significa na bioimpedância, qual valor é considerado normal, os riscos e o que ajuda a reduzir.',
     publicadoEm: '2026-10-18',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -291,7 +291,7 @@ export const POSTS = [
     descricaoSocial:
       'Relógio biológico, sono, estresse e refeições do dia: entenda a vontade de doce depois do jantar e quando vale procurar avaliação médica.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -311,14 +311,14 @@ export const POSTS = [
     slug: 'canetas-emagrecedoras',
     // Pilar do grupo de medicamentos: tirzepatida-ou-semaglutida e semaglutida-generica linkam para cá.
     titulo: 'Canetas emagrecedoras: quais são aprovadas, para quem são indicadas, riscos e acompanhamento médico em São Paulo',
-    tituloSeo: 'Canetas emagrecedoras: quais são, para quem e riscos | SP',
+    tituloSeo: 'Canetas emagrecedoras: tipos, diferenças e como agem',
     descricao:
       'Canetas emagrecedoras aprovadas no Brasil: como agem, quanto ajudam a emagrecer, para quem são indicadas e os riscos. Acompanhamento médico em SP.',
-    tituloSocial: 'Canetas emagrecedoras: quais são aprovadas, para quem e os riscos',
+    tituloSocial: 'Canetas emagrecedoras: tipos, diferenças e como agem',
     descricaoSocial:
       'Liraglutida, semaglutida e tirzepatida: o que os estudos mostram, quem pode usar, efeitos colaterais e por que o acompanhamento médico faz diferença.',
     publicadoEm: '2026-10-20',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1536,
       altura: 1024,
@@ -357,15 +357,15 @@ export const POSTS = [
   {
     slug: 'remedios-para-emagrecer',
     // Pilar dos remédios (comprimidos e canetas); canetas-emagrecedoras é o pilar das injetáveis.
-    titulo: 'Remédios para emagrecer: quais são aprovados, como agem, riscos e quando usar, com acompanhamento em São Paulo',
-    tituloSeo: 'Remédios para emagrecer: quais são aprovados e riscos | SP',
+    titulo: 'Qual o melhor remédio para emagrecer? Remédios aprovados, como agem e para quem são indicados, em São Paulo',
+    tituloSeo: 'Qual o melhor remédio para emagrecer? Opções aprovadas | SP',
     descricao:
-      'Remédios para emagrecer aprovados no Brasil: comprimidos e canetas, como agem, quanto ajudam, riscos e inibidores proibidos. Acompanhamento em SP.',
-    tituloSocial: 'Remédios para emagrecer: quais são aprovados, como agem e os riscos',
+      'Qual o melhor remédio para emagrecer? Conheça os remédios aprovados no Brasil, como agem, para quem são indicados e por que a escolha é individual.',
+    tituloSocial: 'Qual o melhor remédio para emagrecer? Opções aprovadas | SP',
     descricaoSocial:
-      'Orlistate, sibutramina, naltrexona com bupropiona e canetas: o que funciona, o que é proibido e por que a escolha é médica.',
+      'Qual o melhor remédio para emagrecer? Conheça os remédios aprovados no Brasil, como agem, para quem são indicados e por que a escolha é individual.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -854,12 +854,12 @@ export const POSTS = [
   {
     slug: 'metformina-emagrece',
     titulo: 'Metformina emagrece? Para que serve, quando é indicada, efeitos colaterais e uso sem diabetes, com acompanhamento em São Paulo',
-    tituloSeo: 'Metformina emagrece? Para que serve e quando é indicada',
+    tituloSeo: 'Metformina: para que serve, emagrece e efeitos colaterais',
     descricao:
-      'Metformina emagrece? Veja quanto peso ela ajuda a perder, quando é indicada sem diabetes, a relação com pré-diabetes, SOP e lipedema e os efeitos.',
-    tituloSocial: 'Metformina emagrece? Para que serve e quando é indicada',
+      'Metformina: para que serve, se emagrece, os efeitos colaterais mais comuns e por que não é um remédio aprovado para perda de peso.',
+    tituloSocial: 'Metformina: para que serve, emagrece e efeitos colaterais',
     descricaoSocial:
-      'O efeito da metformina no peso é pequeno. Entenda quando ela faz sentido, os efeitos colaterais e a relação com a vitamina B12.',
+      'Metformina: para que serve, se emagrece, os efeitos colaterais mais comuns e por que não é um remédio aprovado para perda de peso.',
     publicadoEm: '2026-10-30',
     atualizadoEm: '2026-11-12',
     capa: {
@@ -906,14 +906,14 @@ export const POSTS = [
   {
     slug: 'sibutramina',
     titulo: 'Sibutramina: o que é, como age, se emagrece, efeitos colaterais e quem não pode usar, com acompanhamento em São Paulo',
-    tituloSeo: 'Sibutramina: como age, se emagrece e quem não pode usar',
+    tituloSeo: 'Sibutramina emagrece? Como age, riscos e contraindicações',
     descricao:
-      'Sibutramina: como age, quanto emagrece, regras da receita no Brasil, efeitos colaterais, riscos para o coração e quem não pode usar. Nutrologia em SP.',
-    tituloSocial: 'Sibutramina: como age, se emagrece e quem não pode usar',
+      'Sibutramina emagrece? Entenda como age, o que mostram os estudos, os efeitos colaterais, quem não pode usar e por que exige receita especial.',
+    tituloSocial: 'Sibutramina emagrece? Como age, riscos e contraindicações',
     descricaoSocial:
-      'Regras da Anvisa, efeitos colaterais, o estudo SCOUT e a comparação com as canetas emagrecedoras.',
+      'Sibutramina emagrece? Entenda como age, o que mostram os estudos, os efeitos colaterais, quem não pode usar e por que exige receita especial.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -932,14 +932,14 @@ export const POSTS = [
   {
     slug: 'orlistate',
     titulo: 'Orlistate: o que é, como funciona, quanto emagrece, efeitos colaterais e para quem é indicado, com acompanhamento em São Paulo',
-    tituloSeo: 'Orlistate: como funciona, quanto emagrece e efeitos | SP',
+    tituloSeo: 'Orlistat emagrece? Como funciona e efeitos colaterais | SP',
     descricao:
-      'Orlistate (Xenical): como funciona, quanto emagrece, efeitos colaterais, cuidado com vitaminas e interações e para quem é indicado. Nutrologia em SP.',
-    tituloSocial: 'Orlistate: como funciona, quanto emagrece e efeitos colaterais',
+      'Orlistat emagrece? Veja como o orlistate age no intestino, o que mostram os estudos, os efeitos colaterais e quem não deve usar.',
+    tituloSocial: 'Orlistat emagrece? Como funciona e efeitos colaterais | SP',
     descricaoSocial:
-      'O remédio que reduz a absorção de gordura e não age no cérebro: resultados, efeitos intestinais e cuidados.',
+      'Orlistat emagrece? Veja como o orlistate age no intestino, o que mostram os estudos, os efeitos colaterais e quem não deve usar.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1085,12 +1085,12 @@ export const POSTS = [
   {
     slug: 'consulta-nutrologia-plano-de-saude',
     titulo: 'Consulta de nutrologia pelo plano de saúde: o plano cobre nutrólogo, como pedir reembolso e quais documentos guardar, em São Paulo',
-    tituloSeo: 'Nutrólogo pelo plano de saúde: cobertura e reembolso | SP',
+    tituloSeo: 'Nutrólogo pela Unimed e outros planos: cobertura e reembolso',
     descricao:
-      'O plano de saúde cobre nutrólogo? Veja como pedir reembolso de consulta particular, documentos, prazos da ANS e o que o plano costuma não cobrir.',
-    tituloSocial: 'Nutrólogo pelo plano de saúde: cobertura e reembolso',
+      'Nutrólogo pela Unimed e outros planos: como funciona a cobertura, quando dá para pedir reembolso e o que levar para a consulta particular.',
+    tituloSocial: 'Nutrólogo pela Unimed e outros planos: cobertura e reembolso',
     descricaoSocial:
-      'Como funciona a consulta de nutrologia pelo plano, o reembolso de consulta particular e os exames pedidos por médico fora da rede.',
+      'Nutrólogo pela Unimed e outros planos: como funciona a cobertura, quando dá para pedir reembolso e o que levar para a consulta particular.',
     publicadoEm: '2026-11-01',
     atualizadoEm: '2026-11-12',
     capa: {
@@ -1142,7 +1142,7 @@ export const POSTS = [
     descricaoSocial:
       'Nutrólogo, endocrinologista ou nutricionista: veja a diferença entre eles, o que cada um faz no emagrecimento e qual procurar no seu caso.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1394,14 +1394,14 @@ export const POSTS = [
   {
     slug: 'jejum-intermitente',
     titulo: 'Jejum intermitente funciona para emagrecer? O que dizem os estudos, riscos e quem não deve fazer, com acompanhamento em São Paulo',
-    tituloSeo: 'Jejum intermitente funciona para emagrecer? Riscos | SP',
+    tituloSeo: 'Jejum intermitente emagrece? O que a ciência mostra | SP',
     descricao:
-      'Jejum intermitente funciona para emagrecer? Veja o que dizem os estudos, os tipos, os riscos, quem não deve fazer e a relação com canetas. Nutrologia SP.',
-    tituloSocial: 'Jejum intermitente funciona para emagrecer?',
+      'Jejum intermitente emagrece? Veja o que mostram os estudos, como se compara à dieta comum, os tipos de jejum e quem não deve fazer.',
+    tituloSocial: 'Jejum intermitente emagrece? O que a ciência mostra | SP',
     descricaoSocial:
-      'Nos estudos, o resultado foi parecido com o de dietas comuns. Entenda benefícios, riscos e quem não deve fazer.',
+      'Jejum intermitente emagrece? Veja o que mostram os estudos, como se compara à dieta comum, os tipos de jejum e quem não deve fazer.',
     publicadoEm: '2026-11-03',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1545,14 +1545,14 @@ export const POSTS = [
   {
     slug: 'emagrecer-na-menopausa',
     titulo: 'Emagrecer na menopausa: por que fica mais difícil e o que funciona, com acompanhamento em nutrologia em São Paulo',
-    tituloSeo: 'Emagrecer na menopausa: o que muda e o que fazer | SP',
+    tituloSeo: 'Menopausa engorda? Como emagrecer na menopausa | SP',
     descricao:
-      'Emagrecer na menopausa fica mais difícil? Entenda o papel do estrogênio, da perda de músculo e do sono, e o que reduz a barriga. Nutrologia em SP.',
-    tituloSocial: 'Emagrecer na menopausa: por que fica mais difícil e o que funciona',
+      'Menopausa engorda? Entenda por que o peso e a barriga mudam nessa fase e o que ajuda a emagrecer na menopausa, com acompanhamento médico.',
+    tituloSocial: 'Menopausa engorda? Como emagrecer na menopausa | SP',
     descricaoSocial:
-      'Estrogênio, massa muscular, sono e gordura abdominal: o que muda na menopausa e o que ajuda a emagrecer nessa fase.',
+      'Menopausa engorda? Entenda por que o peso e a barriga mudam nessa fase e o que ajuda a emagrecer na menopausa, com acompanhamento médico.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1682,7 +1682,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o sono afeta a fome e o peso e o que fazer para dormir melhor.',
     publicadoEm: '2026-11-05',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,

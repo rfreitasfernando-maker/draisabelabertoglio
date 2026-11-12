@@ -96,7 +96,7 @@ export const POSTS = [
     descricaoSocial:
       'Quanto do peso perdido com tirzepatida é massa magra, por que isso importa e como proteína, treino de força e bioimpedância ajudam a preservar o músculo.',
     publicadoEm: '2026-10-08',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -341,7 +341,7 @@ export const POSTS = [
     descricaoSocial:
       'Náusea, diarreia, intestino preso: o que esperar da tirzepatida, quando procurar atendimento e os cuidados com anticoncepcional e cirurgias.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -679,7 +679,7 @@ export const POSTS = [
     descricaoSocial:
       'Glicemia entre 100 e 125 ou glicada entre 5,7% e 6,4%? Entenda o que é pré-diabetes e o que fazer para reverter.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -705,7 +705,7 @@ export const POSTS = [
     descricaoSocial:
       'Proteína dá saciedade e protege o músculo no emagrecimento. Veja quanto comer por dia, as melhores fontes e se o whey ajuda.',
     publicadoEm: '2026-10-29',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -809,7 +809,7 @@ export const POSTS = [
     descricaoSocial:
       'O princípio ativo do Mounjaro age no GLP-1 e no GIP. Entenda o mecanismo, a indicação, onde aplicar e os cuidados.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -861,7 +861,7 @@ export const POSTS = [
     descricaoSocial:
       'O efeito da metformina no peso é pequeno. Entenda quando ela faz sentido, os efeitos colaterais e a relação com a vitamina B12.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-07',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1092,7 +1092,7 @@ export const POSTS = [
     descricaoSocial:
       'Como funciona a consulta de nutrologia pelo plano, o reembolso de consulta particular e os exames pedidos por médico fora da rede.',
     publicadoEm: '2026-11-01',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1193,7 +1193,7 @@ export const POSTS = [
     descricaoSocial:
       'O exame que mostra a média da glicose dos últimos 3 meses: valores, metas no diabetes, interferências e como baixar.',
     publicadoEm: '2026-11-02',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-10',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1708,7 +1708,7 @@ export const POSTS = [
     descricaoSocial:
       'Pílula, DIU, implante e injeção: o efeito real de cada método no peso.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-09',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2355,7 +2355,7 @@ export const POSTS = [
     descricaoSocial:
       'Diferenças, estudos, riscos e o alerta da Anvisa em 2026.',
     publicadoEm: '2026-11-11',
-    atualizadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2442,5 +2442,153 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento da endometriose é conduzido pelo ginecologista. O plano alimentar depende de avaliação individual.',
+  },
+  {
+    slug: 'consulta-nutrologa-online',
+    titulo: 'Consulta com nutróloga online: como funciona a teleconsulta, o que dá para resolver por vídeo, como se preparar e quando ir ao consultório, em São Paulo',
+    tituloSeo: 'Consulta com nutróloga online: como funciona | SP',
+    descricao:
+      'Consulta com nutróloga online: como funciona a teleconsulta, o que dá para resolver por vídeo, a regra do CFM e como se preparar para a consulta.',
+    tituloSocial: 'Consulta com nutróloga online: como funciona',
+    descricaoSocial:
+      'Teleconsulta: o que dá para fazer por vídeo e quando ir ao consultório.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a teleconsulta com nutróloga: regulamentada pela Resolução CFM 2.314/2022, por vídeo dá para fazer avaliação, exames e plano, a bioimpedância é só presencial e a médica decide o formato',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalProcedure', name: 'Teleconsulta em nutrologia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A definição do formato de atendimento, a distância ou presencial, cabe à médica em cada caso.',
+  },
+  {
+    slug: 'mounjaro-anticoncepcional',
+    titulo: 'Mounjaro e anticoncepcional: a tirzepatida corta o efeito da pílula? Quando o risco é maior, que métodos não são afetados e os cuidados com a gravidez, em São Paulo',
+    tituloSeo: 'Mounjaro e anticoncepcional: corta o efeito? | SP',
+    descricao:
+      'Mounjaro e anticoncepcional: a tirzepatida pode reduzir o efeito da pílula. Saiba quando o risco é maior, que métodos não são afetados e os cuidados.',
+    tituloSocial: 'Mounjaro corta o efeito do anticoncepcional?',
+    descricaoSocial:
+      'Quando o risco é maior, métodos não afetados e cuidados com a gravidez.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre Mounjaro e anticoncepcional: a absorção da pílula pode diminuir, o risco é maior nas 4 semanas após o início e cada aumento de dose, DIU, implante e anel não são afetados e a gravidez deve ser planejada com o médico',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Gravidez' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A escolha do método anticoncepcional deve ser feita com o ginecologista. O uso de canetas emagrecedoras depende de avaliação e acompanhamento médico.',
+  },
+  {
+    slug: 'berberina-emagrece',
+    titulo: 'Berberina emagrece? O que a ciência mostra sobre o "Ozempic natural", os riscos, as interações e o que a Anvisa decidiu, em São Paulo',
+    tituloSeo: 'Berberina emagrece? A verdade sobre o Ozempic natural | SP',
+    descricao:
+      'Berberina emagrece? Veja o que os estudos mostram sobre o "Ozempic natural", os efeitos colaterais, as interações e o que a Anvisa decidiu em 2026.',
+    tituloSocial: 'Berberina emagrece? O que saber sobre o Ozempic natural',
+    descricaoSocial:
+      'Estudos, riscos, interações e a decisão da Anvisa em 2026.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a berberina: evidência inconclusiva para perda de peso, o apelido de Ozempic natural não tem base científica, causa efeitos intestinais e interações e produtos sem registro foram proibidos pela Anvisa',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de qualquer suplemento deve ser avaliado individualmente, considerando os remédios em uso e as condições de saúde.',
+  },
+  {
+    slug: 'parar-de-fumar-engorda',
+    titulo: 'Parar de fumar engorda? Por que o peso sobe, quanto costuma aumentar e como evitar o ganho de peso sem voltar a fumar, em São Paulo',
+    tituloSeo: 'Parar de fumar engorda? Como evitar o ganho de peso | SP',
+    descricao:
+      'Parar de fumar engorda? Entenda por que o peso sobe, quanto costuma aumentar e o que ajuda a evitar o ganho de peso sem voltar a fumar.',
+    tituloSocial: 'Parar de fumar engorda? Como evitar o ganho de peso',
+    descricaoSocial:
+      'Por que o peso sobe, quanto aumenta e o que ajuda.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre parar de fumar e peso: ganho médio de 4 a 5 kg no primeiro ano, a maior parte nos 3 primeiros meses, com grande variação entre as pessoas, e parar vale a pena com folga',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Tabagismo' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento do tabagismo e do peso depende de avaliação médica individual.',
+  },
+  {
+    slug: 'remissao-diabetes-tipo-2',
+    titulo: 'Diabetes tipo 2 tem remissão? O que significa, o papel da perda de peso, o que mostrou o estudo DiRECT e quem tem mais chance, em São Paulo',
+    tituloSeo: 'Diabetes tipo 2 tem remissão? O papel da perda de peso | SP',
+    descricao:
+      'Diabetes tipo 2 tem remissão? Entenda o que significa, o papel da perda de peso, o que mostrou o estudo DiRECT e quem tem mais chance.',
+    tituloSocial: 'Diabetes tipo 2 tem remissão?',
+    descricaoSocial:
+      'O que significa, o papel da perda de peso e o estudo DiRECT.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre remissão do diabetes tipo 2: hemoglobina glicada abaixo de 6,5% sem remédios, não é cura e pode voltar, 46% em remissão após um ano no estudo DiRECT e remédios só se ajustam com o médico',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+      { '@type': 'MedicalCondition', name: 'Resistência à insulina' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O tratamento do diabetes e qualquer ajuste de remédios dependem de avaliação e acompanhamento médico.',
+  },
+  {
+    slug: 'whey-protein-para-que-serve',
+    titulo: 'Whey protein: para que serve, quem pode tomar, se emagrece ou engorda, tipos, cuidados com os rins e como escolher, em São Paulo',
+    tituloSeo: 'Whey protein: para que serve e quem pode tomar | SP',
+    descricao:
+      'Whey protein: para que serve, quem pode tomar, se emagrece ou engorda, os tipos, os cuidados com os rins e a lactose e como escolher um produto.',
+    tituloSocial: 'Whey protein: para que serve e quem pode tomar',
+    descricaoSocial:
+      'Se emagrece, os tipos, os cuidados e como escolher.',
+    publicadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-12',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre whey protein: serve para completar a proteína do dia, não emagrece sozinho, o isolado tem menos lactose e quem tem doença renal precisa de orientação',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `DietarySupplement`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Sarcopenia' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Obesidade' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A necessidade de suplementos e a quantidade de proteína dependem de avaliação individual.',
   },
 ];

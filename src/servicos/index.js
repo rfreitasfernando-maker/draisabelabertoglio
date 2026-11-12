@@ -200,7 +200,8 @@ export const SERVICOS = [
     descricao:
       'Como funciona a consulta com a nutróloga Dra. Isabela em São Paulo: avaliação, InBody, exames, plano e retornos. Agende pelo WhatsApp.',
     sobre: { '@type': 'MedicalProcedure', name: 'Consulta de nutrologia', procedureType: 'https://schema.org/NoninvasiveProcedure' },
-    revisadoEm: REVISADO_EM,
+    // Revisada em 12/11/2026 (link para o post da consulta online)
+    revisadoEm: '2026-11-12',
     mensagemWhatsapp: 'Olá! Vim pela página da consulta de nutrologia e gostaria de agendar a primeira consulta com a Dra. Isabela.',
     publicada: true,
   },

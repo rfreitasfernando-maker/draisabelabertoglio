@@ -25,6 +25,7 @@ export const CATEGORIAS = [
       'ozempic-para-que-serve', 'rosto-de-ozempic', 'semaglutida-generica', 'wegovy', 'wegovy-comprimido',
       'liraglutida', 'retatrutida', 'orforgliprona-foundayo', 'remedios-para-emagrecer', 'inibidor-de-apetite',
       'sibutramina', 'orlistate', 'metformina-emagrece', 'bupropiona-emagrece-contrave',
+      'mounjaro-anticoncepcional',
     ],
   },
   {
@@ -43,6 +44,7 @@ export const CATEGORIAS = [
       'exames-para-emagrecer', 'imc', 'hemoglobina-glicada', 'pre-diabetes', 'resistencia-a-insulina',
       'sindrome-metabolica', 'gordura-no-figado', 'colesterol-alto', 'triglicerides-alto', 'acido-urico-alto',
       'ferritina-alta', 'hipotireoidismo-engorda', 'hipotireoidismo-subclinico',
+      'remissao-diabetes-tipo-2',
     ],
   },
   {
@@ -61,6 +63,7 @@ export const CATEGORIAS = [
       'suplementos-para-emagrecer', 'vitamina-d-b12-ferritina', 'vitamina-b12-baixa', 'creatina',
       'omega-3-para-que-serve', 'magnesio-para-que-serve', 'zinco-para-que-serve', 'colageno-para-que-serve',
       'curcuma-para-que-serve', 'coenzima-q10-estatina', 'probioticos-emagrecem', 'melatonina-para-que-serve',
+      'berberina-emagrece', 'whey-protein-para-que-serve',
     ],
   },
   {
@@ -133,6 +136,7 @@ export const CATEGORIAS = [
     posts: [
       'dormir-mal-engorda', 'apneia-do-sono-e-obesidade', 'compulsao-alimentar', 'vontade-de-comer-doce-a-noite',
       'intestino-preso', 'barriga-inchada', 'hipoglicemia-reativa',
+      'parar-de-fumar-engorda',
     ],
   },
   {
@@ -151,6 +155,7 @@ export const CATEGORIAS = [
       'emagrecimento-com-acompanhamento-medico', 'obesidade-tratamento', 'nao-consigo-emagrecer',
       'nutrologo-o-que-faz', 'consulta-nutrologia-plano-de-saude', 'reganho-apos-bariatrica',
       'preparo-nutricional-cirurgia-plastica',
+      'consulta-nutrologa-online',
     ],
   },
 ];

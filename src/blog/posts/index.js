@@ -801,13 +801,13 @@ export const POSTS = [
   },
   {
     slug: 'tirzepatida',
-    titulo: 'O que é tirzepatida? Para que serve, como age no corpo, para quem é indicada e cuidados, com acompanhamento em São Paulo',
-    tituloSeo: 'O que é tirzepatida? Para que serve e como age no corpo | SP',
+    titulo: 'Mounjaro (tirzepatida): o que é, para que serve, como age no corpo, para quem é indicado e cuidados, com acompanhamento em São Paulo',
+    tituloSeo: 'Mounjaro (tirzepatida): o que é, para que serve e como age',
     descricao:
-      'O que é tirzepatida, para que serve, como age no corpo, se é insulina, para quem é indicada e quais os cuidados durante o uso do Mounjaro.',
-    tituloSocial: 'O que é tirzepatida? Para que serve e como age no corpo | SP',
+      'Mounjaro (tirzepatida): o que é, para que serve, como age no corpo, se é insulina, para quem é indicado e os cuidados durante o uso.',
+    tituloSocial: 'Mounjaro (tirzepatida): o que é, para que serve e como age',
     descricaoSocial:
-      'O que é tirzepatida, para que serve, como age no corpo, se é insulina, para quem é indicada e quais os cuidados durante o uso do Mounjaro.',
+      'Mounjaro (tirzepatida): o que é, para que serve, como age no corpo, se é insulina, para quem é indicado e os cuidados durante o uso.',
     publicadoEm: '2026-10-30',
     atualizadoEm: '2026-11-12',
     capa: {
@@ -990,7 +990,7 @@ export const POSTS = [
     descricaoSocial:
       'Proteína primeiro, porções menores e o que evitar para reduzir o enjoo e preservar o músculo durante o uso das canetas.',
     publicadoEm: '2026-10-31',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-12',
     capa: {
       largura: 1734,
       altura: 907,

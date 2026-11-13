@@ -26,6 +26,8 @@ export const CATEGORIAS = [
       'liraglutida', 'retatrutida', 'orforgliprona-foundayo', 'remedios-para-emagrecer', 'inibidor-de-apetite',
       'sibutramina', 'orlistate', 'metformina-emagrece', 'bupropiona-emagrece-contrave',
       'mounjaro-anticoncepcional',
+      'receita-mounjaro',
+      'mounjaro-natural',
     ],
   },
   {
@@ -82,6 +84,7 @@ export const CATEGORIAS = [
       'reeducacao-alimentar', 'deficit-calorico', 'proteina-para-emagrecer', 'alimentos-ricos-em-fibras',
       'low-carb', 'jejum-intermitente', 'dieta-anti-inflamatoria', 'adocante-faz-mal', 'dieta-sem-gluten-emagrece',
       'intolerancia-a-lactose', 'o-que-comer-usando-mounjaro', 'efeito-sanfona',
+      'o-que-comer-para-emagrecer',
     ],
   },
   {

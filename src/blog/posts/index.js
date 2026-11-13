@@ -365,7 +365,7 @@ export const POSTS = [
     descricaoSocial:
       'Qual o melhor remédio para emagrecer? Conheça os remédios aprovados no Brasil, como agem, para quem são indicados e por que a escolha é individual.',
     publicadoEm: '2026-10-21',
-    atualizadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -492,7 +492,7 @@ export const POSTS = [
     descricaoSocial:
       'Comida de verdade, proteína, fibras e regularidade: como trocar a dieta com data para acabar por hábitos que mantêm o peso.',
     publicadoEm: '2026-10-25',
-    atualizadoEm: '2026-11-06',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1731,
       altura: 909,
@@ -809,7 +809,7 @@ export const POSTS = [
     descricaoSocial:
       'Mounjaro (tirzepatida): o que é, para que serve, como age no corpo, se é insulina, para quem é indicado e os cuidados durante o uso.',
     publicadoEm: '2026-10-30',
-    atualizadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1731,
       altura: 909,
@@ -1427,7 +1427,7 @@ export const POSTS = [
     descricaoSocial:
       'Como o corpo gasta energia, como estimar o seu déficit e por que a conta nem sempre fecha.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-11',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1478,7 +1478,7 @@ export const POSTS = [
     descricaoSocial:
       'Termogênicos, berberina, chá verde e outros: efeito real no peso, riscos para o fígado e o que pode ajudar de verdade.',
     publicadoEm: '2026-11-04',
-    atualizadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -1786,7 +1786,7 @@ export const POSTS = [
     descricaoSocial:
       'Saciedade, glicose e intestino: quanto comer por dia e como aumentar.',
     publicadoEm: '2026-11-06',
-    atualizadoEm: '2026-11-08',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2453,7 +2453,7 @@ export const POSTS = [
     descricaoSocial:
       'Teleconsulta: o que dá para fazer por vídeo e quando ir ao consultório.',
     publicadoEm: '2026-11-12',
-    atualizadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2502,7 +2502,7 @@ export const POSTS = [
     descricaoSocial:
       'Estudos, riscos, interações e a decisão da Anvisa em 2026.',
     publicadoEm: '2026-11-12',
-    atualizadoEm: '2026-11-12',
+    atualizadoEm: '2026-11-13',
     capa: {
       largura: 1734,
       altura: 907,
@@ -2590,5 +2590,79 @@ export const POSTS = [
     ],
     aviso:
       'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. A necessidade de suplementos e a quantidade de proteína dependem de avaliação individual.',
+  },
+  {
+    slug: 'receita-mounjaro',
+    titulo: 'Receita de Mounjaro: como funciona a prescrição, a retenção na farmácia, a receita digital e onde comprar com segurança, em São Paulo',
+    tituloSeo: 'Receita de Mounjaro: como funciona e onde comprar | SP',
+    descricao:
+      'Receita de Mounjaro: como funciona a prescrição, a retenção na farmácia, a validade, a receita digital e onde comprar com segurança.',
+    tituloSocial: 'Receita de Mounjaro: como funciona',
+    descricaoSocial:
+      'Retenção, validade, receita digital e onde comprar com segurança.',
+    publicadoEm: '2026-11-13',
+    atualizadoEm: '2026-11-13',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre a receita das canetas emagrecedoras segundo a Anvisa: retenção desde 23 de junho de 2025, duas vias com uma retida na farmácia, validade de 90 dias e receita digital com assinatura eletrônica',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de canetas emagrecedoras depende de avaliação e acompanhamento médico. Informações regulatórias conferidas em 13/11/2026.',
+  },
+  {
+    slug: 'mounjaro-natural',
+    titulo: 'Mounjaro natural existe? O que são a gelatina, o adesivo e as cápsulas "naturais", o que a Anvisa proibiu e o que realmente ajuda, em São Paulo',
+    tituloSeo: 'Mounjaro natural existe? Gelatina, adesivo e riscos | SP',
+    descricao:
+      'Mounjaro natural existe? Entenda o que são a gelatina, o adesivo e as cápsulas vendidas com esse nome, o que a Anvisa proibiu e o que ajuda.',
+    tituloSocial: 'Mounjaro natural existe?',
+    descricaoSocial:
+      'Gelatina, adesivo, cápsulas e o que a Anvisa proibiu.',
+    publicadoEm: '2026-11-13',
+    atualizadoEm: '2026-11-13',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre o Mounjaro natural: não existe, gelatina e adesivo não têm o efeito da tirzepatida, a Anvisa proibiu um produto em dezembro de 2025 e o Mounjaro real é injetável e vendido com receita',
+      legenda: 'Imagem ilustrativa',
+    },
+    // Sem o tipo `Drug`: o Google o lê como produto à venda. O tema é a condição tratada.
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Diabetes tipo 2' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O uso de qualquer remédio ou suplemento deve ser avaliado individualmente com um médico.',
+  },
+  {
+    slug: 'o-que-comer-para-emagrecer',
+    titulo: 'O que comer para emagrecer: alimentos que ajudam, como montar o prato, o que evitar e por que não existe dieta milagrosa, em São Paulo',
+    tituloSeo: 'O que comer para emagrecer: alimentos e prato ideal | SP',
+    descricao:
+      'O que comer para emagrecer: os alimentos que ajudam, como montar o prato, o que evitar e por que não existe dieta milagrosa. Veja como começar.',
+    tituloSocial: 'O que comer para emagrecer',
+    descricaoSocial:
+      'Alimentos que ajudam, como montar o prato e o que evitar.',
+    publicadoEm: '2026-11-13',
+    atualizadoEm: '2026-11-13',
+    capa: {
+      largura: 1734,
+      altura: 907,
+      alt: 'Quadro sobre como montar o prato para emagrecer: metade com legumes e verduras, um quarto com proteína, um quarto com carboidrato de preferência integral, e fruta, água e um fio de azeite junto',
+      legenda: 'Imagem ilustrativa',
+    },
+    tema: { '@type': 'MedicalCondition', name: 'Obesidade' },
+    mencoes: [
+      { '@type': 'MedicalCondition', name: 'Sobrepeso' },
+    ],
+    aviso:
+      'Este conteúdo tem caráter exclusivamente informativo e educativo. Não substitui consulta médica. O plano alimentar depende de avaliação individual.',
   },
 ];

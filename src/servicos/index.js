@@ -45,8 +45,8 @@ export const SERVICOS = [
     descricao:
       'Acompanhamento médico com tirzepatida e semaglutida em São Paulo: indicação, ajuste de dose e cuidado com o músculo. Agende pelo WhatsApp.',
     sobre: { '@type': 'MedicalTherapy', name: 'Tratamento farmacológico da obesidade com agonistas de GLP-1 e GIP' },
-    // Revisada em 12/11/2026 (H2 dos medicamentos)
-    revisadoEm: '2026-11-12',
+    // Revisada em 13/11/2026 (link para o post da receita de Mounjaro)
+    revisadoEm: '2026-11-13',
     mensagemWhatsapp: 'Olá! Vim pela página de canetas emagrecedoras e gostaria de agendar uma avaliação com a Dra. Isabela.',
     publicada: true,
   },
